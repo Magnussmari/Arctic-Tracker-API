@@ -1,0 +1,45 @@
+{
+  "analysis_date": "2025-07-28T14:17:50.668460",
+  "cites_version": "v2025.1",
+  "total_files": 56,
+  "estimated_records": 27901926,
+  "file_structure": {
+    "format": "CSV",
+    "encoding": "UTF-8",
+    "delimiter": ",",
+    "columns": [
+      "Id",
+      "Year",
+      "Appendix",
+      "Taxon",
+      "Class",
+      "Order",
+      "Family",
+      "Genus",
+      "Term",
+      "Quantity",
+      "Unit",
+      "Importer",
+      "Exporter",
+      "Origin",
+      "Purpose",
+      "Source",
+      "Reporter.type",
+      "Import.permit.RandomID",
+      "Export.permit.RandomID"
+    ]
+  },
+  "migration_requirements": {
+    "storage_needed": "~5GB",
+    "processing_time": "24-48 hours",
+    "backup_size": "~2GB compressed",
+    "risk_level": "HIGH"
+  },
+  "recommendations": [
+    "Full backup before migration",
+    "Test with staging environment",
+    "Process in parallel for speed",
+    "Monitor species matching rate",
+    "Validate Arctic species coverage"
+  ]
+}

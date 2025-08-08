@@ -1,0 +1,11 @@
+table_name,record_count,has_data
+catch_records,4,True
+cites_listings,4,True
+cites_trade_records,4,True
+common_names,4,True
+families,4,True
+iucn_assessments,4,True
+species,4,True
+species_trade_summary,4,True
+subpopulations,4,True
+timeline_events,4,True

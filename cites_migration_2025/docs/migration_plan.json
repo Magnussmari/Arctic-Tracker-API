@@ -1,0 +1,292 @@
+{
+  "generated_at": "2025-07-28T14:30:22.065431",
+  "phases": [
+    {
+      "phase": 1,
+      "name": "Pre-Migration Preparation",
+      "duration": "2-3 hours",
+      "steps": [
+        {
+          "step": "1.1",
+          "action": "Create comprehensive backup",
+          "command": "python backup_cites_data.py --full",
+          "validation": "Verify backup file exists and size matches expected",
+          "rollback": "N/A - No changes made yet"
+        },
+        {
+          "step": "1.2",
+          "action": "Create staging table",
+          "sql": "CREATE TABLE cites_trade_records_staging (\n                            LIKE cites_trade_records INCLUDING ALL\n                        );",
+          "validation": "Table exists with same structure",
+          "rollback": "DROP TABLE cites_trade_records_staging;"
+        },
+        {
+          "step": "1.3",
+          "action": "Add missing species (Aleutian cackling goose)",
+          "command": "python add_missing_species.py",
+          "validation": "Species exists in species table",
+          "rollback": "DELETE FROM species WHERE scientific_name = 'Branta hutchinsii leucopareia';"
+        }
+      ]
+    },
+    {
+      "phase": 2,
+      "name": "Test Migration",
+      "duration": "1 hour",
+      "steps": [
+        {
+          "step": "2.1",
+          "action": "Load 2024 data to staging",
+          "command": "python load_to_staging.py --year 2024",
+          "validation": "Record count matches expected for 2024",
+          "rollback": "TRUNCATE cites_trade_records_staging;"
+        },
+        {
+          "step": "2.2",
+          "action": "Validate staged data",
+          "command": "python validate_staging_data.py --year 2024",
+          "validation": "All validation checks pass",
+          "rollback": "TRUNCATE cites_trade_records_staging;"
+        },
+        {
+          "step": "2.3",
+          "action": "Test query performance",
+          "command": "python test_query_performance.py",
+          "validation": "Query times within acceptable range",
+          "rollback": "N/A - Read only"
+        }
+      ]
+    },
+    {
+      "phase": 3,
+      "name": "Full Data Migration",
+      "duration": "3-4 hours",
+      "steps": [
+        {
+          "step": "3.1",
+          "action": "Clear staging table",
+          "sql": "TRUNCATE cites_trade_records_staging;",
+          "validation": "Staging table empty",
+          "rollback": "N/A"
+        },
+        {
+          "step": "3.2",
+          "action": "Load all Arctic data to staging",
+          "command": "python load_to_staging.py --all --batch-size 10000",
+          "validation": "Staging has 489107 records",
+          "rollback": "TRUNCATE cites_trade_records_staging;"
+        },
+        {
+          "step": "3.3",
+          "action": "Validate all staged data",
+          "command": "python validate_staging_data.py --all",
+          "validation": "All validation checks pass",
+          "rollback": "TRUNCATE cites_trade_records_staging;"
+        }
+      ]
+    },
+    {
+      "phase": 4,
+      "name": "Data Switchover",
+      "duration": "30 minutes",
+      "steps": [
+        {
+          "step": "4.1",
+          "action": "Create backup of current table",
+          "sql": "CREATE TABLE cites_trade_records_backup AS \n                                SELECT * FROM cites_trade_records;",
+          "validation": "Backup table has correct record count",
+          "rollback": "N/A"
+        },
+        {
+          "step": "4.2",
+          "action": "Rename tables for switchover",
+          "sql": "BEGIN;\n                                ALTER TABLE cites_trade_records RENAME TO cites_trade_records_old;\n                                ALTER TABLE cites_trade_records_staging RENAME TO cites_trade_records;\n                                COMMIT;",
+          "validation": "New table is active with correct data",
+          "rollback": "BEGIN;\n                                     ALTER TABLE cites_trade_records RENAME TO cites_trade_records_staging;\n                                     ALTER TABLE cites_trade_records_old RENAME TO cites_trade_records;\n                                     COMMIT;"
+        },
+        {
+          "step": "4.3",
+          "action": "Rebuild indexes",
+          "sql": "REINDEX TABLE cites_trade_records;",
+          "validation": "All indexes rebuilt successfully",
+          "rollback": "N/A"
+        }
+      ]
+    },
+    {
+      "phase": 5,
+      "name": "Post-Migration Tasks",
+      "duration": "1-2 hours",
+      "steps": [
+        {
+          "step": "5.1",
+          "action": "Update species_trade_summary",
+          "command": "python update_trade_summary.py",
+          "validation": "Summary table updated with new data",
+          "rollback": "TRUNCATE species_trade_summary;"
+        },
+        {
+          "step": "5.2",
+          "action": "Run comprehensive validation",
+          "command": "python validate_migration.py --comprehensive",
+          "validation": "All checks pass",
+          "rollback": "Use phase 4.2 rollback"
+        },
+        {
+          "step": "5.3",
+          "action": "Update documentation",
+          "command": "python generate_migration_report.py",
+          "validation": "Report generated successfully",
+          "rollback": "N/A"
+        },
+        {
+          "step": "5.4",
+          "action": "Clean up old tables (after validation period)",
+          "sql": "DROP TABLE IF EXISTS cites_trade_records_old;",
+          "validation": "Old table removed",
+          "rollback": "N/A - Keep backup files"
+        }
+      ]
+    }
+  ],
+  "risk_assessment": {
+    "high_risk": [
+      {
+        "risk": "Data corruption during migration",
+        "probability": "Low",
+        "impact": "High",
+        "mitigation": "Comprehensive backups, staging validation, atomic switchover"
+      },
+      {
+        "risk": "Service downtime",
+        "probability": "Medium",
+        "impact": "Medium",
+        "mitigation": "Use staging table approach, minimize switchover time"
+      }
+    ],
+    "medium_risk": [
+      {
+        "risk": "Performance degradation",
+        "probability": "Low",
+        "impact": "Medium",
+        "mitigation": "Test queries before switchover, rebuild indexes"
+      },
+      {
+        "risk": "Missing species mappings",
+        "probability": "Low",
+        "impact": "Low",
+        "mitigation": "Pre-migration species validation"
+      }
+    ],
+    "low_risk": [
+      {
+        "risk": "Incomplete 2024 data",
+        "probability": "Low",
+        "impact": "Low",
+        "mitigation": "Verify with CITES data source"
+      }
+    ]
+  },
+  "rollback_procedures": {},
+  "validation_checkpoints": [
+    {
+      "checkpoint": "Pre-Migration",
+      "validations": [
+        "Current database backup completed",
+        "Staging table created successfully",
+        "All species mapped correctly",
+        "Disk space adequate (10GB free)"
+      ]
+    },
+    {
+      "checkpoint": "Post-Staging",
+      "validations": [
+        "Record count matches expected",
+        "No duplicate records",
+        "All foreign keys valid",
+        "Date ranges correct",
+        "Species IDs all mapped"
+      ]
+    },
+    {
+      "checkpoint": "Post-Switchover",
+      "validations": [
+        "Application queries working",
+        "API endpoints responsive",
+        "Query performance acceptable",
+        "No error logs"
+      ]
+    },
+    {
+      "checkpoint": "Final Validation",
+      "validations": [
+        "Trade summary updated",
+        "All statistics regenerated",
+        "Documentation updated",
+        "Backup verified and stored"
+      ]
+    }
+  ],
+  "summary": {
+    "current_state": {
+      "current_record_count": 461042,
+      "current_max_year": 2023,
+      "last_backup": null
+    },
+    "new_data": {
+      "new_record_count": 489107,
+      "species_count": 41,
+      "year_range": {
+        "min": 1975,
+        "max": 2024
+      },
+      "columns": [
+        "Id",
+        "Year",
+        "Appendix",
+        "Taxon",
+        "Class",
+        "Order",
+        "Family",
+        "Genus",
+        "Term",
+        "Quantity",
+        "Unit",
+        "Importer",
+        "Exporter",
+        "Origin",
+        "Purpose",
+        "Source",
+        "Reporter.type",
+        "Import.permit.RandomID",
+        "Export.permit.RandomID",
+        "Origin.permit.RandomID",
+        "common_name",
+        "species_class"
+      ],
+      "high_volume_species": [
+        {
+          "Taxon": "Acipenser baerii",
+          "record_count": 195775
+        },
+        {
+          "Taxon": "Falco rusticolus",
+          "record_count": 86802
+        },
+        {
+          "Taxon": "Lynx canadensis",
+          "record_count": 38822
+        },
+        {
+          "Taxon": "Falco peregrinus",
+          "record_count": 34668
+        },
+        {
+          "Taxon": "Odobenus rosmarus",
+          "record_count": 26139
+        }
+      ]
+    },
+    "total_records": 489107
+  }
+}

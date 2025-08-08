@@ -1,0 +1,62 @@
+{
+  "species": {
+    "scientific_name": "Falco peregrinus",
+    "common_name": "",
+    "taxonomic_info": {
+      "kingdom": "",
+      "phylum": "",
+      "class": "",
+      "order": "",
+      "family": "",
+      "genus": "",
+      "species": ""
+    }
+  },
+  "conservation_status": {
+    "iucn_status": "",
+    "cites_listing": "",
+    "cms_appendix": "",
+    "population_trend": "",
+    "assessment_year": null
+  },
+  "distribution": {
+    "arctic_range": [],
+    "breeding_range": [],
+    "wintering_range": [],
+    "depth_range": {},
+    "habitat_types": []
+  },
+  "ecology": {
+    "diet": [],
+    "feeding_behavior": "",
+    "breeding_season": "",
+    "lifespan": "",
+    "generation_time": "",
+    "social_structure": ""
+  },
+  "threats": [],
+  "conservation_measures": [],
+  "population_data": {
+    "global_population": "",
+    "regional_populations": {},
+    "monitoring_methods": []
+  },
+  "cultural_significance": {
+    "indigenous_names": {},
+    "traditional_uses": [],
+    "cultural_importance": ""
+  },
+  "economic_importance": {
+    "commercial_value": "",
+    "subsistence_value": "",
+    "ecotourism_value": ""
+  },
+  "research_needs": [],
+  "references": [],
+  "metadata": {
+    "profile_version": "1.0",
+    "last_updated": "",
+    "data_sources": [],
+    "notes": "Empty template - awaiting research data"
+  }
+}

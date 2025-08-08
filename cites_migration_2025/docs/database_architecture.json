@@ -1,0 +1,615 @@
+{
+  "extraction_date": "2025-07-28T14:25:26.724829",
+  "database": "Arctic Tracker - Supabase",
+  "table_counts": {
+    "species": 43,
+    "cites_trade_records": 461042,
+    "species_trade_summary": "Error",
+    "cites_listings": 67,
+    "iucn_assessments": 317,
+    "common_names": 327
+  },
+  "table_schemas": {
+    "species": {
+      "table_name": "species",
+      "columns": {
+        "id": {
+          "sample_value": "332be9c5-d770-467f-886e-6de3832f521e",
+          "type": "str"
+        },
+        "scientific_name": {
+          "sample_value": "Buteo lagopus",
+          "type": "str"
+        },
+        "common_name": {
+          "sample_value": "Rough-legged Buzzard",
+          "type": "str"
+        },
+        "kingdom": {
+          "sample_value": "Animalia",
+          "type": "str"
+        },
+        "phylum": {
+          "sample_value": "CHORDATA",
+          "type": "str"
+        },
+        "class": {
+          "sample_value": "AVES",
+          "type": "str"
+        },
+        "order_name": {
+          "sample_value": "ACCIPITRIFORMES",
+          "type": "str"
+        },
+        "family": {
+          "sample_value": "ACCIPITRIDAE",
+          "type": "str"
+        },
+        "genus": {
+          "sample_value": "Buteo",
+          "type": "str"
+        },
+        "species_name": {
+          "sample_value": "lagopus",
+          "type": "str"
+        },
+        "authority": {
+          "sample_value": "(Pontoppidan, 1763)",
+          "type": "str"
+        },
+        "sis_id": {
+          "sample_value": "22695973",
+          "type": "int"
+        },
+        "created_at": {
+          "sample_value": "2025-03-25T12:18:39.485111+00:00",
+          "type": "str"
+        },
+        "inaturalist_id": {
+          "sample_value": null,
+          "type": "unknown"
+        },
+        "default_image_url": {
+          "sample_value": null,
+          "type": "unknown"
+        },
+        "description": {
+          "sample_value": null,
+          "type": "unknown"
+        },
+        "habitat_description": {
+          "sample_value": null,
+          "type": "unknown"
+        },
+        "population_trend": {
+          "sample_value": null,
+          "type": "unknown"
+        },
+        "population_size": {
+          "sample_value": null,
+          "type": "unknown"
+        },
+        "generation_length": {
+          "sample_value": null,
+          "type": "unknown"
+        },
+        "movement_patterns": {
+          "sample_value": null,
+          "type": "unknown"
+        },
+        "use_and_trade": {
+          "sample_value": null,
+          "type": "unknown"
+        },
+        "threats_overview": {
+          "sample_value": null,
+          "type": "unknown"
+        },
+        "conservation_overview": {
+          "sample_value": null,
+          "type": "unknown"
+        },
+        "family_id": {
+          "sample_value": "ec774d8c-35e1-4c5e-9377-bafc9993000e",
+          "type": "str"
+        }
+      }
+    },
+    "cites_trade_records": {
+      "table_name": "cites_trade_records",
+      "columns": {
+        "id": {
+          "sample_value": "825ecde3-b1f8-4d9d-bf82-8d127f8a52ee",
+          "type": "str"
+        },
+        "species_id": {
+          "sample_value": "506d9478-6bef-4116-8295-fd1ccc6292c6",
+          "type": "str"
+        },
+        "record_id": {
+          "sample_value": "2501271552",
+          "type": "str"
+        },
+        "year": {
+          "sample_value": "2021",
+          "type": "int"
+        },
+        "appendix": {
+          "sample_value": "I",
+          "type": "str"
+        },
+        "taxon": {
+          "sample_value": "Falco rusticolus",
+          "type": "str"
+        },
+        "class": {
+          "sample_value": "Aves",
+          "type": "str"
+        },
+        "order_name": {
+          "sample_value": "Falconiformes",
+          "type": "str"
+        },
+        "family": {
+          "sample_value": "Falconidae",
+          "type": "str"
+        },
+        "genus": {
+          "sample_value": "Falco",
+          "type": "str"
+        },
+        "term": {
+          "sample_value": "live",
+          "type": "str"
+        },
+        "quantity": {
+          "sample_value": "1.0",
+          "type": "float"
+        },
+        "unit": {
+          "sample_value": "Number of specimens",
+          "type": "str"
+        },
+        "importer": {
+          "sample_value": "AT",
+          "type": "str"
+        },
+        "exporter": {
+          "sample_value": "AE",
+          "type": "str"
+        },
+        "origin": {
+          "sample_value": "GB",
+          "type": "str"
+        },
+        "purpose": {
+          "sample_value": "T",
+          "type": "str"
+        },
+        "source": {
+          "sample_value": "C",
+          "type": "str"
+        },
+        "reporter_type": {
+          "sample_value": "E",
+          "type": "str"
+        },
+        "import_permit": {
+          "sample_value": null,
+          "type": "unknown"
+        },
+        "export_permit": {
+          "sample_value": null,
+          "type": "unknown"
+        },
+        "origin_permit": {
+          "sample_value": null,
+          "type": "unknown"
+        }
+      }
+    },
+    "species_trade_summary": {
+      "table_name": "species_trade_summary",
+      "columns": {
+        "species_id": {
+          "sample_value": "0ae6a6b2-65cf-402b-a500-347627b68c76",
+          "type": "str"
+        },
+        "last_updated_at": {
+          "sample_value": "2025-05-24T23:05:20.045676+00:00",
+          "type": "str"
+        },
+        "total_trade_records": {
+          "sample_value": "171",
+          "type": "int"
+        },
+        "overall_min_year": {
+          "sample_value": "1977",
+          "type": "int"
+        },
+        "overall_max_year": {
+          "sample_value": "2022",
+          "type": "int"
+        },
+        "overall_total_quantity": {
+          "sample_value": "536.0",
+          "type": "float"
+        },
+        "distinct_years": {
+          "sample_value": "[1977, 1978, 1979, 1980, 1982, 1983, 1984, 1985, 1987, 1988, 1991, 1992, 1993, 1994, 1995, 1996, 199",
+          "type": "list"
+        },
+        "distinct_terms": {
+          "sample_value": "['bodies', 'eggs', 'eggs (live)', 'feathers', 'live', 'specimens']",
+          "type": "list"
+        },
+        "distinct_importers": {
+          "sample_value": "[{'code': 'US', 'name': 'US'}, {'code': 'DE', 'name': 'DE'}, {'code': 'DD', 'name': 'DD'}, {'code': ",
+          "type": "list"
+        },
+        "distinct_exporters": {
+          "sample_value": "[{'code': 'DE', 'name': 'DE'}, {'code': 'SU', 'name': 'SU'}, {'code': 'GB', 'name': 'GB'}, {'code': ",
+          "type": "list"
+        },
+        "annual_summaries": {
+          "sample_value": "[{'year': 1977, 'terms_summary': [{'term': 'eggs', 'records': 1, 'quantity': 6.0}, {'term': 'live', ",
+          "type": "list"
+        }
+      }
+    },
+    "cites_listings": {
+      "table_name": "cites_listings",
+      "columns": {
+        "id": {
+          "sample_value": "02034a7c-fa33-4e89-aabe-043d8261ae8a",
+          "type": "str"
+        },
+        "species_id": {
+          "sample_value": "5f289c1e-5101-458f-a5ea-a65e5c734569",
+          "type": "str"
+        },
+        "appendix": {
+          "sample_value": "II",
+          "type": "str"
+        },
+        "listing_date": {
+          "sample_value": "1979-06-28",
+          "type": "str"
+        },
+        "notes": {
+          "sample_value": "Listed under Appendix II as part of the Monodontidae family. All parts and derivatives except those ",
+          "type": "str"
+        },
+        "is_current": {
+          "sample_value": "True",
+          "type": "bool"
+        }
+      }
+    },
+    "iucn_assessments": {
+      "table_name": "iucn_assessments",
+      "columns": {
+        "id": {
+          "sample_value": "e772fc19-3caf-44fd-b7f9-ba7e3fe206c5",
+          "type": "str"
+        },
+        "species_id": {
+          "sample_value": "5f289c1e-5101-458f-a5ea-a65e5c734569",
+          "type": "str"
+        },
+        "year_published": {
+          "sample_value": "2023",
+          "type": "int"
+        },
+        "is_latest": {
+          "sample_value": null,
+          "type": "unknown"
+        },
+        "possibly_extinct": {
+          "sample_value": null,
+          "type": "unknown"
+        },
+        "possibly_extinct_in_wild": {
+          "sample_value": null,
+          "type": "unknown"
+        },
+        "status": {
+          "sample_value": "LC",
+          "type": "str"
+        },
+        "url": {
+          "sample_value": "https://www.iucnredlist.org/species/13704/219011698",
+          "type": "str"
+        },
+        "assessment_id": {
+          "sample_value": "219011698",
+          "type": "int"
+        },
+        "scope_code": {
+          "sample_value": "2",
+          "type": "str"
+        },
+        "scope_description": {
+          "sample_value": "Europe",
+          "type": "str"
+        }
+      }
+    }
+  },
+  "relationships": {
+    "cites_trade_records": {
+      "foreign_keys": [
+        "species_id -> species.id"
+      ],
+      "indexes": [
+        "species_id",
+        "year",
+        "exporter",
+        "importer"
+      ]
+    },
+    "species_trade_summary": {
+      "foreign_keys": [
+        "species_id -> species.id"
+      ],
+      "indexes": [
+        "species_id",
+        "year"
+      ]
+    },
+    "cites_listings": {
+      "foreign_keys": [
+        "species_id -> species.id"
+      ],
+      "indexes": [
+        "species_id",
+        "listing_date"
+      ]
+    },
+    "iucn_assessments": {
+      "foreign_keys": [
+        "species_id -> species.id"
+      ],
+      "indexes": [
+        "species_id",
+        "year_published"
+      ]
+    }
+  },
+  "cites_trade_details": {
+    "schema": {
+      "table_name": "cites_trade_records",
+      "columns": {
+        "id": {
+          "sample_value": "825ecde3-b1f8-4d9d-bf82-8d127f8a52ee",
+          "type": "str"
+        },
+        "species_id": {
+          "sample_value": "506d9478-6bef-4116-8295-fd1ccc6292c6",
+          "type": "str"
+        },
+        "record_id": {
+          "sample_value": "2501271552",
+          "type": "str"
+        },
+        "year": {
+          "sample_value": "2021",
+          "type": "int"
+        },
+        "appendix": {
+          "sample_value": "I",
+          "type": "str"
+        },
+        "taxon": {
+          "sample_value": "Falco rusticolus",
+          "type": "str"
+        },
+        "class": {
+          "sample_value": "Aves",
+          "type": "str"
+        },
+        "order_name": {
+          "sample_value": "Falconiformes",
+          "type": "str"
+        },
+        "family": {
+          "sample_value": "Falconidae",
+          "type": "str"
+        },
+        "genus": {
+          "sample_value": "Falco",
+          "type": "str"
+        },
+        "term": {
+          "sample_value": "live",
+          "type": "str"
+        },
+        "quantity": {
+          "sample_value": "1.0",
+          "type": "float"
+        },
+        "unit": {
+          "sample_value": "Number of specimens",
+          "type": "str"
+        },
+        "importer": {
+          "sample_value": "AT",
+          "type": "str"
+        },
+        "exporter": {
+          "sample_value": "AE",
+          "type": "str"
+        },
+        "origin": {
+          "sample_value": "GB",
+          "type": "str"
+        },
+        "purpose": {
+          "sample_value": "T",
+          "type": "str"
+        },
+        "source": {
+          "sample_value": "C",
+          "type": "str"
+        },
+        "reporter_type": {
+          "sample_value": "E",
+          "type": "str"
+        },
+        "import_permit": {
+          "sample_value": null,
+          "type": "unknown"
+        },
+        "export_permit": {
+          "sample_value": null,
+          "type": "unknown"
+        },
+        "origin_permit": {
+          "sample_value": null,
+          "type": "unknown"
+        }
+      }
+    },
+    "sample_records": [
+      {
+        "id": "825ecde3-b1f8-4d9d-bf82-8d127f8a52ee",
+        "species_id": "506d9478-6bef-4116-8295-fd1ccc6292c6",
+        "record_id": "2501271552",
+        "year": 2021,
+        "appendix": "I",
+        "taxon": "Falco rusticolus",
+        "class": "Aves",
+        "order_name": "Falconiformes",
+        "family": "Falconidae",
+        "genus": "Falco",
+        "term": "live",
+        "quantity": 1.0,
+        "unit": "Number of specimens",
+        "importer": "AT",
+        "exporter": "AE",
+        "origin": "GB",
+        "purpose": "T",
+        "source": "C",
+        "reporter_type": "E",
+        "import_permit": "",
+        "export_permit": "",
+        "origin_permit": ""
+      },
+      {
+        "id": "65b9675b-5804-4d7a-9ae0-b0537ce7bf75",
+        "species_id": "506d9478-6bef-4116-8295-fd1ccc6292c6",
+        "record_id": "7226141652",
+        "year": 2021,
+        "appendix": "I",
+        "taxon": "Falco rusticolus",
+        "class": "Aves",
+        "order_name": "Falconiformes",
+        "family": "Falconidae",
+        "genus": "Falco",
+        "term": "live",
+        "quantity": 1.0,
+        "unit": "Number of specimens",
+        "importer": "ES",
+        "exporter": "AE",
+        "origin": "DE",
+        "purpose": "T",
+        "source": "C",
+        "reporter_type": "E",
+        "import_permit": "",
+        "export_permit": "",
+        "origin_permit": ""
+      },
+      {
+        "id": "2addc1c4-6bc7-4c2c-82a6-92bb2f2bd941",
+        "species_id": "506d9478-6bef-4116-8295-fd1ccc6292c6",
+        "record_id": "1935986952",
+        "year": 2021,
+        "appendix": "I",
+        "taxon": "Falco rusticolus",
+        "class": "Aves",
+        "order_name": "Falconiformes",
+        "family": "Falconidae",
+        "genus": "Falco",
+        "term": "live",
+        "quantity": 1.0,
+        "unit": "Number of specimens",
+        "importer": "QA",
+        "exporter": "AE",
+        "origin": "ES",
+        "purpose": "T",
+        "source": "C",
+        "reporter_type": "E",
+        "import_permit": "",
+        "export_permit": "",
+        "origin_permit": ""
+      },
+      {
+        "id": "4f411303-7a83-4429-80ee-b848e927a136",
+        "species_id": "506d9478-6bef-4116-8295-fd1ccc6292c6",
+        "record_id": "3460950452",
+        "year": 2021,
+        "appendix": "I",
+        "taxon": "Falco rusticolus",
+        "class": "Aves",
+        "order_name": "Falconiformes",
+        "family": "Falconidae",
+        "genus": "Falco",
+        "term": "live",
+        "quantity": 1.0,
+        "unit": "Number of specimens",
+        "importer": "ES",
+        "exporter": "AE",
+        "origin": "US",
+        "purpose": "T",
+        "source": "C",
+        "reporter_type": "E",
+        "import_permit": "",
+        "export_permit": "",
+        "origin_permit": ""
+      },
+      {
+        "id": "f4da849b-f6ab-4ec8-ac61-14422c6d366d",
+        "species_id": "506d9478-6bef-4116-8295-fd1ccc6292c6",
+        "record_id": "4715785452",
+        "year": 2021,
+        "appendix": "I",
+        "taxon": "Falco rusticolus",
+        "class": "Aves",
+        "order_name": "Falconiformes",
+        "family": "Falconidae",
+        "genus": "Falco",
+        "term": "live",
+        "quantity": 1.0,
+        "unit": "Number of specimens",
+        "importer": "AT",
+        "exporter": "AE",
+        "origin": "DE",
+        "purpose": "T",
+        "source": "C",
+        "reporter_type": "E",
+        "import_permit": "",
+        "export_permit": "",
+        "origin_permit": ""
+      }
+    ],
+    "field_analysis": {
+      "purposes": [
+        "P",
+        "S",
+        "B",
+        "T"
+      ],
+      "sources": [
+        "C",
+        "O",
+        "I",
+        "D",
+        "W"
+      ],
+      "year_range": {
+        "min": 1975,
+        "max": 2023
+      }
+    }
+  }
+}

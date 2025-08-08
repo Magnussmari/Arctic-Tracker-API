@@ -1,0 +1,208 @@
+ {
+  "species_data": {
+    "scientific_name": "Asio flammeus",
+    "common_name": "Short-eared Owl",
+    "kingdom": "Animalia",
+    "phylum": "Chordata",
+    "class": "Aves",
+    "order_name": "Strigiformes",
+    "family": "Strigidae",
+    "genus": "Asio",
+    "species_name": "flammeus",
+    "authority": "(Pontoppidan, 1763)",
+    "description": "The Short-eared Owl (Asio flammeus) is a medium-sized owl with an average length of 32 to 40 cm and a wingspan ranging from 80 to 100 cm. The weight of adults varies significantly between populations, typically between 250 to 600 grams (Booms et al., 2014; (Johnson et al., 2013; . The plumage is characterized by a mottled brown and buff coloration which serves as camouflage in its grassland habitats. Both sexes exhibit similar coloration, indicating a lack of sexual dimorphism, though males may be slightly smaller (Booms et al., 2014; (Johnson et al., 2013; . Notably, the species possesses distinctive rounded wings and a short tail, which distinguish it from other owls (Dial et al., 2012).",
+    "habitat_description": "Asio flammeus primarily inhabits open grasslands, fields, marshes, and coastal areas, where it can utilize its keen hunting skills to capture small mammals, particularly voles (Booms et al., 2014; (Johnson et al., 2013; . The species breeds across a variety of landscapes, including tundra and grasslands. It displays flexibility in habitat choice during migration and breeding (Fernández‐Bellon et al., 2020; . Seasonal variations influence its habitat use, with wintering populations often migrating to open fields where small mammals are abundant (Linnell & Washburn, 2018; Miller et al., 2023; .",
+    "population_size": "The most recent estimates suggest that the global population of Short-eared Owls is between 1.5 million and 2 million individuals, as reported in the North American Breeding Bird Survey (Johnson et al., 2013; . This estimation reflects data collected up to 2023, indicating a need for continual monitoring due to the species' conservation status.",
+    "population_trend": "Overall, the population trend for the Short-eared Owl is decreasing, particularly noted in regions such as North America, where there has been a decline of approximately 70% over the past 40–50 years (Johnson et al., 2013; Kämpfer et al., 2022). The situation in Europe is similarly concerning, with local studies indicating significant decreases attributed to habitat loss and changes in land use (Fernández‐Bellon et al., 2020; Kämpfer et al., 2022).",
+    "generation_length": 4,
+    "movement_patterns": "Short-eared Owls exhibit nomadic and irruptive behaviors, often migrating in search of suitable habitats that offer an abundance of prey Miller et al., 2023; Miller et al., 2016). Their movement patterns are shaped largely by food availability, leading to strong site fidelity in optimal habitats during breeding seasons, while dispersing to other areas during winter (Booms et al., 2014; (Fernández‐Bellon et al., 2020; . They primarily utilize low-lying areas for nesting and hunting during their migratory journeys.",
+    "use_and_trade": "While Short-eared Owls do not have significant commercial value, they are occasionally targeted in illegal hunting activities. They are not listed under CITES but are subject to various local regulations aimed at protecting migratory bird populations Miller et al., 2016)(Booms et al., 2014; . Conservation efforts often focus on public education about the importance of these birds in local ecosystems.",
+    "threats_overview": "Major threats to the Short-eared Owl include habitat destruction due to agricultural expansion and development, climate change, and increased predation pressures. Significant habitat modification and land use changes have led to declines in small mammal populations, which are critical to the owl's diet (Fernández‐Bellon et al., 2020; (Booms et al., 2014; Kämpfer et al., 2022). Additionally, mortality from collisions with vehicles and wind turbines poses severe risks (Linnell & Washburn, 2018; Miller et al., 2023; .",
+    "conservation_overview": "Various national and international actions are underway to conserve the Short-eared Owl, including habitat protection initiatives, the designation of conservation areas, and species-specific management plans. Noteworthy among these is the collaboration across borders for migratory bird conservation, primarily in North America and Europe, where habitat safeguards are prioritized (Booms et al., 2014; Miller et al., 2023; Miller et al., 2016). Efforts to mitigate threats from agricultural practices and urban development also form a critical part of ongoing conservation strategies."
+  },
+  "conservation_profile": {
+    "species_scientific_name": "Asio flammeus",
+    "profile_type": "comprehensive",
+    "content": {
+      "subpopulations": "Recognized subpopulations of Asio flammeus include distinct groups in North America, Europe, and parts of Asia. These subpopulations are often geographically and ecologically separated, exhibiting adaptations to local climates and prey availability (Booms et al., 2014; (Fernández‐Bellon et al., 2020; . For instance, subpopulations in the Arctic regions tend to breed in grasslands near coastlines, while those in temperate climates may occupy more varied habitats.",
+      "distribution_range": "The Short-eared Owl has a widespread distribution, inhabiting regions from the Arctic tundra in Alaska and Canada to southern regions of the United States, with its presence noted across various ecosystems including Europe and Asia (Fernández‐Bellon et al., 2020; Kämpfer et al., 2022). Its range is circumpolar, adapting to multiple ecological environments during breeding and wintering periods.",
+      "source_file": "scite_asio_flammeus.md",
+      "parsed_date": "2024-05-21T14:00:00Z",
+      "sections_parsed": 11,
+      "references_count": 9
+    }
+  },
+  "references": [
+    {
+      "title": "Assessing the status and conservation priorities of the short‐eared owl in north america",
+      "authors": [
+        "Booms, T.",
+        "Holroyd, G.",
+        "Gahbauer, M.",
+        "Trefry, H.",
+        "Wiggins, D.",
+        "Holt, D.",
+        "Swengel, S."
+      ],
+      "journal": "Journal of Wildlife Management",
+      "year": 2014,
+      "volume": "78",
+      "issue": "5",
+      "pages": "772-778",
+      "doi": "10.1002/jwmg.719",
+      "url": "https://doi.org/10.1002/jwmg.719",
+      "reference_type": "journal",
+      "full_citation": "Booms, T., Holroyd, G., Gahbauer, M., Trefry, H., Wiggins, D., Holt, D., … & Swengel, S. (2014). Assessing the status and conservation priorities of the short‐eared owl in north america. Journal of Wildlife Management, 78(5), 772-778. https://doi.org/10.1002/jwmg.719"
+    },
+    {
+      "title": "Weather conditions determine reproductive success of a ground-nesting bird of prey in natural dune grasslands",
+      "authors": [
+        "Kämpfer, S.",
+        "Engel, E.",
+        "Fartmann, T."
+      ],
+      "journal": "Journal of Ornithology",
+      "year": 2022,
+      "volume": "163",
+      "issue": "4",
+      "pages": "855-865",
+      "doi": "10.1007/s10336-022-01999-w",
+      "url": "https://doi.org/10.1007/s10336-022-01999-w",
+      "reference_type": "journal",
+      "full_citation": "Kämpfer, S., Engel, E., & Fartmann, T. (2022). Weather conditions determine reproductive success of a ground-nesting bird of prey in natural dune grasslands. Journal of Ornithology, 163(4), 855-865. https://doi.org/10.1007/s10336-022-01999-w"
+    },
+    {
+      "title": "Short-eared owl (asio flammeus) occurrence at buena vista grassland, wisconsin, during 1955–2011",
+      "authors": [
+        "Johnson, D.",
+        "Swengel, S.",
+        "Swengel, A."
+      ],
+      "journal": "Journal of Raptor Research",
+      "year": 2013,
+      "volume": "47",
+      "issue": "3",
+      "pages": "271-281",
+      "doi": "10.3356/jrr-12-00006.1",
+      "url": "https://doi.org/10.3356/jrr-12-00006.1",
+      "reference_type": "journal",
+      "full_citation": "Johnson, D., Swengel, S., & Swengel, A. (2013). Short-eared owl (asio flammeus) occurrence at buena vista grassland, wisconsin, during 1955–2011. Journal of Raptor Research, 47(3), 271-281. https://doi.org/10.3356/jrr-12-00006.1"
+    },
+    {
+      "title": "Cross-species amplification of microsatellite markers in the great horned owl <i>bubo virginianus</i>, short-eared owl <i>asio flammeus</i> and snowy owl <i>b. scandiacus</i> for use in population genetics, individual identification and parentage studies",
+      "authors": [
+        "Dial, C.",
+        "Talbot, S.",
+        "Sage, G.",
+        "Seidensticker, M.",
+        "Holt, D."
+      ],
+      "journal": "Journal of the Yamashina Institute for Ornithology",
+      "year": 2012,
+      "volume": "44",
+      "issue": "1",
+      "pages": "1-12",
+      "doi": "10.3312/jyio.44.1",
+      "url": "https://doi.org/10.3312/jyio.44.1",
+      "reference_type": "journal",
+      "full_citation": "Dial, C., Talbot, S., Sage, G., Seidensticker, M., & Holt, D. (2012). Cross-species amplification of microsatellite markers in the great horned owl <i>bubo virginianus</i>, short-eared owl <i>asio flammeus</i> and snowy owl <i>b. scandiacus</i> for use in population genetics, individual identification and parentage studies. Journal of the Yamashina Institute for Ornithology, 44(1), 1-12. https://doi.org/10.3312/jyio.44.1"
+    },
+    {
+      "title": "Short-eared owl (asio flammeus) surveys in the north american intermountain west: utilizing citizen scientists to conduct monitoring across a broad geographic scale",
+      "authors": [
+        "Miller, R.",
+        "Paprocki, N.",
+        "Stuber, M.",
+        "Moulton, C.",
+        "Carlisle, J."
+      ],
+      "journal": "Avian Conservation and Ecology",
+      "year": 2016,
+      "volume": "11",
+      "issue": "1",
+      "pages": null,
+      "doi": "10.5751/ace-00819-110103",
+      "url": "https://doi.org/10.5751/ace-00819-110103",
+      "reference_type": "journal",
+      "full_citation": "Miller, R., Paprocki, N., Stuber, M., Moulton, C., & Carlisle, J. (2016). Short-eared owl (asio flammeus) surveys in the north american intermountain west: utilizing citizen scientists to conduct monitoring across a broad geographic scale. Avian Conservation and Ecology, 11(1). https://doi.org/10.5751/ace-00819-110103"
+    },
+    {
+      "title": "Expert knowledge assessment of threats and conservation strategies for breeding hen harrier and short-eared owl across europe",
+      "authors": [
+        "Fernández‐Bellon, D.",
+        "Lusby, J.",
+        "Bos, J.",
+        "Schaub, T.",
+        "McCarthy, A.",
+        "Caravaggi, A.",
+        "O’Halloran, J."
+      ],
+      "journal": "Bird Conservation International",
+      "year": 2020,
+      "volume": "31",
+      "issue": "2",
+      "pages": "268-285",
+      "doi": "10.1017/s0959270920000349",
+      "url": "https://doi.org/10.1017/s0959270920000349",
+      "reference_type": "journal",
+      "full_citation": "Fernández‐Bellon, D., Lusby, J., Bos, J., Schaub, T., McCarthy, A., Caravaggi, A., … & O’Halloran, J. (2020). Expert knowledge assessment of threats and conservation strategies for breeding hen harrier and short-eared owl across europe. Bird Conservation International, 31(2), 268-285. https://doi.org/10.1017/s0959270920000349"
+    },
+    {
+      "title": "Breeding of the Short-eared Owl in New Mexico",
+      "authors": [
+        "Meyer"
+      ],
+      "journal": "Western Birds",
+      "year": 2016,
+      "volume": "47",
+      "issue": "2",
+      "pages": "4",
+      "doi": "10.21199/wb47.2.4",
+      "url": "https://doi.org/10.21199/wb47.2.4",
+      "reference_type": "journal",
+      "full_citation": "Meyer \"Breeding of the Short-eared Owl in New Mexico\" Western Birds (2016) doi:10.21199/wb47.2.4."
+    },
+    {
+      "title": "Assessing owl collisions with us civil and us air force aircraft",
+      "authors": [
+        "Linnell, K.",
+        "Washburn, B."
+      ],
+      "journal": "Journal of Raptor Research",
+      "year": 2018,
+      "volume": "52",
+      "issue": "3",
+      "pages": "282-290",
+      "doi": "10.3356/jrr-17-64.1",
+      "url": "https://doi.org/10.3356/jrr-17-64.1",
+      "reference_type": "journal",
+      "full_citation": "Linnell, K. and Washburn, B. (2018). Assessing owl collisions with us civil and us air force aircraft. Journal of Raptor Research, 52(3), 282-290. https://doi.org/10.3356/jrr-17-64.1"
+    },
+    {
+      "title": "Temporal and spatial population dynamics of the nomadic short‐eared owl across the western united states",
+      "authors": [
+        "Miller, R.",
+        "Buchanan, J.",
+        "Pope, T.",
+        "Carlisle, J.",
+        "Booms, T."
+      ],
+      "journal": "Journal of Wildlife Management",
+      "year": 2023,
+      "volume": "87",
+      "issue": "3",
+      "pages": null,
+      "doi": "10.1002/jwmg.22369",
+      "url": "https://doi.org/10.1002/jwmg.22369",
+      "reference_type": "journal",
+      "full_citation": "Miller, R., Buchanan, J., Pope, T., Carlisle, J., & Booms, T. (2023). Temporal and spatial population dynamics of the nomadic short‐eared owl across the western united states. Journal of Wildlife Management, 87(3). https://doi.org/10.1002/jwmg.22369"
+    }
+  ],
+  "metadata": {
+    "processing_date": "2024-05-21T14:00:00Z",
+    "source_file": "scite_asio_flammeus.md",
+    "total_sections": 11,
+    "total_references": 9,
+    "parser_version": "unified_v1.0"
+  }
+}

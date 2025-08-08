@@ -1,0 +1,148 @@
+{
+  "species_data": {
+    "scientific_name": "Balaenoptera borealis",
+    "common_name": "Sei Whale",
+    "kingdom": "Animalia",
+    "phylum": "Chordata",
+    "class": "Mammalia",
+    "order_name": "Artiodactyla",
+    "family": "Balaenopteridae",
+    "genus": "Balaenoptera",
+    "species_name": "borealis",
+    "authority": null,
+    "description": "Sei whales (Balaenoptera borealis) are medium‐sized rorquals sharing the general body plan of larger congeners but with several distinct morphological adaptations. The species possesses a slender, streamlined body with a relatively narrow tail stock and a small, falcate dorsal fin set well aft on the back (Brodie & Víkingsson, 2010). Unlike fin or blue whales, sei whales have fewer and shorter ventral throat grooves limiting buccal pouch expansion, but they compensate with finer baleen plates that enable efficient skim‐feeding on smaller zooplankton or dense prey patches; they can, however, switch to gulp feeding when prey concentrations are high (Brodie & Víkingsson, 2010). Sexual dimorphism is subtle, with adult females and males overlapping broadly in size and external appearance (Brodie & Víkingsson, 2010).",
+    "habitat_description": "Sei whales occupy temperate to subpolar shelf and slope waters in all major ocean basins, moving seasonally in response to prey distribution. Critical feeding habitat models off coastal British Columbia indicate a strong preference for regions with moderate bathymetric complexity (100–300 m depths), water temperatures between ~5 °C and 15 °C, and distinct shelf‐break frontal systems (Gregr & Trites, 2001). Stable‐isotope analyses demonstrate that some sei whales forage locally during winter months rather than undertaking long‐distance migrations, indicating greater habitat plasticity than previously assumed (Silva et al., 2019).",
+    "population_size": "No peer‐reviewed, basin‐wide abundance estimate for sei whales currently exists. Historical whaling logbooks document tens of thousands of removals, but comprehensive, contemporary global survey data necessary for robust population estimates remain lacking (Ryan et al., 2022).",
+    "population_trend": "Regional studies provide mixed signals of recovery. In the southwestern Atlantic, photo‐sighting and stranding records suggest a slow but perceptible increase in relative encounter rates since the cessation of large‐scale whaling in the mid‐20th century (Íñiguez et al., 2010). Nonetheless, the paucity of systematic surveys precludes definitive conclusions on global population trajectories.",
+    "generation_length": 23,
+    "movement_patterns": "Sei whales generally undertake seasonal migrations between high‐latitude summer feeding grounds and lower‐latitude wintering areas, although recent evidence indicates that some individuals feed opportunistically in subtropical winter habitats rather than migrating further (Silva et al., 2019). Passive acoustic detections off O‘ahu (Hawai‘i) reveal a pronounced winter presence, implying that at least a portion of the North Pacific population remains relatively resident in mid‐latitudes during the boreal winter (Au et al., 2013).",
+    "use_and_trade": "Sei whales were historically targeted by international commercial whaling fleets operating under IWC regulations. Since the 1986 moratorium on commercial whaling, direct takes have ceased in most jurisdictions, and the species is now listed on Appendix I of CITES, prohibiting international trade in specimens or products (Steenmans, 2017). No significant contemporary subsistence or commercial utilization of sei whales is documented in peer‐reviewed sources.",
+    "threats_overview": "Historically, intensive commercial whaling was the principal driver of sei whale decline, with tens of thousands of individuals removed from North Atlantic and North Pacific stocks between the early 1900s and mid‐20th century (Ryan et al., 2022). Contemporary threats include underwater noise pollution, which overlaps low‐frequency vocalization bands (30–50 Hz) critical for communication and potential mate attraction, and may disrupt foraging or social behavior (Tremblay et al., 2019). Emerging climate‐driven changes in prey distribution and increased industrial activity (e.g., shipping, seismic surveys) pose additional concerns, although quantification of these impacts remains incomplete.",
+    "conservation_overview": "The IWC’s 1986 moratorium provides the primary international protection framework for sei whales, reinforced by CITES Appendix I listing (Steenmans, 2017). National measures—including designation of marine mammal protected areas and ship‐strike reduction zones—supplement global efforts. Predictive habitat models and passive acoustic monitoring programs are increasingly used to inform spatial management and assess population status. Nonetheless, critical data gaps in abundance, life history, and fine‐scale movement underscore the need for coordinated international research and monitoring initiatives."
+  },
+  "conservation_profile": {
+    "species_scientific_name": "Balaenoptera borealis",
+    "profile_type": "comprehensive",
+    "content": {
+      "subpopulations": "Management of sei whales is organized into at least two major stocks by the International Whaling Commission (IWC): the Northern Hemisphere stock (encompassing North Atlantic and North Pacific components) and the Southern Hemisphere stock (Steenmans, 2017). Genetic and ecological data hint at further substructure within these hemispheric groupings, but formal recognition of additional management units awaits more detailed studies.",
+      "distribution_range": "Balaenoptera borealis exhibits a cosmopolitan distribution in temperate and subpolar waters of the Atlantic, Pacific, and Indian Oceans. Seasonal movements bring individuals into marginal Arctic waters—particularly in the North Atlantic—where they exploit summer prey blooms along continental shelves and offshore frontal zones (Gregr & Trites, 2001).",
+      "source_file": "sei_whale_profile.md",
+      "parsed_date": "2025-06-11T22:00:00Z",
+      "sections_parsed": 11,
+      "references_count": 8
+    }
+  },
+  "references": [
+    {
+      "title": "Seasonal and diurnal pattern of baleen whales detected on the station aloha cabled observatory off oahu, hawaii",
+      "authors": ["Au, W.", "Richlen, M.", "Ou, H.", "Howe, B."],
+      "journal": "The Journal of the Acoustical Society of America",
+      "year": 2013,
+      "volume": "134",
+      "issue": "5_Supplement",
+      "pages": "3974-3974",
+      "doi": "10.1121/1.4830479",
+      "url": "https://doi.org/10.1121/1.4830479",
+      "reference_type": "journal",
+      "full_citation": "Au, W., Richlen, M., Ou, H., & Howe, B. (2013). Seasonal and diurnal pattern of baleen whales detected on the station aloha cabled observatory off oahu, hawaii. The Journal of the Acoustical Society of America, 134(5_Supplement), 3974-3974. https://doi.org/10.1121/1.4830479"
+    },
+    {
+      "title": "On the feeding mechanisms of the sei whale (balaenoptera borealis)",
+      "authors": ["Brodie, P.", "Víkingsson, G."],
+      "journal": "Journal of Northwest Atlantic Fishery Science",
+      "year": 2010,
+      "volume": "42",
+      "issue": null,
+      "pages": "49-54",
+      "doi": "10.2960/j.v42.m646",
+      "url": "https://doi.org/10.2960/j.v42.m646",
+      "reference_type": "journal",
+      "full_citation": "Brodie, P. and Víkingsson, G. (2010). On the feeding mechanisms of the sei whale (balaenoptera borealis). Journal of Northwest Atlantic Fishery Science, 42, 49-54. https://doi.org/10.2960/j.v42.m646"
+    },
+    {
+      "title": "Predictions of critical habitat for five whale species in the waters of coastal british columbia",
+      "authors": ["Gregr, E.", "Trites, A."],
+      "journal": "Canadian Journal of Fisheries and Aquatic Sciences",
+      "year": 2001,
+      "volume": "58",
+      "issue": "7",
+      "pages": "1265-1285",
+      "doi": "10.1139/f01-078",
+      "url": "https://doi.org/10.1139/f01-078",
+      "reference_type": "journal",
+      "full_citation": "Gregr, E. and Trites, A. (2001). Predictions of critical habitat for five whale species in the waters of coastal british columbia. Canadian Journal of Fisheries and Aquatic Sciences, 58(7), 1265-1285. https://doi.org/10.1139/f01-078"
+    },
+    {
+      "title": "Historical occurrence of whales in scottish waters inferred from whaling records",
+      "authors": ["Ryan, C.", "Calderan, S.", "Allison, C.", "Leaper, R.", "Risch, D."],
+      "journal": "Aquatic Conservation Marine and Freshwater Ecosystems",
+      "year": 2022,
+      "volume": "32",
+      "issue": "10",
+      "pages": "1675-1692",
+      "doi": "10.1002/aqc.3873",
+      "url": "https://doi.org/10.1002/aqc.3873",
+      "reference_type": "journal",
+      "full_citation": "Ryan, C., Calderan, S., Allison, C., Leaper, R., & Risch, D. (2022). Historical occurrence of whales in scottish waters inferred from whaling records. Aquatic Conservation Marine and Freshwater Ecosystems, 32(10), 1675-1692. https://doi.org/10.1002/aqc.3873"
+    },
+    {
+      "title": "Stable isotopes reveal winter feeding in different habitats in blue, fin and sei whales migrating through the azores",
+      "authors": ["Silva, M.", "Borrell, A.", "Prieto, R.", "Gauffier, P.", "Bérubé, M.", "Palsbøl, P.", "Colaço, A."],
+      "journal": "Royal Society Open Science",
+      "year": 2019,
+      "volume": "6",
+      "issue": "8",
+      "pages": "181800",
+      "doi": "10.1098/rsos.181800",
+      "url": "https://doi.org/10.1098/rsos.181800",
+      "reference_type": "journal",
+      "full_citation": "Silva, M., Borrell, A., Prieto, R., Gauffier, P., Bérubé, M., Palsbøl, P., … & Colaço, A. (2019). Stable isotopes reveal winter feeding in different habitats in blue, fin and sei whales migrating through the azores. Royal Society Open Science, 6(8), 181800. https://doi.org/10.1098/rsos.181800"
+    },
+    {
+      "title": "International convention for the regulation of whaling 1946.",
+      "authors": ["Steenmans, K."],
+      "journal": null,
+      "year": 2017,
+      "volume": null,
+      "issue": "v.8",
+      "pages": "89-100",
+      "doi": "10.4337/9781783477210.v.8",
+      "url": "https://doi.org/10.4337/9781783477210.v.8",
+      "reference_type": "report",
+      "full_citation": "Steenmans, K. (2017). International convention for the regulation of whaling 1946., 89-100. https://doi.org/10.4337/9781783477210.v.8"
+    },
+    {
+      "title": "50 to 30-hz triplet and singlet down sweep vocalizations produced by sei whales (balaenoptera borealis) in the western north atlantic ocean",
+      "authors": ["Tremblay, C.", "Parijs, S.", "Cholewiak, D."],
+      "journal": "The Journal of the Acoustical Society of America",
+      "year": 2019,
+      "volume": "145",
+      "issue": "6",
+      "pages": "3351-3358",
+      "doi": "10.1121/1.5110713",
+      "url": "https://doi.org/10.1121/1.5110713",
+      "reference_type": "journal",
+      "full_citation": "Tremblay, C., Parijs, S., & Cholewiak, D. (2019). 50 to 30-hz triplet and singlet down sweep vocalizations produced by sei whales (balaenoptera borealis) in the western north atlantic ocean. The Journal of the Acoustical Society of America, 145(6), 3351-3358. https://doi.org/10.1121/1.5110713"
+    },
+    {
+      "title": "On the occurrence of sei whales, balaenoptera borealis, in the south-western atlantic",
+      "authors": ["Íñiguez, M.", "Masello, J.", "Gribaudo, C.", "Arcucci, D.", "Krohling, F.", "Belgrano, J."],
+      "journal": "Marine Biodiversity Records",
+      "year": 2010,
+      "volume": "3",
+      "issue": null,
+      "pages": null,
+      "doi": "10.1017/s1755267210000576",
+      "url": "https://doi.org/10.1017/s1755267210000576",
+      "reference_type": "journal",
+      "full_citation": "Íñiguez, M., Masello, J., Gribaudo, C., Arcucci, D., Krohling, F., & Belgrano, J. (2010). On the occurrence of sei whales, balaenoptera borealis, in the south-western atlantic. Marine Biodiversity Records, 3. https://doi.org/10.1017/s1755267210000576"
+    }
+  ],
+  "metadata": {
+    "processing_date": "2025-06-11T22:00:00Z",
+    "source_file": "sei_whale_profile.md",
+    "total_sections": 11,
+    "total_references": 8,
+    "parser_version": "unified_v1.0"
+  }
+}

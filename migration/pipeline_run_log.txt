@@ -1,0 +1,496 @@
+2025-07-28 13:39:22,222 - INFO - Starting report generation for 43 species
+2025-07-28 13:39:22,222 - INFO - Processing 1/43: Aleutian cackling goose
+2025-07-28 13:39:22,525 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Aleutian+cackling+goose%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:22,614 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25aleutian+cackling+goose%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:22,697 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Aleutian+cackling+goose%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:22,782 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Aleutian+cackling+goose%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:22,783 - WARNING - Species not found in database: Aleutian cackling goose
+2025-07-28 13:39:22,783 - WARNING - Species ID not found for: Aleutian cackling goose
+2025-07-28 13:39:22,783 - INFO - Processing 2/43: Siberian Sturgeon
+2025-07-28 13:39:22,868 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Siberian+Sturgeon%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:22,869 - INFO - Processing Siberian Sturgeon (ID: 8cc40499-d0d2-4b27-8c8b-4532e83290e1)
+2025-07-28 13:39:23,022 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species_trade_summary?select=%2A&species_id=eq.8cc40499-d0d2-4b27-8c8b-4532e83290e1 "HTTP/2 200 OK"
+2025-07-28 13:39:23,164 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=purpose&species_id=eq.8cc40499-d0d2-4b27-8c8b-4532e83290e1 "HTTP/2 200 OK"
+2025-07-28 13:39:23,255 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=source&species_id=eq.8cc40499-d0d2-4b27-8c8b-4532e83290e1 "HTTP/2 200 OK"
+2025-07-28 13:39:23,353 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.8cc40499-d0d2-4b27-8c8b-4532e83290e1&order=year.desc&limit=100 "HTTP/2 200 OK"
+2025-07-28 13:39:23,448 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.8cc40499-d0d2-4b27-8c8b-4532e83290e1&year=gte.2010 "HTTP/2 200 OK"
+2025-07-28 13:39:23,535 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/iucn_assessments?select=status%2Cyear_published&species_id=eq.8cc40499-d0d2-4b27-8c8b-4532e83290e1&order=year_published.desc&limit=2 "HTTP/2 200 OK"
+2025-07-28 13:39:23,640 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_listings?select=appendix&species_id=eq.8cc40499-d0d2-4b27-8c8b-4532e83290e1&order=effective_date.desc&limit=2 "HTTP/2 400 Bad Request"
+2025-07-28 13:39:23,641 - ERROR - Error getting conservation status for species 8cc40499-d0d2-4b27-8c8b-4532e83290e1: {'message': 'column cites_listings.effective_date does not exist', 'code': '42703', 'hint': None, 'details': None}
+2025-07-28 13:39:23,737 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=exporter%2Cquantity&species_id=eq.8cc40499-d0d2-4b27-8c8b-4532e83290e1 "HTTP/2 200 OK"
+2025-07-28 13:39:23,739 - INFO - Processing 3/43: Common Thresher Shark
+2025-07-28 13:39:23,829 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Common+Thresher+Shark%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:23,830 - INFO - Processing Common Thresher Shark (ID: e6a764ef-196c-4eaa-8930-c7fa7d3beade)
+2025-07-28 13:39:23,920 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species_trade_summary?select=%2A&species_id=eq.e6a764ef-196c-4eaa-8930-c7fa7d3beade "HTTP/2 200 OK"
+2025-07-28 13:39:24,007 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=purpose&species_id=eq.e6a764ef-196c-4eaa-8930-c7fa7d3beade "HTTP/2 200 OK"
+2025-07-28 13:39:24,093 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=source&species_id=eq.e6a764ef-196c-4eaa-8930-c7fa7d3beade "HTTP/2 200 OK"
+2025-07-28 13:39:24,185 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.e6a764ef-196c-4eaa-8930-c7fa7d3beade&order=year.desc&limit=100 "HTTP/2 200 OK"
+2025-07-28 13:39:24,267 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.e6a764ef-196c-4eaa-8930-c7fa7d3beade&year=gte.2010 "HTTP/2 200 OK"
+2025-07-28 13:39:24,360 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/iucn_assessments?select=status%2Cyear_published&species_id=eq.e6a764ef-196c-4eaa-8930-c7fa7d3beade&order=year_published.desc&limit=2 "HTTP/2 200 OK"
+2025-07-28 13:39:24,450 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_listings?select=appendix&species_id=eq.e6a764ef-196c-4eaa-8930-c7fa7d3beade&order=effective_date.desc&limit=2 "HTTP/2 400 Bad Request"
+2025-07-28 13:39:24,451 - ERROR - Error getting conservation status for species e6a764ef-196c-4eaa-8930-c7fa7d3beade: {'message': 'column cites_listings.effective_date does not exist', 'code': '42703', 'hint': None, 'details': None}
+2025-07-28 13:39:24,537 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=exporter%2Cquantity&species_id=eq.e6a764ef-196c-4eaa-8930-c7fa7d3beade "HTTP/2 200 OK"
+2025-07-28 13:39:24,539 - INFO - Processing 4/43: Sandhill Crane
+2025-07-28 13:39:24,629 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Sandhill+Crane%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:24,630 - INFO - Processing Sandhill Crane (ID: 38f44b54-cf6a-4211-8f3f-7d58392dda36)
+2025-07-28 13:39:24,728 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species_trade_summary?select=%2A&species_id=eq.38f44b54-cf6a-4211-8f3f-7d58392dda36 "HTTP/2 200 OK"
+2025-07-28 13:39:24,824 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=purpose&species_id=eq.38f44b54-cf6a-4211-8f3f-7d58392dda36 "HTTP/2 200 OK"
+2025-07-28 13:39:24,917 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=source&species_id=eq.38f44b54-cf6a-4211-8f3f-7d58392dda36 "HTTP/2 200 OK"
+2025-07-28 13:39:25,011 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.38f44b54-cf6a-4211-8f3f-7d58392dda36&order=year.desc&limit=100 "HTTP/2 200 OK"
+2025-07-28 13:39:25,103 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.38f44b54-cf6a-4211-8f3f-7d58392dda36&year=gte.2010 "HTTP/2 200 OK"
+2025-07-28 13:39:25,192 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/iucn_assessments?select=status%2Cyear_published&species_id=eq.38f44b54-cf6a-4211-8f3f-7d58392dda36&order=year_published.desc&limit=2 "HTTP/2 200 OK"
+2025-07-28 13:39:25,284 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_listings?select=appendix&species_id=eq.38f44b54-cf6a-4211-8f3f-7d58392dda36&order=effective_date.desc&limit=2 "HTTP/2 400 Bad Request"
+2025-07-28 13:39:25,285 - ERROR - Error getting conservation status for species 38f44b54-cf6a-4211-8f3f-7d58392dda36: {'message': 'column cites_listings.effective_date does not exist', 'code': '42703', 'hint': None, 'details': None}
+2025-07-28 13:39:25,397 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=exporter%2Cquantity&species_id=eq.38f44b54-cf6a-4211-8f3f-7d58392dda36 "HTTP/2 200 OK"
+2025-07-28 13:39:25,401 - INFO - Processing 5/43: Short-eared Owl
+2025-07-28 13:39:25,485 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Short-eared+Owl%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:25,486 - INFO - Processing Short-eared Owl (ID: bb95896d-8a6c-4268-9f90-805dac6fca6d)
+2025-07-28 13:39:25,573 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species_trade_summary?select=%2A&species_id=eq.bb95896d-8a6c-4268-9f90-805dac6fca6d "HTTP/2 200 OK"
+2025-07-28 13:39:25,660 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=purpose&species_id=eq.bb95896d-8a6c-4268-9f90-805dac6fca6d "HTTP/2 200 OK"
+2025-07-28 13:39:25,743 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=source&species_id=eq.bb95896d-8a6c-4268-9f90-805dac6fca6d "HTTP/2 200 OK"
+2025-07-28 13:39:25,826 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.bb95896d-8a6c-4268-9f90-805dac6fca6d&order=year.desc&limit=100 "HTTP/2 200 OK"
+2025-07-28 13:39:25,908 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.bb95896d-8a6c-4268-9f90-805dac6fca6d&year=gte.2010 "HTTP/2 200 OK"
+2025-07-28 13:39:25,999 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/iucn_assessments?select=status%2Cyear_published&species_id=eq.bb95896d-8a6c-4268-9f90-805dac6fca6d&order=year_published.desc&limit=2 "HTTP/2 200 OK"
+2025-07-28 13:39:26,084 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_listings?select=appendix&species_id=eq.bb95896d-8a6c-4268-9f90-805dac6fca6d&order=effective_date.desc&limit=2 "HTTP/2 400 Bad Request"
+2025-07-28 13:39:26,084 - ERROR - Error getting conservation status for species bb95896d-8a6c-4268-9f90-805dac6fca6d: {'message': 'column cites_listings.effective_date does not exist', 'code': '42703', 'hint': None, 'details': None}
+2025-07-28 13:39:26,169 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=exporter%2Cquantity&species_id=eq.bb95896d-8a6c-4268-9f90-805dac6fca6d "HTTP/2 200 OK"
+2025-07-28 13:39:26,170 - INFO - Processing 6/43: Bowhead Whale
+2025-07-28 13:39:26,252 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Bowhead+Whale%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:26,252 - INFO - Processing Bowhead Whale (ID: 4c358cc2-d0d3-4a34-a3fe-bca2b85db100)
+2025-07-28 13:39:26,338 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species_trade_summary?select=%2A&species_id=eq.4c358cc2-d0d3-4a34-a3fe-bca2b85db100 "HTTP/2 200 OK"
+2025-07-28 13:39:26,435 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=purpose&species_id=eq.4c358cc2-d0d3-4a34-a3fe-bca2b85db100 "HTTP/2 200 OK"
+2025-07-28 13:39:26,524 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=source&species_id=eq.4c358cc2-d0d3-4a34-a3fe-bca2b85db100 "HTTP/2 200 OK"
+2025-07-28 13:39:26,628 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.4c358cc2-d0d3-4a34-a3fe-bca2b85db100&order=year.desc&limit=100 "HTTP/2 200 OK"
+2025-07-28 13:39:26,714 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.4c358cc2-d0d3-4a34-a3fe-bca2b85db100&year=gte.2010 "HTTP/2 200 OK"
+2025-07-28 13:39:26,801 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/iucn_assessments?select=status%2Cyear_published&species_id=eq.4c358cc2-d0d3-4a34-a3fe-bca2b85db100&order=year_published.desc&limit=2 "HTTP/2 200 OK"
+2025-07-28 13:39:26,891 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_listings?select=appendix&species_id=eq.4c358cc2-d0d3-4a34-a3fe-bca2b85db100&order=effective_date.desc&limit=2 "HTTP/2 400 Bad Request"
+2025-07-28 13:39:26,892 - ERROR - Error getting conservation status for species 4c358cc2-d0d3-4a34-a3fe-bca2b85db100: {'message': 'column cites_listings.effective_date does not exist', 'code': '42703', 'hint': None, 'details': None}
+2025-07-28 13:39:26,989 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=exporter%2Cquantity&species_id=eq.4c358cc2-d0d3-4a34-a3fe-bca2b85db100 "HTTP/2 200 OK"
+2025-07-28 13:39:26,992 - INFO - Processing 7/43: Minke Whale
+2025-07-28 13:39:27,081 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Minke+Whale%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:27,082 - INFO - Processing Minke Whale (ID: d5007ba6-6818-4257-a0bf-2aed02301647)
+2025-07-28 13:39:27,168 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species_trade_summary?select=%2A&species_id=eq.d5007ba6-6818-4257-a0bf-2aed02301647 "HTTP/2 200 OK"
+2025-07-28 13:39:27,253 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=purpose&species_id=eq.d5007ba6-6818-4257-a0bf-2aed02301647 "HTTP/2 200 OK"
+2025-07-28 13:39:27,339 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=source&species_id=eq.d5007ba6-6818-4257-a0bf-2aed02301647 "HTTP/2 200 OK"
+2025-07-28 13:39:27,427 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.d5007ba6-6818-4257-a0bf-2aed02301647&order=year.desc&limit=100 "HTTP/2 200 OK"
+2025-07-28 13:39:27,512 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.d5007ba6-6818-4257-a0bf-2aed02301647&year=gte.2010 "HTTP/2 200 OK"
+2025-07-28 13:39:27,597 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/iucn_assessments?select=status%2Cyear_published&species_id=eq.d5007ba6-6818-4257-a0bf-2aed02301647&order=year_published.desc&limit=2 "HTTP/2 200 OK"
+2025-07-28 13:39:27,686 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_listings?select=appendix&species_id=eq.d5007ba6-6818-4257-a0bf-2aed02301647&order=effective_date.desc&limit=2 "HTTP/2 400 Bad Request"
+2025-07-28 13:39:27,687 - ERROR - Error getting conservation status for species d5007ba6-6818-4257-a0bf-2aed02301647: {'message': 'column cites_listings.effective_date does not exist', 'code': '42703', 'hint': None, 'details': None}
+2025-07-28 13:39:27,773 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=exporter%2Cquantity&species_id=eq.d5007ba6-6818-4257-a0bf-2aed02301647 "HTTP/2 200 OK"
+2025-07-28 13:39:27,775 - INFO - Processing 8/43: Atlantic White-sided Dolphin
+2025-07-28 13:39:27,872 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Atlantic+White-sided+Dolphin%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:27,873 - INFO - Processing Atlantic White-sided Dolphin (ID: a844b4b6-16a9-45f1-b901-48e3703919d3)
+2025-07-28 13:39:27,965 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species_trade_summary?select=%2A&species_id=eq.a844b4b6-16a9-45f1-b901-48e3703919d3 "HTTP/2 200 OK"
+2025-07-28 13:39:28,063 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=purpose&species_id=eq.a844b4b6-16a9-45f1-b901-48e3703919d3 "HTTP/2 200 OK"
+2025-07-28 13:39:28,144 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=source&species_id=eq.a844b4b6-16a9-45f1-b901-48e3703919d3 "HTTP/2 200 OK"
+2025-07-28 13:39:28,228 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.a844b4b6-16a9-45f1-b901-48e3703919d3&order=year.desc&limit=100 "HTTP/2 200 OK"
+2025-07-28 13:39:28,313 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.a844b4b6-16a9-45f1-b901-48e3703919d3&year=gte.2010 "HTTP/2 200 OK"
+2025-07-28 13:39:28,400 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/iucn_assessments?select=status%2Cyear_published&species_id=eq.a844b4b6-16a9-45f1-b901-48e3703919d3&order=year_published.desc&limit=2 "HTTP/2 200 OK"
+2025-07-28 13:39:28,499 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_listings?select=appendix&species_id=eq.a844b4b6-16a9-45f1-b901-48e3703919d3&order=effective_date.desc&limit=2 "HTTP/2 400 Bad Request"
+2025-07-28 13:39:28,500 - ERROR - Error getting conservation status for species a844b4b6-16a9-45f1-b901-48e3703919d3: {'message': 'column cites_listings.effective_date does not exist', 'code': '42703', 'hint': None, 'details': None}
+2025-07-28 13:39:28,584 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=exporter%2Cquantity&species_id=eq.a844b4b6-16a9-45f1-b901-48e3703919d3 "HTTP/2 200 OK"
+2025-07-28 13:39:28,585 - INFO - Processing 9/43: Baird's Beaked Whale
+2025-07-28 13:39:28,666 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Baird%27s+Beaked+Whale%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:28,668 - INFO - Processing Baird's Beaked Whale (ID: 2a4ef599-7108-48a4-a10a-1567b772f9d7)
+2025-07-28 13:39:28,750 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species_trade_summary?select=%2A&species_id=eq.2a4ef599-7108-48a4-a10a-1567b772f9d7 "HTTP/2 200 OK"
+2025-07-28 13:39:28,837 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=purpose&species_id=eq.2a4ef599-7108-48a4-a10a-1567b772f9d7 "HTTP/2 200 OK"
+2025-07-28 13:39:28,919 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=source&species_id=eq.2a4ef599-7108-48a4-a10a-1567b772f9d7 "HTTP/2 200 OK"
+2025-07-28 13:39:29,008 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.2a4ef599-7108-48a4-a10a-1567b772f9d7&order=year.desc&limit=100 "HTTP/2 200 OK"
+2025-07-28 13:39:29,090 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.2a4ef599-7108-48a4-a10a-1567b772f9d7&year=gte.2010 "HTTP/2 200 OK"
+2025-07-28 13:39:29,169 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/iucn_assessments?select=status%2Cyear_published&species_id=eq.2a4ef599-7108-48a4-a10a-1567b772f9d7&order=year_published.desc&limit=2 "HTTP/2 200 OK"
+2025-07-28 13:39:29,254 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_listings?select=appendix&species_id=eq.2a4ef599-7108-48a4-a10a-1567b772f9d7&order=effective_date.desc&limit=2 "HTTP/2 400 Bad Request"
+2025-07-28 13:39:29,254 - ERROR - Error getting conservation status for species 2a4ef599-7108-48a4-a10a-1567b772f9d7: {'message': 'column cites_listings.effective_date does not exist', 'code': '42703', 'hint': None, 'details': None}
+2025-07-28 13:39:29,336 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=exporter%2Cquantity&species_id=eq.2a4ef599-7108-48a4-a10a-1567b772f9d7 "HTTP/2 200 OK"
+2025-07-28 13:39:29,338 - INFO - Processing 10/43: Basking Shark
+2025-07-28 13:39:29,431 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Basking+Shark%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:29,432 - INFO - Processing Basking Shark (ID: f0f36896-7869-413e-ad36-7718e2729513)
+2025-07-28 13:39:29,513 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species_trade_summary?select=%2A&species_id=eq.f0f36896-7869-413e-ad36-7718e2729513 "HTTP/2 200 OK"
+2025-07-28 13:39:29,595 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=purpose&species_id=eq.f0f36896-7869-413e-ad36-7718e2729513 "HTTP/2 200 OK"
+2025-07-28 13:39:29,688 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=source&species_id=eq.f0f36896-7869-413e-ad36-7718e2729513 "HTTP/2 200 OK"
+2025-07-28 13:39:29,772 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.f0f36896-7869-413e-ad36-7718e2729513&order=year.desc&limit=100 "HTTP/2 200 OK"
+2025-07-28 13:39:29,854 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.f0f36896-7869-413e-ad36-7718e2729513&year=gte.2010 "HTTP/2 200 OK"
+2025-07-28 13:39:29,939 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/iucn_assessments?select=status%2Cyear_published&species_id=eq.f0f36896-7869-413e-ad36-7718e2729513&order=year_published.desc&limit=2 "HTTP/2 200 OK"
+2025-07-28 13:39:30,024 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_listings?select=appendix&species_id=eq.f0f36896-7869-413e-ad36-7718e2729513&order=effective_date.desc&limit=2 "HTTP/2 400 Bad Request"
+2025-07-28 13:39:30,025 - ERROR - Error getting conservation status for species f0f36896-7869-413e-ad36-7718e2729513: {'message': 'column cites_listings.effective_date does not exist', 'code': '42703', 'hint': None, 'details': None}
+2025-07-28 13:39:30,112 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=exporter%2Cquantity&species_id=eq.f0f36896-7869-413e-ad36-7718e2729513 "HTTP/2 200 OK"
+2025-07-28 13:39:30,114 - INFO - Processing 11/43: Beluga Whale
+2025-07-28 13:39:30,196 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Beluga+Whale%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:30,282 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&scientific_name=eq.Delphinapterus+leucas&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:30,282 - INFO - Processing Beluga Whale (ID: fbcb38a3-1cb9-4473-9643-82aef221e64a)
+2025-07-28 13:39:30,366 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species_trade_summary?select=%2A&species_id=eq.fbcb38a3-1cb9-4473-9643-82aef221e64a "HTTP/2 200 OK"
+2025-07-28 13:39:30,470 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=purpose&species_id=eq.fbcb38a3-1cb9-4473-9643-82aef221e64a "HTTP/2 200 OK"
+2025-07-28 13:39:30,559 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=source&species_id=eq.fbcb38a3-1cb9-4473-9643-82aef221e64a "HTTP/2 200 OK"
+2025-07-28 13:39:30,659 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.fbcb38a3-1cb9-4473-9643-82aef221e64a&order=year.desc&limit=100 "HTTP/2 200 OK"
+2025-07-28 13:39:30,745 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.fbcb38a3-1cb9-4473-9643-82aef221e64a&year=gte.2010 "HTTP/2 200 OK"
+2025-07-28 13:39:30,839 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/iucn_assessments?select=status%2Cyear_published&species_id=eq.fbcb38a3-1cb9-4473-9643-82aef221e64a&order=year_published.desc&limit=2 "HTTP/2 200 OK"
+2025-07-28 13:39:30,924 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_listings?select=appendix&species_id=eq.fbcb38a3-1cb9-4473-9643-82aef221e64a&order=effective_date.desc&limit=2 "HTTP/2 400 Bad Request"
+2025-07-28 13:39:30,925 - ERROR - Error getting conservation status for species fbcb38a3-1cb9-4473-9643-82aef221e64a: {'message': 'column cites_listings.effective_date does not exist', 'code': '42703', 'hint': None, 'details': None}
+2025-07-28 13:39:31,014 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=exporter%2Cquantity&species_id=eq.fbcb38a3-1cb9-4473-9643-82aef221e64a "HTTP/2 200 OK"
+2025-07-28 13:39:31,016 - INFO - Processing 12/43: Blue Whale
+2025-07-28 13:39:31,094 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Blue+Whale%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:31,095 - INFO - Processing Blue Whale (ID: 93c5865f-a1d5-444b-a74e-d05372f29bfd)
+2025-07-28 13:39:31,184 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species_trade_summary?select=%2A&species_id=eq.93c5865f-a1d5-444b-a74e-d05372f29bfd "HTTP/2 200 OK"
+2025-07-28 13:39:31,272 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=purpose&species_id=eq.93c5865f-a1d5-444b-a74e-d05372f29bfd "HTTP/2 200 OK"
+2025-07-28 13:39:31,360 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=source&species_id=eq.93c5865f-a1d5-444b-a74e-d05372f29bfd "HTTP/2 200 OK"
+2025-07-28 13:39:31,448 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.93c5865f-a1d5-444b-a74e-d05372f29bfd&order=year.desc&limit=100 "HTTP/2 200 OK"
+2025-07-28 13:39:31,532 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.93c5865f-a1d5-444b-a74e-d05372f29bfd&year=gte.2010 "HTTP/2 200 OK"
+2025-07-28 13:39:31,617 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/iucn_assessments?select=status%2Cyear_published&species_id=eq.93c5865f-a1d5-444b-a74e-d05372f29bfd&order=year_published.desc&limit=2 "HTTP/2 200 OK"
+2025-07-28 13:39:31,701 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_listings?select=appendix&species_id=eq.93c5865f-a1d5-444b-a74e-d05372f29bfd&order=effective_date.desc&limit=2 "HTTP/2 400 Bad Request"
+2025-07-28 13:39:31,703 - ERROR - Error getting conservation status for species 93c5865f-a1d5-444b-a74e-d05372f29bfd: {'message': 'column cites_listings.effective_date does not exist', 'code': '42703', 'hint': None, 'details': None}
+2025-07-28 13:39:31,785 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=exporter%2Cquantity&species_id=eq.93c5865f-a1d5-444b-a74e-d05372f29bfd "HTTP/2 200 OK"
+2025-07-28 13:39:31,787 - INFO - Processing 13/43: Canada Lynx
+2025-07-28 13:39:31,870 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Canada+Lynx%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:31,872 - INFO - Processing Canada Lynx (ID: d62146cd-6c23-41ba-9014-77d099c546f7)
+2025-07-28 13:39:32,019 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species_trade_summary?select=%2A&species_id=eq.d62146cd-6c23-41ba-9014-77d099c546f7 "HTTP/2 200 OK"
+2025-07-28 13:39:32,118 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=purpose&species_id=eq.d62146cd-6c23-41ba-9014-77d099c546f7 "HTTP/2 200 OK"
+2025-07-28 13:39:32,206 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=source&species_id=eq.d62146cd-6c23-41ba-9014-77d099c546f7 "HTTP/2 200 OK"
+2025-07-28 13:39:32,290 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.d62146cd-6c23-41ba-9014-77d099c546f7&order=year.desc&limit=100 "HTTP/2 200 OK"
+2025-07-28 13:39:32,386 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.d62146cd-6c23-41ba-9014-77d099c546f7&year=gte.2010 "HTTP/2 200 OK"
+2025-07-28 13:39:32,475 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/iucn_assessments?select=status%2Cyear_published&species_id=eq.d62146cd-6c23-41ba-9014-77d099c546f7&order=year_published.desc&limit=2 "HTTP/2 200 OK"
+2025-07-28 13:39:32,561 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_listings?select=appendix&species_id=eq.d62146cd-6c23-41ba-9014-77d099c546f7&order=effective_date.desc&limit=2 "HTTP/2 400 Bad Request"
+2025-07-28 13:39:32,562 - ERROR - Error getting conservation status for species d62146cd-6c23-41ba-9014-77d099c546f7: {'message': 'column cites_listings.effective_date does not exist', 'code': '42703', 'hint': None, 'details': None}
+2025-07-28 13:39:32,657 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=exporter%2Cquantity&species_id=eq.d62146cd-6c23-41ba-9014-77d099c546f7 "HTTP/2 200 OK"
+2025-07-28 13:39:32,660 - INFO - Processing 14/43: Cuvier's beaked whale
+2025-07-28 13:39:32,741 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Cuvier%27s+beaked+whale%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:32,742 - INFO - Processing Cuvier's beaked whale (ID: f2eae94d-b2f3-4023-906c-c3d8c1103c8e)
+2025-07-28 13:39:32,830 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species_trade_summary?select=%2A&species_id=eq.f2eae94d-b2f3-4023-906c-c3d8c1103c8e "HTTP/2 200 OK"
+2025-07-28 13:39:32,919 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=purpose&species_id=eq.f2eae94d-b2f3-4023-906c-c3d8c1103c8e "HTTP/2 200 OK"
+2025-07-28 13:39:33,018 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=source&species_id=eq.f2eae94d-b2f3-4023-906c-c3d8c1103c8e "HTTP/2 200 OK"
+2025-07-28 13:39:33,105 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.f2eae94d-b2f3-4023-906c-c3d8c1103c8e&order=year.desc&limit=100 "HTTP/2 200 OK"
+2025-07-28 13:39:33,185 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.f2eae94d-b2f3-4023-906c-c3d8c1103c8e&year=gte.2010 "HTTP/2 200 OK"
+2025-07-28 13:39:33,275 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/iucn_assessments?select=status%2Cyear_published&species_id=eq.f2eae94d-b2f3-4023-906c-c3d8c1103c8e&order=year_published.desc&limit=2 "HTTP/2 200 OK"
+2025-07-28 13:39:33,359 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_listings?select=appendix&species_id=eq.f2eae94d-b2f3-4023-906c-c3d8c1103c8e&order=effective_date.desc&limit=2 "HTTP/2 400 Bad Request"
+2025-07-28 13:39:33,360 - ERROR - Error getting conservation status for species f2eae94d-b2f3-4023-906c-c3d8c1103c8e: {'message': 'column cites_listings.effective_date does not exist', 'code': '42703', 'hint': None, 'details': None}
+2025-07-28 13:39:33,453 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=exporter%2Cquantity&species_id=eq.f2eae94d-b2f3-4023-906c-c3d8c1103c8e "HTTP/2 200 OK"
+2025-07-28 13:39:33,457 - INFO - Processing 15/43: Dall's Porpoise
+2025-07-28 13:39:33,539 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Dall%27s+Porpoise%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:33,624 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25dall%27s+porpoise%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:33,713 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Dall%27s+Porpoise%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:33,797 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Dall+Porpoise%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:33,798 - WARNING - Species not found in database: Dall's Porpoise
+2025-07-28 13:39:33,798 - WARNING - Species ID not found for: Dall's Porpoise
+2025-07-28 13:39:33,798 - INFO - Processing 16/43: Eskimo Curlew
+2025-07-28 13:39:33,880 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Eskimo+Curlew%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:33,881 - INFO - Processing Eskimo Curlew (ID: 652d45e6-324e-4066-addb-3029f289a1ac)
+2025-07-28 13:39:33,964 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species_trade_summary?select=%2A&species_id=eq.652d45e6-324e-4066-addb-3029f289a1ac "HTTP/2 200 OK"
+2025-07-28 13:39:34,046 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=purpose&species_id=eq.652d45e6-324e-4066-addb-3029f289a1ac "HTTP/2 200 OK"
+2025-07-28 13:39:34,209 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=source&species_id=eq.652d45e6-324e-4066-addb-3029f289a1ac "HTTP/2 200 OK"
+2025-07-28 13:39:34,293 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.652d45e6-324e-4066-addb-3029f289a1ac&order=year.desc&limit=100 "HTTP/2 200 OK"
+2025-07-28 13:39:34,387 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.652d45e6-324e-4066-addb-3029f289a1ac&year=gte.2010 "HTTP/2 200 OK"
+2025-07-28 13:39:34,479 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/iucn_assessments?select=status%2Cyear_published&species_id=eq.652d45e6-324e-4066-addb-3029f289a1ac&order=year_published.desc&limit=2 "HTTP/2 200 OK"
+2025-07-28 13:39:34,560 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_listings?select=appendix&species_id=eq.652d45e6-324e-4066-addb-3029f289a1ac&order=effective_date.desc&limit=2 "HTTP/2 400 Bad Request"
+2025-07-28 13:39:34,561 - ERROR - Error getting conservation status for species 652d45e6-324e-4066-addb-3029f289a1ac: {'message': 'column cites_listings.effective_date does not exist', 'code': '42703', 'hint': None, 'details': None}
+2025-07-28 13:39:34,641 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=exporter%2Cquantity&species_id=eq.652d45e6-324e-4066-addb-3029f289a1ac "HTTP/2 200 OK"
+2025-07-28 13:39:34,641 - INFO - Processing 17/43: Fin Whale
+2025-07-28 13:39:34,724 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Fin+Whale%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:34,724 - INFO - Processing Fin Whale (ID: e77df55d-294b-431f-9b0f-1d2da69518f6)
+2025-07-28 13:39:34,815 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species_trade_summary?select=%2A&species_id=eq.e77df55d-294b-431f-9b0f-1d2da69518f6 "HTTP/2 200 OK"
+2025-07-28 13:39:34,906 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=purpose&species_id=eq.e77df55d-294b-431f-9b0f-1d2da69518f6 "HTTP/2 200 OK"
+2025-07-28 13:39:35,000 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=source&species_id=eq.e77df55d-294b-431f-9b0f-1d2da69518f6 "HTTP/2 200 OK"
+2025-07-28 13:39:35,086 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.e77df55d-294b-431f-9b0f-1d2da69518f6&order=year.desc&limit=100 "HTTP/2 200 OK"
+2025-07-28 13:39:35,168 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.e77df55d-294b-431f-9b0f-1d2da69518f6&year=gte.2010 "HTTP/2 200 OK"
+2025-07-28 13:39:35,258 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/iucn_assessments?select=status%2Cyear_published&species_id=eq.e77df55d-294b-431f-9b0f-1d2da69518f6&order=year_published.desc&limit=2 "HTTP/2 200 OK"
+2025-07-28 13:39:35,341 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_listings?select=appendix&species_id=eq.e77df55d-294b-431f-9b0f-1d2da69518f6&order=effective_date.desc&limit=2 "HTTP/2 400 Bad Request"
+2025-07-28 13:39:35,342 - ERROR - Error getting conservation status for species e77df55d-294b-431f-9b0f-1d2da69518f6: {'message': 'column cites_listings.effective_date does not exist', 'code': '42703', 'hint': None, 'details': None}
+2025-07-28 13:39:35,429 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=exporter%2Cquantity&species_id=eq.e77df55d-294b-431f-9b0f-1d2da69518f6 "HTTP/2 200 OK"
+2025-07-28 13:39:35,434 - INFO - Processing 18/43: Gray Whale
+2025-07-28 13:39:35,519 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Gray+Whale%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:35,520 - INFO - Processing Gray Whale (ID: c2ab33a1-6ab1-462f-834d-840949fa9e43)
+2025-07-28 13:39:35,610 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species_trade_summary?select=%2A&species_id=eq.c2ab33a1-6ab1-462f-834d-840949fa9e43 "HTTP/2 200 OK"
+2025-07-28 13:39:35,709 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=purpose&species_id=eq.c2ab33a1-6ab1-462f-834d-840949fa9e43 "HTTP/2 200 OK"
+2025-07-28 13:39:35,791 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=source&species_id=eq.c2ab33a1-6ab1-462f-834d-840949fa9e43 "HTTP/2 200 OK"
+2025-07-28 13:39:35,879 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.c2ab33a1-6ab1-462f-834d-840949fa9e43&order=year.desc&limit=100 "HTTP/2 200 OK"
+2025-07-28 13:39:35,964 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.c2ab33a1-6ab1-462f-834d-840949fa9e43&year=gte.2010 "HTTP/2 200 OK"
+2025-07-28 13:39:36,053 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/iucn_assessments?select=status%2Cyear_published&species_id=eq.c2ab33a1-6ab1-462f-834d-840949fa9e43&order=year_published.desc&limit=2 "HTTP/2 200 OK"
+2025-07-28 13:39:36,137 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_listings?select=appendix&species_id=eq.c2ab33a1-6ab1-462f-834d-840949fa9e43&order=effective_date.desc&limit=2 "HTTP/2 400 Bad Request"
+2025-07-28 13:39:36,139 - ERROR - Error getting conservation status for species c2ab33a1-6ab1-462f-834d-840949fa9e43: {'message': 'column cites_listings.effective_date does not exist', 'code': '42703', 'hint': None, 'details': None}
+2025-07-28 13:39:36,222 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=exporter%2Cquantity&species_id=eq.c2ab33a1-6ab1-462f-834d-840949fa9e43 "HTTP/2 200 OK"
+2025-07-28 13:39:36,226 - INFO - Processing 19/43: Gyrfalcon
+2025-07-28 13:39:36,309 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Gyrfalcon%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:36,310 - INFO - Processing Gyrfalcon (ID: 506d9478-6bef-4116-8295-fd1ccc6292c6)
+2025-07-28 13:39:36,445 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species_trade_summary?select=%2A&species_id=eq.506d9478-6bef-4116-8295-fd1ccc6292c6 "HTTP/2 200 OK"
+2025-07-28 13:39:36,538 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=purpose&species_id=eq.506d9478-6bef-4116-8295-fd1ccc6292c6 "HTTP/2 200 OK"
+2025-07-28 13:39:36,628 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=source&species_id=eq.506d9478-6bef-4116-8295-fd1ccc6292c6 "HTTP/2 200 OK"
+2025-07-28 13:39:36,719 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.506d9478-6bef-4116-8295-fd1ccc6292c6&order=year.desc&limit=100 "HTTP/2 200 OK"
+2025-07-28 13:39:36,819 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.506d9478-6bef-4116-8295-fd1ccc6292c6&year=gte.2010 "HTTP/2 200 OK"
+2025-07-28 13:39:36,914 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/iucn_assessments?select=status%2Cyear_published&species_id=eq.506d9478-6bef-4116-8295-fd1ccc6292c6&order=year_published.desc&limit=2 "HTTP/2 200 OK"
+2025-07-28 13:39:37,009 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_listings?select=appendix&species_id=eq.506d9478-6bef-4116-8295-fd1ccc6292c6&order=effective_date.desc&limit=2 "HTTP/2 400 Bad Request"
+2025-07-28 13:39:37,010 - ERROR - Error getting conservation status for species 506d9478-6bef-4116-8295-fd1ccc6292c6: {'message': 'column cites_listings.effective_date does not exist', 'code': '42703', 'hint': None, 'details': None}
+2025-07-28 13:39:37,100 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=exporter%2Cquantity&species_id=eq.506d9478-6bef-4116-8295-fd1ccc6292c6 "HTTP/2 200 OK"
+2025-07-28 13:39:37,102 - INFO - Processing 20/43: Harbour Porpoise
+2025-07-28 13:39:37,191 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Harbour+Porpoise%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:37,278 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25harbour+porpoise%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:37,366 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Harbour+Porpoise%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:37,465 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Harbour+Porpoise%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:37,466 - WARNING - Species not found in database: Harbour Porpoise
+2025-07-28 13:39:37,466 - WARNING - Species ID not found for: Harbour Porpoise
+2025-07-28 13:39:37,466 - INFO - Processing 21/43: Humpback Whale
+2025-07-28 13:39:37,550 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Humpback+Whale%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:37,552 - INFO - Processing Humpback Whale (ID: 95485512-67e7-4fad-a8f0-f76c17d03c1f)
+2025-07-28 13:39:37,644 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species_trade_summary?select=%2A&species_id=eq.95485512-67e7-4fad-a8f0-f76c17d03c1f "HTTP/2 200 OK"
+2025-07-28 13:39:37,735 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=purpose&species_id=eq.95485512-67e7-4fad-a8f0-f76c17d03c1f "HTTP/2 200 OK"
+2025-07-28 13:39:37,825 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=source&species_id=eq.95485512-67e7-4fad-a8f0-f76c17d03c1f "HTTP/2 200 OK"
+2025-07-28 13:39:37,930 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.95485512-67e7-4fad-a8f0-f76c17d03c1f&order=year.desc&limit=100 "HTTP/2 200 OK"
+2025-07-28 13:39:38,025 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.95485512-67e7-4fad-a8f0-f76c17d03c1f&year=gte.2010 "HTTP/2 200 OK"
+2025-07-28 13:39:38,108 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/iucn_assessments?select=status%2Cyear_published&species_id=eq.95485512-67e7-4fad-a8f0-f76c17d03c1f&order=year_published.desc&limit=2 "HTTP/2 200 OK"
+2025-07-28 13:39:38,190 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_listings?select=appendix&species_id=eq.95485512-67e7-4fad-a8f0-f76c17d03c1f&order=effective_date.desc&limit=2 "HTTP/2 400 Bad Request"
+2025-07-28 13:39:38,191 - ERROR - Error getting conservation status for species 95485512-67e7-4fad-a8f0-f76c17d03c1f: {'message': 'column cites_listings.effective_date does not exist', 'code': '42703', 'hint': None, 'details': None}
+2025-07-28 13:39:38,282 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=exporter%2Cquantity&species_id=eq.95485512-67e7-4fad-a8f0-f76c17d03c1f "HTTP/2 200 OK"
+2025-07-28 13:39:38,288 - INFO - Processing 22/43: Long-finned Pilot Whale
+2025-07-28 13:39:38,397 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Long-finned+Pilot+Whale%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:38,398 - INFO - Processing Long-finned Pilot Whale (ID: 9b0b1518-f0ef-4e0f-b47d-5458564e909b)
+2025-07-28 13:39:38,490 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species_trade_summary?select=%2A&species_id=eq.9b0b1518-f0ef-4e0f-b47d-5458564e909b "HTTP/2 200 OK"
+2025-07-28 13:39:38,575 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=purpose&species_id=eq.9b0b1518-f0ef-4e0f-b47d-5458564e909b "HTTP/2 200 OK"
+2025-07-28 13:39:38,666 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=source&species_id=eq.9b0b1518-f0ef-4e0f-b47d-5458564e909b "HTTP/2 200 OK"
+2025-07-28 13:39:38,754 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.9b0b1518-f0ef-4e0f-b47d-5458564e909b&order=year.desc&limit=100 "HTTP/2 200 OK"
+2025-07-28 13:39:38,845 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.9b0b1518-f0ef-4e0f-b47d-5458564e909b&year=gte.2010 "HTTP/2 200 OK"
+2025-07-28 13:39:38,929 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/iucn_assessments?select=status%2Cyear_published&species_id=eq.9b0b1518-f0ef-4e0f-b47d-5458564e909b&order=year_published.desc&limit=2 "HTTP/2 200 OK"
+2025-07-28 13:39:39,009 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_listings?select=appendix&species_id=eq.9b0b1518-f0ef-4e0f-b47d-5458564e909b&order=effective_date.desc&limit=2 "HTTP/2 400 Bad Request"
+2025-07-28 13:39:39,010 - ERROR - Error getting conservation status for species 9b0b1518-f0ef-4e0f-b47d-5458564e909b: {'message': 'column cites_listings.effective_date does not exist', 'code': '42703', 'hint': None, 'details': None}
+2025-07-28 13:39:39,091 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=exporter%2Cquantity&species_id=eq.9b0b1518-f0ef-4e0f-b47d-5458564e909b "HTTP/2 200 OK"
+2025-07-28 13:39:39,092 - INFO - Processing 23/43: Narwhal
+2025-07-28 13:39:39,172 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Narwhal%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:39,173 - INFO - Processing Narwhal (ID: 5f289c1e-5101-458f-a5ea-a65e5c734569)
+2025-07-28 13:39:39,319 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species_trade_summary?select=%2A&species_id=eq.5f289c1e-5101-458f-a5ea-a65e5c734569 "HTTP/2 200 OK"
+2025-07-28 13:39:39,419 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=purpose&species_id=eq.5f289c1e-5101-458f-a5ea-a65e5c734569 "HTTP/2 200 OK"
+2025-07-28 13:39:39,513 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=source&species_id=eq.5f289c1e-5101-458f-a5ea-a65e5c734569 "HTTP/2 200 OK"
+2025-07-28 13:39:39,612 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.5f289c1e-5101-458f-a5ea-a65e5c734569&order=year.desc&limit=100 "HTTP/2 200 OK"
+2025-07-28 13:39:39,711 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.5f289c1e-5101-458f-a5ea-a65e5c734569&year=gte.2010 "HTTP/2 200 OK"
+2025-07-28 13:39:39,799 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/iucn_assessments?select=status%2Cyear_published&species_id=eq.5f289c1e-5101-458f-a5ea-a65e5c734569&order=year_published.desc&limit=2 "HTTP/2 200 OK"
+2025-07-28 13:39:39,881 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_listings?select=appendix&species_id=eq.5f289c1e-5101-458f-a5ea-a65e5c734569&order=effective_date.desc&limit=2 "HTTP/2 400 Bad Request"
+2025-07-28 13:39:39,883 - ERROR - Error getting conservation status for species 5f289c1e-5101-458f-a5ea-a65e5c734569: {'message': 'column cites_listings.effective_date does not exist', 'code': '42703', 'hint': None, 'details': None}
+2025-07-28 13:39:39,967 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=exporter%2Cquantity&species_id=eq.5f289c1e-5101-458f-a5ea-a65e5c734569 "HTTP/2 200 OK"
+2025-07-28 13:39:39,972 - INFO - Processing 24/43: North American River Otter
+2025-07-28 13:39:40,052 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25North+American+River+Otter%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:40,052 - INFO - Processing North American River Otter (ID: 266eeed0-3d6e-4f14-90be-72b74f8dce53)
+2025-07-28 13:39:40,203 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species_trade_summary?select=%2A&species_id=eq.266eeed0-3d6e-4f14-90be-72b74f8dce53 "HTTP/2 200 OK"
+2025-07-28 13:39:40,296 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=purpose&species_id=eq.266eeed0-3d6e-4f14-90be-72b74f8dce53 "HTTP/2 200 OK"
+2025-07-28 13:39:40,379 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=source&species_id=eq.266eeed0-3d6e-4f14-90be-72b74f8dce53 "HTTP/2 200 OK"
+2025-07-28 13:39:40,466 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.266eeed0-3d6e-4f14-90be-72b74f8dce53&order=year.desc&limit=100 "HTTP/2 200 OK"
+2025-07-28 13:39:40,553 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.266eeed0-3d6e-4f14-90be-72b74f8dce53&year=gte.2010 "HTTP/2 200 OK"
+2025-07-28 13:39:40,644 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/iucn_assessments?select=status%2Cyear_published&species_id=eq.266eeed0-3d6e-4f14-90be-72b74f8dce53&order=year_published.desc&limit=2 "HTTP/2 200 OK"
+2025-07-28 13:39:40,728 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_listings?select=appendix&species_id=eq.266eeed0-3d6e-4f14-90be-72b74f8dce53&order=effective_date.desc&limit=2 "HTTP/2 400 Bad Request"
+2025-07-28 13:39:40,729 - ERROR - Error getting conservation status for species 266eeed0-3d6e-4f14-90be-72b74f8dce53: {'message': 'column cites_listings.effective_date does not exist', 'code': '42703', 'hint': None, 'details': None}
+2025-07-28 13:39:40,813 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=exporter%2Cquantity&species_id=eq.266eeed0-3d6e-4f14-90be-72b74f8dce53 "HTTP/2 200 OK"
+2025-07-28 13:39:40,814 - INFO - Processing 25/43: North Atlantic Right Whale
+2025-07-28 13:39:40,906 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25North+Atlantic+Right+Whale%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:40,906 - INFO - Processing North Atlantic Right Whale (ID: f133cabe-d298-4ae4-a03d-5c5899395d52)
+2025-07-28 13:39:40,999 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species_trade_summary?select=%2A&species_id=eq.f133cabe-d298-4ae4-a03d-5c5899395d52 "HTTP/2 200 OK"
+2025-07-28 13:39:41,085 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=purpose&species_id=eq.f133cabe-d298-4ae4-a03d-5c5899395d52 "HTTP/2 200 OK"
+2025-07-28 13:39:41,165 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=source&species_id=eq.f133cabe-d298-4ae4-a03d-5c5899395d52 "HTTP/2 200 OK"
+2025-07-28 13:39:41,255 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.f133cabe-d298-4ae4-a03d-5c5899395d52&order=year.desc&limit=100 "HTTP/2 200 OK"
+2025-07-28 13:39:41,337 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.f133cabe-d298-4ae4-a03d-5c5899395d52&year=gte.2010 "HTTP/2 200 OK"
+2025-07-28 13:39:41,420 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/iucn_assessments?select=status%2Cyear_published&species_id=eq.f133cabe-d298-4ae4-a03d-5c5899395d52&order=year_published.desc&limit=2 "HTTP/2 200 OK"
+2025-07-28 13:39:41,505 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_listings?select=appendix&species_id=eq.f133cabe-d298-4ae4-a03d-5c5899395d52&order=effective_date.desc&limit=2 "HTTP/2 400 Bad Request"
+2025-07-28 13:39:41,505 - ERROR - Error getting conservation status for species f133cabe-d298-4ae4-a03d-5c5899395d52: {'message': 'column cites_listings.effective_date does not exist', 'code': '42703', 'hint': None, 'details': None}
+2025-07-28 13:39:41,585 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=exporter%2Cquantity&species_id=eq.f133cabe-d298-4ae4-a03d-5c5899395d52 "HTTP/2 200 OK"
+2025-07-28 13:39:41,587 - INFO - Processing 26/43: North Pacific Right Whale
+2025-07-28 13:39:41,672 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25North+Pacific+Right+Whale%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:41,755 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25north+pacific+right+whale%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:41,837 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25North+Pacific+Right+Whale%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:41,922 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25North+Pacific+Right+Whale%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:41,923 - WARNING - Species not found in database: North Pacific Right Whale
+2025-07-28 13:39:41,923 - WARNING - Species ID not found for: North Pacific Right Whale
+2025-07-28 13:39:41,923 - INFO - Processing 27/43: Northern bottlenose whale
+2025-07-28 13:39:42,004 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Northern+bottlenose+whale%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:42,005 - INFO - Processing Northern bottlenose whale (ID: 68cb209a-b1a5-4cd2-9e56-d6efdf7e8d40)
+2025-07-28 13:39:42,095 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species_trade_summary?select=%2A&species_id=eq.68cb209a-b1a5-4cd2-9e56-d6efdf7e8d40 "HTTP/2 200 OK"
+2025-07-28 13:39:42,201 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=purpose&species_id=eq.68cb209a-b1a5-4cd2-9e56-d6efdf7e8d40 "HTTP/2 200 OK"
+2025-07-28 13:39:42,283 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=source&species_id=eq.68cb209a-b1a5-4cd2-9e56-d6efdf7e8d40 "HTTP/2 200 OK"
+2025-07-28 13:39:42,366 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.68cb209a-b1a5-4cd2-9e56-d6efdf7e8d40&order=year.desc&limit=100 "HTTP/2 200 OK"
+2025-07-28 13:39:42,451 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.68cb209a-b1a5-4cd2-9e56-d6efdf7e8d40&year=gte.2010 "HTTP/2 200 OK"
+2025-07-28 13:39:42,533 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/iucn_assessments?select=status%2Cyear_published&species_id=eq.68cb209a-b1a5-4cd2-9e56-d6efdf7e8d40&order=year_published.desc&limit=2 "HTTP/2 200 OK"
+2025-07-28 13:39:42,617 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_listings?select=appendix&species_id=eq.68cb209a-b1a5-4cd2-9e56-d6efdf7e8d40&order=effective_date.desc&limit=2 "HTTP/2 400 Bad Request"
+2025-07-28 13:39:42,618 - ERROR - Error getting conservation status for species 68cb209a-b1a5-4cd2-9e56-d6efdf7e8d40: {'message': 'column cites_listings.effective_date does not exist', 'code': '42703', 'hint': None, 'details': None}
+2025-07-28 13:39:42,698 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=exporter%2Cquantity&species_id=eq.68cb209a-b1a5-4cd2-9e56-d6efdf7e8d40 "HTTP/2 200 OK"
+2025-07-28 13:39:42,699 - INFO - Processing 28/43: Orca
+2025-07-28 13:39:42,779 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Orca%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:42,780 - INFO - Processing Orca (ID: 01648df8-41bf-4fc2-97ec-563565d7a6e4)
+2025-07-28 13:39:42,868 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species_trade_summary?select=%2A&species_id=eq.01648df8-41bf-4fc2-97ec-563565d7a6e4 "HTTP/2 200 OK"
+2025-07-28 13:39:42,954 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=purpose&species_id=eq.01648df8-41bf-4fc2-97ec-563565d7a6e4 "HTTP/2 200 OK"
+2025-07-28 13:39:43,041 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=source&species_id=eq.01648df8-41bf-4fc2-97ec-563565d7a6e4 "HTTP/2 200 OK"
+2025-07-28 13:39:43,142 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.01648df8-41bf-4fc2-97ec-563565d7a6e4&order=year.desc&limit=100 "HTTP/2 200 OK"
+2025-07-28 13:39:43,233 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.01648df8-41bf-4fc2-97ec-563565d7a6e4&year=gte.2010 "HTTP/2 200 OK"
+2025-07-28 13:39:43,320 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/iucn_assessments?select=status%2Cyear_published&species_id=eq.01648df8-41bf-4fc2-97ec-563565d7a6e4&order=year_published.desc&limit=2 "HTTP/2 200 OK"
+2025-07-28 13:39:43,403 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_listings?select=appendix&species_id=eq.01648df8-41bf-4fc2-97ec-563565d7a6e4&order=effective_date.desc&limit=2 "HTTP/2 400 Bad Request"
+2025-07-28 13:39:43,404 - ERROR - Error getting conservation status for species 01648df8-41bf-4fc2-97ec-563565d7a6e4: {'message': 'column cites_listings.effective_date does not exist', 'code': '42703', 'hint': None, 'details': None}
+2025-07-28 13:39:43,491 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=exporter%2Cquantity&species_id=eq.01648df8-41bf-4fc2-97ec-563565d7a6e4 "HTTP/2 200 OK"
+2025-07-28 13:39:43,496 - INFO - Processing 29/43: Peregrine Falcon
+2025-07-28 13:39:43,581 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Peregrine+Falcon%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:43,582 - INFO - Processing Peregrine Falcon (ID: eb7be3f0-7ae7-4dd8-8803-7e8513fb1abe)
+2025-07-28 13:39:43,755 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species_trade_summary?select=%2A&species_id=eq.eb7be3f0-7ae7-4dd8-8803-7e8513fb1abe "HTTP/2 200 OK"
+2025-07-28 13:39:43,846 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=purpose&species_id=eq.eb7be3f0-7ae7-4dd8-8803-7e8513fb1abe "HTTP/2 200 OK"
+2025-07-28 13:39:43,938 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=source&species_id=eq.eb7be3f0-7ae7-4dd8-8803-7e8513fb1abe "HTTP/2 200 OK"
+2025-07-28 13:39:44,057 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.eb7be3f0-7ae7-4dd8-8803-7e8513fb1abe&order=year.desc&limit=100 "HTTP/2 200 OK"
+2025-07-28 13:39:44,143 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.eb7be3f0-7ae7-4dd8-8803-7e8513fb1abe&year=gte.2010 "HTTP/2 200 OK"
+2025-07-28 13:39:44,226 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/iucn_assessments?select=status%2Cyear_published&species_id=eq.eb7be3f0-7ae7-4dd8-8803-7e8513fb1abe&order=year_published.desc&limit=2 "HTTP/2 200 OK"
+2025-07-28 13:39:44,311 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_listings?select=appendix&species_id=eq.eb7be3f0-7ae7-4dd8-8803-7e8513fb1abe&order=effective_date.desc&limit=2 "HTTP/2 400 Bad Request"
+2025-07-28 13:39:44,311 - ERROR - Error getting conservation status for species eb7be3f0-7ae7-4dd8-8803-7e8513fb1abe: {'message': 'column cites_listings.effective_date does not exist', 'code': '42703', 'hint': None, 'details': None}
+2025-07-28 13:39:44,397 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=exporter%2Cquantity&species_id=eq.eb7be3f0-7ae7-4dd8-8803-7e8513fb1abe "HTTP/2 200 OK"
+2025-07-28 13:39:44,400 - INFO - Processing 30/43: Polar Bear
+2025-07-28 13:39:44,483 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Polar+Bear%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:44,484 - INFO - Processing Polar Bear (ID: d07c1335-0bf5-445c-bcaa-f7cdbd029637)
+2025-07-28 13:39:44,631 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species_trade_summary?select=%2A&species_id=eq.d07c1335-0bf5-445c-bcaa-f7cdbd029637 "HTTP/2 200 OK"
+2025-07-28 13:39:44,719 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=purpose&species_id=eq.d07c1335-0bf5-445c-bcaa-f7cdbd029637 "HTTP/2 200 OK"
+2025-07-28 13:39:44,805 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=source&species_id=eq.d07c1335-0bf5-445c-bcaa-f7cdbd029637 "HTTP/2 200 OK"
+2025-07-28 13:39:44,899 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.d07c1335-0bf5-445c-bcaa-f7cdbd029637&order=year.desc&limit=100 "HTTP/2 200 OK"
+2025-07-28 13:39:44,987 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.d07c1335-0bf5-445c-bcaa-f7cdbd029637&year=gte.2010 "HTTP/2 200 OK"
+2025-07-28 13:39:45,076 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/iucn_assessments?select=status%2Cyear_published&species_id=eq.d07c1335-0bf5-445c-bcaa-f7cdbd029637&order=year_published.desc&limit=2 "HTTP/2 200 OK"
+2025-07-28 13:39:45,165 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_listings?select=appendix&species_id=eq.d07c1335-0bf5-445c-bcaa-f7cdbd029637&order=effective_date.desc&limit=2 "HTTP/2 400 Bad Request"
+2025-07-28 13:39:45,166 - ERROR - Error getting conservation status for species d07c1335-0bf5-445c-bcaa-f7cdbd029637: {'message': 'column cites_listings.effective_date does not exist', 'code': '42703', 'hint': None, 'details': None}
+2025-07-28 13:39:45,250 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=exporter%2Cquantity&species_id=eq.d07c1335-0bf5-445c-bcaa-f7cdbd029637 "HTTP/2 200 OK"
+2025-07-28 13:39:45,253 - INFO - Processing 31/43: Porbeagle Shark
+2025-07-28 13:39:45,333 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Porbeagle+Shark%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:45,335 - INFO - Processing Porbeagle Shark (ID: d96c4f08-604c-4b80-ba4c-f445152daeea)
+2025-07-28 13:39:45,418 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species_trade_summary?select=%2A&species_id=eq.d96c4f08-604c-4b80-ba4c-f445152daeea "HTTP/2 200 OK"
+2025-07-28 13:39:45,501 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=purpose&species_id=eq.d96c4f08-604c-4b80-ba4c-f445152daeea "HTTP/2 200 OK"
+2025-07-28 13:39:45,584 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=source&species_id=eq.d96c4f08-604c-4b80-ba4c-f445152daeea "HTTP/2 200 OK"
+2025-07-28 13:39:45,680 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.d96c4f08-604c-4b80-ba4c-f445152daeea&order=year.desc&limit=100 "HTTP/2 200 OK"
+2025-07-28 13:39:45,772 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.d96c4f08-604c-4b80-ba4c-f445152daeea&year=gte.2010 "HTTP/2 200 OK"
+2025-07-28 13:39:45,853 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/iucn_assessments?select=status%2Cyear_published&species_id=eq.d96c4f08-604c-4b80-ba4c-f445152daeea&order=year_published.desc&limit=2 "HTTP/2 200 OK"
+2025-07-28 13:39:45,937 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_listings?select=appendix&species_id=eq.d96c4f08-604c-4b80-ba4c-f445152daeea&order=effective_date.desc&limit=2 "HTTP/2 400 Bad Request"
+2025-07-28 13:39:45,939 - ERROR - Error getting conservation status for species d96c4f08-604c-4b80-ba4c-f445152daeea: {'message': 'column cites_listings.effective_date does not exist', 'code': '42703', 'hint': None, 'details': None}
+2025-07-28 13:39:46,030 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=exporter%2Cquantity&species_id=eq.d96c4f08-604c-4b80-ba4c-f445152daeea "HTTP/2 200 OK"
+2025-07-28 13:39:46,031 - INFO - Processing 32/43: Red-Breasted Goose
+2025-07-28 13:39:46,120 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Red-Breasted+Goose%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:46,120 - INFO - Processing Red-Breasted Goose (ID: 16707406-8a99-4f32-8e55-9ba732461777)
+2025-07-28 13:39:46,210 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species_trade_summary?select=%2A&species_id=eq.16707406-8a99-4f32-8e55-9ba732461777 "HTTP/2 200 OK"
+2025-07-28 13:39:46,304 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=purpose&species_id=eq.16707406-8a99-4f32-8e55-9ba732461777 "HTTP/2 200 OK"
+2025-07-28 13:39:46,401 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=source&species_id=eq.16707406-8a99-4f32-8e55-9ba732461777 "HTTP/2 200 OK"
+2025-07-28 13:39:46,489 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.16707406-8a99-4f32-8e55-9ba732461777&order=year.desc&limit=100 "HTTP/2 200 OK"
+2025-07-28 13:39:46,597 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.16707406-8a99-4f32-8e55-9ba732461777&year=gte.2010 "HTTP/2 200 OK"
+2025-07-28 13:39:46,694 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/iucn_assessments?select=status%2Cyear_published&species_id=eq.16707406-8a99-4f32-8e55-9ba732461777&order=year_published.desc&limit=2 "HTTP/2 200 OK"
+2025-07-28 13:39:46,779 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_listings?select=appendix&species_id=eq.16707406-8a99-4f32-8e55-9ba732461777&order=effective_date.desc&limit=2 "HTTP/2 400 Bad Request"
+2025-07-28 13:39:46,780 - ERROR - Error getting conservation status for species 16707406-8a99-4f32-8e55-9ba732461777: {'message': 'column cites_listings.effective_date does not exist', 'code': '42703', 'hint': None, 'details': None}
+2025-07-28 13:39:46,866 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=exporter%2Cquantity&species_id=eq.16707406-8a99-4f32-8e55-9ba732461777 "HTTP/2 200 OK"
+2025-07-28 13:39:46,870 - INFO - Processing 33/43: Roseroot
+2025-07-28 13:39:46,962 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Roseroot%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:47,065 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25roseroot%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:47,152 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Roseroot%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:47,237 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Roseroot%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:47,238 - WARNING - Species not found in database: Roseroot
+2025-07-28 13:39:47,238 - WARNING - Species ID not found for: Roseroot
+2025-07-28 13:39:47,238 - INFO - Processing 34/43: Rough-legged buzzard
+2025-07-28 13:39:47,322 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Rough-legged+buzzard%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:47,323 - INFO - Processing Rough-legged buzzard (ID: 332be9c5-d770-467f-886e-6de3832f521e)
+2025-07-28 13:39:47,429 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species_trade_summary?select=%2A&species_id=eq.332be9c5-d770-467f-886e-6de3832f521e "HTTP/2 200 OK"
+2025-07-28 13:39:47,522 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=purpose&species_id=eq.332be9c5-d770-467f-886e-6de3832f521e "HTTP/2 200 OK"
+2025-07-28 13:39:47,634 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=source&species_id=eq.332be9c5-d770-467f-886e-6de3832f521e "HTTP/2 200 OK"
+2025-07-28 13:39:47,723 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.332be9c5-d770-467f-886e-6de3832f521e&order=year.desc&limit=100 "HTTP/2 200 OK"
+2025-07-28 13:39:47,810 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.332be9c5-d770-467f-886e-6de3832f521e&year=gte.2010 "HTTP/2 200 OK"
+2025-07-28 13:39:47,896 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/iucn_assessments?select=status%2Cyear_published&species_id=eq.332be9c5-d770-467f-886e-6de3832f521e&order=year_published.desc&limit=2 "HTTP/2 200 OK"
+2025-07-28 13:39:47,982 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_listings?select=appendix&species_id=eq.332be9c5-d770-467f-886e-6de3832f521e&order=effective_date.desc&limit=2 "HTTP/2 400 Bad Request"
+2025-07-28 13:39:47,983 - ERROR - Error getting conservation status for species 332be9c5-d770-467f-886e-6de3832f521e: {'message': 'column cites_listings.effective_date does not exist', 'code': '42703', 'hint': None, 'details': None}
+2025-07-28 13:39:48,089 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=exporter%2Cquantity&species_id=eq.332be9c5-d770-467f-886e-6de3832f521e "HTTP/2 200 OK"
+2025-07-28 13:39:48,090 - INFO - Processing 35/43: Sea Otter
+2025-07-28 13:39:48,169 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Sea+Otter%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:48,171 - INFO - Processing Sea Otter (ID: e37fba40-33e0-41c9-94cb-78fbb86ae48d)
+2025-07-28 13:39:48,264 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species_trade_summary?select=%2A&species_id=eq.e37fba40-33e0-41c9-94cb-78fbb86ae48d "HTTP/2 200 OK"
+2025-07-28 13:39:48,354 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=purpose&species_id=eq.e37fba40-33e0-41c9-94cb-78fbb86ae48d "HTTP/2 200 OK"
+2025-07-28 13:39:48,440 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=source&species_id=eq.e37fba40-33e0-41c9-94cb-78fbb86ae48d "HTTP/2 200 OK"
+2025-07-28 13:39:48,528 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.e37fba40-33e0-41c9-94cb-78fbb86ae48d&order=year.desc&limit=100 "HTTP/2 200 OK"
+2025-07-28 13:39:48,616 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.e37fba40-33e0-41c9-94cb-78fbb86ae48d&year=gte.2010 "HTTP/2 200 OK"
+2025-07-28 13:39:48,702 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/iucn_assessments?select=status%2Cyear_published&species_id=eq.e37fba40-33e0-41c9-94cb-78fbb86ae48d&order=year_published.desc&limit=2 "HTTP/2 200 OK"
+2025-07-28 13:39:48,784 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_listings?select=appendix&species_id=eq.e37fba40-33e0-41c9-94cb-78fbb86ae48d&order=effective_date.desc&limit=2 "HTTP/2 400 Bad Request"
+2025-07-28 13:39:48,785 - ERROR - Error getting conservation status for species e37fba40-33e0-41c9-94cb-78fbb86ae48d: {'message': 'column cites_listings.effective_date does not exist', 'code': '42703', 'hint': None, 'details': None}
+2025-07-28 13:39:48,872 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=exporter%2Cquantity&species_id=eq.e37fba40-33e0-41c9-94cb-78fbb86ae48d "HTTP/2 200 OK"
+2025-07-28 13:39:48,874 - INFO - Processing 36/43: Sei Whale
+2025-07-28 13:39:48,955 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Sei+Whale%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:48,956 - INFO - Processing Sei Whale (ID: e58a3fff-e0f3-43d9-bfcc-be33ac49d540)
+2025-07-28 13:39:49,046 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species_trade_summary?select=%2A&species_id=eq.e58a3fff-e0f3-43d9-bfcc-be33ac49d540 "HTTP/2 200 OK"
+2025-07-28 13:39:49,137 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=purpose&species_id=eq.e58a3fff-e0f3-43d9-bfcc-be33ac49d540 "HTTP/2 200 OK"
+2025-07-28 13:39:49,225 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=source&species_id=eq.e58a3fff-e0f3-43d9-bfcc-be33ac49d540 "HTTP/2 200 OK"
+2025-07-28 13:39:49,312 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.e58a3fff-e0f3-43d9-bfcc-be33ac49d540&order=year.desc&limit=100 "HTTP/2 200 OK"
+2025-07-28 13:39:49,397 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.e58a3fff-e0f3-43d9-bfcc-be33ac49d540&year=gte.2010 "HTTP/2 200 OK"
+2025-07-28 13:39:49,483 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/iucn_assessments?select=status%2Cyear_published&species_id=eq.e58a3fff-e0f3-43d9-bfcc-be33ac49d540&order=year_published.desc&limit=2 "HTTP/2 200 OK"
+2025-07-28 13:39:49,567 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_listings?select=appendix&species_id=eq.e58a3fff-e0f3-43d9-bfcc-be33ac49d540&order=effective_date.desc&limit=2 "HTTP/2 400 Bad Request"
+2025-07-28 13:39:49,571 - ERROR - Error getting conservation status for species e58a3fff-e0f3-43d9-bfcc-be33ac49d540: {'message': 'column cites_listings.effective_date does not exist', 'code': '42703', 'hint': None, 'details': None}
+2025-07-28 13:39:49,653 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=exporter%2Cquantity&species_id=eq.e58a3fff-e0f3-43d9-bfcc-be33ac49d540 "HTTP/2 200 OK"
+2025-07-28 13:39:49,653 - INFO - Processing 37/43: Short-tailed Albatross
+2025-07-28 13:39:49,734 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Short-tailed+Albatross%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:49,734 - INFO - Processing Short-tailed Albatross (ID: 196ec4ab-88a9-48ca-bd65-f0033809e4a8)
+2025-07-28 13:39:49,815 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species_trade_summary?select=%2A&species_id=eq.196ec4ab-88a9-48ca-bd65-f0033809e4a8 "HTTP/2 200 OK"
+2025-07-28 13:39:49,901 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=purpose&species_id=eq.196ec4ab-88a9-48ca-bd65-f0033809e4a8 "HTTP/2 200 OK"
+2025-07-28 13:39:49,991 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=source&species_id=eq.196ec4ab-88a9-48ca-bd65-f0033809e4a8 "HTTP/2 200 OK"
+2025-07-28 13:39:50,075 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.196ec4ab-88a9-48ca-bd65-f0033809e4a8&order=year.desc&limit=100 "HTTP/2 200 OK"
+2025-07-28 13:39:50,163 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.196ec4ab-88a9-48ca-bd65-f0033809e4a8&year=gte.2010 "HTTP/2 200 OK"
+2025-07-28 13:39:50,253 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/iucn_assessments?select=status%2Cyear_published&species_id=eq.196ec4ab-88a9-48ca-bd65-f0033809e4a8&order=year_published.desc&limit=2 "HTTP/2 200 OK"
+2025-07-28 13:39:50,338 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_listings?select=appendix&species_id=eq.196ec4ab-88a9-48ca-bd65-f0033809e4a8&order=effective_date.desc&limit=2 "HTTP/2 400 Bad Request"
+2025-07-28 13:39:50,339 - ERROR - Error getting conservation status for species 196ec4ab-88a9-48ca-bd65-f0033809e4a8: {'message': 'column cites_listings.effective_date does not exist', 'code': '42703', 'hint': None, 'details': None}
+2025-07-28 13:39:50,423 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=exporter%2Cquantity&species_id=eq.196ec4ab-88a9-48ca-bd65-f0033809e4a8 "HTTP/2 200 OK"
+2025-07-28 13:39:50,424 - INFO - Processing 38/43: Siberian Crane
+2025-07-28 13:39:50,520 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Siberian+Crane%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:50,521 - INFO - Processing Siberian Crane (ID: 0ae6a6b2-65cf-402b-a500-347627b68c76)
+2025-07-28 13:39:50,607 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species_trade_summary?select=%2A&species_id=eq.0ae6a6b2-65cf-402b-a500-347627b68c76 "HTTP/2 200 OK"
+2025-07-28 13:39:50,700 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=purpose&species_id=eq.0ae6a6b2-65cf-402b-a500-347627b68c76 "HTTP/2 200 OK"
+2025-07-28 13:39:50,791 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=source&species_id=eq.0ae6a6b2-65cf-402b-a500-347627b68c76 "HTTP/2 200 OK"
+2025-07-28 13:39:50,874 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.0ae6a6b2-65cf-402b-a500-347627b68c76&order=year.desc&limit=100 "HTTP/2 200 OK"
+2025-07-28 13:39:50,960 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.0ae6a6b2-65cf-402b-a500-347627b68c76&year=gte.2010 "HTTP/2 200 OK"
+2025-07-28 13:39:51,044 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/iucn_assessments?select=status%2Cyear_published&species_id=eq.0ae6a6b2-65cf-402b-a500-347627b68c76&order=year_published.desc&limit=2 "HTTP/2 200 OK"
+2025-07-28 13:39:51,133 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_listings?select=appendix&species_id=eq.0ae6a6b2-65cf-402b-a500-347627b68c76&order=effective_date.desc&limit=2 "HTTP/2 400 Bad Request"
+2025-07-28 13:39:51,134 - ERROR - Error getting conservation status for species 0ae6a6b2-65cf-402b-a500-347627b68c76: {'message': 'column cites_listings.effective_date does not exist', 'code': '42703', 'hint': None, 'details': None}
+2025-07-28 13:39:51,216 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=exporter%2Cquantity&species_id=eq.0ae6a6b2-65cf-402b-a500-347627b68c76 "HTTP/2 200 OK"
+2025-07-28 13:39:51,218 - INFO - Processing 39/43: Snowy Owl
+2025-07-28 13:39:51,301 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Snowy+Owl%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:51,302 - INFO - Processing Snowy Owl (ID: 2e6cedd3-4179-4d39-b704-6388007a97f1)
+2025-07-28 13:39:51,391 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species_trade_summary?select=%2A&species_id=eq.2e6cedd3-4179-4d39-b704-6388007a97f1 "HTTP/2 200 OK"
+2025-07-28 13:39:51,488 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=purpose&species_id=eq.2e6cedd3-4179-4d39-b704-6388007a97f1 "HTTP/2 200 OK"
+2025-07-28 13:39:51,581 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=source&species_id=eq.2e6cedd3-4179-4d39-b704-6388007a97f1 "HTTP/2 200 OK"
+2025-07-28 13:39:51,674 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.2e6cedd3-4179-4d39-b704-6388007a97f1&order=year.desc&limit=100 "HTTP/2 200 OK"
+2025-07-28 13:39:51,757 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.2e6cedd3-4179-4d39-b704-6388007a97f1&year=gte.2010 "HTTP/2 200 OK"
+2025-07-28 13:39:51,845 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/iucn_assessments?select=status%2Cyear_published&species_id=eq.2e6cedd3-4179-4d39-b704-6388007a97f1&order=year_published.desc&limit=2 "HTTP/2 200 OK"
+2025-07-28 13:39:51,928 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_listings?select=appendix&species_id=eq.2e6cedd3-4179-4d39-b704-6388007a97f1&order=effective_date.desc&limit=2 "HTTP/2 400 Bad Request"
+2025-07-28 13:39:51,929 - ERROR - Error getting conservation status for species 2e6cedd3-4179-4d39-b704-6388007a97f1: {'message': 'column cites_listings.effective_date does not exist', 'code': '42703', 'hint': None, 'details': None}
+2025-07-28 13:39:52,011 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=exporter%2Cquantity&species_id=eq.2e6cedd3-4179-4d39-b704-6388007a97f1 "HTTP/2 200 OK"
+2025-07-28 13:39:52,013 - INFO - Processing 40/43: Sperm Whale
+2025-07-28 13:39:52,094 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Sperm+Whale%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:52,094 - INFO - Processing Sperm Whale (ID: df36d357-e0ba-469e-8fc3-17e1ff523fad)
+2025-07-28 13:39:52,239 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species_trade_summary?select=%2A&species_id=eq.df36d357-e0ba-469e-8fc3-17e1ff523fad "HTTP/2 200 OK"
+2025-07-28 13:39:52,335 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=purpose&species_id=eq.df36d357-e0ba-469e-8fc3-17e1ff523fad "HTTP/2 200 OK"
+2025-07-28 13:39:52,430 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=source&species_id=eq.df36d357-e0ba-469e-8fc3-17e1ff523fad "HTTP/2 200 OK"
+2025-07-28 13:39:52,523 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.df36d357-e0ba-469e-8fc3-17e1ff523fad&order=year.desc&limit=100 "HTTP/2 200 OK"
+2025-07-28 13:39:52,615 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.df36d357-e0ba-469e-8fc3-17e1ff523fad&year=gte.2010 "HTTP/2 200 OK"
+2025-07-28 13:39:52,704 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/iucn_assessments?select=status%2Cyear_published&species_id=eq.df36d357-e0ba-469e-8fc3-17e1ff523fad&order=year_published.desc&limit=2 "HTTP/2 200 OK"
+2025-07-28 13:39:52,795 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_listings?select=appendix&species_id=eq.df36d357-e0ba-469e-8fc3-17e1ff523fad&order=effective_date.desc&limit=2 "HTTP/2 400 Bad Request"
+2025-07-28 13:39:52,796 - ERROR - Error getting conservation status for species df36d357-e0ba-469e-8fc3-17e1ff523fad: {'message': 'column cites_listings.effective_date does not exist', 'code': '42703', 'hint': None, 'details': None}
+2025-07-28 13:39:52,886 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=exporter%2Cquantity&species_id=eq.df36d357-e0ba-469e-8fc3-17e1ff523fad "HTTP/2 200 OK"
+2025-07-28 13:39:52,891 - INFO - Processing 41/43: Stejneger's beaked whale
+2025-07-28 13:39:52,977 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Stejneger%27s+beaked+whale%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:52,977 - INFO - Processing Stejneger's beaked whale (ID: 4c39d371-3ee3-4ec3-b7e6-5763cf92dd94)
+2025-07-28 13:39:53,060 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species_trade_summary?select=%2A&species_id=eq.4c39d371-3ee3-4ec3-b7e6-5763cf92dd94 "HTTP/2 200 OK"
+2025-07-28 13:39:53,157 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=purpose&species_id=eq.4c39d371-3ee3-4ec3-b7e6-5763cf92dd94 "HTTP/2 200 OK"
+2025-07-28 13:39:53,243 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=source&species_id=eq.4c39d371-3ee3-4ec3-b7e6-5763cf92dd94 "HTTP/2 200 OK"
+2025-07-28 13:39:53,325 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.4c39d371-3ee3-4ec3-b7e6-5763cf92dd94&order=year.desc&limit=100 "HTTP/2 200 OK"
+2025-07-28 13:39:53,425 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.4c39d371-3ee3-4ec3-b7e6-5763cf92dd94&year=gte.2010 "HTTP/2 200 OK"
+2025-07-28 13:39:53,511 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/iucn_assessments?select=status%2Cyear_published&species_id=eq.4c39d371-3ee3-4ec3-b7e6-5763cf92dd94&order=year_published.desc&limit=2 "HTTP/2 200 OK"
+2025-07-28 13:39:53,598 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_listings?select=appendix&species_id=eq.4c39d371-3ee3-4ec3-b7e6-5763cf92dd94&order=effective_date.desc&limit=2 "HTTP/2 400 Bad Request"
+2025-07-28 13:39:53,599 - ERROR - Error getting conservation status for species 4c39d371-3ee3-4ec3-b7e6-5763cf92dd94: {'message': 'column cites_listings.effective_date does not exist', 'code': '42703', 'hint': None, 'details': None}
+2025-07-28 13:39:53,689 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=exporter%2Cquantity&species_id=eq.4c39d371-3ee3-4ec3-b7e6-5763cf92dd94 "HTTP/2 200 OK"
+2025-07-28 13:39:53,691 - INFO - Processing 42/43: Walrus
+2025-07-28 13:39:53,831 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25Walrus%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:53,831 - INFO - Processing Walrus (ID: 286e0896-1b69-4de9-a5b2-6561d82443e6)
+2025-07-28 13:39:53,979 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species_trade_summary?select=%2A&species_id=eq.286e0896-1b69-4de9-a5b2-6561d82443e6 "HTTP/2 200 OK"
+2025-07-28 13:39:54,072 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=purpose&species_id=eq.286e0896-1b69-4de9-a5b2-6561d82443e6 "HTTP/2 200 OK"
+2025-07-28 13:39:54,153 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=source&species_id=eq.286e0896-1b69-4de9-a5b2-6561d82443e6 "HTTP/2 200 OK"
+2025-07-28 13:39:54,234 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.286e0896-1b69-4de9-a5b2-6561d82443e6&order=year.desc&limit=100 "HTTP/2 200 OK"
+2025-07-28 13:39:54,327 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.286e0896-1b69-4de9-a5b2-6561d82443e6&year=gte.2010 "HTTP/2 200 OK"
+2025-07-28 13:39:54,410 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/iucn_assessments?select=status%2Cyear_published&species_id=eq.286e0896-1b69-4de9-a5b2-6561d82443e6&order=year_published.desc&limit=2 "HTTP/2 200 OK"
+2025-07-28 13:39:54,491 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_listings?select=appendix&species_id=eq.286e0896-1b69-4de9-a5b2-6561d82443e6&order=effective_date.desc&limit=2 "HTTP/2 400 Bad Request"
+2025-07-28 13:39:54,492 - ERROR - Error getting conservation status for species 286e0896-1b69-4de9-a5b2-6561d82443e6: {'message': 'column cites_listings.effective_date does not exist', 'code': '42703', 'hint': None, 'details': None}
+2025-07-28 13:39:54,581 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=exporter%2Cquantity&species_id=eq.286e0896-1b69-4de9-a5b2-6561d82443e6 "HTTP/2 200 OK"
+2025-07-28 13:39:54,586 - INFO - Processing 43/43: White-beaked Dolphin
+2025-07-28 13:39:54,668 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species?select=id&common_name=ilike.%25White-beaked+Dolphin%25&limit=1 "HTTP/2 200 OK"
+2025-07-28 13:39:54,669 - INFO - Processing White-beaked Dolphin (ID: 743cc9b7-7e04-46a0-aa8f-94751b9eba3e)
+2025-07-28 13:39:54,755 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/species_trade_summary?select=%2A&species_id=eq.743cc9b7-7e04-46a0-aa8f-94751b9eba3e "HTTP/2 200 OK"
+2025-07-28 13:39:54,844 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=purpose&species_id=eq.743cc9b7-7e04-46a0-aa8f-94751b9eba3e "HTTP/2 200 OK"
+2025-07-28 13:39:54,927 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=source&species_id=eq.743cc9b7-7e04-46a0-aa8f-94751b9eba3e "HTTP/2 200 OK"
+2025-07-28 13:39:55,009 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.743cc9b7-7e04-46a0-aa8f-94751b9eba3e&order=year.desc&limit=100 "HTTP/2 200 OK"
+2025-07-28 13:39:55,100 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=year%2Cquantity&species_id=eq.743cc9b7-7e04-46a0-aa8f-94751b9eba3e&year=gte.2010 "HTTP/2 200 OK"
+2025-07-28 13:39:55,181 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/iucn_assessments?select=status%2Cyear_published&species_id=eq.743cc9b7-7e04-46a0-aa8f-94751b9eba3e&order=year_published.desc&limit=2 "HTTP/2 200 OK"
+2025-07-28 13:39:55,267 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_listings?select=appendix&species_id=eq.743cc9b7-7e04-46a0-aa8f-94751b9eba3e&order=effective_date.desc&limit=2 "HTTP/2 400 Bad Request"
+2025-07-28 13:39:55,268 - ERROR - Error getting conservation status for species 743cc9b7-7e04-46a0-aa8f-94751b9eba3e: {'message': 'column cites_listings.effective_date does not exist', 'code': '42703', 'hint': None, 'details': None}
+2025-07-28 13:39:55,374 - INFO - HTTP Request: GET https://cexwrbrnoxqtxjbiujiq.supabase.co/rest/v1/cites_trade_records?select=exporter%2Cquantity&species_id=eq.743cc9b7-7e04-46a0-aa8f-94751b9eba3e "HTTP/2 200 OK"
+2025-07-28 13:39:55,378 - INFO - Report generation completed
+2025-07-28 13:39:55,387 - INFO - Data exported to /Users/magnussmari/Arctic_Tracker(version_1.0)/Arctic-Tracker-API/migration/arctic_species_trade_completed.csv
+Trade data extraction completed successfully!

@@ -1,0 +1,327 @@
+id,species_id,name,language,is_main
+2f37bab7-bb69-4396-81d4-dbfc728f3973,f133cabe-d298-4ae4-a03d-5c5899395d52,North Atlantic Right Whale,eng,True
+710f3348-237c-4ff5-955b-18d06a9ffc02,f133cabe-d298-4ae4-a03d-5c5899395d52,Nordkaper,nor,False
+9dadf5ac-674e-4870-bed1-1b60c901adfd,f133cabe-d298-4ae4-a03d-5c5899395d52,Ballena franca del Norte,spa,False
+61b39be6-19c9-492c-9319-ef3db8c2c74a,f133cabe-d298-4ae4-a03d-5c5899395d52,stillahavsrätval,swe,False
+639bf748-9c72-4d74-afd2-f1579a95b186,f133cabe-d298-4ae4-a03d-5c5899395d52,Baleine franche,fra,False
+8ae5a432-9bf5-4e5a-a0f0-9d3001bf8851,f133cabe-d298-4ae4-a03d-5c5899395d52,Atlantischer nordkaper,deu,False
+012c0943-3fa7-4042-9bc4-304191964ee0,5f289c1e-5101-458f-a5ea-a65e5c734569,Narwhal,eng,True
+0879577f-b992-4e97-b431-d8dc1f8f8218,5f289c1e-5101-458f-a5ea-a65e5c734569,Narhval,nor,False
+08107366-c559-459c-9998-74157d40b237,5f289c1e-5101-458f-a5ea-a65e5c734569,Narval,spa,False
+09f1e907-bad8-4cae-ae4b-78fb50e3d25a,5f289c1e-5101-458f-a5ea-a65e5c734569,narval,swe,False
+bee8166d-4492-4af3-b2a6-2e1676c391b1,5f289c1e-5101-458f-a5ea-a65e5c734569,Narval,fra,False
+a44a067a-721d-4dfd-a95f-b97e9c0641a7,5f289c1e-5101-458f-a5ea-a65e5c734569,Qirniqtaq,iku,False
+3da71c99-865d-4a67-a1a6-c854a3402f68,332be9c5-d770-467f-886e-6de3832f521e,Rough-legged Buzzard,eng,True
+7ea71039-5fc7-4878-80dc-4e76bdbf7d5e,332be9c5-d770-467f-886e-6de3832f521e,myšiak severský,slk,False
+afb13c9b-dbc7-46f4-b9e0-b7b898ad5b03,332be9c5-d770-467f-886e-6de3832f521e,koconoga kanja,slv,False
+669d95ac-f4a6-4bd7-9589-aa9c62db36ef,332be9c5-d770-467f-886e-6de3832f521e,Búteo-calçado,por,False
+33dca35a-c6d5-4dac-808b-b4f9919f8c0f,332be9c5-d770-467f-886e-6de3832f521e,Myszołów włochaty,pol,False
+8281e49d-eac1-416e-acb7-7a5973c5931d,332be9c5-d770-467f-886e-6de3832f521e,Ruigpootbuizerd,nld,False
+78c11469-78cb-443b-862d-a62fad9d09db,332be9c5-d770-467f-886e-6de3832f521e,Ratonero calzado,spa,False
+820deb77-9ee4-417f-bb60-7bc67350c085,332be9c5-d770-467f-886e-6de3832f521e,Fjällvråk,swe,False
+7b92a2ba-5729-41ac-8305-9321ed43e292,332be9c5-d770-467f-886e-6de3832f521e,Buse pattue,fra,False
+7b1dd8e4-a119-41c8-97ac-8bf975e10ae2,332be9c5-d770-467f-886e-6de3832f521e,Škanjac gaćaš,hr,False
+93870ffa-6931-4944-937c-b56b85fb593c,332be9c5-d770-467f-886e-6de3832f521e,Poiana calzata,ita,False
+faae60fa-e923-446f-b8ab-1e4d8f15caab,332be9c5-d770-467f-886e-6de3832f521e,Fjeldvåge,dan,False
+2ea84582-4737-4ff0-9745-b3038724ac9d,332be9c5-d770-467f-886e-6de3832f521e,Rauhfußbussard,deu,False
+6cbbeac7-a537-446e-9baf-b8a806fe0c5e,332be9c5-d770-467f-886e-6de3832f521e,Северен мишелов,bul,False
+3d594114-a309-41e3-8e57-8b3178797f5e,332be9c5-d770-467f-886e-6de3832f521e,káně rousná,ces,False
+87b94e3d-c53a-4127-8f19-1da335ddbeb0,332be9c5-d770-467f-886e-6de3832f521e,Χιονογερακίνα,el,False
+ad233419-7b91-471b-bad9-8ffbd5222716,332be9c5-d770-467f-886e-6de3832f521e,Karvasjalg-viu,est,False
+d238c31d-ae67-4345-a57c-78e6ef7225b1,332be9c5-d770-467f-886e-6de3832f521e,Piekana,fin,False
+c43708c4-12c1-4f20-aeb5-0ce6b7a1c1ce,332be9c5-d770-467f-886e-6de3832f521e,Gatyås ölyv,hun,False
+04b40b09-4ca1-4526-96b7-342929c4db6e,332be9c5-d770-467f-886e-6de3832f521e,Bikšainais klijāns,lav,False
+3861abb4-ef5c-4ae0-9146-7aa403c7b74c,332be9c5-d770-467f-886e-6de3832f521e,Tūbuotasis suopis,lit,False
+5bf1da05-715e-4e8e-a380-ee86c13de4b4,332be9c5-d770-467f-886e-6de3832f521e,Kuċċarda tal-kalzetti,mlt,False
+d9999ccd-c0ab-4787-b1fc-ef1356d06fa4,332be9c5-d770-467f-886e-6de3832f521e,Șorecar încălțat,ron,False
+1c394f0b-35d7-4fd0-a0c7-2c2042d07c08,332be9c5-d770-467f-886e-6de3832f521e,Clamhán lópach,gle,False
+8ecd8ed9-6b6f-489f-ae5e-ce5a11c37cb0,e77df55d-294b-431f-9b0f-1d2da69518f6,Fin Whale,eng,True
+44179b37-7263-4ed8-ab15-dbbc7eba6c4f,e77df55d-294b-431f-9b0f-1d2da69518f6,Baleia-comum,por,False
+9aa72b0a-fe9b-48f0-8a01-906461c66f3c,e77df55d-294b-431f-9b0f-1d2da69518f6,Finnhval,nor,False
+7ab86e34-df03-4fe1-ac45-a857e8e35281,e77df55d-294b-431f-9b0f-1d2da69518f6,Gewone Vinvis,nld,False
+a6fb24b2-1035-4c52-86ad-fa5873b5e2cd,e77df55d-294b-431f-9b0f-1d2da69518f6,Ballena aleta,spa,False
+8dbf5476-cbf4-43d3-a051-abab3a53aaf8,e77df55d-294b-431f-9b0f-1d2da69518f6,sillval,swe,False
+d1acb3c5-17be-44db-9c3d-f2e3a846a993,e77df55d-294b-431f-9b0f-1d2da69518f6,长须鲸,zho,False
+3432a0f4-149b-4a40-a5dd-3899a35ffaf0,e77df55d-294b-431f-9b0f-1d2da69518f6,Baleine à nageoires,fra,False
+d11bc6d8-1dc5-43ba-929b-5362b19b6214,e77df55d-294b-431f-9b0f-1d2da69518f6,Balenottera comune,ita,False
+72714f17-585c-49cd-a977-d85e7a83a406,e77df55d-294b-431f-9b0f-1d2da69518f6,Finnwal,deu,False
+ac419c7e-6881-4ba0-912d-914334229704,286e0896-1b69-4de9-a5b2-6561d82443e6,Walrus,eng,True
+87974bd6-38a5-4f4e-912c-0ecd05951b4f,286e0896-1b69-4de9-a5b2-6561d82443e6,mrož ľadový,slk,False
+cc3db85f-1b27-4fbc-a7ca-780441984977,286e0896-1b69-4de9-a5b2-6561d82443e6,polarni mrož,slv,False
+20eb08ca-614c-4f5d-a9d1-61f342bf2d33,286e0896-1b69-4de9-a5b2-6561d82443e6,Morsa,por,False
+d8375461-4fd0-4911-be7e-8b2cbc5c3caf,286e0896-1b69-4de9-a5b2-6561d82443e6,Mors,pol,False
+784f9919-cbc9-45a3-9266-5dc5e8f13d68,286e0896-1b69-4de9-a5b2-6561d82443e6,Hvalross,nor,False
+4ea1e994-ef3f-4d31-a292-06e7c61dc131,286e0896-1b69-4de9-a5b2-6561d82443e6,Walrus,nld,False
+fa3e376a-91fc-4a66-9ce8-6f0ffd03965d,286e0896-1b69-4de9-a5b2-6561d82443e6,Morsa,spa,False
+270f71d4-cd5e-4f37-a5b4-769725e5e86a,286e0896-1b69-4de9-a5b2-6561d82443e6,Valross,swe,False
+c04e207b-600e-4ebf-ae59-4d77c2a908c6,286e0896-1b69-4de9-a5b2-6561d82443e6,Mors,tur,False
+f6ac30f0-c642-4963-ac93-5151165bc934,286e0896-1b69-4de9-a5b2-6561d82443e6,海象,zho,False
+f5272b48-5df8-4322-9b7f-6889e560af64,286e0896-1b69-4de9-a5b2-6561d82443e6,Morse,fra,False
+f99062fa-b77a-449d-8944-dee2363584ae,286e0896-1b69-4de9-a5b2-6561d82443e6,Morž,hr,False
+56d8108c-9ea0-4aec-a19c-3d87d90a4671,286e0896-1b69-4de9-a5b2-6561d82443e6,Tricheco,ita,False
+4d560324-2b6b-4c94-82a5-da97ac81516b,286e0896-1b69-4de9-a5b2-6561d82443e6,hvalros,dan,False
+e2a52b0f-e1a6-4bf2-afab-11166dc0b3ba,286e0896-1b69-4de9-a5b2-6561d82443e6,Walroß,deu,False
+85671b7e-7eff-401e-b9ab-b2bb62110a09,286e0896-1b69-4de9-a5b2-6561d82443e6,Морж,bul,False
+4cc8512f-3eab-446c-90c4-5bbfedf9b4b2,286e0896-1b69-4de9-a5b2-6561d82443e6,mrož,ces,False
+6d10f602-9587-49a1-b2c9-478719d556c1,286e0896-1b69-4de9-a5b2-6561d82443e6,Θαλάσσιοι ίπποι,el,False
+76afc607-7510-4a7d-a08a-2e3b6eabd14f,286e0896-1b69-4de9-a5b2-6561d82443e6,Morsk,est,False
+0e3f88c2-12a7-4772-951d-418708e8c2bd,286e0896-1b69-4de9-a5b2-6561d82443e6,Mursu,fin,False
+65e97d61-e8a0-47e0-835d-441ec7f14f17,286e0896-1b69-4de9-a5b2-6561d82443e6,Rozmár,hun,False
+fe1bf3ee-0164-4257-a8f7-df60790f5940,286e0896-1b69-4de9-a5b2-6561d82443e6,Rostungur,is,False
+c44bdd4e-e41b-4bf3-9fae-7d3dc14c743e,286e0896-1b69-4de9-a5b2-6561d82443e6,Valzirgs,lav,False
+ffaef4ff-65c9-4db9-ab33-4be8647931b0,286e0896-1b69-4de9-a5b2-6561d82443e6,Vėplys,lit,False
+640ac03a-d234-4237-ac65-1f42a5b18648,286e0896-1b69-4de9-a5b2-6561d82443e6,Walrus,mlt,False
+41099218-6392-45a4-8639-3a9c879a410f,286e0896-1b69-4de9-a5b2-6561d82443e6,Morsă,ron,False
+a9c1db1d-5142-4d3f-bead-376786044fe2,286e0896-1b69-4de9-a5b2-6561d82443e6,Rosualt,gle,False
+75adc2c5-580c-4fd3-9022-0db2e0a35647,652d45e6-324e-4066-addb-3029f289a1ac,Eskimo Curlew,eng,True
+be6b5ad8-c69e-4c8d-8bdb-316c78468a3a,652d45e6-324e-4066-addb-3029f289a1ac,hvizdák krátkozobý,slk,False
+9d642efd-a023-44ef-a3af-c6be7441282a,652d45e6-324e-4066-addb-3029f289a1ac,eskimski škurh,slv,False
+7b04ca49-ae9f-4843-b054-3d216ea5b648,652d45e6-324e-4066-addb-3029f289a1ac,Maçarico-esquimó,por,False
+05580708-79a9-4856-9e82-744b361e6293,652d45e6-324e-4066-addb-3029f289a1ac,Kulik eskimoski,pol,False
+85be0cc1-c72f-4923-97f1-59d92a6be69e,652d45e6-324e-4066-addb-3029f289a1ac,Eskimowulp,nld,False
+aea4250d-7ab2-4b59-9d1d-2b52054a9445,652d45e6-324e-4066-addb-3029f289a1ac,Zarapito boreal,spa,False
+e0fc280f-d7bf-47ae-9d7e-5c25608d3b85,652d45e6-324e-4066-addb-3029f289a1ac,eskimåspov,swe,False
+59455245-648e-47be-877d-48108e14e562,652d45e6-324e-4066-addb-3029f289a1ac,极北杓鹬,zho,False
+bf7d5a74-7a6c-4e41-b2b4-e03b1fbf7ca1,652d45e6-324e-4066-addb-3029f289a1ac,Courlis esquimau,fra,False
+2d562a26-9494-4e7a-9fa0-43fa4a880ceb,652d45e6-324e-4066-addb-3029f289a1ac,Eskimski pozviždač,hr,False
+40a08263-1fc2-4942-8a0a-5a6a48e55c7e,652d45e6-324e-4066-addb-3029f289a1ac,Chiurlo boreale,ita,False
+daa0a67a-7faa-4b5b-9ebf-8bd38dfbf1ee,652d45e6-324e-4066-addb-3029f289a1ac,Eskimospove,dan,False
+13e5ce31-0372-4eba-807d-bb7058a5d754,652d45e6-324e-4066-addb-3029f289a1ac,Eskimobrachvogel,deu,False
+9878ac61-d4fe-4f2a-82e2-7fada611c480,652d45e6-324e-4066-addb-3029f289a1ac,Ескимосов свирец,bul,False
+5d79a132-fbb0-4128-b0f7-7b124a22cbb8,652d45e6-324e-4066-addb-3029f289a1ac,koliha severní,ces,False
+7655b5f1-9d3e-4c20-9216-a77d89f328df,652d45e6-324e-4066-addb-3029f289a1ac,Τουρλίδα των Εσκιμώων,el,False
+cf1aba4f-684c-4b62-b143-20eb825876bc,652d45e6-324e-4066-addb-3029f289a1ac,Põhjakoovitaja,est,False
+06db0989-8010-4385-95ab-2cae8265799b,652d45e6-324e-4066-addb-3029f289a1ac,Eskimokuovi,fin,False
+14de73b5-eed1-48bd-bfd2-169b2225e227,652d45e6-324e-4066-addb-3029f289a1ac,Eszkimópóling,hun,False
+ee38679d-4037-4d37-a068-5748608ca756,652d45e6-324e-4066-addb-3029f289a1ac,Eskimosu kuitala,lav,False
+33dca121-7d0c-4049-a7d0-229a5cb52949,652d45e6-324e-4066-addb-3029f289a1ac,Eskiminė kuolinga,lit,False
+b2137ba3-6386-487f-921e-518de8c49e37,652d45e6-324e-4066-addb-3029f289a1ac,Gurlin boreali,mlt,False
+51ae684a-a690-4552-b40c-89305924eb9e,652d45e6-324e-4066-addb-3029f289a1ac,Crotach Artach,gle,False
+6f305834-8cd6-4345-97bf-673fa9b05f90,266eeed0-3d6e-4f14-90be-72b74f8dce53,North American River Otter,eng,True
+aa0daa48-a148-4fd8-aa14-0d1fc8cb33df,266eeed0-3d6e-4f14-90be-72b74f8dce53,Nutria norteamericana,spa,False
+e0c82284-7ba0-449e-ac5d-b77e2ea6fe9f,266eeed0-3d6e-4f14-90be-72b74f8dce53,flodutter,swe,False
+5649b74d-5118-427b-a194-79566ba54178,266eeed0-3d6e-4f14-90be-72b74f8dce53,Loutre du Canada,fra,False
+ac71de2b-2a1d-4889-b353-d4071f154d3e,eb7be3f0-7ae7-4dd8-8803-7e8513fb1abe,Peregrine Falcon,eng,True
+36e6fc30-f232-4cdc-9522-4dedb7a8432d,eb7be3f0-7ae7-4dd8-8803-7e8513fb1abe,sokol sťahovavý,slk,False
+65e90c36-4eb1-45ce-af5b-da009e62f0c5,eb7be3f0-7ae7-4dd8-8803-7e8513fb1abe,sokol selec,slv,False
+70434072-d3a0-4857-ba22-b68a562a6052,eb7be3f0-7ae7-4dd8-8803-7e8513fb1abe,Falcão-peregrino,por,False
+6d06fac4-cf23-4807-820e-2ca2c2c838d0,eb7be3f0-7ae7-4dd8-8803-7e8513fb1abe,sokól wedrowny,pol,False
+f1a94122-0135-4321-b4f9-fdd542bc7e10,eb7be3f0-7ae7-4dd8-8803-7e8513fb1abe,Vandrefalk,nor,False
+fbf08e8c-7fa5-45f0-b3fd-216c3892e5cb,eb7be3f0-7ae7-4dd8-8803-7e8513fb1abe,Slechtvalk,nld,False
+472466ae-1d26-4960-ad3c-ee4bc22946a2,eb7be3f0-7ae7-4dd8-8803-7e8513fb1abe,Halcón blancuzco,spa,False
+b544cce9-daf9-4276-8987-46e8dad8880f,eb7be3f0-7ae7-4dd8-8803-7e8513fb1abe,Pilgrimsfalk,swe,False
+fdcf7fc1-67a8-4744-9da0-ad2668f048b3,eb7be3f0-7ae7-4dd8-8803-7e8513fb1abe,游隼,zho,False
+3c5e9ce6-c0cd-446d-b1e6-781493dac999,eb7be3f0-7ae7-4dd8-8803-7e8513fb1abe,Faucon pèlerin,fra,False
+26937488-21ef-4e2c-aa57-f96beda275a5,eb7be3f0-7ae7-4dd8-8803-7e8513fb1abe,Sivi sokol,hr,False
+ad869bbe-bcbc-41d1-87e1-2341dcb8c206,eb7be3f0-7ae7-4dd8-8803-7e8513fb1abe,Pellegrino,ita,False
+368d51e2-1e5c-4965-8371-c759ed56c853,eb7be3f0-7ae7-4dd8-8803-7e8513fb1abe,Vandrefalk,dan,False
+1d8c83b8-03e7-448f-b666-9c78b279d60b,eb7be3f0-7ae7-4dd8-8803-7e8513fb1abe,Wanderfalke,deu,False
+1776ea21-e786-4d78-98fa-cbc1e8c948f1,eb7be3f0-7ae7-4dd8-8803-7e8513fb1abe,Сокол скитник,bul,False
+515a944b-29a6-4168-b854-8549e2dab249,eb7be3f0-7ae7-4dd8-8803-7e8513fb1abe,sokol stěhovavý,ces,False
+2b3bbb4f-33ab-4232-969b-2770947b31bd,eb7be3f0-7ae7-4dd8-8803-7e8513fb1abe,Πετρίτης,el,False
+4d114979-a935-4987-9f8d-da95ce3b9066,eb7be3f0-7ae7-4dd8-8803-7e8513fb1abe,Rabapistrik,est,False
+2d8bbbf4-f87a-4662-b3a6-234684280f1b,eb7be3f0-7ae7-4dd8-8803-7e8513fb1abe,Muuttohaukka,fin,False
+b7447896-ce36-4ae5-ab37-ccc3dd344aa1,eb7be3f0-7ae7-4dd8-8803-7e8513fb1abe,Vándorsólyom,hun,False
+5c5c90f0-6d6c-4533-acab-0a6de2bab33f,eb7be3f0-7ae7-4dd8-8803-7e8513fb1abe,Lielais piekūns,lav,False
+61d76702-06f8-4713-9002-a745446be77c,eb7be3f0-7ae7-4dd8-8803-7e8513fb1abe,Sakalas keleivis,lit,False
+59410e1f-5439-45a5-8307-0e03fc0e1e73,eb7be3f0-7ae7-4dd8-8803-7e8513fb1abe,Bies,mlt,False
+4cac16c3-4c3e-4a43-be15-b6a8a62c1ad2,eb7be3f0-7ae7-4dd8-8803-7e8513fb1abe,Șoim călător,ron,False
+a558196f-8d3f-4294-adc0-e45cc0c6ae35,eb7be3f0-7ae7-4dd8-8803-7e8513fb1abe,Fabhcún gorm,gle,False
+8d546efe-16b5-4532-b19c-c91d02625e7a,d96c4f08-604c-4b80-ba4c-f445152daeea,Porbeagle Shark,eng,True
+b33b1424-c6d9-4eb0-b6dd-e24481bd8781,d96c4f08-604c-4b80-ba4c-f445152daeea,Skylopsaro,el,False
+e10bd861-8218-4fd4-af6c-9086dd4f5e27,d96c4f08-604c-4b80-ba4c-f445152daeea,Zarlacz sledziowy,pol,False
+ce8fd7ef-9b77-49c7-a84b-3056ad8a0e52,d96c4f08-604c-4b80-ba4c-f445152daeea,Rechinul scrumbiilor,ron,False
+ed7b9986-1c66-475f-9768-0df8a9255a29,d96c4f08-604c-4b80-ba4c-f445152daeea,Smeriglio,ita,False
+5e5a3999-fa08-489f-9048-0200b0933ed8,d96c4f08-604c-4b80-ba4c-f445152daeea,Tonil,sq,False
+f11ef66e-3de3-4ae8-97eb-c97cc1d541bf,d96c4f08-604c-4b80-ba4c-f445152daeea,Sillihai,fin,False
+d56ebc8a-069d-49ee-b4e8-66ee6728a5fa,d96c4f08-604c-4b80-ba4c-f445152daeea,Haringhaai,af,False
+7f383921-e539-4a1e-9892-7c044766d84b,d96c4f08-604c-4b80-ba4c-f445152daeea,Marrajo sardinero,spa,False
+265a9f81-763f-4251-81de-ef1284ce0097,d96c4f08-604c-4b80-ba4c-f445152daeea,Haringhaai,nld,False
+4ceafcff-e2e9-49e3-9e09-074b5ee64014,d96c4f08-604c-4b80-ba4c-f445152daeea,Tubarão-sardo,por,False
+1e091265-1cf7-47bc-a369-a4ae551493e8,d96c4f08-604c-4b80-ba4c-f445152daeea,Kalb,ar,False
+3e349fc7-b8a8-4d91-a8ce-1a9f6d8c25db,d96c4f08-604c-4b80-ba4c-f445152daeea,Marraix,cat,False
+95fa34c2-0d59-4217-96ce-97ec46ce6a34,d96c4f08-604c-4b80-ba4c-f445152daeea,Sillhaj,swe,False
+c4f097ef-86e0-4da8-8421-abb70522988f,d96c4f08-604c-4b80-ba4c-f445152daeea,Hemari,fo,False
+50cb52da-3ffc-4b3b-99bd-947aeadb91a0,d96c4f08-604c-4b80-ba4c-f445152daeea,Pixxiplamptu,mlt,False
+210297dc-b547-479e-87ef-3e1c64e2c427,d96c4f08-604c-4b80-ba4c-f445152daeea,Môka-zame,ja,False
+02b88971-66af-4fe8-9bf0-2361d6966d6c,d96c4f08-604c-4b80-ba4c-f445152daeea,Dikburun karkarias,tur,False
+717d56ff-94cd-4a64-9b0d-8a15335eb146,d96c4f08-604c-4b80-ba4c-f445152daeea,Sildehaj,dan,False
+a750281d-be67-4404-8f84-c67cf4919b08,d96c4f08-604c-4b80-ba4c-f445152daeea,Psina atlantska,sr,False
+1093fa9c-cf75-4d34-96fc-1c00285aed6e,d96c4f08-604c-4b80-ba4c-f445152daeea,Heringshai,deu,False
+22347e58-2ba8-4312-a216-78c0fbfabe66,d96c4f08-604c-4b80-ba4c-f445152daeea,Håbrann,nor,False
+a0b0f33f-3005-4a96-9c88-47e1de612ee4,d96c4f08-604c-4b80-ba4c-f445152daeea,Requin-taupe commun,fra,False
+73a21e0a-9560-4325-8682-be235685c4ab,d96c4f08-604c-4b80-ba4c-f445152daeea,Hámeri,is,False
+3ea6091b-f2e1-48b3-b042-d0470d7e0d81,d96c4f08-604c-4b80-ba4c-f445152daeea,Heringcápa,hun,False
+394d33bb-9ae9-42f4-a943-0bf70eafb365,d96c4f08-604c-4b80-ba4c-f445152daeea,Kučina,hr,False
+8099e657-33ee-4bd9-86f4-7feeefff0cda,d96c4f08-604c-4b80-ba4c-f445152daeea,Siļķu haizivs,lav,False
+6f02bd52-ab40-423e-b411-ee873ae81133,d96c4f08-604c-4b80-ba4c-f445152daeea,žralok nosatý,ces,False
+c0d03e98-58f2-48b3-a289-92a0ef53fb8c,d96c4f08-604c-4b80-ba4c-f445152daeea,Harilik heeringhai,est,False
+2a5419c0-e01a-452d-81aa-1fda0fddb1c7,d96c4f08-604c-4b80-ba4c-f445152daeea,Atlantinis silkiaryklis,lit,False
+7230fb89-2053-445a-8266-1b6e9f531c6e,d96c4f08-604c-4b80-ba4c-f445152daeea,atlantski morski pes,slv,False
+c838a913-a73c-4d03-9ffb-ecf31369cc74,d96c4f08-604c-4b80-ba4c-f445152daeea,Селдова акула,bul,False
+19ed1f76-6abd-434f-abfd-eac39a5566dd,d96c4f08-604c-4b80-ba4c-f445152daeea,Craosaire,gle,False
+d67ae5f6-b296-46a0-9f27-8b5ac13d238d,d96c4f08-604c-4b80-ba4c-f445152daeea,lamna nosatá,slk,False
+3a4ba918-a9e1-4775-b969-dc1d7a066aae,d96c4f08-604c-4b80-ba4c-f445152daeea,鼠鲨,zho,False
+949ef02e-1321-4fde-8662-6098273eb295,0ae6a6b2-65cf-402b-a500-347627b68c76,Siberian Crane,eng,True
+1b50cecc-d7a5-4092-a46e-e1582188afb1,0ae6a6b2-65cf-402b-a500-347627b68c76,žeriav biely,slk,False
+adbf27a9-6c14-4d58-bc2b-83136168224a,0ae6a6b2-65cf-402b-a500-347627b68c76,snežni žerjav,slv,False
+7e6acde1-94e7-44c5-834d-c0faaaba7ac0,0ae6a6b2-65cf-402b-a500-347627b68c76,Grou-siberiano,por,False
+a88d0364-c5d9-47ac-87f7-ff0f3889922b,0ae6a6b2-65cf-402b-a500-347627b68c76,Żuraw biały,pol,False
+527db998-9da7-428e-a466-0d95076cfb44,0ae6a6b2-65cf-402b-a500-347627b68c76,Стерх,rus,False
+62b748f0-e430-417b-aea4-6e813a3be4c0,0ae6a6b2-65cf-402b-a500-347627b68c76,Siberische Witte Kraanvogel,nld,False
+0429184b-9391-48d1-a90b-03559becd371,0ae6a6b2-65cf-402b-a500-347627b68c76,Grulla blanca asiática,spa,False
+d4994287-17b9-4595-8914-1de7529a3191,0ae6a6b2-65cf-402b-a500-347627b68c76,snötrana,swe,False
+707118d8-362b-49ad-b983-009b1fdaa7e2,0ae6a6b2-65cf-402b-a500-347627b68c76,白鹤,zho,False
+5b811ff6-6f9c-4983-bca7-e99e869390ce,0ae6a6b2-65cf-402b-a500-347627b68c76,Grue blanche asiatique,fra,False
+e7be48c7-d06e-4657-be37-1c7805c8ec99,0ae6a6b2-65cf-402b-a500-347627b68c76,Snježni ždral,hr,False
+1e071078-039f-4ad1-9bdd-8198656fe7c8,0ae6a6b2-65cf-402b-a500-347627b68c76,Gru bianca asiatica,ita,False
+c0c4ff08-7132-4a18-b4e9-705788a18cd2,0ae6a6b2-65cf-402b-a500-347627b68c76,Snetrane,dan,False
+130d1c56-0ba9-40bf-a4bd-bc1615b81979,0ae6a6b2-65cf-402b-a500-347627b68c76,Nonnenkranich,deu,False
+426f8295-d2e8-4739-9c1d-49020c375aac,0ae6a6b2-65cf-402b-a500-347627b68c76,Сибирски жерав,bul,False
+9bfd56dc-5df8-466e-afa3-4df952218e23,0ae6a6b2-65cf-402b-a500-347627b68c76,jeřáb bílý,ces,False
+58eb18a4-0c29-4165-9be9-cebc6742ac3d,0ae6a6b2-65cf-402b-a500-347627b68c76,Λευκός ασιατικός γερανός,el,False
+b71e99c3-0ba5-4258-9c5f-b7e206798bb6,0ae6a6b2-65cf-402b-a500-347627b68c76,Valgekurg,est,False
+25e46d2d-6a8f-41d0-8114-b5cb6b2ea50f,0ae6a6b2-65cf-402b-a500-347627b68c76,Lumikurki,fin,False
+21dcef94-b22e-41a5-9e33-7d67c2229e14,0ae6a6b2-65cf-402b-a500-347627b68c76,Hódaru,hun,False
+21d6a4b5-2183-4aae-b9ed-838e2693729e,0ae6a6b2-65cf-402b-a500-347627b68c76,Baltā dzērve,lav,False
+070c03e3-6f64-47d3-91d3-19371d0f3db4,0ae6a6b2-65cf-402b-a500-347627b68c76,Sibirinė gervė,lit,False
+0f51ca9c-e2bb-44ea-a2b8-8db7b0f2c82a,0ae6a6b2-65cf-402b-a500-347627b68c76,Grawwa tas-Siberja,mlt,False
+1c74b76b-31d5-40e0-9bb1-ab3c4ca73ac3,0ae6a6b2-65cf-402b-a500-347627b68c76,Grús Sibéarach,gle,False
+e89cc982-37fe-43c2-b7c3-91ff9557cc34,4c358cc2-d0d3-4a34-a3fe-bca2b85db100,Bowhead Whale,eng,True
+38690a3c-fd29-4a68-8e12-7df710aad127,4c358cc2-d0d3-4a34-a3fe-bca2b85db100,Grønlandshval,nor,False
+67c0b575-4c5d-46fe-8401-b7110d21f05f,4c358cc2-d0d3-4a34-a3fe-bca2b85db100,Groenlandse Walvis,nld,False
+d47addb3-d7cf-4ee4-b44c-27d62023a02d,4c358cc2-d0d3-4a34-a3fe-bca2b85db100,Ballena boreal,spa,False
+a00e12b6-fc57-4275-94a1-dfe79b72cbde,4c358cc2-d0d3-4a34-a3fe-bca2b85db100,grönlandsval,swe,False
+e4b3da9a-a481-467d-98ce-c67ca1c72c3c,4c358cc2-d0d3-4a34-a3fe-bca2b85db100,北极露脊鲸,zho,False
+e6791f44-5d96-4d96-97c3-f92d8e06647c,4c358cc2-d0d3-4a34-a3fe-bca2b85db100,Baleine de grande baie,fra,False
+ec77a014-a994-449e-91aa-30e50fa2f7fc,4c358cc2-d0d3-4a34-a3fe-bca2b85db100,Arviq,iku,False
+5693ed59-b66d-4992-b39f-7e211e153eed,fbcb38a3-1cb9-4473-9643-82aef221e64a,Beluga,eng,True
+d37ef473-0cc7-4b65-b473-0608f84273f9,fbcb38a3-1cb9-4473-9643-82aef221e64a,Beluga,slv,False
+2514a89d-7a01-4574-9cff-4ea0ff56d674,fbcb38a3-1cb9-4473-9643-82aef221e64a,Beluga,rus,False
+3988bc0d-db5a-45db-9027-1af3ca25fcaf,fbcb38a3-1cb9-4473-9643-82aef221e64a,Beluga,spa,False
+90201199-8c21-420b-b641-bad97bf62fa6,fbcb38a3-1cb9-4473-9643-82aef221e64a,vitval,swe,False
+e65fc13b-1537-42e7-a3dc-c17796f0568a,fbcb38a3-1cb9-4473-9643-82aef221e64a,Beluga,fra,False
+8a2029dc-9c62-4cd9-bc36-4f2af39589ea,fbcb38a3-1cb9-4473-9643-82aef221e64a,Beluga,fin,False
+ba4c2986-fe6e-4ce2-890f-9120b06304b2,fbcb38a3-1cb9-4473-9643-82aef221e64a,Qaulluqtaq,iku,False
+d8ac8e99-18ad-4894-892b-e3aefbb217ce,506d9478-6bef-4116-8295-fd1ccc6292c6,Gyrfalcon,eng,True
+4b745393-d16b-4cec-8fbc-8699660e70ef,506d9478-6bef-4116-8295-fd1ccc6292c6,sokol poľovnícky,slk,False
+86c60057-1c92-4631-b04e-868b477c6e54,506d9478-6bef-4116-8295-fd1ccc6292c6,arktični sokol,slv,False
+c803349e-5d19-43b8-a064-e99b049edaf9,506d9478-6bef-4116-8295-fd1ccc6292c6,Falcão-gerifalte,por,False
+e75ae86c-fbbf-44ae-a7c6-d098c2f0dcd8,506d9478-6bef-4116-8295-fd1ccc6292c6,Białozór,pol,False
+b68b5b17-317d-46da-b544-22b57e60a636,506d9478-6bef-4116-8295-fd1ccc6292c6,Jaktfalk,nor,False
+82e9a98e-8df3-477d-a560-27279a8fc26e,506d9478-6bef-4116-8295-fd1ccc6292c6,Giervalk,nld,False
+1a7bcc75-bf30-4566-834d-f10b983a921d,506d9478-6bef-4116-8295-fd1ccc6292c6,Halcón gerifalte,spa,False
+3e7b15ac-49af-4fe9-b116-0bb470b7dfcf,506d9478-6bef-4116-8295-fd1ccc6292c6,Jaktfalk,swe,False
+5053e0d4-74c6-4fe0-b01f-a729160080b4,506d9478-6bef-4116-8295-fd1ccc6292c6,矛隼,zho,False
+c99bb992-e83c-4ac5-be4a-f6970a011d22,506d9478-6bef-4116-8295-fd1ccc6292c6,Gerfaut,fra,False
+9ea1ff66-4ff3-4896-857c-f635b340fd31,506d9478-6bef-4116-8295-fd1ccc6292c6,Veliki sokol,hr,False
+dc783c36-53d0-4e03-8281-4e45b312463c,506d9478-6bef-4116-8295-fd1ccc6292c6,Girfalco d'Islanda,ita,False
+0ddd87f1-553f-471a-a06f-04a78ca6705f,506d9478-6bef-4116-8295-fd1ccc6292c6,Jagtfalk,dan,False
+2461afb7-fe79-4aaa-baa5-f05fd27538db,506d9478-6bef-4116-8295-fd1ccc6292c6,Gerfalke,deu,False
+c9405b6a-5404-4fa1-954c-88dd43788ad2,506d9478-6bef-4116-8295-fd1ccc6292c6,Северен сокол,bul,False
+e2a952fc-452a-47be-9155-80f67d9879da,506d9478-6bef-4116-8295-fd1ccc6292c6,Raroh lovecký,ces,False
+05b50598-4a24-472a-9e9a-93da58484e8d,506d9478-6bef-4116-8295-fd1ccc6292c6,Ασπρογέρακο,el,False
+8d77ea31-e9df-47af-9879-a07f1f7c5009,506d9478-6bef-4116-8295-fd1ccc6292c6,Jahipistrik,est,False
+5181bd87-5fbf-4c22-b3b8-90b21471982f,506d9478-6bef-4116-8295-fd1ccc6292c6,Tunturihaukka,fin,False
+9c8c4795-f7a9-4dd0-9f54-91e8e103dcad,506d9478-6bef-4116-8295-fd1ccc6292c6,Sarki sólyom,hun,False
+757ed218-d0bb-444e-9c23-c884603f3943,506d9478-6bef-4116-8295-fd1ccc6292c6,Medību piekūns,lav,False
+66e458c4-3f90-4530-9b65-5592e98316a3,506d9478-6bef-4116-8295-fd1ccc6292c6,Medžioklinis sakalas,lit,False
+ac480d30-1eae-44b9-8438-836bac59b8d8,506d9478-6bef-4116-8295-fd1ccc6292c6,Bies gyr,mlt,False
+7c7330a0-4992-42d4-b92c-c5360cf52fb0,506d9478-6bef-4116-8295-fd1ccc6292c6,Șoim de vânătoare,ron,False
+b664012a-df3a-496f-903b-b81927216fa3,506d9478-6bef-4116-8295-fd1ccc6292c6,Fabhcún tuaithe,gle,False
+e1eef116-f88c-425e-9806-1be6d1ad31eb,676fe797-bfed-4cd2-98b1-3e57183050d9,Roseroot,eng,True
+7e0badfe-03b7-40cd-8d7f-b213197629b0,df36d357-e0ba-469e-8fc3-17e1ff523fad,Sperm Whale,eng,True
+88da4289-d256-43cf-82c4-81cf09d33b2e,df36d357-e0ba-469e-8fc3-17e1ff523fad,Cachalote,por,False
+a05b2a2e-311a-402c-b1c7-cb274ab47379,df36d357-e0ba-469e-8fc3-17e1ff523fad,Kashalot,sq,False
+6fd4835d-7ffa-488b-a07f-05225fe1c284,df36d357-e0ba-469e-8fc3-17e1ff523fad,Cachalote,spa,False
+641fb227-ba8b-44e1-8518-e9fa0baa913e,df36d357-e0ba-469e-8fc3-17e1ff523fad,kaskelot,swe,False
+895bec1d-ebf9-4fe0-a266-741553e1db4f,df36d357-e0ba-469e-8fc3-17e1ff523fad,抹香鲸,zho,False
+96a57177-1a50-40b6-925b-b9eec1d3483a,df36d357-e0ba-469e-8fc3-17e1ff523fad,Cachalot,fra,False
+1e444496-d436-4a53-9e69-deda5054027a,df36d357-e0ba-469e-8fc3-17e1ff523fad,Roshtan,he,False
+e7849090-d3d2-4b56-8471-db906ea224b5,df36d357-e0ba-469e-8fc3-17e1ff523fad,Uljeáura,hr,False
+f23c7826-4d22-4b60-99e3-a0069a6aeef4,df36d357-e0ba-469e-8fc3-17e1ff523fad,Capodoglio,ita,False
+1a3f1645-bebc-401e-84d9-8c8e8d38609e,df36d357-e0ba-469e-8fc3-17e1ff523fad,Anbar,ar,False
+ce88a16b-90e2-48f1-a336-c105972fd982,df36d357-e0ba-469e-8fc3-17e1ff523fad,Gabdoll,mlt,False
+ec157d00-99ff-4be7-ad80-94e751f46a01,2e6cedd3-4179-4d39-b704-6388007a97f1,Snowy Owl,eng,True
+5573a699-a303-4510-b695-095705ba1e13,d62146cd-6c23-41ba-9014-77d099c546f7,Canada Lynx,eng,True
+cba9b99e-6806-4037-9382-baa60e63484f,d62146cd-6c23-41ba-9014-77d099c546f7,Lince del Canadá,spa,False
+06960309-6ba1-4143-9021-8f46d86d5175,d62146cd-6c23-41ba-9014-77d099c546f7,nordamerikansk lo,swe,False
+26b4ff87-4134-455b-addf-97d4f3259a9f,d62146cd-6c23-41ba-9014-77d099c546f7,Lynx du Canada,fra,False
+927b37ce-866b-448a-8645-26f61398c9fa,d5007ba6-6818-4257-a0bf-2aed02301647,Minke Whale,eng,True
+969e00a8-0435-4fe0-b065-77bea95f074f,d5007ba6-6818-4257-a0bf-2aed02301647,Dwergvinvis,nld,False
+58c73b62-c5a2-4b06-95bf-63f4770454bd,d5007ba6-6818-4257-a0bf-2aed02301647,Ballena minke,spa,False
+c4210793-ecfd-4424-8a90-ba74f5164012,d5007ba6-6818-4257-a0bf-2aed02301647,vikval,swe,False
+0bec8b72-9432-44b8-9230-a83425855653,d5007ba6-6818-4257-a0bf-2aed02301647,小须鲸,zho,False
+1798df7e-784a-4312-9f59-545b18aae142,d5007ba6-6818-4257-a0bf-2aed02301647,Petit rorqual,fra,False
+12f4d20b-c5aa-4e03-9196-b31769a6ef53,d5007ba6-6818-4257-a0bf-2aed02301647,Zwergwal,deu,False
+7dc9f040-720d-46d2-b746-c9706e559007,95485512-67e7-4fad-a8f0-f76c17d03c1f,Humpback Whale,eng,True
+e5462a99-8caa-4e86-b035-ae171b83106b,95485512-67e7-4fad-a8f0-f76c17d03c1f,Baleia-de-bossa,por,False
+5fd2d05c-5c89-4a63-8b34-7a34e2dd2bdf,95485512-67e7-4fad-a8f0-f76c17d03c1f,Knølhval,nor,False
+99e2d287-061a-4c25-8b10-80974c1568ec,95485512-67e7-4fad-a8f0-f76c17d03c1f,Rorcual jorobado,spa,False
+60500a02-2601-4f01-bc27-039f11a7b23c,95485512-67e7-4fad-a8f0-f76c17d03c1f,puckelval,swe,False
+75f1ded7-39dc-4d5c-9434-7e5b4491ac75,95485512-67e7-4fad-a8f0-f76c17d03c1f,大翅鲸,zho,False
+c9492d2d-780f-419e-8320-8bafbcffbf32,95485512-67e7-4fad-a8f0-f76c17d03c1f,Baleine à bosse,fra,False
+3788036a-3c6e-4a80-825e-e18b6c0dfb90,f0f36896-7869-413e-ad36-7718e2729513,Basking Shark,eng,True
+604b0110-f5e9-4ef9-9bba-a94c8c7bb738,f0f36896-7869-413e-ad36-7718e2729513,Büyük camgöz,tur,False
+7149841d-f4f4-4137-82d9-149d33681d94,f0f36896-7869-413e-ad36-7718e2729513,Tiburón peregrino,spa,False
+54f12543-5798-4e74-bcf6-01a5df532502,f0f36896-7869-413e-ad36-7718e2729513,Frade,por,False
+4d7c0b09-e4a2-4cba-b570-039d546a6c2a,f0f36896-7869-413e-ad36-7718e2729513,Squale-pèlerin,fra,False
+97081115-d03d-48bf-9094-9294a1205126,f0f36896-7869-413e-ad36-7718e2729513,Riesenhai,deu,False
+ea715730-02b2-4c71-8757-77d4de23e823,f0f36896-7869-413e-ad36-7718e2729513,Kalb,ar,False
+1016f8a5-3378-4cf2-a24d-088a16459127,f0f36896-7869-413e-ad36-7718e2729513,Beinhákarl,is,False
+3bf7492a-97f9-4ecd-870c-f7e12a000bc7,f0f36896-7869-413e-ad36-7718e2729513,Saparnasm Skylopsaro,el,False
+2345f83d-acbf-42c7-a677-4d4098e8ae7a,f0f36896-7869-413e-ad36-7718e2729513,Dlugoszpar a. rekin gigantyczny,pol,False
+7c1c3267-fd21-44a9-9b90-d9496814a431,f0f36896-7869-413e-ad36-7718e2729513,Brugda,fo,False
+de96ef45-b63f-44a7-b6e5-fd8d16cabf71,f0f36896-7869-413e-ad36-7718e2729513,Peshkaqen shtegtar,sq,False
+b8d96280-2b62-4664-b8af-594c700057cc,f0f36896-7869-413e-ad36-7718e2729513,Squalo elefante,ita,False
+a982bfeb-6084-4ac0-8abd-3a704db0620f,f0f36896-7869-413e-ad36-7718e2729513,Reuzenhaai,nld,False
+3534cc56-fd3f-496d-b86e-ccd875539a95,f0f36896-7869-413e-ad36-7718e2729513,Gobdoll,mlt,False
+dbafb48a-fd66-49ee-9c6b-9cbc062feec2,f0f36896-7869-413e-ad36-7718e2729513,jättehaj,swe,False
+11fea79a-0b73-4035-914c-7e02b90dd405,f0f36896-7869-413e-ad36-7718e2729513,Ubazame,ja,False
+5d48eaab-5386-4673-bb35-25d9fd4f8e72,f0f36896-7869-413e-ad36-7718e2729513,Karish anak,he,False
+cbb3a938-985d-4fac-9ddc-9d96cca7b4a3,f0f36896-7869-413e-ad36-7718e2729513,Brugde,dan,False
+3eb15401-d96d-41c2-96c2-4dbb503c0f89,f0f36896-7869-413e-ad36-7718e2729513,Brugde,nor,False
+6a7b7e4a-dd73-4c2f-a889-aa18556f7521,f0f36896-7869-413e-ad36-7718e2729513,Jättiläishai,fin,False
+41b73829-c4ee-4a91-98f6-852cc2b6200b,f0f36896-7869-413e-ad36-7718e2729513,Reremai,mi,False
+02ee6816-40f8-4286-8b48-b165738ff7a2,f0f36896-7869-413e-ad36-7718e2729513,Koesterhaai,af,False
+e2b68a75-a9a2-4998-9016-ce32ce1813c7,f0f36896-7869-413e-ad36-7718e2729513,žralok ozrutný,slk,False
+6cce5f14-2c18-4a42-969c-5abdd70795fe,f0f36896-7869-413e-ad36-7718e2729513,Óriáscetcápa,hun,False
+f5db2cc0-6ce5-40c2-af8f-ebb2725927ae,f0f36896-7869-413e-ad36-7718e2729513,Гигантска акула,bul,False
+ff3aff7b-c29b-4df6-bddb-8e2df46cbf51,f0f36896-7869-413e-ad36-7718e2729513,Milzu haizivs,lav,False
+90ae5100-51df-4285-b4ef-06a53cc71ec2,f0f36896-7869-413e-ad36-7718e2729513,morski pes orjak,slv,False
+6b8c3171-a425-4f02-90ad-ea8ed7fffec1,f0f36896-7869-413e-ad36-7718e2729513,Milžinryklis,lit,False
+5c73d981-7f99-4d80-8221-e294dac83364,f0f36896-7869-413e-ad36-7718e2729513,Psina golema,hr,False
+e2faf5d9-5617-42b8-88af-6b4b236f7882,f0f36896-7869-413e-ad36-7718e2729513,Rechin pelerin,ron,False
+569d94f1-606a-47e5-aab3-33cbc67ec4ed,f0f36896-7869-413e-ad36-7718e2729513,žralok veliký,ces,False
+f46e162f-0856-4bce-99e5-3c66d7d78508,f0f36896-7869-413e-ad36-7718e2729513,Liamhán gréine,gle,False
+018abdbe-bff6-4472-a7cd-9f7c46c999f5,f0f36896-7869-413e-ad36-7718e2729513,Hiidhaid,est,False
+72c1f3d7-e9ec-401e-aa39-b3c682310f91,f0f36896-7869-413e-ad36-7718e2729513,姥鲨,zho,False
+237ad3b9-2d29-49e9-902b-32cec175d263,e58a3fff-e0f3-43d9-bfcc-be33ac49d540,Sei Whale,eng,True
+810cc1e0-1b32-4ed5-9235-d6d4129bbecc,e58a3fff-e0f3-43d9-bfcc-be33ac49d540,Baleia sei,por,False
+504882f4-93e2-4f62-8400-17a2049fedf5,e58a3fff-e0f3-43d9-bfcc-be33ac49d540,Seihval,nor,False
+0c7ca34f-d03a-4496-a87e-a9af092d2695,e58a3fff-e0f3-43d9-bfcc-be33ac49d540,Noordse Vinvis,nld,False
+d81e5485-61a4-4330-b718-52e24f58df27,e58a3fff-e0f3-43d9-bfcc-be33ac49d540,Ballena sei,spa,False
+01c6b111-23eb-4177-815d-86e43e0e462f,e58a3fff-e0f3-43d9-bfcc-be33ac49d540,sejval,swe,False
+1ee3d5ba-3492-41f8-8417-59128ca5bea5,e58a3fff-e0f3-43d9-bfcc-be33ac49d540,塞鲸,zho,False
+7bfadada-65f7-4aed-9815-9beb413afc04,e58a3fff-e0f3-43d9-bfcc-be33ac49d540,Baleinoptère de Rudolphi,fra,False
+a7bcaa09-31ee-44d4-b61c-5ce99a2723fd,e58a3fff-e0f3-43d9-bfcc-be33ac49d540,Seiwal,deu,False
+1181dd2c-e874-4390-af4c-642d34ebd59b,d07c1335-0bf5-445c-bcaa-f7cdbd029637,Polar Bear,eng,True
+f08e007e-da2c-4b5d-8f43-780aec101e69,d07c1335-0bf5-445c-bcaa-f7cdbd029637,Urso-polar,por,False
+0dc983f2-c9bc-403d-bb33-c3f81dfd0e21,d07c1335-0bf5-445c-bcaa-f7cdbd029637,Ariu i bardhe,sq,False
+dd968b67-0d1d-45b1-96bd-d028d0e3ebfd,d07c1335-0bf5-445c-bcaa-f7cdbd029637,Bely medved,rus,False
+a8e394b0-1df4-43bc-a895-76d70d452990,d07c1335-0bf5-445c-bcaa-f7cdbd029637,Isbjørn,nor,False
+a3d6a63f-12b2-4790-b6d6-b99d8837f603,d07c1335-0bf5-445c-bcaa-f7cdbd029637,Ijsbeer,nld,False
+9024e2eb-246a-42d0-9973-86ae82a3636c,d07c1335-0bf5-445c-bcaa-f7cdbd029637,Oso polar,spa,False
+5e0c8e2b-3f05-4bd3-8a6d-abe39ce65d6c,d07c1335-0bf5-445c-bcaa-f7cdbd029637,isbjörn,swe,False
+ff39260c-56ed-4b2a-be6d-ce52334d2d31,d07c1335-0bf5-445c-bcaa-f7cdbd029637,Ours polaire,fra,False
+99e93b2d-27ad-4ea4-be16-cee13ea72290,d07c1335-0bf5-445c-bcaa-f7cdbd029637,Polarni medvjed,hr,False
+9f98c9b6-7769-4ea7-b2bb-d36aa60e3d3d,d07c1335-0bf5-445c-bcaa-f7cdbd029637,Orso polare,ita,False
+5d110d6d-758a-419d-8c9b-2654e38cbf56,d07c1335-0bf5-445c-bcaa-f7cdbd029637,Isbjørn,dan,False
+22e458c3-0e12-454c-b0a8-fd016f74f8b6,d07c1335-0bf5-445c-bcaa-f7cdbd029637,Eisbär,deu,False
+abe530b7-0fbe-470d-8eb7-635ce46657db,d07c1335-0bf5-445c-bcaa-f7cdbd029637,Jääkaru,est,False
+7692623e-993f-45d7-ac85-c965663caa18,d07c1335-0bf5-445c-bcaa-f7cdbd029637,Jääkarhu,fin,False
+9b0c22bd-ef84-4405-b647-3ae5203d44fb,d07c1335-0bf5-445c-bcaa-f7cdbd029637,Jegesmedve,hun,False
+801b0129-e1e8-445d-a45d-a42053ba9172,d07c1335-0bf5-445c-bcaa-f7cdbd029637,Hvítabjörn,is,False
+c3855dfe-68ae-4207-86c6-3f73e5dd2776,d07c1335-0bf5-445c-bcaa-f7cdbd029637,Baltasis lokys,lit,False
+a02d46c7-aeb2-4695-adc8-a065ce5c0d99,d07c1335-0bf5-445c-bcaa-f7cdbd029637,Urs-polar,ron,False
+cdcdb8b3-0994-4ead-87f1-e816bb761e49,e37fba40-33e0-41c9-94cb-78fbb86ae48d,Sea Otter,en,True

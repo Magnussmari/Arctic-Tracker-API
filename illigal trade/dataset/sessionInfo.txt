@@ -1,0 +1,23 @@
+R version 4.1.0 (2021-05-18)
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+Running under: Windows 10 x64 (build 19042)
+
+Matrix products: default
+
+locale:
+[1] LC_COLLATE=English_Australia.1252  LC_CTYPE=English_Australia.1252   
+[3] LC_MONETARY=English_Australia.1252 LC_NUMERIC=C                      
+[5] LC_TIME=English_Australia.1252    
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] stringr_1.4.0 readr_1.4.0   dplyr_1.0.6  
+
+loaded via a namespace (and not attached):
+ [1] fansi_0.5.0      assertthat_0.2.1 utf8_1.2.1       crayon_1.4.1     R6_2.5.0        
+ [6] DBI_1.1.1        lifecycle_1.0.0  magrittr_2.0.1   pillar_1.6.1     cli_2.5.0       
+[11] stringi_1.6.2    rlang_0.4.11     rstudioapi_0.13  vctrs_0.3.8      generics_0.1.0  
+[16] ellipsis_0.3.2   tools_4.1.0      glue_1.4.2       purrr_0.3.4      hms_1.1.0       
+[21] compiler_4.1.0   pkgconfig_2.0.3  tidyselect_1.1.1 tibble_3.1.2    

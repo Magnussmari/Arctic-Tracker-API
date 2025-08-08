@@ -1,0 +1,98 @@
+{
+  "species_data": {
+    "scientific_name": "Branta canadensis leucopareia",
+    "common_name": "Aleutian Canada Goose",
+    "kingdom": "Animalia",
+    "phylum": "Chordata",
+    "class": "Aves",
+    "order_name": "Anseriformes",
+    "family": "Anatidae",
+    "genus": "Branta",
+    "species_name": "canadensis",
+    "authority": "Linnaeus, 1758",
+    "description": "The Aleutian Canada Goose, recognized scientifically as Branta canadensis leucopareia, is a medium-sized waterfowl characterized by a unique color pattern and distinctive features. Adults typically measure about 64–76 cm in length and weigh between 2.3 and 3.6 kg (Pluym, 2019). Their plumage is primarily dark brown with lighter sides, featuring a conspicuous white cheek patch and a black head and neck, which are typical of the broader Branta canadensis group (Bönner et al., 2004). Sexual dimorphism is minimal, although males tend to be slightly larger than females (Pluym, 2019). There are no unique anatomical structures such as tusks or baleen; however, their beak is adapted for grazing on grasses and other vegetation commonly found in their habitats.",
+    "habitat_description": "The Aleutian Canada Goose inhabits tundra and wetland areas, particularly during the breeding season from May to August. Preferred habitats include low-lying coastal grasslands, meadows, and areas with abundant sedge and other grasses (Miller et al., 2007). Seasonal variations in habitat occur as they migrate southward to warmer areas during winter, typically within the Pacific Flyway, using agricultural landscapes and wetlands as stopover sites (Miller et al., 2007). The geese require habitats that provide adequate foraging resources and shelter from predators, which is crucial during nesting and brood-rearing seasons (Miller et al., 2007).",
+    "population_size": "The most recent global population estimate for the Aleutian Canada Goose is approximately 4,000 individuals (Miller et al., 2007). This estimate has been corroborated by monitoring efforts in key breeding and migratory areas.",
+    "population_trend": "The population trend for Branta canadensis leucopareia has been reported as increasing since the early 2000s following a recovery from previous lows due to habitat degradation and hunting pressures (Miller et al., 2007). Recent assessments indicate a stable to increasing population trend, attributed to conservation efforts and improved habitat management (Miller et al., 2007).",
+    "generation_length": 8,
+    "movement_patterns": "The Aleutian Canada Goose exhibits migratory behavior, traveling from its breeding grounds in Alaska to wintering sites in California and Washington (Miller et al., 2007). Migration typically occurs in a staggered pattern beginning in early September and extending through late October. Notably, some populations show high site fidelity, returning to the same breeding locations annually, which enhances survival and reproductive success (Miller et al., 2007).",
+    "use_and_trade": "Human interactions with the Aleutian Canada Goose mainly consist of subsistence hunting and ecological tourism (Miller et al., 2007). Although hunting is regulated and necessary for population management, the species is protected under the Migratory Bird Treaty Act and is listed as Least Concern by the IUCN, implying no immediate commercial trade threatens its conservation (Miller et al., 2007).",
+    "threats_overview": "Major threats to the Aleutian Canada Goose include habitat loss due to climate change, which alters wetland ecosystems crucial for breeding; hunting pressures; and pollution from various sources (Miller et al., 2007). Climate change further impacts food availability and migration patterns, while human-induced alterations of habitats increase risks of entrapment and bycatch (Miller et al., 2007).",
+    "conservation_overview": "Various national and international conservation efforts are focused on protecting the Aleutian Canada Goose, including habitat restoration projects and stringent hunting regulations (Miller et al., 2007). The establishment of protected areas on the breeding islands has significantly contributed to population recovery, along with collaborative management strategies involving local governments and environmental organizations (Miller et al., 2007)."
+  },
+  "conservation_profile": {
+    "species_scientific_name": "Branta canadensis",
+    "profile_type": "comprehensive",
+    "content": {
+      "subpopulations": "Recognized subpopulations primarily include those breeding in various parts of the Aleutian Islands (Miller et al., 2007). Although the Aleutian Canada Goose is classified as a distinct subspecies, genetic studies have indicated the presence of ecological and behavioral distinctions among populations in different geographic areas (Pluym, 2019).",
+      "distribution_range": "In the Arctic context, the Aleutian Canada Goose has a limited but crucial distribution range, primarily concentrated in the Aleutian Islands and parts of the Bering Sea region (Miller et al., 2007). Its breeding range extends across the Aleutian chain, while migratory pathways lead into the coastal regions of North America (Miller et al., 2007).",
+      "source_file": "scite_branta_canadensis_leucopareia.md",
+      "parsed_date": "2025-06-11T21:30:00Z",
+      "sections_parsed": 11,
+      "references_count": 3
+    }
+  },
+  "references": [
+    {
+      "title": "Morphometric and allometric studies on eggshells and embryos of free-living canada geese (branta c. canadensis linnaeus, 1758)",
+      "authors": [
+        "Bönner, B.",
+        "Lutz, W.",
+        "Redmann, T.",
+        "Jäger, S.",
+        "Reinhardt, B.",
+        "Wissing, J.",
+        "Kaleta, E."
+      ],
+      "journal": "European Journal of Wildlife Research",
+      "year": 2004,
+      "volume": "50",
+      "issue": "4",
+      "pages": "179-186",
+      "doi": "10.1007/s10344-004-0061-0",
+      "url": "https://doi.org/10.1007/s10344-004-0061-0",
+      "reference_type": "journal",
+      "full_citation": "Bönner, B., Lutz, W., Redmann, T., Jäger, S., Reinhardt, B., Wissing, J., … & Kaleta, E. (2004). Morphometric and allometric studies on eggshells and embryos of free-living canada geese (branta c. canadensis linnaeus, 1758). European Journal of Wildlife Research, 50(4), 179-186. https://doi.org/10.1007/s10344-004-0061-0"
+    },
+    {
+      "title": "Optimizing nest survival and female survival: consequences of nest site selection for canada geese",
+      "authors": [
+        "Miller, D.",
+        "Grand, J.",
+        "Fondell, T.",
+        "Anthony, R."
+      ],
+      "journal": "Ornithological Applications",
+      "year": 2007,
+      "volume": "109",
+      "issue": "4",
+      "pages": "769-780",
+      "doi": "10.1093/condor/109.4.769",
+      "url": "https://doi.org/10.1093/condor/109.4.769",
+      "reference_type": "journal",
+      "full_citation": "Miller, D., Grand, J., Fondell, T., & Anthony, R. (2007). Optimizing nest survival and female survival: consequences of nest site selection for canada geese. Ornithological Applications, 109(4), 769-780. https://doi.org/10.1093/condor/109.4.769"
+    },
+    {
+      "title": "The aleutian cackling goose in arizona",
+      "authors": [
+        "Pluym, D."
+      ],
+      "journal": "Western Birds",
+      "year": 2019,
+      "volume": "50",
+      "issue": "3",
+      "pages": "142-149",
+      "doi": "10.21199/wb50.3.2",
+      "url": "https://doi.org/10.21199/wb50.3.2",
+      "reference_type": "journal",
+      "full_citation": "Pluym, D. (2019). The aleutian cackling goose in arizona. Western Birds, 50(3), 142-149. https://doi.org/10.21199/wb50.3.2"
+    }
+  ],
+  "metadata": {
+    "processing_date": "2025-06-11T21:30:00Z",
+    "source_file": "scite_branta_canadensis_leucopareia.md",
+    "total_sections": 11,
+    "total_references": 3,
+    "parser_version": "unified_v1.0"
+  }
+}

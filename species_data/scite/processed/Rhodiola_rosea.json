@@ -1,0 +1,95 @@
+{
+  "species_data": {
+    "scientific_name": "Rhodiola rosea",
+    "common_name": "Arctic Rose",
+    "kingdom": "Plantae",
+    "phylum": "Tracheophyta",
+    "class": "Magnoliopsida",
+    "order_name": "Saxifragales",
+    "family": "Crassulaceae",
+    "genus": "Rhodiola",
+    "species_name": "rosea",
+    "authority": "L., 1753",
+    "description": "Rhodiola rosea, commonly known as Arctic Rose, is a perennial herbaceous plant characterized by its thick, fleshy roots and succulent leaves. The species typically grows to a height of 20 to 80 centimeters, with average weights that can vary significantly depending on environmental conditions (Kliment, 2019). The leaves are alternate, fleshy, and stalked, often ranging from 3 to 6 centimeters in length and exhibiting a shiny green appearance, which may turn slightly reddish as they mature (Savev, 2022). This plant produces small, star-shaped yellow-green flowers that cluster at the top of the stem, blooming in late spring to early summer (Savev, 2022). Notably, Rhodiola rosea lacks sexual dimorphism; both male and female reproductive structures coexist in the plant, facilitating self-pollination (Głąbień et al., 2024).",
+    "habitat_description": "Rhodiola rosea thrives primarily in arctic and alpine regions, preferring well-drained, rocky soils often found on cliffs, mountains, and slopes (Głąbień et al., 2024). The species can be found at elevations from sea level to about 2,500 meters, with its habitat extending across various climatic conditions ranging from cold dry tundras to moderately humid alpine environments (Kliment, 2019). Seasonal variations significantly affect its growth; it is adapted to short growing seasons with ample sunlight during summer, utilizing its nutrient reserves effectively during the winter months (Kliment, 2019).",
+    "population_size": "The most recent estimates suggest that Rhodiola rosea has stable population sizes in regions of Europe, particularly in the Pirin National Park of Bulgaria, where significant local populations have been documented to have several thousand individuals (Savev, 2022). Although global population sizes remain uncertain due to the vast distribution of the species, localized surveys highlight viable populations.",
+    "population_trend": "Current assessments indicate that the population of Rhodiola rosea is relatively stable overall, despite some local declines attributed to overharvesting and habitat degradation (Głąbień et al., 2024). In areas such as the Western Carpathians of Slovakia, the species remains common, suggesting a stable trend within this specific region (Kliment, 2019).",
+    "generation_length": 8,
+    "movement_patterns": "Rhodiola rosea is primarily non-migratory; however, it exhibits strong site fidelity with young plants often remaining near their parent sites due to clonal propagation via rhizomes (Głąbień et al., 2024). Seasonal dispersal behavior is minimal, as the plant relies on self-pollination and local environmental conditions to sustain its populations.",
+    "use_and_trade": "Rhodiola rosea has been utilized in traditional medicine for centuries, primarily for its adaptogenic properties that help combat stress and fatigue (Głąbień et al., 2024). The roots and rhizomes are harvested for medicinal purposes, often being incorporated into supplements and herbal extracts. The species is not listed on CITES; however, regulations concerning wild harvesting are increasingly enforced in regions where over-collection poses risks to sustainable populations (Kliment, 2019).",
+    "threats_overview": "Major threats to Rhodiola rosea include climate change, which alters habitat conditions and phenology, along with habitat loss from land use changes and illegal harvesting due to its commercial value in herbal medicine (Głąbień et al., 2024). Overharvesting for traditional medicine and dietary supplements poses a significant risk, especially in regions with high demand (Savev, 2022). Additionally, invasive species and pollution from nearby industrial activities also threaten its natural populations.",
+    "conservation_overview": "Various conservation actions have been implemented to protect Rhodiola rosea, particularly in national parks such as Bulgaria’s Pirin National Park, where it benefits from habitat protections and monitoring programs (Savev, 2022). Management plans focus on sustainable harvesting methods and habitat restoration efforts. Internationally, awareness campaigns promoting sustainable use of Rhodiola rosea in traditional medicine have also been established, highlighting the need for conservation (Głąbień et al., 2024)."
+  },
+  "conservation_profile": {
+    "species_scientific_name": "Rhodiola rosea",
+    "profile_type": "comprehensive",
+    "content": {
+      "subpopulations": "Recognized subpopulations of Rhodiola rosea exist across various geographic regions, notably in the alpine zones of Europe (e.g., the Alps and Carpathians) and parts of Asia, including Eastern Siberia (Kliment, 2019). Ecologically, these subpopulations may vary in their phenotypic traits due to local adaptations in response to differing soil types and microclimates.",
+      "distribution_range": "The geographic distribution of Rhodiola rosea is extensive, spanning the Arctic regions of Europe and Asia, including Scandinavia, Greenland, and parts of North America (Głąbień et al., 2024). The species is circumpolar, notably absent in tropical or subtropical regions, which aligns with its preference for cold climates.",
+      "source_file": "rhodiola_rosea.md",
+      "parsed_date": "2024-10-26T10:00:00Z",
+      "sections_parsed": 11,
+      "references_count": 3
+    }
+  },
+  "references": [
+    {
+      "title": "Exploring rhodiola rosea: a comprehensive review of its adaptogenic effects and medical relevance",
+      "authors": [
+        "Głąbień, M.",
+        "Rajewska, A.",
+        "Kuśnierz, A.",
+        "Kusiak, K.",
+        "Aleksandrowicz, D.",
+        "Wieczorek, O.",
+        "Kondratowicz, A."
+      ],
+      "journal": "Quality in Sport",
+      "year": 2024,
+      "volume": "29",
+      "issue": null,
+      "pages": "55631",
+      "doi": "10.12775/qs.2024.29.55631",
+      "url": "https://doi.org/10.12775/qs.2024.29.55631",
+      "reference_type": "journal",
+      "full_citation": "Głąbień, M., Rajewska, A., Kuśnierz, A., Kusiak, K., Aleksandrowicz, D., Wieczorek, O., … & Kondratowicz, A. (2024). Exploring rhodiola rosea: a comprehensive review of its adaptogenic effects and medical relevance. Quality in Sport, 29, 55631. https://doi.org/10.12775/qs.2024.29.55631"
+    },
+    {
+      "title": "Distribution of rhodiola rosea in slovakia",
+      "authors": [
+        "Kliment, J."
+      ],
+      "journal": "Acta Carp. Occ.",
+      "year": 2019,
+      "volume": "10",
+      "issue": "1",
+      "pages": "8-26",
+      "doi": "10.62317/aco.2019.002",
+      "url": "https://doi.org/10.62317/aco.2019.002",
+      "reference_type": "journal",
+      "full_citation": "Kliment, J. (2019). Distribution of rhodiola rosea in slovakia. Acta Carp. Occ., 10(1), 8-26. https://doi.org/10.62317/aco.2019.002"
+    },
+    {
+      "title": "Natural localities and nature conservation status of  rhodiola rosea  in the pirin national park (bulgaria)",
+      "authors": [
+        "Savev, S."
+      ],
+      "journal": "Phytologia Balcanica",
+      "year": 2022,
+      "volume": "28",
+      "issue": "3",
+      "pages": null,
+      "doi": "10.7546/phb.28.3.2022.5",
+      "url": "https://doi.org/10.7546/phb.28.3.2022.5",
+      "reference_type": "journal",
+      "full_citation": "Savev, S. (2022). Natural localities and nature conservation status of  rhodiola rosea  in the pirin national park (bulgaria). Phytologia Balcanica, 28(3). https://doi.org/10.7546/phb.28.3.2022.5"
+    }
+  ],
+  "metadata": {
+    "processing_date": "2024-10-26T10:00:00Z",
+    "source_file": "rhodiola_rosea.md",
+    "total_sections": 11,
+    "total_references": 3,
+    "parser_version": "unified_v1.0"
+  }
+}

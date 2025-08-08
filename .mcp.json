@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "arctic-tracker": {
+      "command": "node",
+      "args": ["/Users/magnussmari/Arctic_Tracker(version_1.0)/Arctic-Tracker-API/mcp_server/dist/index.js"],
+      "env": {
+        "SUPABASE_URL": "https://cexwrbrnoxqtxjbiujiq.supabase.co",
+        "SUPABASE_SERVICE_ROLE_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNleHdyYnJub3hxdHhqYml1amlxIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc0MjgzNDQzMywiZXhwIjoyMDU4NDEwNDMzfQ.OcIArMorXjPjVItjc0U40wcSNuR_b-uq152JE-hPu2Y"
+      }
+    }
+  }
+}

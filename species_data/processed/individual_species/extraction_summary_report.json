@@ -1,0 +1,16 @@
+{
+  "extraction_summary": {
+    "extraction_date": "2025-05-24T19:36:18.822442",
+    "statistics": {
+      "species_processed": 2,
+      "species_with_trade": 2,
+      "species_without_trade": 0,
+      "total_trade_records": 1050,
+      "quantity_issues": 0,
+      "files_processed": 54
+    },
+    "species_without_trade": [],
+    "quantity_issues_sample": [],
+    "total_quantity_issues": 0
+  }
+}

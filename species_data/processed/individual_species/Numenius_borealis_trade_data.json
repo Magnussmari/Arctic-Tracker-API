@@ -1,0 +1,213 @@
+{
+  "species": "Numenius borealis",
+  "summary": {
+    "total_records": 7,
+    "year_range": "2000-2014",
+    "years_with_data": [
+      2000,
+      2004,
+      2008,
+      2009,
+      2013,
+      2014
+    ],
+    "importing_countries": [
+      "AU",
+      "CH",
+      "FR",
+      "QA",
+      "US"
+    ],
+    "exporting_countries": [
+      "AU",
+      "CA",
+      "CL",
+      "GB"
+    ],
+    "terms_traded": {
+      "bodies": 5,
+      "skeletons": 1,
+      "specimens": 1
+    },
+    "quantity_summary": {},
+    "top_terms": [
+      [
+        "bodies",
+        5
+      ],
+      [
+        "skeletons",
+        1
+      ],
+      [
+        "specimens",
+        1
+      ]
+    ]
+  },
+  "trade_records": [
+    {
+      "id": "7592925716",
+      "year": 2000,
+      "appendix": "I",
+      "class": "Aves",
+      "order": "Charadriiformes",
+      "family": "Scolopacidae",
+      "genus": "Numenius",
+      "term": "bodies",
+      "quantity_raw": "1",
+      "quantity_normalized": 1.0,
+      "unit": "",
+      "importer": "QA",
+      "exporter": "GB",
+      "origin": "XX",
+      "purpose": "P",
+      "source": "O",
+      "reporter_type": "E",
+      "source_file": "trade_db_16.csv",
+      "row_number": 291244
+    },
+    {
+      "id": "4406586718",
+      "year": 2004,
+      "appendix": "I",
+      "class": "Aves",
+      "order": "Charadriiformes",
+      "family": "Scolopacidae",
+      "genus": "Numenius",
+      "term": "bodies",
+      "quantity_raw": "1",
+      "quantity_normalized": 1.0,
+      "unit": "",
+      "importer": "US",
+      "exporter": "CA",
+      "origin": "XX",
+      "purpose": "E",
+      "source": "O",
+      "reporter_type": "E",
+      "source_file": "trade_db_18.csv",
+      "row_number": 326817
+    },
+    {
+      "id": "8852107918",
+      "year": 2004,
+      "appendix": "I",
+      "class": "Aves",
+      "order": "Charadriiformes",
+      "family": "Scolopacidae",
+      "genus": "Numenius",
+      "term": "bodies",
+      "quantity_raw": "1",
+      "quantity_normalized": 1.0,
+      "unit": "",
+      "importer": "US",
+      "exporter": "CA",
+      "origin": "XX",
+      "purpose": "E",
+      "source": "W",
+      "reporter_type": "I",
+      "source_file": "trade_db_18.csv",
+      "row_number": 326818
+    },
+    {
+      "id": "9199968222",
+      "year": 2008,
+      "appendix": "I",
+      "class": "Aves",
+      "order": "Charadriiformes",
+      "family": "Scolopacidae",
+      "genus": "Numenius",
+      "term": "bodies",
+      "quantity_raw": "1",
+      "quantity_normalized": 1.0,
+      "unit": "",
+      "importer": "AU",
+      "exporter": "GB",
+      "origin": "XX",
+      "purpose": "P",
+      "source": "O",
+      "reporter_type": "E",
+      "source_file": "trade_db_22.csv",
+      "row_number": 407207
+    },
+    {
+      "id": "9325913623",
+      "year": 2009,
+      "appendix": "I",
+      "class": "Aves",
+      "order": "Charadriiformes",
+      "family": "Scolopacidae",
+      "genus": "Numenius",
+      "term": "skeletons",
+      "quantity_raw": "5",
+      "quantity_normalized": 5.0,
+      "unit": "",
+      "importer": "FR",
+      "exporter": "CL",
+      "origin": "",
+      "purpose": "S",
+      "source": "W",
+      "reporter_type": "I",
+      "source_file": "trade_db_23.csv",
+      "row_number": 379905
+    },
+    {
+      "id": "4181596231",
+      "year": 2013,
+      "appendix": "I",
+      "class": "Aves",
+      "order": "Charadriiformes",
+      "family": "Scolopacidae",
+      "genus": "Numenius",
+      "term": "bodies",
+      "quantity_raw": "1",
+      "quantity_normalized": 1.0,
+      "unit": "",
+      "importer": "CH",
+      "exporter": "AU",
+      "origin": "",
+      "purpose": "T",
+      "source": "O",
+      "reporter_type": "E",
+      "source_file": "trade_db_31.csv",
+      "row_number": 361001
+    },
+    {
+      "id": "7209924835",
+      "year": 2014,
+      "appendix": "I",
+      "class": "Aves",
+      "order": "Charadriiformes",
+      "family": "Scolopacidae",
+      "genus": "Numenius",
+      "term": "specimens",
+      "quantity_raw": "1",
+      "quantity_normalized": 1.0,
+      "unit": "",
+      "importer": "CH",
+      "exporter": "AU",
+      "origin": "",
+      "purpose": "T",
+      "source": "O",
+      "reporter_type": "I",
+      "source_file": "trade_db_35.csv",
+      "row_number": 369765
+    }
+  ],
+  "extraction_metadata": {
+    "extraction_date": "2025-05-24T18:33:14.148005",
+    "total_records": 7,
+    "source_files": [
+      "trade_db_23.csv",
+      "trade_db_16.csv",
+      "trade_db_31.csv",
+      "trade_db_22.csv",
+      "trade_db_35.csv",
+      "trade_db_18.csv"
+    ],
+    "date_range": {
+      "earliest_year": 2000,
+      "latest_year": 2014
+    }
+  }
+}

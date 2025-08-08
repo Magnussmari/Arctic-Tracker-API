@@ -1,0 +1,4020 @@
+{
+  "analysis_metadata": {
+    "timestamp": "2025-05-26T00:30:56.865392",
+    "analyzer_version": "2.0.0",
+    "database_url": "https://cexwrbrnoxqtxjbiujiq.supabase.co",
+    "tables_analyzed": 14,
+    "family_normalization_detected": true
+  },
+  "database_schema": {
+    "tables": [
+      "catch_records",
+      "cites_listings",
+      "cites_trade_records",
+      "common_names",
+      "conservation_measures",
+      "distribution_ranges",
+      "families",
+      "iucn_assessments",
+      "profiles",
+      "species",
+      "species_threats",
+      "species_trade_summary",
+      "subpopulations",
+      "timeline_events"
+    ],
+    "table_structures": {
+      "catch_records": {
+        "table_name": "catch_records",
+        "columns": [
+          {
+            "name": "id",
+            "type": "INTEGER",
+            "sample_value": "1",
+            "is_nullable": false
+          },
+          {
+            "name": "species_id",
+            "type": "VARCHAR(255)",
+            "sample_value": "5f289c1e-5101-458f-a5ea-a65e5c734569",
+            "is_nullable": false
+          },
+          {
+            "name": "country",
+            "type": "VARCHAR(255)",
+            "sample_value": "Greenland",
+            "is_nullable": false
+          },
+          {
+            "name": "year",
+            "type": "INTEGER",
+            "sample_value": "1992",
+            "is_nullable": false
+          },
+          {
+            "name": "area",
+            "type": "TEXT",
+            "sample_value": null,
+            "is_nullable": true
+          },
+          {
+            "name": "catch_total",
+            "type": "INTEGER",
+            "sample_value": "0",
+            "is_nullable": false
+          },
+          {
+            "name": "quota",
+            "type": "TEXT",
+            "sample_value": null,
+            "is_nullable": true
+          },
+          {
+            "name": "source",
+            "type": "VARCHAR(255)",
+            "sample_value": "NAMMCO",
+            "is_nullable": false
+          },
+          {
+            "name": "created_at",
+            "type": "VARCHAR(255)",
+            "sample_value": "2025-04-04T14:56:58.977304+00:00",
+            "is_nullable": false
+          }
+        ],
+        "sample_data": {
+          "id": 1,
+          "species_id": "5f289c1e-5101-458f-a5ea-a65e5c734569",
+          "country": "Greenland",
+          "year": 1992,
+          "area": null,
+          "catch_total": 0,
+          "quota": null,
+          "source": "NAMMCO",
+          "created_at": "2025-04-04T14:56:58.977304+00:00"
+        },
+        "record_count": 4,
+        "analyzed_at": "2025-05-26T00:30:59.180633"
+      },
+      "cites_listings": {
+        "table_name": "cites_listings",
+        "columns": [
+          {
+            "name": "id",
+            "type": "VARCHAR(255)",
+            "sample_value": "02034a7c-fa33-4e89-aabe-043d8261ae8a",
+            "is_nullable": false
+          },
+          {
+            "name": "species_id",
+            "type": "VARCHAR(255)",
+            "sample_value": "5f289c1e-5101-458f-a5ea-a65e5c734569",
+            "is_nullable": false
+          },
+          {
+            "name": "appendix",
+            "type": "VARCHAR(255)",
+            "sample_value": "II",
+            "is_nullable": false
+          },
+          {
+            "name": "listing_date",
+            "type": "VARCHAR(255)",
+            "sample_value": "1979-06-28",
+            "is_nullable": false
+          },
+          {
+            "name": "notes",
+            "type": "VARCHAR(255)",
+            "sample_value": "Listed under Appendix II as part of the Monodontidae family. All parts and derivatives except those ",
+            "is_nullable": false
+          },
+          {
+            "name": "is_current",
+            "type": "BOOLEAN",
+            "sample_value": "True",
+            "is_nullable": false
+          }
+        ],
+        "sample_data": {
+          "id": "02034a7c-fa33-4e89-aabe-043d8261ae8a",
+          "species_id": "5f289c1e-5101-458f-a5ea-a65e5c734569",
+          "appendix": "II",
+          "listing_date": "1979-06-28",
+          "notes": "Listed under Appendix II as part of the Monodontidae family. All parts and derivatives except those covered by Annotation 1.",
+          "is_current": true
+        },
+        "record_count": 4,
+        "analyzed_at": "2025-05-26T00:30:59.405827"
+      },
+      "cites_trade_records": {
+        "table_name": "cites_trade_records",
+        "columns": [
+          {
+            "name": "id",
+            "type": "VARCHAR(255)",
+            "sample_value": "48442bcb-9847-4654-95c0-ae5d7a69249c",
+            "is_nullable": false
+          },
+          {
+            "name": "species_id",
+            "type": "VARCHAR(255)",
+            "sample_value": "506d9478-6bef-4116-8295-fd1ccc6292c6",
+            "is_nullable": false
+          },
+          {
+            "name": "record_id",
+            "type": "VARCHAR(255)",
+            "sample_value": "2416370039",
+            "is_nullable": false
+          },
+          {
+            "name": "year",
+            "type": "INTEGER",
+            "sample_value": "2017",
+            "is_nullable": false
+          },
+          {
+            "name": "appendix",
+            "type": "VARCHAR(255)",
+            "sample_value": "I",
+            "is_nullable": false
+          },
+          {
+            "name": "taxon",
+            "type": "VARCHAR(255)",
+            "sample_value": "Falco rusticolus",
+            "is_nullable": false
+          },
+          {
+            "name": "class",
+            "type": "VARCHAR(255)",
+            "sample_value": "Aves",
+            "is_nullable": false
+          },
+          {
+            "name": "order_name",
+            "type": "VARCHAR(255)",
+            "sample_value": "Falconiformes",
+            "is_nullable": false
+          },
+          {
+            "name": "family",
+            "type": "VARCHAR(255)",
+            "sample_value": "Falconidae",
+            "is_nullable": false
+          },
+          {
+            "name": "genus",
+            "type": "VARCHAR(255)",
+            "sample_value": "Falco",
+            "is_nullable": false
+          },
+          {
+            "name": "term",
+            "type": "VARCHAR(255)",
+            "sample_value": "live",
+            "is_nullable": false
+          },
+          {
+            "name": "quantity",
+            "type": "FLOAT",
+            "sample_value": "1.0",
+            "is_nullable": false
+          },
+          {
+            "name": "unit",
+            "type": "VARCHAR(255)",
+            "sample_value": "",
+            "is_nullable": false
+          },
+          {
+            "name": "importer",
+            "type": "VARCHAR(255)",
+            "sample_value": "BH",
+            "is_nullable": false
+          },
+          {
+            "name": "exporter",
+            "type": "VARCHAR(255)",
+            "sample_value": "NL",
+            "is_nullable": false
+          },
+          {
+            "name": "origin",
+            "type": "VARCHAR(255)",
+            "sample_value": "",
+            "is_nullable": false
+          },
+          {
+            "name": "purpose",
+            "type": "VARCHAR(255)",
+            "sample_value": "T",
+            "is_nullable": false
+          },
+          {
+            "name": "source",
+            "type": "VARCHAR(255)",
+            "sample_value": "C",
+            "is_nullable": false
+          },
+          {
+            "name": "reporter_type",
+            "type": "VARCHAR(255)",
+            "sample_value": "E",
+            "is_nullable": false
+          },
+          {
+            "name": "import_permit",
+            "type": "VARCHAR(255)",
+            "sample_value": "",
+            "is_nullable": false
+          },
+          {
+            "name": "export_permit",
+            "type": "VARCHAR(255)",
+            "sample_value": "",
+            "is_nullable": false
+          },
+          {
+            "name": "origin_permit",
+            "type": "VARCHAR(255)",
+            "sample_value": "",
+            "is_nullable": false
+          }
+        ],
+        "sample_data": {
+          "id": "48442bcb-9847-4654-95c0-ae5d7a69249c",
+          "species_id": "506d9478-6bef-4116-8295-fd1ccc6292c6",
+          "record_id": "2416370039",
+          "year": 2017,
+          "appendix": "I",
+          "taxon": "Falco rusticolus",
+          "class": "Aves",
+          "order_name": "Falconiformes",
+          "family": "Falconidae",
+          "genus": "Falco",
+          "term": "live",
+          "quantity": 1.0,
+          "unit": "",
+          "importer": "BH",
+          "exporter": "NL",
+          "origin": "",
+          "purpose": "T",
+          "source": "C",
+          "reporter_type": "E",
+          "import_permit": "",
+          "export_permit": "",
+          "origin_permit": ""
+        },
+        "record_count": 4,
+        "analyzed_at": "2025-05-26T00:30:59.640069"
+      },
+      "common_names": {
+        "table_name": "common_names",
+        "columns": [
+          {
+            "name": "id",
+            "type": "VARCHAR(255)",
+            "sample_value": "2f37bab7-bb69-4396-81d4-dbfc728f3973",
+            "is_nullable": false
+          },
+          {
+            "name": "species_id",
+            "type": "VARCHAR(255)",
+            "sample_value": "f133cabe-d298-4ae4-a03d-5c5899395d52",
+            "is_nullable": false
+          },
+          {
+            "name": "name",
+            "type": "VARCHAR(255)",
+            "sample_value": "North Atlantic Right Whale",
+            "is_nullable": false
+          },
+          {
+            "name": "language",
+            "type": "VARCHAR(255)",
+            "sample_value": "eng",
+            "is_nullable": false
+          },
+          {
+            "name": "is_main",
+            "type": "BOOLEAN",
+            "sample_value": "True",
+            "is_nullable": false
+          }
+        ],
+        "sample_data": {
+          "id": "2f37bab7-bb69-4396-81d4-dbfc728f3973",
+          "species_id": "f133cabe-d298-4ae4-a03d-5c5899395d52",
+          "name": "North Atlantic Right Whale",
+          "language": "eng",
+          "is_main": true
+        },
+        "record_count": 4,
+        "analyzed_at": "2025-05-26T00:30:59.867784"
+      },
+      "conservation_measures": {
+        "table_name": "conservation_measures",
+        "columns": [],
+        "sample_data": null,
+        "record_count": 0,
+        "error": "No data found"
+      },
+      "distribution_ranges": {
+        "table_name": "distribution_ranges",
+        "columns": [],
+        "sample_data": null,
+        "record_count": 0,
+        "error": "No data found"
+      },
+      "families": {
+        "table_name": "families",
+        "columns": [
+          {
+            "name": "id",
+            "type": "VARCHAR(255)",
+            "sample_value": "ec774d8c-35e1-4c5e-9377-bafc9993000e",
+            "is_nullable": false
+          },
+          {
+            "name": "family_name",
+            "type": "VARCHAR(255)",
+            "sample_value": "ACCIPITRIDAE",
+            "is_nullable": false
+          },
+          {
+            "name": "order_name",
+            "type": "VARCHAR(255)",
+            "sample_value": "ACCIPITRIFORMES",
+            "is_nullable": false
+          },
+          {
+            "name": "class",
+            "type": "VARCHAR(255)",
+            "sample_value": "AVES",
+            "is_nullable": false
+          },
+          {
+            "name": "description",
+            "type": "TEXT",
+            "sample_value": null,
+            "is_nullable": true
+          },
+          {
+            "name": "created_at",
+            "type": "VARCHAR(255)",
+            "sample_value": "2025-05-25T14:02:22.75238+00:00",
+            "is_nullable": false
+          },
+          {
+            "name": "updated_at",
+            "type": "VARCHAR(255)",
+            "sample_value": "2025-05-25T14:02:22.75238+00:00",
+            "is_nullable": false
+          }
+        ],
+        "sample_data": {
+          "id": "ec774d8c-35e1-4c5e-9377-bafc9993000e",
+          "family_name": "ACCIPITRIDAE",
+          "order_name": "ACCIPITRIFORMES",
+          "class": "AVES",
+          "description": null,
+          "created_at": "2025-05-25T14:02:22.75238+00:00",
+          "updated_at": "2025-05-25T14:02:22.75238+00:00"
+        },
+        "record_count": 4,
+        "analyzed_at": "2025-05-26T00:31:00.343954"
+      },
+      "iucn_assessments": {
+        "table_name": "iucn_assessments",
+        "columns": [
+          {
+            "name": "id",
+            "type": "VARCHAR(255)",
+            "sample_value": "e772fc19-3caf-44fd-b7f9-ba7e3fe206c5",
+            "is_nullable": false
+          },
+          {
+            "name": "species_id",
+            "type": "VARCHAR(255)",
+            "sample_value": "5f289c1e-5101-458f-a5ea-a65e5c734569",
+            "is_nullable": false
+          },
+          {
+            "name": "year_published",
+            "type": "INTEGER",
+            "sample_value": "2023",
+            "is_nullable": false
+          },
+          {
+            "name": "is_latest",
+            "type": "BOOLEAN",
+            "sample_value": "False",
+            "is_nullable": false
+          },
+          {
+            "name": "possibly_extinct",
+            "type": "BOOLEAN",
+            "sample_value": "False",
+            "is_nullable": false
+          },
+          {
+            "name": "possibly_extinct_in_wild",
+            "type": "BOOLEAN",
+            "sample_value": "False",
+            "is_nullable": false
+          },
+          {
+            "name": "status",
+            "type": "VARCHAR(255)",
+            "sample_value": "LC",
+            "is_nullable": false
+          },
+          {
+            "name": "url",
+            "type": "VARCHAR(255)",
+            "sample_value": "https://www.iucnredlist.org/species/13704/219011698",
+            "is_nullable": false
+          },
+          {
+            "name": "assessment_id",
+            "type": "INTEGER",
+            "sample_value": "219011698",
+            "is_nullable": false
+          },
+          {
+            "name": "scope_code",
+            "type": "VARCHAR(255)",
+            "sample_value": "2",
+            "is_nullable": false
+          },
+          {
+            "name": "scope_description",
+            "type": "VARCHAR(255)",
+            "sample_value": "Europe",
+            "is_nullable": false
+          }
+        ],
+        "sample_data": {
+          "id": "e772fc19-3caf-44fd-b7f9-ba7e3fe206c5",
+          "species_id": "5f289c1e-5101-458f-a5ea-a65e5c734569",
+          "year_published": 2023,
+          "is_latest": false,
+          "possibly_extinct": false,
+          "possibly_extinct_in_wild": false,
+          "status": "LC",
+          "url": "https://www.iucnredlist.org/species/13704/219011698",
+          "assessment_id": 219011698,
+          "scope_code": "2",
+          "scope_description": "Europe"
+        },
+        "record_count": 4,
+        "analyzed_at": "2025-05-26T00:31:00.581025"
+      },
+      "profiles": {
+        "table_name": "profiles",
+        "columns": [],
+        "sample_data": null,
+        "record_count": 0,
+        "error": "No data found"
+      },
+      "species": {
+        "table_name": "species",
+        "columns": [
+          {
+            "name": "id",
+            "type": "VARCHAR(255)",
+            "sample_value": "332be9c5-d770-467f-886e-6de3832f521e",
+            "is_nullable": false
+          },
+          {
+            "name": "scientific_name",
+            "type": "VARCHAR(255)",
+            "sample_value": "Buteo lagopus",
+            "is_nullable": false
+          },
+          {
+            "name": "common_name",
+            "type": "VARCHAR(255)",
+            "sample_value": "Rough-legged Buzzard",
+            "is_nullable": false
+          },
+          {
+            "name": "kingdom",
+            "type": "VARCHAR(255)",
+            "sample_value": "Animalia",
+            "is_nullable": false
+          },
+          {
+            "name": "phylum",
+            "type": "VARCHAR(255)",
+            "sample_value": "CHORDATA",
+            "is_nullable": false
+          },
+          {
+            "name": "class",
+            "type": "VARCHAR(255)",
+            "sample_value": "AVES",
+            "is_nullable": false
+          },
+          {
+            "name": "order_name",
+            "type": "VARCHAR(255)",
+            "sample_value": "ACCIPITRIFORMES",
+            "is_nullable": false
+          },
+          {
+            "name": "family",
+            "type": "VARCHAR(255)",
+            "sample_value": "ACCIPITRIDAE",
+            "is_nullable": false
+          },
+          {
+            "name": "genus",
+            "type": "VARCHAR(255)",
+            "sample_value": "Buteo",
+            "is_nullable": false
+          },
+          {
+            "name": "species_name",
+            "type": "VARCHAR(255)",
+            "sample_value": "lagopus",
+            "is_nullable": false
+          },
+          {
+            "name": "authority",
+            "type": "VARCHAR(255)",
+            "sample_value": "(Pontoppidan, 1763)",
+            "is_nullable": false
+          },
+          {
+            "name": "sis_id",
+            "type": "INTEGER",
+            "sample_value": "22695973",
+            "is_nullable": false
+          },
+          {
+            "name": "created_at",
+            "type": "VARCHAR(255)",
+            "sample_value": "2025-03-25T12:18:39.485111+00:00",
+            "is_nullable": false
+          },
+          {
+            "name": "inaturalist_id",
+            "type": "TEXT",
+            "sample_value": null,
+            "is_nullable": true
+          },
+          {
+            "name": "default_image_url",
+            "type": "TEXT",
+            "sample_value": null,
+            "is_nullable": true
+          },
+          {
+            "name": "description",
+            "type": "TEXT",
+            "sample_value": null,
+            "is_nullable": true
+          },
+          {
+            "name": "habitat_description",
+            "type": "TEXT",
+            "sample_value": null,
+            "is_nullable": true
+          },
+          {
+            "name": "population_trend",
+            "type": "TEXT",
+            "sample_value": null,
+            "is_nullable": true
+          },
+          {
+            "name": "population_size",
+            "type": "TEXT",
+            "sample_value": null,
+            "is_nullable": true
+          },
+          {
+            "name": "generation_length",
+            "type": "TEXT",
+            "sample_value": null,
+            "is_nullable": true
+          },
+          {
+            "name": "movement_patterns",
+            "type": "TEXT",
+            "sample_value": null,
+            "is_nullable": true
+          },
+          {
+            "name": "use_and_trade",
+            "type": "TEXT",
+            "sample_value": null,
+            "is_nullable": true
+          },
+          {
+            "name": "threats_overview",
+            "type": "TEXT",
+            "sample_value": null,
+            "is_nullable": true
+          },
+          {
+            "name": "conservation_overview",
+            "type": "TEXT",
+            "sample_value": null,
+            "is_nullable": true
+          },
+          {
+            "name": "family_id",
+            "type": "VARCHAR(255)",
+            "sample_value": "ec774d8c-35e1-4c5e-9377-bafc9993000e",
+            "is_nullable": false
+          }
+        ],
+        "sample_data": {
+          "id": "332be9c5-d770-467f-886e-6de3832f521e",
+          "scientific_name": "Buteo lagopus",
+          "common_name": "Rough-legged Buzzard",
+          "kingdom": "Animalia",
+          "phylum": "CHORDATA",
+          "class": "AVES",
+          "order_name": "ACCIPITRIFORMES",
+          "family": "ACCIPITRIDAE",
+          "genus": "Buteo",
+          "species_name": "lagopus",
+          "authority": "(Pontoppidan, 1763)",
+          "sis_id": 22695973,
+          "created_at": "2025-03-25T12:18:39.485111+00:00",
+          "inaturalist_id": null,
+          "default_image_url": null,
+          "description": null,
+          "habitat_description": null,
+          "population_trend": null,
+          "population_size": null,
+          "generation_length": null,
+          "movement_patterns": null,
+          "use_and_trade": null,
+          "threats_overview": null,
+          "conservation_overview": null,
+          "family_id": "ec774d8c-35e1-4c5e-9377-bafc9993000e"
+        },
+        "record_count": 4,
+        "analyzed_at": "2025-05-26T00:31:00.941162"
+      },
+      "species_threats": {
+        "table_name": "species_threats",
+        "columns": [],
+        "sample_data": null,
+        "record_count": 0,
+        "error": "No data found"
+      },
+      "species_trade_summary": {
+        "table_name": "species_trade_summary",
+        "columns": [
+          {
+            "name": "species_id",
+            "type": "VARCHAR(255)",
+            "sample_value": "0ae6a6b2-65cf-402b-a500-347627b68c76",
+            "is_nullable": false
+          },
+          {
+            "name": "last_updated_at",
+            "type": "VARCHAR(255)",
+            "sample_value": "2025-05-24T23:05:20.045676+00:00",
+            "is_nullable": false
+          },
+          {
+            "name": "total_trade_records",
+            "type": "INTEGER",
+            "sample_value": "171",
+            "is_nullable": false
+          },
+          {
+            "name": "overall_min_year",
+            "type": "INTEGER",
+            "sample_value": "1977",
+            "is_nullable": false
+          },
+          {
+            "name": "overall_max_year",
+            "type": "INTEGER",
+            "sample_value": "2022",
+            "is_nullable": false
+          },
+          {
+            "name": "overall_total_quantity",
+            "type": "FLOAT",
+            "sample_value": "536.0",
+            "is_nullable": false
+          },
+          {
+            "name": "distinct_years",
+            "type": "JSONB",
+            "sample_value": "[1977, 1978, 1979, 1980, 1982, 1983, 1984, 1985, 1987, 1988, 1991, 1992, 1993, 1994, 1995, 1996, 199",
+            "is_nullable": false
+          },
+          {
+            "name": "distinct_terms",
+            "type": "JSONB",
+            "sample_value": "['bodies', 'eggs', 'eggs (live)', 'feathers', 'live', 'specimens']",
+            "is_nullable": false
+          },
+          {
+            "name": "distinct_importers",
+            "type": "JSONB",
+            "sample_value": "[{'code': 'US', 'name': 'US'}, {'code': 'DE', 'name': 'DE'}, {'code': 'DD', 'name': 'DD'}, {'code': ",
+            "is_nullable": false
+          },
+          {
+            "name": "distinct_exporters",
+            "type": "JSONB",
+            "sample_value": "[{'code': 'DE', 'name': 'DE'}, {'code': 'SU', 'name': 'SU'}, {'code': 'GB', 'name': 'GB'}, {'code': ",
+            "is_nullable": false
+          },
+          {
+            "name": "annual_summaries",
+            "type": "JSONB",
+            "sample_value": "[{'year': 1977, 'terms_summary': [{'term': 'eggs', 'records': 1, 'quantity': 6.0}, {'term': 'live', ",
+            "is_nullable": false
+          }
+        ],
+        "sample_data": {
+          "species_id": "0ae6a6b2-65cf-402b-a500-347627b68c76",
+          "last_updated_at": "2025-05-24T23:05:20.045676+00:00",
+          "total_trade_records": 171,
+          "overall_min_year": 1977,
+          "overall_max_year": 2022,
+          "overall_total_quantity": 536.0,
+          "distinct_years": [
+            1977,
+            1978,
+            1979,
+            1980,
+            1982,
+            1983,
+            1984,
+            1985,
+            1987,
+            1988,
+            1991,
+            1992,
+            1993,
+            1994,
+            1995,
+            1996,
+            1997,
+            1998,
+            1999,
+            2000,
+            2001,
+            2002,
+            2003,
+            2004,
+            2006,
+            2007,
+            2008,
+            2009,
+            2011,
+            2012,
+            2013,
+            2014,
+            2016,
+            2017,
+            2020,
+            2022
+          ],
+          "distinct_terms": [
+            "bodies",
+            "eggs",
+            "eggs (live)",
+            "feathers",
+            "live",
+            "specimens"
+          ],
+          "distinct_importers": [
+            {
+              "code": "US",
+              "name": "US"
+            },
+            {
+              "code": "DE",
+              "name": "DE"
+            },
+            {
+              "code": "DD",
+              "name": "DD"
+            },
+            {
+              "code": "SU",
+              "name": "SU"
+            },
+            {
+              "code": "JP",
+              "name": "JP"
+            },
+            {
+              "code": "AR",
+              "name": "AR"
+            },
+            {
+              "code": "IR",
+              "name": "IR"
+            },
+            {
+              "code": "KR",
+              "name": "KR"
+            },
+            {
+              "code": "RU",
+              "name": "RU"
+            },
+            {
+              "code": "IN",
+              "name": "IN"
+            },
+            {
+              "code": "GB",
+              "name": "GB"
+            },
+            {
+              "code": "BE",
+              "name": "BE"
+            },
+            {
+              "code": "MX",
+              "name": "MX"
+            },
+            {
+              "code": "FR",
+              "name": "FR"
+            },
+            {
+              "code": "EE",
+              "name": "EE"
+            },
+            {
+              "code": "UZ",
+              "name": "UZ"
+            },
+            {
+              "code": "KP",
+              "name": "KP"
+            },
+            {
+              "code": "CL",
+              "name": "CL"
+            },
+            {
+              "code": "AE",
+              "name": "AE"
+            },
+            {
+              "code": "CH",
+              "name": "CH"
+            },
+            {
+              "code": "CZ",
+              "name": "CZ"
+            }
+          ],
+          "distinct_exporters": [
+            {
+              "code": "DE",
+              "name": "DE"
+            },
+            {
+              "code": "SU",
+              "name": "SU"
+            },
+            {
+              "code": "GB",
+              "name": "GB"
+            },
+            {
+              "code": "JP",
+              "name": "JP"
+            },
+            {
+              "code": "US",
+              "name": "US"
+            },
+            {
+              "code": "RU",
+              "name": "RU"
+            },
+            {
+              "code": "BE",
+              "name": "BE"
+            },
+            {
+              "code": "CN",
+              "name": "CN"
+            },
+            {
+              "code": "IN",
+              "name": "IN"
+            },
+            {
+              "code": "TR",
+              "name": "TR"
+            },
+            {
+              "code": "UZ",
+              "name": "UZ"
+            },
+            {
+              "code": "XX",
+              "name": "XX"
+            }
+          ],
+          "annual_summaries": [
+            {
+              "year": 1977,
+              "terms_summary": [
+                {
+                  "term": "eggs",
+                  "records": 1,
+                  "quantity": 6.0
+                },
+                {
+                  "term": "live",
+                  "records": 1,
+                  "quantity": 1.0
+                }
+              ],
+              "sources_summary": [
+                {
+                  "records": 2,
+                  "quantity": 7.0,
+                  "source_code": "unknown"
+                }
+              ],
+              "purposes_summary": [
+                {
+                  "records": 2,
+                  "quantity": 7.0,
+                  "purpose_code": "unknown"
+                }
+              ],
+              "exporters_summary": [
+                {
+                  "records": 1,
+                  "quantity": 6.0,
+                  "exporter_code": "SU"
+                },
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "exporter_code": "JP"
+                }
+              ],
+              "importers_summary": [
+                {
+                  "records": 2,
+                  "quantity": 7.0,
+                  "importer_code": "US"
+                }
+              ],
+              "total_records_for_year": 2,
+              "total_quantity_for_year": 7.0
+            },
+            {
+              "year": 1978,
+              "terms_summary": [
+                {
+                  "term": "eggs",
+                  "records": 2,
+                  "quantity": 24.0
+                },
+                {
+                  "term": "live",
+                  "records": 1,
+                  "quantity": 1.0
+                }
+              ],
+              "sources_summary": [
+                {
+                  "records": 3,
+                  "quantity": 25.0,
+                  "source_code": "unknown"
+                }
+              ],
+              "purposes_summary": [
+                {
+                  "records": 3,
+                  "quantity": 25.0,
+                  "purpose_code": "unknown"
+                }
+              ],
+              "exporters_summary": [
+                {
+                  "records": 2,
+                  "quantity": 24.0,
+                  "exporter_code": "SU"
+                },
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "exporter_code": "GB"
+                }
+              ],
+              "importers_summary": [
+                {
+                  "records": 2,
+                  "quantity": 24.0,
+                  "importer_code": "US"
+                },
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "importer_code": "DD"
+                }
+              ],
+              "total_records_for_year": 3,
+              "total_quantity_for_year": 25.0
+            },
+            {
+              "year": 1979,
+              "terms_summary": [
+                {
+                  "term": "live",
+                  "records": 1,
+                  "quantity": 1.0
+                }
+              ],
+              "sources_summary": [
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "source_code": "unknown"
+                }
+              ],
+              "purposes_summary": [
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "purpose_code": "unknown"
+                }
+              ],
+              "exporters_summary": [
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "exporter_code": "DE"
+                }
+              ],
+              "importers_summary": [
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "importer_code": "US"
+                }
+              ],
+              "total_records_for_year": 1,
+              "total_quantity_for_year": 1.0
+            },
+            {
+              "year": 1980,
+              "terms_summary": [
+                {
+                  "term": "live",
+                  "records": 2,
+                  "quantity": 10.0
+                },
+                {
+                  "term": "eggs",
+                  "records": 2,
+                  "quantity": 8.0
+                }
+              ],
+              "sources_summary": [
+                {
+                  "records": 3,
+                  "quantity": 10.0,
+                  "source_code": "unknown"
+                },
+                {
+                  "records": 1,
+                  "quantity": 8.0,
+                  "source_code": "C"
+                }
+              ],
+              "purposes_summary": [
+                {
+                  "records": 3,
+                  "quantity": 10.0,
+                  "purpose_code": "Z"
+                },
+                {
+                  "records": 1,
+                  "quantity": 8.0,
+                  "purpose_code": "T"
+                }
+              ],
+              "exporters_summary": [
+                {
+                  "records": 4,
+                  "quantity": 18.0,
+                  "exporter_code": "SU"
+                }
+              ],
+              "importers_summary": [
+                {
+                  "records": 4,
+                  "quantity": 18.0,
+                  "importer_code": "DE"
+                }
+              ],
+              "total_records_for_year": 4,
+              "total_quantity_for_year": 18.0
+            },
+            {
+              "year": 1982,
+              "terms_summary": [
+                {
+                  "term": "bodies",
+                  "records": 1,
+                  "quantity": 1.0
+                }
+              ],
+              "sources_summary": [
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "source_code": "unknown"
+                }
+              ],
+              "purposes_summary": [
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "purpose_code": "E"
+                }
+              ],
+              "exporters_summary": [
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "exporter_code": "JP"
+                }
+              ],
+              "importers_summary": [
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "importer_code": "SU"
+                }
+              ],
+              "total_records_for_year": 1,
+              "total_quantity_for_year": 1.0
+            },
+            {
+              "year": 1983,
+              "terms_summary": [
+                {
+                  "term": "live",
+                  "records": 1,
+                  "quantity": 1.0
+                },
+                {
+                  "term": "eggs",
+                  "records": 1,
+                  "quantity": 4.0
+                }
+              ],
+              "sources_summary": [
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "source_code": "C"
+                },
+                {
+                  "records": 1,
+                  "quantity": 4.0,
+                  "source_code": "unknown"
+                }
+              ],
+              "purposes_summary": [
+                {
+                  "records": 2,
+                  "quantity": 5.0,
+                  "purpose_code": "Z"
+                }
+              ],
+              "exporters_summary": [
+                {
+                  "records": 2,
+                  "quantity": 5.0,
+                  "exporter_code": "US"
+                }
+              ],
+              "importers_summary": [
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "importer_code": "JP"
+                },
+                {
+                  "records": 1,
+                  "quantity": 4.0,
+                  "importer_code": "SU"
+                }
+              ],
+              "total_records_for_year": 2,
+              "total_quantity_for_year": 5.0
+            },
+            {
+              "year": 1984,
+              "terms_summary": [
+                {
+                  "term": "bodies",
+                  "records": 1,
+                  "quantity": 1.0
+                }
+              ],
+              "sources_summary": [
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "source_code": "unknown"
+                }
+              ],
+              "purposes_summary": [
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "purpose_code": "unknown"
+                }
+              ],
+              "exporters_summary": [
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "exporter_code": "JP"
+                }
+              ],
+              "importers_summary": [
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "importer_code": "SU"
+                }
+              ],
+              "total_records_for_year": 1,
+              "total_quantity_for_year": 1.0
+            },
+            {
+              "year": 1985,
+              "terms_summary": [
+                {
+                  "term": "live",
+                  "records": 2,
+                  "quantity": 3.0
+                },
+                {
+                  "term": "eggs",
+                  "records": 2,
+                  "quantity": 9.0
+                }
+              ],
+              "sources_summary": [
+                {
+                  "records": 3,
+                  "quantity": 11.0,
+                  "source_code": "unknown"
+                },
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "source_code": "C"
+                }
+              ],
+              "purposes_summary": [
+                {
+                  "records": 2,
+                  "quantity": 5.0,
+                  "purpose_code": "S"
+                },
+                {
+                  "records": 1,
+                  "quantity": 6.0,
+                  "purpose_code": "B"
+                },
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "purpose_code": "Q"
+                }
+              ],
+              "exporters_summary": [
+                {
+                  "records": 3,
+                  "quantity": 11.0,
+                  "exporter_code": "US"
+                },
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "exporter_code": "SU"
+                }
+              ],
+              "importers_summary": [
+                {
+                  "records": 1,
+                  "quantity": 2.0,
+                  "importer_code": "JP"
+                },
+                {
+                  "records": 2,
+                  "quantity": 9.0,
+                  "importer_code": "SU"
+                },
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "importer_code": "AR"
+                }
+              ],
+              "total_records_for_year": 4,
+              "total_quantity_for_year": 12.0
+            },
+            {
+              "year": 1987,
+              "terms_summary": [
+                {
+                  "term": "bodies",
+                  "records": 3,
+                  "quantity": 3.0
+                },
+                {
+                  "term": "live",
+                  "records": 2,
+                  "quantity": 2.0
+                }
+              ],
+              "sources_summary": [
+                {
+                  "records": 4,
+                  "quantity": 4.0,
+                  "source_code": "unknown"
+                },
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "source_code": "C"
+                }
+              ],
+              "purposes_summary": [
+                {
+                  "records": 2,
+                  "quantity": 2.0,
+                  "purpose_code": "S"
+                },
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "purpose_code": "Z"
+                },
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "purpose_code": "E"
+                },
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "purpose_code": "unknown"
+                }
+              ],
+              "exporters_summary": [
+                {
+                  "records": 2,
+                  "quantity": 2.0,
+                  "exporter_code": "JP"
+                },
+                {
+                  "records": 2,
+                  "quantity": 2.0,
+                  "exporter_code": "DE"
+                },
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "exporter_code": "SU"
+                }
+              ],
+              "importers_summary": [
+                {
+                  "records": 2,
+                  "quantity": 2.0,
+                  "importer_code": "SU"
+                },
+                {
+                  "records": 3,
+                  "quantity": 3.0,
+                  "importer_code": "JP"
+                }
+              ],
+              "total_records_for_year": 5,
+              "total_quantity_for_year": 5.0
+            },
+            {
+              "year": 1988,
+              "terms_summary": [
+                {
+                  "term": "live",
+                  "records": 2,
+                  "quantity": 4.0
+                }
+              ],
+              "sources_summary": [
+                {
+                  "records": 2,
+                  "quantity": 4.0,
+                  "source_code": "C"
+                }
+              ],
+              "purposes_summary": [
+                {
+                  "records": 1,
+                  "quantity": 2.0,
+                  "purpose_code": "unknown"
+                },
+                {
+                  "records": 1,
+                  "quantity": 2.0,
+                  "purpose_code": "Z"
+                }
+              ],
+              "exporters_summary": [
+                {
+                  "records": 2,
+                  "quantity": 4.0,
+                  "exporter_code": "US"
+                }
+              ],
+              "importers_summary": [
+                {
+                  "records": 2,
+                  "quantity": 4.0,
+                  "importer_code": "DE"
+                }
+              ],
+              "total_records_for_year": 2,
+              "total_quantity_for_year": 4.0
+            },
+            {
+              "year": 1991,
+              "terms_summary": [
+                {
+                  "term": "live",
+                  "records": 2,
+                  "quantity": 3.0
+                },
+                {
+                  "term": "eggs",
+                  "records": 2,
+                  "quantity": 12.0
+                },
+                {
+                  "term": "specimens",
+                  "records": 1,
+                  "quantity": 2.0
+                }
+              ],
+              "sources_summary": [
+                {
+                  "records": 2,
+                  "quantity": 3.0,
+                  "source_code": "C"
+                },
+                {
+                  "records": 3,
+                  "quantity": 14.0,
+                  "source_code": "unknown"
+                }
+              ],
+              "purposes_summary": [
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "purpose_code": "Z"
+                },
+                {
+                  "records": 1,
+                  "quantity": 2.0,
+                  "purpose_code": "T"
+                },
+                {
+                  "records": 1,
+                  "quantity": 6.0,
+                  "purpose_code": "B"
+                },
+                {
+                  "records": 2,
+                  "quantity": 8.0,
+                  "purpose_code": "S"
+                }
+              ],
+              "exporters_summary": [
+                {
+                  "records": 3,
+                  "quantity": 9.0,
+                  "exporter_code": "SU"
+                },
+                {
+                  "records": 1,
+                  "quantity": 2.0,
+                  "exporter_code": "US"
+                },
+                {
+                  "records": 1,
+                  "quantity": 6.0,
+                  "exporter_code": "DE"
+                }
+              ],
+              "importers_summary": [
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "importer_code": "DE"
+                },
+                {
+                  "records": 2,
+                  "quantity": 8.0,
+                  "importer_code": "SU"
+                },
+                {
+                  "records": 2,
+                  "quantity": 8.0,
+                  "importer_code": "US"
+                }
+              ],
+              "total_records_for_year": 5,
+              "total_quantity_for_year": 17.0
+            },
+            {
+              "year": 1992,
+              "terms_summary": [
+                {
+                  "term": "live",
+                  "records": 3,
+                  "quantity": 10.0
+                }
+              ],
+              "sources_summary": [
+                {
+                  "records": 2,
+                  "quantity": 8.0,
+                  "source_code": "C"
+                },
+                {
+                  "records": 1,
+                  "quantity": 2.0,
+                  "source_code": "W"
+                }
+              ],
+              "purposes_summary": [
+                {
+                  "records": 1,
+                  "quantity": 2.0,
+                  "purpose_code": "Z"
+                },
+                {
+                  "records": 1,
+                  "quantity": 6.0,
+                  "purpose_code": "unknown"
+                },
+                {
+                  "records": 1,
+                  "quantity": 2.0,
+                  "purpose_code": "S"
+                }
+              ],
+              "exporters_summary": [
+                {
+                  "records": 2,
+                  "quantity": 4.0,
+                  "exporter_code": "CN"
+                },
+                {
+                  "records": 1,
+                  "quantity": 6.0,
+                  "exporter_code": "US"
+                }
+              ],
+              "importers_summary": [
+                {
+                  "records": 2,
+                  "quantity": 4.0,
+                  "importer_code": "JP"
+                },
+                {
+                  "records": 1,
+                  "quantity": 6.0,
+                  "importer_code": "SU"
+                }
+              ],
+              "total_records_for_year": 3,
+              "total_quantity_for_year": 10.0
+            },
+            {
+              "year": 1993,
+              "terms_summary": [
+                {
+                  "term": "live",
+                  "records": 8,
+                  "quantity": 18.0
+                }
+              ],
+              "sources_summary": [
+                {
+                  "records": 7,
+                  "quantity": 16.0,
+                  "source_code": "C"
+                },
+                {
+                  "records": 1,
+                  "quantity": 2.0,
+                  "source_code": "unknown"
+                }
+              ],
+              "purposes_summary": [
+                {
+                  "records": 2,
+                  "quantity": 3.0,
+                  "purpose_code": "B"
+                },
+                {
+                  "records": 2,
+                  "quantity": 4.0,
+                  "purpose_code": "Z"
+                },
+                {
+                  "records": 3,
+                  "quantity": 9.0,
+                  "purpose_code": "unknown"
+                },
+                {
+                  "records": 1,
+                  "quantity": 2.0,
+                  "purpose_code": "S"
+                }
+              ],
+              "exporters_summary": [
+                {
+                  "records": 3,
+                  "quantity": 10.0,
+                  "exporter_code": "US"
+                },
+                {
+                  "records": 4,
+                  "quantity": 6.0,
+                  "exporter_code": "DE"
+                },
+                {
+                  "records": 1,
+                  "quantity": 2.0,
+                  "exporter_code": "RU"
+                }
+              ],
+              "importers_summary": [
+                {
+                  "records": 2,
+                  "quantity": 4.0,
+                  "importer_code": "DE"
+                },
+                {
+                  "records": 2,
+                  "quantity": 2.0,
+                  "importer_code": "US"
+                },
+                {
+                  "records": 2,
+                  "quantity": 4.0,
+                  "importer_code": "JP"
+                },
+                {
+                  "records": 1,
+                  "quantity": 6.0,
+                  "importer_code": "RU"
+                },
+                {
+                  "records": 1,
+                  "quantity": 2.0,
+                  "importer_code": "IN"
+                }
+              ],
+              "total_records_for_year": 8,
+              "total_quantity_for_year": 18.0
+            },
+            {
+              "year": 1994,
+              "terms_summary": [
+                {
+                  "term": "specimens",
+                  "records": 4,
+                  "quantity": 6.0
+                },
+                {
+                  "term": "live",
+                  "records": 5,
+                  "quantity": 13.0
+                },
+                {
+                  "term": "eggs",
+                  "records": 3,
+                  "quantity": 26.0
+                }
+              ],
+              "sources_summary": [
+                {
+                  "records": 7,
+                  "quantity": 12.0,
+                  "source_code": "C"
+                },
+                {
+                  "records": 3,
+                  "quantity": 18.0,
+                  "source_code": "F"
+                },
+                {
+                  "records": 1,
+                  "quantity": 5.0,
+                  "source_code": "W"
+                },
+                {
+                  "records": 1,
+                  "quantity": 10.0,
+                  "source_code": "U"
+                }
+              ],
+              "purposes_summary": [
+                {
+                  "records": 2,
+                  "quantity": 2.0,
+                  "purpose_code": "M"
+                },
+                {
+                  "records": 3,
+                  "quantity": 18.0,
+                  "purpose_code": "N"
+                },
+                {
+                  "records": 2,
+                  "quantity": 7.0,
+                  "purpose_code": "B"
+                },
+                {
+                  "records": 1,
+                  "quantity": 2.0,
+                  "purpose_code": "S"
+                },
+                {
+                  "records": 1,
+                  "quantity": 2.0,
+                  "purpose_code": "T"
+                },
+                {
+                  "records": 3,
+                  "quantity": 14.0,
+                  "purpose_code": "unknown"
+                }
+              ],
+              "exporters_summary": [
+                {
+                  "records": 4,
+                  "quantity": 6.0,
+                  "exporter_code": "JP"
+                },
+                {
+                  "records": 3,
+                  "quantity": 9.0,
+                  "exporter_code": "RU"
+                },
+                {
+                  "records": 1,
+                  "quantity": 2.0,
+                  "exporter_code": "IN"
+                },
+                {
+                  "records": 1,
+                  "quantity": 6.0,
+                  "exporter_code": "DE"
+                },
+                {
+                  "records": 3,
+                  "quantity": 22.0,
+                  "exporter_code": "US"
+                }
+              ],
+              "importers_summary": [
+                {
+                  "records": 4,
+                  "quantity": 6.0,
+                  "importer_code": "US"
+                },
+                {
+                  "records": 2,
+                  "quantity": 4.0,
+                  "importer_code": "IN"
+                },
+                {
+                  "records": 1,
+                  "quantity": 2.0,
+                  "importer_code": "GB"
+                },
+                {
+                  "records": 1,
+                  "quantity": 5.0,
+                  "importer_code": "BE"
+                },
+                {
+                  "records": 4,
+                  "quantity": 28.0,
+                  "importer_code": "RU"
+                }
+              ],
+              "total_records_for_year": 12,
+              "total_quantity_for_year": 45.0
+            },
+            {
+              "year": 1995,
+              "terms_summary": [
+                {
+                  "term": "live",
+                  "records": 10,
+                  "quantity": 15.0
+                },
+                {
+                  "term": "eggs",
+                  "records": 3,
+                  "quantity": 29.0
+                }
+              ],
+              "sources_summary": [
+                {
+                  "records": 9,
+                  "quantity": 30.0,
+                  "source_code": "C"
+                },
+                {
+                  "records": 3,
+                  "quantity": 4.0,
+                  "source_code": "W"
+                },
+                {
+                  "records": 1,
+                  "quantity": 10.0,
+                  "source_code": "U"
+                }
+              ],
+              "purposes_summary": [
+                {
+                  "records": 4,
+                  "quantity": 6.0,
+                  "purpose_code": "B"
+                },
+                {
+                  "records": 5,
+                  "quantity": 7.0,
+                  "purpose_code": "Z"
+                },
+                {
+                  "records": 1,
+                  "quantity": 16.0,
+                  "purpose_code": "N"
+                },
+                {
+                  "records": 3,
+                  "quantity": 15.0,
+                  "purpose_code": "unknown"
+                }
+              ],
+              "exporters_summary": [
+                {
+                  "records": 9,
+                  "quantity": 39.0,
+                  "exporter_code": "US"
+                },
+                {
+                  "records": 2,
+                  "quantity": 3.0,
+                  "exporter_code": "RU"
+                },
+                {
+                  "records": 2,
+                  "quantity": 2.0,
+                  "exporter_code": "DE"
+                }
+              ],
+              "importers_summary": [
+                {
+                  "records": 1,
+                  "quantity": 2.0,
+                  "importer_code": "MX"
+                },
+                {
+                  "records": 4,
+                  "quantity": 6.0,
+                  "importer_code": "BE"
+                },
+                {
+                  "records": 2,
+                  "quantity": 3.0,
+                  "importer_code": "GB"
+                },
+                {
+                  "records": 2,
+                  "quantity": 2.0,
+                  "importer_code": "JP"
+                },
+                {
+                  "records": 3,
+                  "quantity": 29.0,
+                  "importer_code": "RU"
+                },
+                {
+                  "records": 1,
+                  "quantity": 2.0,
+                  "importer_code": "IR"
+                }
+              ],
+              "total_records_for_year": 13,
+              "total_quantity_for_year": 44.0
+            },
+            {
+              "year": 1996,
+              "terms_summary": [
+                {
+                  "term": "live",
+                  "records": 6,
+                  "quantity": 9.0
+                },
+                {
+                  "term": "feathers",
+                  "records": 1,
+                  "quantity": 1.0
+                }
+              ],
+              "sources_summary": [
+                {
+                  "records": 3,
+                  "quantity": 3.0,
+                  "source_code": "F"
+                },
+                {
+                  "records": 3,
+                  "quantity": 6.0,
+                  "source_code": "C"
+                },
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "source_code": "I"
+                }
+              ],
+              "purposes_summary": [
+                {
+                  "records": 3,
+                  "quantity": 3.0,
+                  "purpose_code": "Z"
+                },
+                {
+                  "records": 1,
+                  "quantity": 2.0,
+                  "purpose_code": "S"
+                },
+                {
+                  "records": 3,
+                  "quantity": 5.0,
+                  "purpose_code": "unknown"
+                }
+              ],
+              "exporters_summary": [
+                {
+                  "records": 4,
+                  "quantity": 6.0,
+                  "exporter_code": "DE"
+                },
+                {
+                  "records": 2,
+                  "quantity": 3.0,
+                  "exporter_code": "US"
+                },
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "exporter_code": "RU"
+                }
+              ],
+              "importers_summary": [
+                {
+                  "records": 5,
+                  "quantity": 7.0,
+                  "importer_code": "US"
+                },
+                {
+                  "records": 1,
+                  "quantity": 2.0,
+                  "importer_code": "IR"
+                },
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "importer_code": "MX"
+                }
+              ],
+              "total_records_for_year": 7,
+              "total_quantity_for_year": 10.0
+            },
+            {
+              "year": 1997,
+              "terms_summary": [
+                {
+                  "term": "live",
+                  "records": 6,
+                  "quantity": 16.0
+                },
+                {
+                  "term": "eggs",
+                  "records": 3,
+                  "quantity": 26.0
+                }
+              ],
+              "sources_summary": [
+                {
+                  "records": 8,
+                  "quantity": 38.0,
+                  "source_code": "C"
+                },
+                {
+                  "records": 1,
+                  "quantity": 4.0,
+                  "source_code": "unknown"
+                }
+              ],
+              "purposes_summary": [
+                {
+                  "records": 3,
+                  "quantity": 6.0,
+                  "purpose_code": "B"
+                },
+                {
+                  "records": 1,
+                  "quantity": 4.0,
+                  "purpose_code": "T"
+                },
+                {
+                  "records": 2,
+                  "quantity": 8.0,
+                  "purpose_code": "unknown"
+                },
+                {
+                  "records": 1,
+                  "quantity": 4.0,
+                  "purpose_code": "S"
+                },
+                {
+                  "records": 2,
+                  "quantity": 20.0,
+                  "purpose_code": "N"
+                }
+              ],
+              "exporters_summary": [
+                {
+                  "records": 2,
+                  "quantity": 4.0,
+                  "exporter_code": "DE"
+                },
+                {
+                  "records": 5,
+                  "quantity": 34.0,
+                  "exporter_code": "US"
+                },
+                {
+                  "records": 2,
+                  "quantity": 4.0,
+                  "exporter_code": "RU"
+                }
+              ],
+              "importers_summary": [
+                {
+                  "records": 2,
+                  "quantity": 4.0,
+                  "importer_code": "MX"
+                },
+                {
+                  "records": 2,
+                  "quantity": 8.0,
+                  "importer_code": "IN"
+                },
+                {
+                  "records": 3,
+                  "quantity": 26.0,
+                  "importer_code": "RU"
+                },
+                {
+                  "records": 2,
+                  "quantity": 4.0,
+                  "importer_code": "FR"
+                }
+              ],
+              "total_records_for_year": 9,
+              "total_quantity_for_year": 42.0
+            },
+            {
+              "year": 1998,
+              "terms_summary": [
+                {
+                  "term": "eggs",
+                  "records": 4,
+                  "quantity": 28.0
+                },
+                {
+                  "term": "live",
+                  "records": 7,
+                  "quantity": 16.0
+                }
+              ],
+              "sources_summary": [
+                {
+                  "records": 4,
+                  "quantity": 20.0,
+                  "source_code": "F"
+                },
+                {
+                  "records": 7,
+                  "quantity": 24.0,
+                  "source_code": "C"
+                }
+              ],
+              "purposes_summary": [
+                {
+                  "records": 4,
+                  "quantity": 20.0,
+                  "purpose_code": "N"
+                },
+                {
+                  "records": 5,
+                  "quantity": 10.0,
+                  "purpose_code": "B"
+                },
+                {
+                  "records": 2,
+                  "quantity": 14.0,
+                  "purpose_code": "unknown"
+                }
+              ],
+              "exporters_summary": [
+                {
+                  "records": 4,
+                  "quantity": 28.0,
+                  "exporter_code": "US"
+                },
+                {
+                  "records": 2,
+                  "quantity": 6.0,
+                  "exporter_code": "DE"
+                },
+                {
+                  "records": 5,
+                  "quantity": 10.0,
+                  "exporter_code": "RU"
+                }
+              ],
+              "importers_summary": [
+                {
+                  "records": 3,
+                  "quantity": 8.0,
+                  "importer_code": "DE"
+                },
+                {
+                  "records": 4,
+                  "quantity": 30.0,
+                  "importer_code": "RU"
+                },
+                {
+                  "records": 4,
+                  "quantity": 6.0,
+                  "importer_code": "BE"
+                }
+              ],
+              "total_records_for_year": 11,
+              "total_quantity_for_year": 44.0
+            },
+            {
+              "year": 1999,
+              "terms_summary": [
+                {
+                  "term": "live",
+                  "records": 6,
+                  "quantity": 16.0
+                },
+                {
+                  "term": "eggs",
+                  "records": 1,
+                  "quantity": 10.0
+                },
+                {
+                  "term": "eggs (live)",
+                  "records": 1,
+                  "quantity": 12.0
+                }
+              ],
+              "sources_summary": [
+                {
+                  "records": 6,
+                  "quantity": 16.0,
+                  "source_code": "F"
+                },
+                {
+                  "records": 2,
+                  "quantity": 22.0,
+                  "source_code": "C"
+                }
+              ],
+              "purposes_summary": [
+                {
+                  "records": 3,
+                  "quantity": 10.0,
+                  "purpose_code": "B"
+                },
+                {
+                  "records": 2,
+                  "quantity": 4.0,
+                  "purpose_code": "Z"
+                },
+                {
+                  "records": 1,
+                  "quantity": 10.0,
+                  "purpose_code": "P"
+                },
+                {
+                  "records": 1,
+                  "quantity": 2.0,
+                  "purpose_code": "unknown"
+                },
+                {
+                  "records": 1,
+                  "quantity": 12.0,
+                  "purpose_code": "N"
+                }
+              ],
+              "exporters_summary": [
+                {
+                  "records": 4,
+                  "quantity": 12.0,
+                  "exporter_code": "RU"
+                },
+                {
+                  "records": 4,
+                  "quantity": 26.0,
+                  "exporter_code": "US"
+                }
+              ],
+              "importers_summary": [
+                {
+                  "records": 2,
+                  "quantity": 8.0,
+                  "importer_code": "DE"
+                },
+                {
+                  "records": 2,
+                  "quantity": 4.0,
+                  "importer_code": "BE"
+                },
+                {
+                  "records": 2,
+                  "quantity": 4.0,
+                  "importer_code": "EE"
+                },
+                {
+                  "records": 2,
+                  "quantity": 22.0,
+                  "importer_code": "RU"
+                }
+              ],
+              "total_records_for_year": 8,
+              "total_quantity_for_year": 38.0
+            },
+            {
+              "year": 2000,
+              "terms_summary": [
+                {
+                  "term": "live",
+                  "records": 9,
+                  "quantity": 12.0
+                }
+              ],
+              "sources_summary": [
+                {
+                  "records": 3,
+                  "quantity": 4.0,
+                  "source_code": "C"
+                },
+                {
+                  "records": 6,
+                  "quantity": 8.0,
+                  "source_code": "F"
+                }
+              ],
+              "purposes_summary": [
+                {
+                  "records": 9,
+                  "quantity": 12.0,
+                  "purpose_code": "B"
+                }
+              ],
+              "exporters_summary": [
+                {
+                  "records": 7,
+                  "quantity": 10.0,
+                  "exporter_code": "RU"
+                },
+                {
+                  "records": 2,
+                  "quantity": 2.0,
+                  "exporter_code": "US"
+                }
+              ],
+              "importers_summary": [
+                {
+                  "records": 2,
+                  "quantity": 2.0,
+                  "importer_code": "DE"
+                },
+                {
+                  "records": 1,
+                  "quantity": 2.0,
+                  "importer_code": "FR"
+                },
+                {
+                  "records": 6,
+                  "quantity": 8.0,
+                  "importer_code": "BE"
+                }
+              ],
+              "total_records_for_year": 9,
+              "total_quantity_for_year": 12.0
+            },
+            {
+              "year": 2001,
+              "terms_summary": [
+                {
+                  "term": "live",
+                  "records": 4,
+                  "quantity": 8.0
+                }
+              ],
+              "sources_summary": [
+                {
+                  "records": 3,
+                  "quantity": 5.0,
+                  "source_code": "C"
+                },
+                {
+                  "records": 1,
+                  "quantity": 3.0,
+                  "source_code": "F"
+                }
+              ],
+              "purposes_summary": [
+                {
+                  "records": 4,
+                  "quantity": 8.0,
+                  "purpose_code": "B"
+                }
+              ],
+              "exporters_summary": [
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "exporter_code": "TR"
+                },
+                {
+                  "records": 1,
+                  "quantity": 2.0,
+                  "exporter_code": "US"
+                },
+                {
+                  "records": 2,
+                  "quantity": 5.0,
+                  "exporter_code": "RU"
+                }
+              ],
+              "importers_summary": [
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "importer_code": "RU"
+                },
+                {
+                  "records": 2,
+                  "quantity": 5.0,
+                  "importer_code": "BE"
+                },
+                {
+                  "records": 1,
+                  "quantity": 2.0,
+                  "importer_code": "FR"
+                }
+              ],
+              "total_records_for_year": 4,
+              "total_quantity_for_year": 8.0
+            },
+            {
+              "year": 2002,
+              "terms_summary": [
+                {
+                  "term": "live",
+                  "records": 9,
+                  "quantity": 19.0
+                },
+                {
+                  "term": "eggs (live)",
+                  "records": 1,
+                  "quantity": 10.0
+                }
+              ],
+              "sources_summary": [
+                {
+                  "records": 1,
+                  "quantity": 3.0,
+                  "source_code": "W"
+                },
+                {
+                  "records": 8,
+                  "quantity": 23.0,
+                  "source_code": "C"
+                },
+                {
+                  "records": 1,
+                  "quantity": 3.0,
+                  "source_code": "F"
+                }
+              ],
+              "purposes_summary": [
+                {
+                  "records": 2,
+                  "quantity": 6.0,
+                  "purpose_code": "S"
+                },
+                {
+                  "records": 8,
+                  "quantity": 23.0,
+                  "purpose_code": "B"
+                }
+              ],
+              "exporters_summary": [
+                {
+                  "records": 9,
+                  "quantity": 19.0,
+                  "exporter_code": "RU"
+                },
+                {
+                  "records": 1,
+                  "quantity": 10.0,
+                  "exporter_code": "BE"
+                }
+              ],
+              "importers_summary": [
+                {
+                  "records": 2,
+                  "quantity": 6.0,
+                  "importer_code": "IR"
+                },
+                {
+                  "records": 7,
+                  "quantity": 13.0,
+                  "importer_code": "BE"
+                },
+                {
+                  "records": 1,
+                  "quantity": 10.0,
+                  "importer_code": "RU"
+                }
+              ],
+              "total_records_for_year": 10,
+              "total_quantity_for_year": 29.0
+            },
+            {
+              "year": 2003,
+              "terms_summary": [
+                {
+                  "term": "live",
+                  "records": 3,
+                  "quantity": 4.0
+                }
+              ],
+              "sources_summary": [
+                {
+                  "records": 2,
+                  "quantity": 2.0,
+                  "source_code": "C"
+                },
+                {
+                  "records": 1,
+                  "quantity": 2.0,
+                  "source_code": "F"
+                }
+              ],
+              "purposes_summary": [
+                {
+                  "records": 2,
+                  "quantity": 2.0,
+                  "purpose_code": "B"
+                },
+                {
+                  "records": 1,
+                  "quantity": 2.0,
+                  "purpose_code": "N"
+                }
+              ],
+              "exporters_summary": [
+                {
+                  "records": 2,
+                  "quantity": 2.0,
+                  "exporter_code": "BE"
+                },
+                {
+                  "records": 1,
+                  "quantity": 2.0,
+                  "exporter_code": "RU"
+                }
+              ],
+              "importers_summary": [
+                {
+                  "records": 2,
+                  "quantity": 2.0,
+                  "importer_code": "JP"
+                },
+                {
+                  "records": 1,
+                  "quantity": 2.0,
+                  "importer_code": "IR"
+                }
+              ],
+              "total_records_for_year": 3,
+              "total_quantity_for_year": 4.0
+            },
+            {
+              "year": 2004,
+              "terms_summary": [
+                {
+                  "term": "live",
+                  "records": 1,
+                  "quantity": 2.0
+                }
+              ],
+              "sources_summary": [
+                {
+                  "records": 1,
+                  "quantity": 2.0,
+                  "source_code": "unknown"
+                }
+              ],
+              "purposes_summary": [
+                {
+                  "records": 1,
+                  "quantity": 2.0,
+                  "purpose_code": "S"
+                }
+              ],
+              "exporters_summary": [
+                {
+                  "records": 1,
+                  "quantity": 2.0,
+                  "exporter_code": "RU"
+                }
+              ],
+              "importers_summary": [
+                {
+                  "records": 1,
+                  "quantity": 2.0,
+                  "importer_code": "IR"
+                }
+              ],
+              "total_records_for_year": 1,
+              "total_quantity_for_year": 2.0
+            },
+            {
+              "year": 2006,
+              "terms_summary": [
+                {
+                  "term": "live",
+                  "records": 2,
+                  "quantity": 8.0
+                }
+              ],
+              "sources_summary": [
+                {
+                  "records": 1,
+                  "quantity": 6.0,
+                  "source_code": "C"
+                },
+                {
+                  "records": 1,
+                  "quantity": 2.0,
+                  "source_code": "W"
+                }
+              ],
+              "purposes_summary": [
+                {
+                  "records": 1,
+                  "quantity": 6.0,
+                  "purpose_code": "B"
+                },
+                {
+                  "records": 1,
+                  "quantity": 2.0,
+                  "purpose_code": "S"
+                }
+              ],
+              "exporters_summary": [
+                {
+                  "records": 1,
+                  "quantity": 6.0,
+                  "exporter_code": "BE"
+                },
+                {
+                  "records": 1,
+                  "quantity": 2.0,
+                  "exporter_code": "XX"
+                }
+              ],
+              "importers_summary": [
+                {
+                  "records": 1,
+                  "quantity": 6.0,
+                  "importer_code": "AE"
+                },
+                {
+                  "records": 1,
+                  "quantity": 2.0,
+                  "importer_code": "IR"
+                }
+              ],
+              "total_records_for_year": 2,
+              "total_quantity_for_year": 8.0
+            },
+            {
+              "year": 2007,
+              "terms_summary": [
+                {
+                  "term": "bodies",
+                  "records": 6,
+                  "quantity": 6.0
+                },
+                {
+                  "term": "live",
+                  "records": 2,
+                  "quantity": 4.0
+                }
+              ],
+              "sources_summary": [
+                {
+                  "records": 6,
+                  "quantity": 6.0,
+                  "source_code": "C"
+                },
+                {
+                  "records": 2,
+                  "quantity": 4.0,
+                  "source_code": "F"
+                }
+              ],
+              "purposes_summary": [
+                {
+                  "records": 6,
+                  "quantity": 6.0,
+                  "purpose_code": "T"
+                },
+                {
+                  "records": 2,
+                  "quantity": 4.0,
+                  "purpose_code": "N"
+                }
+              ],
+              "exporters_summary": [
+                {
+                  "records": 5,
+                  "quantity": 5.0,
+                  "exporter_code": "BE"
+                },
+                {
+                  "records": 2,
+                  "quantity": 4.0,
+                  "exporter_code": "RU"
+                },
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "exporter_code": "GB"
+                }
+              ],
+              "importers_summary": [
+                {
+                  "records": 6,
+                  "quantity": 6.0,
+                  "importer_code": "CH"
+                },
+                {
+                  "records": 1,
+                  "quantity": 2.0,
+                  "importer_code": "IR"
+                },
+                {
+                  "records": 1,
+                  "quantity": 2.0,
+                  "importer_code": "UZ"
+                }
+              ],
+              "total_records_for_year": 8,
+              "total_quantity_for_year": 10.0
+            },
+            {
+              "year": 2008,
+              "terms_summary": [
+                {
+                  "term": "live",
+                  "records": 5,
+                  "quantity": 30.0
+                }
+              ],
+              "sources_summary": [
+                {
+                  "records": 2,
+                  "quantity": 24.0,
+                  "source_code": "C"
+                },
+                {
+                  "records": 2,
+                  "quantity": 5.0,
+                  "source_code": "F"
+                },
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "source_code": "unknown"
+                }
+              ],
+              "purposes_summary": [
+                {
+                  "records": 2,
+                  "quantity": 24.0,
+                  "purpose_code": "B"
+                },
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "purpose_code": "N"
+                },
+                {
+                  "records": 2,
+                  "quantity": 5.0,
+                  "purpose_code": "S"
+                }
+              ],
+              "exporters_summary": [
+                {
+                  "records": 2,
+                  "quantity": 24.0,
+                  "exporter_code": "BE"
+                },
+                {
+                  "records": 3,
+                  "quantity": 6.0,
+                  "exporter_code": "RU"
+                }
+              ],
+              "importers_summary": [
+                {
+                  "records": 2,
+                  "quantity": 24.0,
+                  "importer_code": "AE"
+                },
+                {
+                  "records": 2,
+                  "quantity": 2.0,
+                  "importer_code": "IR"
+                },
+                {
+                  "records": 1,
+                  "quantity": 4.0,
+                  "importer_code": "UZ"
+                }
+              ],
+              "total_records_for_year": 5,
+              "total_quantity_for_year": 30.0
+            },
+            {
+              "year": 2009,
+              "terms_summary": [
+                {
+                  "term": "live",
+                  "records": 8,
+                  "quantity": 44.0
+                }
+              ],
+              "sources_summary": [
+                {
+                  "records": 5,
+                  "quantity": 14.0,
+                  "source_code": "F"
+                },
+                {
+                  "records": 3,
+                  "quantity": 30.0,
+                  "source_code": "C"
+                }
+              ],
+              "purposes_summary": [
+                {
+                  "records": 6,
+                  "quantity": 16.0,
+                  "purpose_code": "Z"
+                },
+                {
+                  "records": 1,
+                  "quantity": 26.0,
+                  "purpose_code": "B"
+                },
+                {
+                  "records": 1,
+                  "quantity": 2.0,
+                  "purpose_code": "S"
+                }
+              ],
+              "exporters_summary": [
+                {
+                  "records": 7,
+                  "quantity": 18.0,
+                  "exporter_code": "RU"
+                },
+                {
+                  "records": 1,
+                  "quantity": 26.0,
+                  "exporter_code": "BE"
+                }
+              ],
+              "importers_summary": [
+                {
+                  "records": 4,
+                  "quantity": 8.0,
+                  "importer_code": "CZ"
+                },
+                {
+                  "records": 1,
+                  "quantity": 26.0,
+                  "importer_code": "AE"
+                },
+                {
+                  "records": 3,
+                  "quantity": 10.0,
+                  "importer_code": "UZ"
+                }
+              ],
+              "total_records_for_year": 8,
+              "total_quantity_for_year": 44.0
+            },
+            {
+              "year": 2011,
+              "terms_summary": [
+                {
+                  "term": "live",
+                  "records": 1,
+                  "quantity": 3.0
+                },
+                {
+                  "term": "bodies",
+                  "records": 1,
+                  "quantity": 1.0
+                }
+              ],
+              "sources_summary": [
+                {
+                  "records": 2,
+                  "quantity": 4.0,
+                  "source_code": "C"
+                }
+              ],
+              "purposes_summary": [
+                {
+                  "records": 1,
+                  "quantity": 3.0,
+                  "purpose_code": "S"
+                },
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "purpose_code": "Q"
+                }
+              ],
+              "exporters_summary": [
+                {
+                  "records": 1,
+                  "quantity": 3.0,
+                  "exporter_code": "RU"
+                },
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "exporter_code": "BE"
+                }
+              ],
+              "importers_summary": [
+                {
+                  "records": 1,
+                  "quantity": 3.0,
+                  "importer_code": "IR"
+                },
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "importer_code": "KR"
+                }
+              ],
+              "total_records_for_year": 2,
+              "total_quantity_for_year": 4.0
+            },
+            {
+              "year": 2012,
+              "terms_summary": [
+                {
+                  "term": "bodies",
+                  "records": 2,
+                  "quantity": 2.0
+                }
+              ],
+              "sources_summary": [
+                {
+                  "records": 2,
+                  "quantity": 2.0,
+                  "source_code": "C"
+                }
+              ],
+              "purposes_summary": [
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "purpose_code": "T"
+                },
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "purpose_code": "Q"
+                }
+              ],
+              "exporters_summary": [
+                {
+                  "records": 2,
+                  "quantity": 2.0,
+                  "exporter_code": "BE"
+                }
+              ],
+              "importers_summary": [
+                {
+                  "records": 2,
+                  "quantity": 2.0,
+                  "importer_code": "KR"
+                }
+              ],
+              "total_records_for_year": 2,
+              "total_quantity_for_year": 2.0
+            },
+            {
+              "year": 2013,
+              "terms_summary": [
+                {
+                  "term": "live",
+                  "records": 2,
+                  "quantity": 3.0
+                }
+              ],
+              "sources_summary": [
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "source_code": "F"
+                },
+                {
+                  "records": 1,
+                  "quantity": 2.0,
+                  "source_code": "C"
+                }
+              ],
+              "purposes_summary": [
+                {
+                  "records": 2,
+                  "quantity": 3.0,
+                  "purpose_code": "N"
+                }
+              ],
+              "exporters_summary": [
+                {
+                  "records": 2,
+                  "quantity": 3.0,
+                  "exporter_code": "RU"
+                }
+              ],
+              "importers_summary": [
+                {
+                  "records": 2,
+                  "quantity": 3.0,
+                  "importer_code": "UZ"
+                }
+              ],
+              "total_records_for_year": 2,
+              "total_quantity_for_year": 3.0
+            },
+            {
+              "year": 2014,
+              "terms_summary": [
+                {
+                  "term": "bodies",
+                  "records": 2,
+                  "quantity": 2.0
+                }
+              ],
+              "sources_summary": [
+                {
+                  "records": 2,
+                  "quantity": 2.0,
+                  "source_code": "C"
+                }
+              ],
+              "purposes_summary": [
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "purpose_code": "T"
+                },
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "purpose_code": "Q"
+                }
+              ],
+              "exporters_summary": [
+                {
+                  "records": 2,
+                  "quantity": 2.0,
+                  "exporter_code": "BE"
+                }
+              ],
+              "importers_summary": [
+                {
+                  "records": 2,
+                  "quantity": 2.0,
+                  "importer_code": "KR"
+                }
+              ],
+              "total_records_for_year": 2,
+              "total_quantity_for_year": 2.0
+            },
+            {
+              "year": 2016,
+              "terms_summary": [
+                {
+                  "term": "bodies",
+                  "records": 1,
+                  "quantity": 1.0
+                }
+              ],
+              "sources_summary": [
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "source_code": "U"
+                }
+              ],
+              "purposes_summary": [
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "purpose_code": "E"
+                }
+              ],
+              "exporters_summary": [
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "exporter_code": "CN"
+                }
+              ],
+              "importers_summary": [
+                {
+                  "records": 1,
+                  "quantity": 1.0,
+                  "importer_code": "KP"
+                }
+              ],
+              "total_records_for_year": 1,
+              "total_quantity_for_year": 1.0
+            },
+            {
+              "year": 2017,
+              "terms_summary": [
+                {
+                  "term": "specimens",
+                  "records": 1,
+                  "quantity": 20.0
+                }
+              ],
+              "sources_summary": [
+                {
+                  "records": 1,
+                  "quantity": 20.0,
+                  "source_code": "C"
+                }
+              ],
+              "purposes_summary": [
+                {
+                  "records": 1,
+                  "quantity": 20.0,
+                  "purpose_code": "S"
+                }
+              ],
+              "exporters_summary": [
+                {
+                  "records": 1,
+                  "quantity": 20.0,
+                  "exporter_code": "US"
+                }
+              ],
+              "importers_summary": [
+                {
+                  "records": 1,
+                  "quantity": 20.0,
+                  "importer_code": "RU"
+                }
+              ],
+              "total_records_for_year": 1,
+              "total_quantity_for_year": 20.0
+            },
+            {
+              "year": 2020,
+              "terms_summary": [
+                {
+                  "term": "live",
+                  "records": 8,
+                  "quantity": 8.0
+                }
+              ],
+              "sources_summary": [
+                {
+                  "records": 8,
+                  "quantity": 8.0,
+                  "source_code": "C"
+                }
+              ],
+              "purposes_summary": [
+                {
+                  "records": 8,
+                  "quantity": 8.0,
+                  "purpose_code": "T"
+                }
+              ],
+              "exporters_summary": [
+                {
+                  "records": 8,
+                  "quantity": 8.0,
+                  "exporter_code": "BE"
+                }
+              ],
+              "importers_summary": [
+                {
+                  "records": 8,
+                  "quantity": 8.0,
+                  "importer_code": "CL"
+                }
+              ],
+              "total_records_for_year": 8,
+              "total_quantity_for_year": 8.0
+            },
+            {
+              "year": 2022,
+              "terms_summary": [
+                {
+                  "term": "live",
+                  "records": 2,
+                  "quantity": 2.0
+                }
+              ],
+              "sources_summary": [
+                {
+                  "records": 2,
+                  "quantity": 2.0,
+                  "source_code": "C"
+                }
+              ],
+              "purposes_summary": [
+                {
+                  "records": 2,
+                  "quantity": 2.0,
+                  "purpose_code": "S"
+                }
+              ],
+              "exporters_summary": [
+                {
+                  "records": 2,
+                  "quantity": 2.0,
+                  "exporter_code": "UZ"
+                }
+              ],
+              "importers_summary": [
+                {
+                  "records": 2,
+                  "quantity": 2.0,
+                  "importer_code": "RU"
+                }
+              ],
+              "total_records_for_year": 2,
+              "total_quantity_for_year": 2.0
+            }
+          ]
+        },
+        "record_count": 4,
+        "analyzed_at": "2025-05-26T00:31:01.296466"
+      },
+      "subpopulations": {
+        "table_name": "subpopulations",
+        "columns": [
+          {
+            "name": "id",
+            "type": "VARCHAR(255)",
+            "sample_value": "a2b0c210-5636-46da-8046-ae0902f3c4b7",
+            "is_nullable": false
+          },
+          {
+            "name": "species_id",
+            "type": "VARCHAR(255)",
+            "sample_value": "4c358cc2-d0d3-4a34-a3fe-bca2b85db100",
+            "is_nullable": false
+          },
+          {
+            "name": "scientific_name",
+            "type": "VARCHAR(255)",
+            "sample_value": "Balaena mysticetus Bering-Chukchi-Beaufort Sea subpopulation",
+            "is_nullable": false
+          },
+          {
+            "name": "subpopulation_name",
+            "type": "VARCHAR(255)",
+            "sample_value": "Bering-Chukchi-Beaufort Sea subpopulation",
+            "is_nullable": false
+          },
+          {
+            "name": "sis_id",
+            "type": "INTEGER",
+            "sample_value": "2468",
+            "is_nullable": false
+          },
+          {
+            "name": "authority",
+            "type": "VARCHAR(255)",
+            "sample_value": "Linnaeus, 1758",
+            "is_nullable": false
+          }
+        ],
+        "sample_data": {
+          "id": "a2b0c210-5636-46da-8046-ae0902f3c4b7",
+          "species_id": "4c358cc2-d0d3-4a34-a3fe-bca2b85db100",
+          "scientific_name": "Balaena mysticetus Bering-Chukchi-Beaufort Sea subpopulation",
+          "subpopulation_name": "Bering-Chukchi-Beaufort Sea subpopulation",
+          "sis_id": 2468,
+          "authority": "Linnaeus, 1758"
+        },
+        "record_count": 4,
+        "analyzed_at": "2025-05-26T00:31:01.524726"
+      },
+      "timeline_events": {
+        "table_name": "timeline_events",
+        "columns": [
+          {
+            "name": "id",
+            "type": "VARCHAR(255)",
+            "sample_value": "4610cec6-311a-4270-bce5-ace26104a931",
+            "is_nullable": false
+          },
+          {
+            "name": "species_id",
+            "type": "VARCHAR(255)",
+            "sample_value": "5f289c1e-5101-458f-a5ea-a65e5c734569",
+            "is_nullable": false
+          },
+          {
+            "name": "event_date",
+            "type": "VARCHAR(255)",
+            "sample_value": "2023-01-01",
+            "is_nullable": false
+          },
+          {
+            "name": "year",
+            "type": "INTEGER",
+            "sample_value": "2023",
+            "is_nullable": false
+          },
+          {
+            "name": "event_type",
+            "type": "VARCHAR(255)",
+            "sample_value": "iucn_assessment",
+            "is_nullable": false
+          },
+          {
+            "name": "title",
+            "type": "VARCHAR(255)",
+            "sample_value": "IUCN Red List Assessment (2023)",
+            "is_nullable": false
+          },
+          {
+            "name": "description",
+            "type": "VARCHAR(255)",
+            "sample_value": "IUCN assessment with scope: Europe",
+            "is_nullable": false
+          },
+          {
+            "name": "status",
+            "type": "VARCHAR(255)",
+            "sample_value": "LC",
+            "is_nullable": false
+          },
+          {
+            "name": "source_type",
+            "type": "VARCHAR(255)",
+            "sample_value": "iucn_assessments",
+            "is_nullable": false
+          },
+          {
+            "name": "source_id",
+            "type": "TEXT",
+            "sample_value": null,
+            "is_nullable": true
+          }
+        ],
+        "sample_data": {
+          "id": "4610cec6-311a-4270-bce5-ace26104a931",
+          "species_id": "5f289c1e-5101-458f-a5ea-a65e5c734569",
+          "event_date": "2023-01-01",
+          "year": 2023,
+          "event_type": "iucn_assessment",
+          "title": "IUCN Red List Assessment (2023)",
+          "description": "IUCN assessment with scope: Europe",
+          "status": "LC",
+          "source_type": "iucn_assessments",
+          "source_id": null
+        },
+        "record_count": 4,
+        "analyzed_at": "2025-05-26T00:31:01.762274"
+      }
+    },
+    "table_counts": {
+      "catch_records": 4,
+      "cites_listings": 4,
+      "cites_trade_records": 4,
+      "common_names": 4,
+      "families": 4,
+      "iucn_assessments": 4,
+      "species": 4,
+      "species_trade_summary": 4,
+      "subpopulations": 4,
+      "timeline_events": 4
+    }
+  },
+  "families_analysis": {
+    "total_families": 29,
+    "families_with_order": 29,
+    "families_with_class": 29,
+    "families_with_description": 0,
+    "taxonomic_distribution": {
+      "AVES": 5,
+      "Actinopterygii ": 1,
+      "Chondrichthyes": 1,
+      "Aves": 3,
+      "Mammalia": 7,
+      "MAMMALIA": 8,
+      "CHONDRICHTHYES": 2,
+      "MAGNOLIOPSIDA": 1,
+      "ave": 1
+    },
+    "order_distribution": {
+      "ACCIPITRIFORMES": 1,
+      "Acipenseriformes": 1,
+      "Lamniformes": 1,
+      "Anseriformes": 1,
+      "Cetartiodactyla ": 4,
+      "ARTIODACTYLA": 4,
+      "Artiodactyla": 2,
+      "LAMNIFORMES": 2,
+      "SAXIFRAGALES": 1,
+      "Procellariiformes": 1,
+      "FALCONIFORMES": 1,
+      "CARNIVORA": 4,
+      "Gruiformes": 1,
+      "GRUIFORMES": 1,
+      "Carnivora": 1,
+      "CHARADRIIFORMES": 1,
+      "Strigiformes": 1,
+      "STRIGIFORMES": 1
+    },
+    "family_names": [
+      "ACCIPITRIDAE",
+      "Acipenseridae ",
+      "Alopiidae",
+      "Anatidae",
+      "BALAENIDAE",
+      "BALAENOPTERIDAE",
+      "Balaenidae",
+      "Balaenopteridae",
+      "CETORHINIDAE",
+      "CRASSULACEAE",
+      "Delphinidae",
+      "Diomedeidae",
+      "Eschrichtiidae",
+      "FALCONIDAE",
+      "FELIDAE",
+      "GRUIDAE",
+      "Gruidae",
+      "LAMNIDAE",
+      "MONODONTIDAE",
+      "MUSTELIDAE",
+      "Mustelidae",
+      "ODOBENIDAE",
+      "PHYSETERIDAE",
+      "Phocoenidae",
+      "SCOLOPACIDAE",
+      "STRIGIDAE",
+      "Strigidae",
+      "URSIDAE",
+      "Ziphiidae"
+    ]
+  },
+  "species_analysis": {
+    "total_species": 43,
+    "species_with_scientific_names": 43,
+    "species_with_common_names": 43,
+    "species_with_both_names": 43,
+    "species_with_family_id": 43,
+    "species_with_legacy_family": 43,
+    "unique_families": [
+      "ACCIPITRIDAE",
+      "Acipenseridae ",
+      "Alopiidae",
+      "Anatidae",
+      "BALAENIDAE",
+      "BALAENOPTERIDAE",
+      "Balaenidae",
+      "Balaenopteridae",
+      "CETORHINIDAE",
+      "CRASSULACEAE",
+      "Delphinidae",
+      "Diomedeidae",
+      "Eschrichtiidae",
+      "FALCONIDAE",
+      "FELIDAE",
+      "GRUIDAE",
+      "Gruidae",
+      "LAMNIDAE",
+      "MONODONTIDAE",
+      "MUSTELIDAE",
+      "Mustelidae",
+      "ODOBENIDAE",
+      "PHYSETERIDAE",
+      "Phocoenidae",
+      "SCOLOPACIDAE",
+      "STRIGIDAE",
+      "Strigidae",
+      "URSIDAE",
+      "Ziphiidae"
+    ],
+    "unique_genera": [
+      "Acipenser",
+      "Alopias",
+      "Antigone",
+      "Asio",
+      "Balaena",
+      "Balaenoptera",
+      "Berardius",
+      "Branta",
+      "Bubo",
+      "Buteo",
+      "Cetorhinus",
+      "Delphinapterus",
+      "Enhydra",
+      "Eschrichtius",
+      "Eubalaena",
+      "Falco",
+      "Globicephala",
+      "Hyperoodon",
+      "Lagenorhynchus",
+      "Lamna",
+      "Leucogeranus",
+      "Lontra",
+      "Lynx",
+      "Megaptera",
+      "Mesoplodon",
+      "Monodon",
+      "Numenius",
+      "Odobenus",
+      "Orcinus",
+      "Phocoena",
+      "Phocoenoides",
+      "Phoebastria",
+      "Physeter",
+      "Rhodiola",
+      "Ursus",
+      "Ziphius"
+    ],
+    "taxonomic_distribution": {
+      "AVES": 6,
+      "MAMMALIA": 13,
+      "Aves": 4,
+      "Mammalia": 14,
+      "Actinopterygii ": 1,
+      "Chondrichthyes": 1,
+      "CHONDRICHTHYES": 2,
+      "MAGNOLIOPSIDA": 1,
+      "ave": 1
+    },
+    "name_conflicts": [],
+    "missing_data": {
+      "no_scientific_name": [],
+      "no_common_name": [],
+      "no_family": [],
+      "no_genus": [],
+      "no_family_id": []
+    },
+    "family_normalization_progress": 100.0
+  },
+  "common_names_analysis": {
+    "total_common_names": 326,
+    "languages": {
+      "eng": 22,
+      "nor": 12,
+      "spa": 20,
+      "swe": 20,
+      "fra": 20,
+      "deu": 13,
+      "iku": 3,
+      "slk": 8,
+      "slv": 9,
+      "por": 13,
+      "pol": 8,
+      "nld": 13,
+      "hr": 10,
+      "ita": 11,
+      "dan": 9,
+      "bul": 8,
+      "ces": 8,
+      "el": 8,
+      "est": 9,
+      "fin": 10,
+      "hun": 9,
+      "lav": 8,
+      "lit": 9,
+      "mlt": 9,
+      "ron": 7,
+      "gle": 8,
+      "zho": 13,
+      "tur": 3,
+      "is": 4,
+      "sq": 4,
+      "af": 2,
+      "ar": 3,
+      "cat": 1,
+      "fo": 2,
+      "ja": 2,
+      "sr": 1,
+      "rus": 3,
+      "he": 2,
+      "mi": 1,
+      "en": 1
+    },
+    "species_with_multiple_names": {
+      "f133cabe-d298-4ae4-a03d-5c5899395d52": [
+        "North Atlantic Right Whale",
+        "Nordkaper",
+        "Ballena franca del Norte",
+        "stillahavsr\u00e4tval",
+        "Baleine franche",
+        "Atlantischer nordkaper"
+      ],
+      "5f289c1e-5101-458f-a5ea-a65e5c734569": [
+        "Narwhal",
+        "Narhval",
+        "Narval",
+        "narval",
+        "Narval",
+        "Qirniqtaq"
+      ],
+      "332be9c5-d770-467f-886e-6de3832f521e": [
+        "Rough-legged Buzzard",
+        "my\u0161iak seversk\u00fd",
+        "koconoga kanja",
+        "B\u00fateo-cal\u00e7ado",
+        "Myszo\u0142\u00f3w w\u0142ochaty",
+        "Ruigpootbuizerd",
+        "Ratonero calzado",
+        "Fj\u00e4llvr\u00e5k",
+        "Buse pattue",
+        "\u0160kanjac ga\u0107a\u0161",
+        "Poiana calzata",
+        "Fjeldv\u00e5ge",
+        "Rauhfu\u00dfbussard",
+        "\u0421\u0435\u0432\u0435\u0440\u0435\u043d \u043c\u0438\u0448\u0435\u043b\u043e\u0432",
+        "k\u00e1n\u011b rousn\u00e1",
+        "\u03a7\u03b9\u03bf\u03bd\u03bf\u03b3\u03b5\u03c1\u03b1\u03ba\u03af\u03bd\u03b1",
+        "Karvasjalg-viu",
+        "Piekana",
+        "Gaty\u00e5s \u00f6lyv",
+        "Bik\u0161ainais klij\u0101ns",
+        "T\u016bbuotasis suopis",
+        "Ku\u010b\u010barda tal-kalzetti",
+        "\u0218orecar \u00eenc\u0103l\u021bat",
+        "Clamh\u00e1n l\u00f3pach"
+      ],
+      "e77df55d-294b-431f-9b0f-1d2da69518f6": [
+        "Fin Whale",
+        "Baleia-comum",
+        "Finnhval",
+        "Gewone Vinvis",
+        "Ballena aleta",
+        "sillval",
+        "\u957f\u987b\u9cb8",
+        "Baleine \u00e0 nageoires",
+        "Balenottera comune",
+        "Finnwal"
+      ],
+      "286e0896-1b69-4de9-a5b2-6561d82443e6": [
+        "Walrus",
+        "mro\u017e \u013eadov\u00fd",
+        "polarni mro\u017e",
+        "Morsa",
+        "Mors",
+        "Hvalross",
+        "Walrus",
+        "Morsa",
+        "Valross",
+        "Mors",
+        "\u6d77\u8c61",
+        "Morse",
+        "Mor\u017e",
+        "Tricheco",
+        "hvalros",
+        "Walro\u00df",
+        "\u041c\u043e\u0440\u0436",
+        "mro\u017e",
+        "\u0398\u03b1\u03bb\u03ac\u03c3\u03c3\u03b9\u03bf\u03b9 \u03af\u03c0\u03c0\u03bf\u03b9",
+        "Morsk",
+        "Mursu",
+        "Rozm\u00e1r",
+        "Rostungur",
+        "Valzirgs",
+        "V\u0117plys",
+        "Walrus",
+        "Mors\u0103",
+        "Rosualt"
+      ],
+      "652d45e6-324e-4066-addb-3029f289a1ac": [
+        "Eskimo Curlew",
+        "hvizd\u00e1k kr\u00e1tkozob\u00fd",
+        "eskimski \u0161kurh",
+        "Ma\u00e7arico-esquim\u00f3",
+        "Kulik eskimoski",
+        "Eskimowulp",
+        "Zarapito boreal",
+        "eskim\u00e5spov",
+        "\u6781\u5317\u6753\u9e6c",
+        "Courlis esquimau",
+        "Eskimski pozvi\u017eda\u010d",
+        "Chiurlo boreale",
+        "Eskimospove",
+        "Eskimobrachvogel",
+        "\u0415\u0441\u043a\u0438\u043c\u043e\u0441\u043e\u0432 \u0441\u0432\u0438\u0440\u0435\u0446",
+        "koliha severn\u00ed",
+        "\u03a4\u03bf\u03c5\u03c1\u03bb\u03af\u03b4\u03b1 \u03c4\u03c9\u03bd \u0395\u03c3\u03ba\u03b9\u03bc\u03ce\u03c9\u03bd",
+        "P\u00f5hjakoovitaja",
+        "Eskimokuovi",
+        "Eszkim\u00f3p\u00f3ling",
+        "Eskimosu kuitala",
+        "Eskimin\u0117 kuolinga",
+        "Gurlin boreali",
+        "Crotach Artach"
+      ],
+      "266eeed0-3d6e-4f14-90be-72b74f8dce53": [
+        "North American River Otter",
+        "Nutria norteamericana",
+        "flodutter",
+        "Loutre du Canada"
+      ],
+      "eb7be3f0-7ae7-4dd8-8803-7e8513fb1abe": [
+        "Peregrine Falcon",
+        "sokol s\u0165ahovav\u00fd",
+        "sokol selec",
+        "Falc\u00e3o-peregrino",
+        "sok\u00f3l wedrowny",
+        "Vandrefalk",
+        "Slechtvalk",
+        "Halc\u00f3n blancuzco",
+        "Pilgrimsfalk",
+        "\u6e38\u96bc",
+        "Faucon p\u00e8lerin",
+        "Sivi sokol",
+        "Pellegrino",
+        "Vandrefalk",
+        "Wanderfalke",
+        "\u0421\u043e\u043a\u043e\u043b \u0441\u043a\u0438\u0442\u043d\u0438\u043a",
+        "sokol st\u011bhovav\u00fd",
+        "\u03a0\u03b5\u03c4\u03c1\u03af\u03c4\u03b7\u03c2",
+        "Rabapistrik",
+        "Muuttohaukka",
+        "V\u00e1ndors\u00f3lyom",
+        "Lielais piek\u016bns",
+        "Sakalas keleivis",
+        "Bies",
+        "\u0218oim c\u0103l\u0103tor",
+        "Fabhc\u00fan gorm"
+      ],
+      "d96c4f08-604c-4b80-ba4c-f445152daeea": [
+        "Porbeagle Shark",
+        "Skylopsaro",
+        "Zarlacz sledziowy",
+        "Rechinul scrumbiilor",
+        "Smeriglio",
+        "Tonil",
+        "Sillihai",
+        "Haringhaai",
+        "Marrajo sardinero",
+        "Haringhaai",
+        "Tubar\u00e3o-sardo",
+        "Kalb",
+        "Marraix",
+        "Sillhaj",
+        "Hemari",
+        "Pixxiplamptu",
+        "M\u00f4ka-zame",
+        "Dikburun karkarias",
+        "Sildehaj",
+        "Psina atlantska",
+        "Heringshai",
+        "H\u00e5brann",
+        "Requin-taupe commun",
+        "H\u00e1meri",
+        "Heringc\u00e1pa",
+        "Ku\u010dina",
+        "Si\u013c\u0137u haizivs",
+        "\u017eralok nosat\u00fd",
+        "Harilik heeringhai",
+        "Atlantinis silkiaryklis",
+        "atlantski morski pes",
+        "\u0421\u0435\u043b\u0434\u043e\u0432\u0430 \u0430\u043a\u0443\u043b\u0430",
+        "Craosaire",
+        "lamna nosat\u00e1",
+        "\u9f20\u9ca8"
+      ],
+      "0ae6a6b2-65cf-402b-a500-347627b68c76": [
+        "Siberian Crane",
+        "\u017eeriav biely",
+        "sne\u017eni \u017eerjav",
+        "Grou-siberiano",
+        "\u017buraw bia\u0142y",
+        "\u0421\u0442\u0435\u0440\u0445",
+        "Siberische Witte Kraanvogel",
+        "Grulla blanca asi\u00e1tica",
+        "sn\u00f6trana",
+        "\u767d\u9e64",
+        "Grue blanche asiatique",
+        "Snje\u017eni \u017edral",
+        "Gru bianca asiatica",
+        "Snetrane",
+        "Nonnenkranich",
+        "\u0421\u0438\u0431\u0438\u0440\u0441\u043a\u0438 \u0436\u0435\u0440\u0430\u0432",
+        "je\u0159\u00e1b b\u00edl\u00fd",
+        "\u039b\u03b5\u03c5\u03ba\u03cc\u03c2 \u03b1\u03c3\u03b9\u03b1\u03c4\u03b9\u03ba\u03cc\u03c2 \u03b3\u03b5\u03c1\u03b1\u03bd\u03cc\u03c2",
+        "Valgekurg",
+        "Lumikurki",
+        "H\u00f3daru",
+        "Balt\u0101 dz\u0113rve",
+        "Sibirin\u0117 gerv\u0117",
+        "Grawwa tas-Siberja",
+        "Gr\u00fas Sib\u00e9arach"
+      ],
+      "4c358cc2-d0d3-4a34-a3fe-bca2b85db100": [
+        "Bowhead Whale",
+        "Gr\u00f8nlandshval",
+        "Groenlandse Walvis",
+        "Ballena boreal",
+        "gr\u00f6nlandsval",
+        "\u5317\u6781\u9732\u810a\u9cb8",
+        "Baleine de grande baie",
+        "Arviq"
+      ],
+      "fbcb38a3-1cb9-4473-9643-82aef221e64a": [
+        "Beluga",
+        "Beluga",
+        "Beluga",
+        "Beluga",
+        "vitval",
+        "Beluga",
+        "Beluga",
+        "Qaulluqtaq"
+      ],
+      "506d9478-6bef-4116-8295-fd1ccc6292c6": [
+        "Gyrfalcon",
+        "sokol po\u013eovn\u00edcky",
+        "arkti\u010dni sokol",
+        "Falc\u00e3o-gerifalte",
+        "Bia\u0142oz\u00f3r",
+        "Jaktfalk",
+        "Giervalk",
+        "Halc\u00f3n gerifalte",
+        "Jaktfalk",
+        "\u77db\u96bc",
+        "Gerfaut",
+        "Veliki sokol",
+        "Girfalco d'Islanda",
+        "Jagtfalk",
+        "Gerfalke",
+        "\u0421\u0435\u0432\u0435\u0440\u0435\u043d \u0441\u043e\u043a\u043e\u043b",
+        "Raroh loveck\u00fd",
+        "\u0391\u03c3\u03c0\u03c1\u03bf\u03b3\u03ad\u03c1\u03b1\u03ba\u03bf",
+        "Jahipistrik",
+        "Tunturihaukka",
+        "Sarki s\u00f3lyom",
+        "Med\u012bbu piek\u016bns",
+        "Med\u017eioklinis sakalas",
+        "Bies gyr",
+        "\u0218oim de v\u00e2n\u0103toare",
+        "Fabhc\u00fan tuaithe"
+      ],
+      "676fe797-bfed-4cd2-98b1-3e57183050d9": [
+        "Roseroot"
+      ],
+      "df36d357-e0ba-469e-8fc3-17e1ff523fad": [
+        "Sperm Whale",
+        "Cachalote",
+        "Kashalot",
+        "Cachalote",
+        "kaskelot",
+        "\u62b9\u9999\u9cb8",
+        "Cachalot",
+        "Roshtan",
+        "Ulje\u00e1ura",
+        "Capodoglio",
+        "Anbar",
+        "Gabdoll"
+      ],
+      "2e6cedd3-4179-4d39-b704-6388007a97f1": [
+        "Snowy Owl"
+      ],
+      "d62146cd-6c23-41ba-9014-77d099c546f7": [
+        "Canada Lynx",
+        "Lince del Canad\u00e1",
+        "nordamerikansk lo",
+        "Lynx du Canada"
+      ],
+      "d5007ba6-6818-4257-a0bf-2aed02301647": [
+        "Minke Whale",
+        "Dwergvinvis",
+        "Ballena minke",
+        "vikval",
+        "\u5c0f\u987b\u9cb8",
+        "Petit rorqual",
+        "Zwergwal"
+      ],
+      "95485512-67e7-4fad-a8f0-f76c17d03c1f": [
+        "Humpback Whale",
+        "Baleia-de-bossa",
+        "Kn\u00f8lhval",
+        "Rorcual jorobado",
+        "puckelval",
+        "\u5927\u7fc5\u9cb8",
+        "Baleine \u00e0 bosse"
+      ],
+      "f0f36896-7869-413e-ad36-7718e2729513": [
+        "Basking Shark",
+        "B\u00fcy\u00fck camg\u00f6z",
+        "Tibur\u00f3n peregrino",
+        "Frade",
+        "Squale-p\u00e8lerin",
+        "Riesenhai",
+        "Kalb",
+        "Beinh\u00e1karl",
+        "Saparnasm Skylopsaro",
+        "Dlugoszpar a. rekin gigantyczny",
+        "Brugda",
+        "Peshkaqen shtegtar",
+        "Squalo elefante",
+        "Reuzenhaai",
+        "Gobdoll",
+        "j\u00e4ttehaj",
+        "Ubazame",
+        "Karish anak",
+        "Brugde",
+        "Brugde",
+        "J\u00e4ttil\u00e4ishai",
+        "Reremai",
+        "Koesterhaai",
+        "\u017eralok ozrutn\u00fd",
+        "\u00d3ri\u00e1scetc\u00e1pa",
+        "\u0413\u0438\u0433\u0430\u043d\u0442\u0441\u043a\u0430 \u0430\u043a\u0443\u043b\u0430",
+        "Milzu haizivs",
+        "morski pes orjak",
+        "Mil\u017einryklis",
+        "Psina golema",
+        "Rechin pelerin",
+        "\u017eralok velik\u00fd",
+        "Liamh\u00e1n gr\u00e9ine",
+        "Hiidhaid",
+        "\u59e5\u9ca8"
+      ],
+      "e58a3fff-e0f3-43d9-bfcc-be33ac49d540": [
+        "Sei Whale",
+        "Baleia sei",
+        "Seihval",
+        "Noordse Vinvis",
+        "Ballena sei",
+        "sejval",
+        "\u585e\u9cb8",
+        "Baleinopt\u00e8re de Rudolphi",
+        "Seiwal"
+      ],
+      "d07c1335-0bf5-445c-bcaa-f7cdbd029637": [
+        "Polar Bear",
+        "Urso-polar",
+        "Ariu i bardhe",
+        "Bely medved",
+        "Isbj\u00f8rn",
+        "Ijsbeer",
+        "Oso polar",
+        "isbj\u00f6rn",
+        "Ours polaire",
+        "Polarni medvjed",
+        "Orso polare",
+        "Isbj\u00f8rn",
+        "Eisb\u00e4r",
+        "J\u00e4\u00e4karu",
+        "J\u00e4\u00e4karhu",
+        "Jegesmedve",
+        "Hv\u00edtabj\u00f6rn",
+        "Baltasis lokys",
+        "Urs-polar"
+      ],
+      "e37fba40-33e0-41c9-94cb-78fbb86ae48d": [
+        "Sea Otter"
+      ]
+    },
+    "main_names_count": 23
+  },
+  "summary": {
+    "total_tables": 14,
+    "total_species": 43,
+    "total_families": 29,
+    "species_with_both_names": 43,
+    "family_normalization_progress": 100.0,
+    "completion_percentage": 100.0
+  }
+}
