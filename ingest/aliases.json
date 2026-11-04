@@ -1,0 +1,9 @@
+{
+  "_comment": "Frozen taxonomic alias map: CITES-reported name -> Arctic Tracker species name. Shared by ingest/db.py (loaders) and the maintainers' independent source-truth derivation. Changes require a documented justification.",
+  "cites_aliases": {
+    "Antigone canadensis": "Grus canadensis",
+    "Nyctea scandiaca": "Bubo scandiacus",
+    "Grus leucogeranus": "Leucogeranus leucogeranus",
+    "Branta canadensis leucopareia": "Branta hutchinsii"
+  }
+}

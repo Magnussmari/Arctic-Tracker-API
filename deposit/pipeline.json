@@ -1,0 +1,157 @@
+{
+ "schema": "arctic-pipeline/v1",
+ "note": "Single source of truth for the S1-S7 evaluation pipeline. Derived from the manuscript's locked step table and the deposited Supplementary Table 4. Every consumer reads this: the manuscript figure and the platform diagram cannot disagree about the pipeline because neither states it. tool_name is the display form: the full sentence lives in ai_tool and is not truncated for drawing. short_title and source_name exist because a diagram box is 100 units wide and prose does not fit; truncating the prose instead produced 'S2 Conservation-st…'. The S4 and S5 tool strings carried unminted placeholders until 1 October 2026, when they were filled from the project's operational records of the literature-search runs and from the processing timestamps the species profiles carry.",
+ "source_table_4_sha256": "02dba91223918b7c76343fd26b6ac227205f879522165d1455f9c4c625c931d2",
+ "stages": {
+  "1": {
+   "label": "Deterministic",
+   "boundary": "corpus frozen at G3"
+  },
+  "2": {
+   "label": "LLM-assisted",
+   "boundary": null
+  }
+ },
+ "steps": [
+  {
+   "id": "S1",
+   "title": "Species & listing identification",
+   "stage": 1,
+   "stage_label": "1 — Deterministic",
+   "data_source": "CITES + CMS appendices; IUCN Red List taxonomy",
+   "ai_tool": "None (deterministic query)",
+   "gate": "G1",
+   "gate_text": "**G1**: species list and appendix mappings reconciled to the published appendices; pass/revise. **43 species; current appendix placement 16 Appendix I, 25 Appendix II, 1 Appendix III, and 1 split-listed across I and II.**",
+   "audit_questions": [
+    "Q1",
+    "Q2"
+   ],
+   "ai_tool_short": "None (deterministic query)",
+   "data_source_short": "CITES + CMS appendices; IUCN Red List taxonomy",
+   "deterministic": true,
+   "tool_name": "No model",
+   "source_name": "CITES + CMS",
+   "short_title": "Species list"
+  },
+  {
+   "id": "S2",
+   "title": "Conservation-status compilation",
+   "stage": 1,
+   "stage_label": "1 — Deterministic",
+   "data_source": "IUCN Red List assessments; NAMMCO catch data",
+   "ai_tool": "None (deterministic query)",
+   "gate": "G2",
+   "gate_text": "**G2**: every status/catch value confirmed against the source record; pass/revise. **370 assessments, retrieved 2026-07-22.** The Red List release identifier was not captured at retrieval; the retrieval date and its basis are stored in `source_releases`.",
+   "audit_questions": [
+    "Q7"
+   ],
+   "ai_tool_short": "None (deterministic query)",
+   "data_source_short": "IUCN Red List assessments; NAMMCO catch data",
+   "deterministic": true,
+   "tool_name": "No model",
+   "source_name": "IUCN Red List",
+   "short_title": "Status compile"
+  },
+  {
+   "id": "S3",
+   "title": "Trade-record integration",
+   "stage": 1,
+   "stage_label": "1 — Deterministic",
+   "data_source": "CITES Trade Database",
+   "ai_tool": "None (deterministic query)",
+   "gate": "G3",
+   "gate_text": "**G3**: record-count AND per-unit/per-term quantity conservation reconciled to the raw extract; corpus **frozen** at this gate (stage boundary). **492,095 records from CITES Trade Database v2025.1, obtained 2025-07-28; count and content-digest delta against an independent re-read of the source = 0.**",
+   "audit_questions": [
+    "Q3",
+    "Q5",
+    "Q6"
+   ],
+   "ai_tool_short": "None (deterministic query)",
+   "data_source_short": "CITES Trade Database",
+   "deterministic": true,
+   "tool_name": "No model",
+   "source_name": "CITES Trade DB",
+   "short_title": "Trade integrate"
+  },
+  {
+   "id": "S4",
+   "title": "Literature retrieval",
+   "stage": 2,
+   "stage_label": "2 — LLM-assisted",
+   "data_source": "Frozen corpus (S1–S3) → per-species literature scope",
+   "ai_tool": "**Scite Assistant** (scite.ai) — source discovery/summarisation",
+   "gate": "G4",
+   "gate_text": "**G4**: retrieved sources checked for relevance/existence against primary records; LLM-proposed sources human-screened. retrieval and rejection counts were not captured against denominators at the time, so no override rate is reported; see the instrumentation caveat below",
+   "audit_questions": [
+    "Q3",
+    "Q4"
+   ],
+   "ai_tool_short": "Scite — source discovery/summarisation",
+   "data_source_short": "Frozen corpus (S1–S3) → per-species literature scope",
+   "deterministic": false,
+   "tool_name": "Scite",
+   "source_name": "Frozen corpus",
+   "short_title": "Literature",
+   "tool_record": "Scite citation-statement index with a user-selected OpenAI reasoning model; prompt v1 written for o4-mini, retained v2 outputs on o3-mini and o4-mini. Prompt versions 1 and 2, v2 dated 23 May 2025. The vendor publishes no build string for the served model, so none is recorded."
+  },
+  {
+   "id": "S5",
+   "title": "Knowledge synthesis",
+   "stage": 2,
+   "stage_label": "2 — LLM-assisted",
+   "data_source": "S4 sources",
+   "ai_tool": "**Gemini 2.5 Pro** — structured extraction/synthesis to prose",
+   "gate": "G5",
+   "gate_text": "**G5**: no synthesized claim or citation is published or cited until verified against the primary source by the taxonomic authors; unverified sections are withheld by the read layer rather than served. **0 of 343 sections have completed expert review**; no correction rate is therefore reportable, and none is reported",
+   "audit_questions": [
+    "Q3",
+    "Q4"
+   ],
+   "ai_tool_short": "Gemini — structured extraction/synthesis to prose",
+   "data_source_short": "S4 sources",
+   "deterministic": false,
+   "tool_name": "Gemini",
+   "source_name": "S4 sources",
+   "short_title": "Synthesis",
+   "tool_record": "Google AI Studio, temperature 0.2, maximum output 8192 tokens, system prompt Unified_Species_JSON_Prompt.md, parser unified_v1.0. The 43 species profiles were structured between 2025-04-16 and 2025-09-09, bounds taken from the project record; the processing dates inside the profiles were written by the model and are not access dates. Google AI Studio exposes no build string for the served model, so none is recorded."
+  },
+  {
+   "id": "S6",
+   "title": "Status-trajectory classification & implementation audit",
+   "stage": 2,
+   "stage_label": "2 — LLM-assisted (human-scored)",
+   "data_source": "S5 synthesis + Stage-1 verified metrics",
+   "ai_tool": "The LLM summarises verified metrics only; **scoring is author-applied**",
+   "gate": "G6",
+   "gate_text": "**G6**: applies the **Standardized Audit Questionnaire (Q1–Q7)**; each score confirmed against its verified metric under the Table-3 rule. no inter-reviewer agreement statistic is reported: scoring was applied by the authors jointly rather than independently, so there is no second rating to agree with",
+   "audit_questions": [
+    "Q3",
+    "Q4",
+    "Q7"
+   ],
+   "ai_tool_short": "The LLM summarises verified metrics only; scoring is author-applied",
+   "data_source_short": "S5 synthesis + Stage-1 verified metrics",
+   "deterministic": false,
+   "tool_name": "Summary only",
+   "source_name": "S5 + Stage 1",
+   "short_title": "Classify"
+  },
+  {
+   "id": "S7",
+   "title": "Integration & platform publication",
+   "stage": 2,
+   "stage_label": "2 — LLM-assisted (walled off)",
+   "data_source": "S6 outputs",
+   "ai_tool": "None in figure-generating path (the LLM writes prose only)",
+   "gate": "G7",
+   "gate_text": "**G7**: DB-to-render parity check per species page (closes R1-15); interpretation is author-authored. **all 43 species pages, swept rather than sampled.**",
+   "audit_questions": [],
+   "ai_tool_short": "None in figure-generating path (the LLM writes prose only)",
+   "data_source_short": "S6 outputs",
+   "deterministic": false,
+   "tool_name": "None in figure path",
+   "source_name": "S6 outputs",
+   "short_title": "Publish"
+  }
+ ]
+}

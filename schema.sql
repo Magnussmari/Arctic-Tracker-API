@@ -1,0 +1,1366 @@
+-- Arctic Tracker v2 schema — GENERATED, do not edit by hand.
+--
+-- Regenerate with: make schema
+--
+-- This file exists because the manuscript told a reader the repository ships
+-- "the database schema", and it did not. The tables are created by DDL embedded
+-- in the loaders under ingest/, which is a fine way to build a database and a
+-- poor way to hand someone one. A reader wanting to stand this up had to read
+-- Python to find out what the tables were.
+--
+-- Taken with pg_dump --schema-only from the database of record. The numbered
+-- migrations under migrations/ (0010 onward) are the changes applied since;
+-- earlier structure is not carried as numbered migrations and this dump is the
+-- honest statement of where the schema actually stands.
+
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 17.5 (Debian 17.5-1.pgdg110+1)
+-- Dumped by pg_dump version 17.5 (Debian 17.5-1.pgdg110+1)
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET transaction_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+--
+-- Name: arctic_v2; Type: SCHEMA; Schema: -; Owner: -
+--
+
+CREATE SCHEMA arctic_v2;
+
+
+SET default_tablespace = '';
+
+SET default_table_access_method = heap;
+
+--
+-- Name: glossary_terms; Type: TABLE; Schema: arctic_v2; Owner: -
+--
+
+CREATE TABLE arctic_v2.glossary_terms (
+    id uuid DEFAULT gen_random_uuid() NOT NULL,
+    term text NOT NULL,
+    acronym text,
+    definition text NOT NULL,
+    category text NOT NULL,
+    subcategory text,
+    related_terms text[],
+    priority integer NOT NULL,
+    display_contexts text[],
+    source_artifact text NOT NULL,
+    source_sha256 text NOT NULL,
+    provenance_class text DEFAULT 'CURATED'::text NOT NULL,
+    loader_version text NOT NULL,
+    loaded_at timestamp with time zone DEFAULT now() NOT NULL,
+    CONSTRAINT glossary_terms_definition_substantive CHECK ((length(definition) >= 20)),
+    CONSTRAINT glossary_terms_priority_range CHECK (((priority >= 1) AND (priority <= 10))),
+    CONSTRAINT glossary_terms_provenance_class CHECK ((provenance_class = ANY (ARRAY['DERIVED'::text, 'CURATED'::text, 'GATED'::text])))
+);
+
+
+--
+-- Name: common_names; Type: TABLE; Schema: arctic_v2; Owner: -
+--
+
+CREATE TABLE arctic_v2.common_names (
+    id uuid DEFAULT gen_random_uuid() NOT NULL,
+    species_id uuid NOT NULL,
+    name text NOT NULL,
+    language text NOT NULL,
+    is_main boolean DEFAULT false NOT NULL,
+    provenance_note text,
+    source_artifact text NOT NULL,
+    source_sha256 text NOT NULL,
+    provenance_class text DEFAULT 'CURATED'::text NOT NULL,
+    loader_version text NOT NULL,
+    loaded_at timestamp with time zone DEFAULT now() NOT NULL,
+    CONSTRAINT common_names_language_is_iso639_3 CHECK ((language ~ '^[a-z]{3}$'::text)),
+    CONSTRAINT common_names_provenance_class CHECK ((provenance_class = ANY (ARRAY['DERIVED'::text, 'CURATED'::text, 'GATED'::text])))
+);
+
+
+--
+-- Name: species; Type: TABLE; Schema: arctic_v2; Owner: -
+--
+
+CREATE TABLE arctic_v2.species (
+    id uuid DEFAULT gen_random_uuid() NOT NULL,
+    scientific_name text NOT NULL,
+    common_name text NOT NULL,
+    kingdom text NOT NULL,
+    phylum text NOT NULL,
+    class text NOT NULL,
+    order_name text NOT NULL,
+    family text NOT NULL,
+    genus text NOT NULL,
+    species_name text NOT NULL,
+    authority text,
+    sis_id integer,
+    is_arctic boolean NOT NULL,
+    cites_reported_name text,
+    divergence_from_cites text,
+    source_artifact text NOT NULL,
+    source_sha256 text NOT NULL,
+    provenance_class text DEFAULT 'CURATED'::text NOT NULL,
+    loader_version text NOT NULL,
+    loaded_at timestamp with time zone DEFAULT now() NOT NULL,
+    CONSTRAINT species_binomial_shape CHECK ((scientific_name ~ '^[A-Z][a-z]+ [a-z-]+$'::text)),
+    CONSTRAINT species_provenance_class CHECK ((provenance_class = ANY (ARRAY['DERIVED'::text, 'CURATED'::text, 'GATED'::text])))
+);
+
+
+--
+-- Name: catch_records; Type: TABLE; Schema: arctic_v2; Owner: -
+--
+
+CREATE TABLE arctic_v2.catch_records (
+    id uuid DEFAULT gen_random_uuid() NOT NULL,
+    species_id uuid NOT NULL,
+    year integer NOT NULL,
+    area text NOT NULL,
+    catch_total integer,
+    quota integer,
+    source text NOT NULL,
+    country_id uuid,
+    data_source text NOT NULL,
+    source_occurrence integer DEFAULT 1 NOT NULL,
+    source_artifact text NOT NULL,
+    source_sha256 text NOT NULL,
+    provenance_class text DEFAULT 'DERIVED'::text NOT NULL,
+    loader_version text NOT NULL,
+    loaded_at timestamp with time zone DEFAULT now() NOT NULL,
+    CONSTRAINT catch_records_catch_nonneg CHECK (((catch_total IS NULL) OR (catch_total >= 0))),
+    CONSTRAINT catch_records_provenance_class CHECK ((provenance_class = ANY (ARRAY['DERIVED'::text, 'CURATED'::text, 'GATED'::text]))),
+    CONSTRAINT catch_records_quota_nonneg CHECK (((quota IS NULL) OR (quota >= 0))),
+    CONSTRAINT catch_records_year_plausible CHECK (((year >= 1900) AND (year <= 2100)))
+);
+
+
+--
+-- Name: cms_listings; Type: TABLE; Schema: arctic_v2; Owner: -
+--
+
+CREATE TABLE arctic_v2.cms_listings (
+    id uuid DEFAULT gen_random_uuid() NOT NULL,
+    species_id uuid NOT NULL,
+    agreement text NOT NULL,
+    appendix text,
+    listing_date date NOT NULL,
+    listed_under text,
+    notes text,
+    native_distribution text,
+    distribution_codes text,
+    extinct_distribution text,
+    distribution_uncertain text,
+    source_row_id text NOT NULL,
+    source_artifact text NOT NULL,
+    source_sha256 text NOT NULL,
+    provenance_class text DEFAULT 'DERIVED'::text NOT NULL,
+    loader_version text NOT NULL,
+    loaded_at timestamp with time zone DEFAULT now() NOT NULL,
+    CONSTRAINT cms_listings_after_convention CHECK ((listing_date >= '1979-01-01'::date)),
+    CONSTRAINT cms_listings_appendix_valid CHECK (((appendix IS NULL) OR (appendix = ANY (ARRAY['I'::text, 'II'::text])))),
+    CONSTRAINT cms_listings_provenance_class CHECK ((provenance_class = ANY (ARRAY['DERIVED'::text, 'CURATED'::text, 'GATED'::text])))
+);
+
+
+--
+-- Name: iucn_assessments; Type: TABLE; Schema: arctic_v2; Owner: -
+--
+
+CREATE TABLE arctic_v2.iucn_assessments (
+    id uuid DEFAULT gen_random_uuid() NOT NULL,
+    species_id uuid NOT NULL,
+    year_published integer NOT NULL,
+    is_latest boolean DEFAULT false,
+    possibly_extinct boolean DEFAULT false,
+    possibly_extinct_in_wild boolean DEFAULT false,
+    status text,
+    url text,
+    assessment_id integer,
+    scope_code text,
+    scope_description text,
+    source_artifact text NOT NULL,
+    source_sha256 text NOT NULL,
+    provenance_class text NOT NULL,
+    loader_version text NOT NULL,
+    CONSTRAINT check_status_not_null CHECK ((status IS NOT NULL)),
+    CONSTRAINT iucn_assessments_provenance_class CHECK ((provenance_class = ANY (ARRAY['DERIVED'::text, 'CURATED'::text, 'GATED'::text])))
+);
+
+
+--
+-- Name: cites_listings; Type: TABLE; Schema: arctic_v2; Owner: -
+--
+
+CREATE TABLE arctic_v2.cites_listings (
+    id uuid DEFAULT gen_random_uuid() NOT NULL,
+    species_id uuid NOT NULL,
+    appendix text NOT NULL,
+    listing_date date NOT NULL,
+    is_current boolean NOT NULL,
+    notes text,
+    provenance_note text,
+    source_artifact text NOT NULL,
+    source_sha256 text NOT NULL,
+    provenance_class text DEFAULT 'CURATED'::text NOT NULL,
+    loader_version text NOT NULL,
+    loaded_at timestamp with time zone DEFAULT now() NOT NULL,
+    CONSTRAINT cites_listings_after_convention CHECK ((listing_date >= '1975-07-01'::date)),
+    CONSTRAINT cites_listings_appendix_valid CHECK ((appendix = ANY (ARRAY['I'::text, 'II'::text, 'III'::text, 'I/II'::text]))),
+    CONSTRAINT cites_listings_provenance_class CHECK ((provenance_class = ANY (ARRAY['DERIVED'::text, 'CURATED'::text, 'GATED'::text])))
+);
+
+
+--
+-- Name: cites_listing_events; Type: TABLE; Schema: arctic_v2; Owner: -
+--
+
+CREATE TABLE arctic_v2.cites_listing_events (
+    id uuid DEFAULT gen_random_uuid() NOT NULL,
+    species_id uuid NOT NULL,
+    event_date date,
+    appendix text,
+    change_type text NOT NULL,
+    is_listing boolean NOT NULL,
+    party text,
+    is_current boolean,
+    note text,
+    source_taxon_id integer,
+    source_artifact text,
+    source_sha256 text,
+    provenance_class text DEFAULT 'EXTERNAL'::text NOT NULL,
+    loader_version text,
+    loaded_at timestamp with time zone DEFAULT now() NOT NULL
+);
+
+
+--
+-- Name: TABLE cites_listing_events; Type: COMMENT; Schema: arctic_v2; Owner: -
+--
+
+COMMENT ON TABLE arctic_v2.cites_listing_events IS 'Full CITES event history from Species+, with listings and reservations distinguished by change_type. Supersedes cites_listings, which conflated them and was short by 40 events.';
+
+
+--
+-- Name: COLUMN cites_listing_events.is_listing; Type: COMMENT; Schema: arctic_v2; Owner: -
+--
+
+COMMENT ON COLUMN arctic_v2.cites_listing_events.is_listing IS 'True only for change_type a or x. A reservation is a Party declining to be bound; it does not move a species between appendices.';
+
+
+--
+-- Name: species_media; Type: TABLE; Schema: arctic_v2; Owner: -
+--
+
+CREATE TABLE arctic_v2.species_media (
+    id uuid DEFAULT gen_random_uuid() NOT NULL,
+    species_id uuid NOT NULL,
+    source text NOT NULL,
+    source_taxon_id integer,
+    source_photo_id text,
+    license_code text,
+    attribution text,
+    is_displayable boolean DEFAULT false NOT NULL,
+    original_url text,
+    local_path text,
+    content_sha256 text,
+    matched_name text,
+    match_exact boolean DEFAULT false NOT NULL,
+    provenance_class text DEFAULT 'EXTERNAL'::text NOT NULL,
+    loader_version text,
+    loaded_at timestamp with time zone DEFAULT now() NOT NULL,
+    source_artifact text,
+    source_sha256 text
+);
+
+
+--
+-- Name: TABLE species_media; Type: COMMENT; Schema: arctic_v2; Owner: -
+--
+
+COMMENT ON TABLE arctic_v2.species_media IS 'One image per species per source, with its licence and photographer credit stored as data. is_displayable is false unless the licence permits display AND the credit is present, so an unlicensed photograph cannot reach a page.';
+
+
+--
+-- Name: COLUMN species_media.is_displayable; Type: COMMENT; Schema: arctic_v2; Owner: -
+--
+
+COMMENT ON COLUMN arctic_v2.species_media.is_displayable IS 'False for all-rights-reserved photographs (iNaturalist default, no license_code) and for any row missing attribution. The read-surface view filters on this column.';
+
+
+--
+-- Name: COLUMN species_media.source_artifact; Type: COMMENT; Schema: arctic_v2; Owner: -
+--
+
+COMMENT ON COLUMN arctic_v2.species_media.source_artifact IS 'The remote photograph URL: the artifact these bytes came from.';
+
+
+--
+-- Name: COLUMN species_media.source_sha256; Type: COMMENT; Schema: arctic_v2; Owner: -
+--
+
+COMMENT ON COLUMN arctic_v2.species_media.source_sha256 IS 'SHA-256 of the bytes actually stored, which for a downloaded file is the digest of the source artifact as we received it.';
+
+
+--
+-- Name: narrative_review; Type: TABLE; Schema: arctic_v2; Owner: -
+--
+
+CREATE TABLE arctic_v2.narrative_review (
+    id uuid DEFAULT gen_random_uuid() NOT NULL,
+    narrative_id uuid NOT NULL,
+    reviewer text NOT NULL,
+    verdict text NOT NULL,
+    rationale text NOT NULL,
+    reviewed_at timestamp with time zone DEFAULT now() NOT NULL,
+    CONSTRAINT narrative_review_rationale_substantive CHECK ((length(btrim(rationale)) >= 20)),
+    CONSTRAINT narrative_review_reviewer_named CHECK ((length(btrim(reviewer)) > 0)),
+    CONSTRAINT narrative_review_verdict_known CHECK ((verdict = ANY (ARRAY['approved'::text, 'rejected'::text, 'pending'::text])))
+);
+
+
+--
+-- Name: species_narratives; Type: TABLE; Schema: arctic_v2; Owner: -
+--
+
+CREATE TABLE arctic_v2.species_narratives (
+    id uuid DEFAULT gen_random_uuid() NOT NULL,
+    species_id uuid NOT NULL,
+    section text NOT NULL,
+    body text NOT NULL,
+    origin text DEFAULT 'machine'::text NOT NULL,
+    citation_count integer DEFAULT 0 NOT NULL,
+    source_artifact text NOT NULL,
+    source_sha256 text NOT NULL,
+    provenance_class text DEFAULT 'GATED'::text NOT NULL,
+    loader_version text NOT NULL,
+    loaded_at timestamp with time zone DEFAULT now() NOT NULL,
+    CONSTRAINT species_narratives_is_gated CHECK ((provenance_class = 'GATED'::text)),
+    CONSTRAINT species_narratives_origin_known CHECK ((origin = ANY (ARRAY['machine'::text, 'human'::text, 'mixed'::text]))),
+    CONSTRAINT species_narratives_section_known CHECK ((section = ANY (ARRAY['description'::text, 'habitat_description'::text, 'movement_patterns'::text, 'use_and_trade'::text, 'threats_overview'::text, 'conservation_overview'::text, 'population_size'::text, 'population_trend'::text])))
+);
+
+
+--
+-- Name: servable_species_narratives; Type: VIEW; Schema: arctic_v2; Owner: -
+--
+
+CREATE VIEW arctic_v2.servable_species_narratives AS
+ SELECT id,
+    species_id,
+    section,
+    body,
+    origin,
+    citation_count
+   FROM arctic_v2.species_narratives n
+  WHERE ((EXISTS ( SELECT 1
+           FROM arctic_v2.narrative_review r
+          WHERE ((r.narrative_id = n.id) AND (r.verdict = 'approved'::text)))) AND (NOT (EXISTS ( SELECT 1
+           FROM arctic_v2.narrative_review r
+          WHERE ((r.narrative_id = n.id) AND (r.verdict = 'rejected'::text))))));
+
+
+--
+-- Name: VIEW servable_species_narratives; Type: COMMENT; Schema: arctic_v2; Owner: -
+--
+
+COMMENT ON VIEW arctic_v2.servable_species_narratives IS 'The only sanctioned read path for species narrative prose. Unsigned or rejected content is invisible here. The application must read this view, never species_narratives directly.';
+
+
+--
+-- Name: conservation_profiles; Type: TABLE; Schema: arctic_v2; Owner: -
+--
+
+CREATE TABLE arctic_v2.conservation_profiles (
+    id uuid DEFAULT gen_random_uuid() NOT NULL,
+    species_id uuid NOT NULL,
+    profile_key text NOT NULL,
+    origin text NOT NULL,
+    file_source text,
+    subpopulations text,
+    distribution_range text,
+    source_artifact text NOT NULL,
+    source_sha256 text NOT NULL,
+    provenance_class text DEFAULT 'GATED'::text NOT NULL,
+    loader_version text NOT NULL,
+    loaded_at timestamp with time zone DEFAULT now() NOT NULL,
+    CONSTRAINT conservation_profiles_is_gated CHECK ((provenance_class = 'GATED'::text)),
+    CONSTRAINT conservation_profiles_origin_known CHECK ((origin = ANY (ARRAY['machine'::text, 'human'::text, 'mixed'::text])))
+);
+
+
+--
+-- Name: profile_references; Type: TABLE; Schema: arctic_v2; Owner: -
+--
+
+CREATE TABLE arctic_v2.profile_references (
+    id uuid DEFAULT gen_random_uuid() NOT NULL,
+    profile_id uuid NOT NULL,
+    reference_id uuid NOT NULL,
+    binding_status text DEFAULT 'proposed'::text NOT NULL,
+    loaded_at timestamp with time zone DEFAULT now() NOT NULL,
+    CONSTRAINT profile_references_status_known CHECK ((binding_status = ANY (ARRAY['proposed'::text, 'live'::text, 'rejected'::text])))
+);
+
+
+--
+-- Name: profile_review; Type: TABLE; Schema: arctic_v2; Owner: -
+--
+
+CREATE TABLE arctic_v2.profile_review (
+    id uuid DEFAULT gen_random_uuid() NOT NULL,
+    profile_id uuid NOT NULL,
+    reviewer text NOT NULL,
+    verdict text NOT NULL,
+    rationale text NOT NULL,
+    reviewed_at timestamp with time zone DEFAULT now() NOT NULL,
+    CONSTRAINT profile_review_rationale_substantive CHECK ((length(btrim(rationale)) >= 20)),
+    CONSTRAINT profile_review_reviewer_named CHECK ((length(btrim(reviewer)) > 0)),
+    CONSTRAINT profile_review_verdict_known CHECK ((verdict = ANY (ARRAY['approved'::text, 'rejected'::text, 'pending'::text])))
+);
+
+
+--
+-- Name: references; Type: TABLE; Schema: arctic_v2; Owner: -
+--
+
+CREATE TABLE arctic_v2."references" (
+    id uuid DEFAULT gen_random_uuid() NOT NULL,
+    authors text,
+    year integer,
+    title text NOT NULL,
+    journal text,
+    doi text,
+    full_citation text,
+    source_artifact text NOT NULL,
+    source_sha256 text NOT NULL,
+    provenance_class text DEFAULT 'GATED'::text NOT NULL,
+    loader_version text NOT NULL,
+    loaded_at timestamp with time zone DEFAULT now() NOT NULL,
+    CONSTRAINT references_identifiable CHECK (((doi IS NOT NULL) OR (length(btrim(title)) > 0))),
+    CONSTRAINT references_is_gated CHECK ((provenance_class = 'GATED'::text)),
+    CONSTRAINT references_year_plausible CHECK (((year IS NULL) OR ((year >= 1700) AND (year <= 2100))))
+);
+
+
+--
+-- Name: servable_profile_references; Type: VIEW; Schema: arctic_v2; Owner: -
+--
+
+CREATE VIEW arctic_v2.servable_profile_references AS
+ SELECT pr.id,
+    pr.profile_id,
+    pr.reference_id,
+    p.species_id
+   FROM (arctic_v2.profile_references pr
+     JOIN arctic_v2.conservation_profiles p ON ((p.id = pr.profile_id)))
+  WHERE ((pr.binding_status = 'live'::text) AND (EXISTS ( SELECT 1
+           FROM arctic_v2.profile_review r
+          WHERE ((r.profile_id = p.id) AND (r.verdict = 'approved'::text)))) AND (NOT (EXISTS ( SELECT 1
+           FROM arctic_v2.profile_review r
+          WHERE ((r.profile_id = p.id) AND (r.verdict = 'rejected'::text))))));
+
+
+--
+-- Name: VIEW servable_profile_references; Type: COMMENT; Schema: arctic_v2; Owner: -
+--
+
+COMMENT ON VIEW arctic_v2.servable_profile_references IS 'The only sanctioned read path for species references. The application must read this, never profile_references directly. Unsigned, rejected or non-live bindings are invisible here.';
+
+
+--
+-- Name: illegal_trade_products; Type: TABLE; Schema: arctic_v2; Owner: -
+--
+
+CREATE TABLE arctic_v2.illegal_trade_products (
+    id uuid DEFAULT gen_random_uuid() NOT NULL,
+    product_code text NOT NULL,
+    product_name text NOT NULL,
+    product_category text NOT NULL,
+    main_category text NOT NULL,
+    is_high_value boolean NOT NULL,
+    search_terms text[] NOT NULL,
+    source_artifact text NOT NULL,
+    source_sha256 text NOT NULL,
+    provenance_class text DEFAULT 'CURATED'::text NOT NULL,
+    loader_version text NOT NULL,
+    loaded_at timestamp with time zone DEFAULT now() NOT NULL,
+    CONSTRAINT illegal_trade_products_provenance_class CHECK ((provenance_class = ANY (ARRAY['DERIVED'::text, 'CURATED'::text, 'GATED'::text]))),
+    CONSTRAINT illegal_trade_products_search_terms_nonempty CHECK ((cardinality(search_terms) > 0))
+);
+
+
+--
+-- Name: illegal_trade_seizures; Type: TABLE; Schema: arctic_v2; Owner: -
+--
+
+CREATE TABLE arctic_v2.illegal_trade_seizures (
+    id uuid DEFAULT gen_random_uuid() NOT NULL,
+    species_id uuid NOT NULL,
+    source_database character varying(20) NOT NULL,
+    original_record_id character varying(100),
+    seizure_date date,
+    seizure_year integer,
+    seizure_location character varying(100),
+    product_type_id uuid,
+    product_category character varying(50),
+    quantity numeric,
+    unit character varying(50),
+    reported_taxon_name character varying(255),
+    gbif_id character varying(50),
+    db_taxa_name_clean character varying(255),
+    created_at timestamp with time zone DEFAULT now(),
+    updated_at timestamp with time zone DEFAULT now(),
+    data_source character varying(255) DEFAULT 'Stringham et al. 2021'::character varying,
+    source_artifact text NOT NULL,
+    source_sha256 text NOT NULL,
+    provenance_class text NOT NULL,
+    loader_version text NOT NULL,
+    CONSTRAINT illegal_trade_seizures_provenance_class CHECK ((provenance_class = ANY (ARRAY['DERIVED'::text, 'CURATED'::text, 'GATED'::text])))
+);
+
+
+--
+-- Name: split_listings; Type: TABLE; Schema: arctic_v2; Owner: -
+--
+
+CREATE TABLE arctic_v2.split_listings (
+    id uuid DEFAULT gen_random_uuid() NOT NULL,
+    species_id uuid NOT NULL,
+    population_identifier text NOT NULL,
+    appendix text NOT NULL,
+    listing_date date NOT NULL,
+    delisting_date date,
+    is_current boolean NOT NULL,
+    notes text,
+    annotation text,
+    source_artifact text NOT NULL,
+    source_sha256 text NOT NULL,
+    provenance_class text DEFAULT 'CURATED'::text NOT NULL,
+    loader_version text NOT NULL,
+    loaded_at timestamp with time zone DEFAULT now() NOT NULL,
+    CONSTRAINT split_listings_after_convention CHECK ((listing_date >= '1975-07-01'::date)),
+    CONSTRAINT split_listings_appendix_valid CHECK ((appendix = ANY (ARRAY['I'::text, 'II'::text, 'III'::text, 'I/II'::text]))),
+    CONSTRAINT split_listings_delist_after_list CHECK (((delisting_date IS NULL) OR (delisting_date >= listing_date)))
+);
+
+
+--
+-- Name: subpopulations; Type: TABLE; Schema: arctic_v2; Owner: -
+--
+
+CREATE TABLE arctic_v2.subpopulations (
+    id uuid DEFAULT gen_random_uuid() NOT NULL,
+    species_id uuid NOT NULL,
+    subpopulation_name text NOT NULL,
+    sis_id integer,
+    authority text,
+    source_artifact text NOT NULL,
+    source_sha256 text NOT NULL,
+    provenance_class text DEFAULT 'CURATED'::text NOT NULL,
+    loader_version text NOT NULL,
+    loaded_at timestamp with time zone DEFAULT now() NOT NULL,
+    CONSTRAINT subpopulations_provenance_class CHECK ((provenance_class = ANY (ARRAY['DERIVED'::text, 'CURATED'::text, 'GATED'::text])))
+);
+
+
+--
+-- Name: timeline_events; Type: TABLE; Schema: arctic_v2; Owner: -
+--
+
+CREATE TABLE arctic_v2.timeline_events (
+    id uuid DEFAULT gen_random_uuid() NOT NULL,
+    species_id uuid NOT NULL,
+    event_date date NOT NULL,
+    year integer NOT NULL,
+    event_type text NOT NULL,
+    title text NOT NULL,
+    description text,
+    status text,
+    source_type text,
+    source_id uuid,
+    provenance_note text,
+    source_artifact text NOT NULL,
+    source_sha256 text NOT NULL,
+    provenance_class text DEFAULT 'CURATED'::text NOT NULL,
+    loader_version text NOT NULL,
+    loaded_at timestamp with time zone DEFAULT now() NOT NULL,
+    CONSTRAINT timeline_events_provenance_class CHECK ((provenance_class = ANY (ARRAY['DERIVED'::text, 'CURATED'::text, 'GATED'::text]))),
+    CONSTRAINT timeline_events_type_valid CHECK ((event_type = ANY (ARRAY['iucn_assessment'::text, 'cites_listing'::text, 'cites_suspension'::text, 'cites_trade'::text, 'eu_decision'::text]))),
+    CONSTRAINT timeline_events_year_matches_date CHECK (((year)::numeric = EXTRACT(year FROM event_date)))
+);
+
+
+--
+-- Name: cites_trade_records; Type: TABLE; Schema: arctic_v2; Owner: -
+--
+
+CREATE TABLE arctic_v2.cites_trade_records (
+    id uuid DEFAULT gen_random_uuid() NOT NULL,
+    species_id uuid NOT NULL,
+    record_id text,
+    year integer NOT NULL,
+    appendix text NOT NULL,
+    taxon text NOT NULL,
+    class text,
+    order_name text,
+    family text,
+    genus text,
+    term text NOT NULL,
+    quantity numeric,
+    unit text,
+    importer text,
+    exporter text,
+    origin text,
+    purpose text,
+    source text,
+    reporter_type text,
+    import_permit text,
+    export_permit text,
+    origin_permit text,
+    source_artifact text NOT NULL,
+    source_sha256 text NOT NULL,
+    provenance_class text NOT NULL,
+    loader_version text NOT NULL,
+    CONSTRAINT cites_trade_records_provenance_class CHECK ((provenance_class = ANY (ARRAY['DERIVED'::text, 'CURATED'::text, 'GATED'::text])))
+);
+
+
+--
+-- Name: countries; Type: TABLE; Schema: arctic_v2; Owner: -
+--
+
+CREATE TABLE arctic_v2.countries (
+    id uuid DEFAULT gen_random_uuid() NOT NULL,
+    country_name text NOT NULL,
+    country_code text NOT NULL,
+    nammco_member boolean NOT NULL,
+    arctic_council boolean NOT NULL,
+    provenance_note text,
+    source_artifact text NOT NULL,
+    source_sha256 text NOT NULL,
+    provenance_class text DEFAULT 'CURATED'::text NOT NULL,
+    loader_version text NOT NULL,
+    loaded_at timestamp with time zone DEFAULT now() NOT NULL,
+    CONSTRAINT countries_code_is_alpha2 CHECK ((country_code ~ '^[A-Z]{2}$'::text)),
+    CONSTRAINT countries_provenance_class CHECK ((provenance_class = ANY (ARRAY['DERIVED'::text, 'CURATED'::text, 'GATED'::text])))
+);
+
+
+--
+-- Name: management_areas; Type: TABLE; Schema: arctic_v2; Owner: -
+--
+
+CREATE TABLE arctic_v2.management_areas (
+    id uuid DEFAULT gen_random_uuid() NOT NULL,
+    area_name text NOT NULL,
+    country_id uuid NOT NULL,
+    area_type text NOT NULL,
+    provenance_note text,
+    source_artifact text NOT NULL,
+    source_sha256 text NOT NULL,
+    provenance_class text DEFAULT 'CURATED'::text NOT NULL,
+    loader_version text NOT NULL,
+    loaded_at timestamp with time zone DEFAULT now() NOT NULL,
+    CONSTRAINT management_areas_provenance_class CHECK ((provenance_class = ANY (ARRAY['DERIVED'::text, 'CURATED'::text, 'GATED'::text])))
+);
+
+
+--
+-- Name: source_releases; Type: TABLE; Schema: arctic_v2; Owner: -
+--
+
+CREATE TABLE arctic_v2.source_releases (
+    id uuid DEFAULT gen_random_uuid() NOT NULL,
+    source_name text NOT NULL,
+    release_label text NOT NULL,
+    obtained_on date NOT NULL,
+    obtained_on_basis text NOT NULL,
+    artifact_path text NOT NULL,
+    artifact_count integer,
+    artifact_bytes bigint,
+    notes text,
+    recorded_at timestamp with time zone DEFAULT now() NOT NULL
+);
+
+
+--
+-- Name: TABLE source_releases; Type: COMMENT; Schema: arctic_v2; Owner: -
+--
+
+COMMENT ON TABLE arctic_v2.source_releases IS 'Which upstream release each part of the corpus was built from. Answers Reviewer 3''s "what was downloaded, and when" from stored data rather than from a directory name.';
+
+
+--
+-- Name: COLUMN source_releases.obtained_on_basis; Type: COMMENT; Schema: arctic_v2; Owner: -
+--
+
+COMMENT ON COLUMN arctic_v2.source_releases.obtained_on_basis IS 'How the date is known. Distinguishes a date published by the source from one inferred from filesystem metadata, which is weaker and can be destroyed by a copy or a restore.';
+
+
+--
+-- Name: catch_records catch_records_key; Type: CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.catch_records
+    ADD CONSTRAINT catch_records_key UNIQUE (species_id, year, area, country_id, data_source, source_occurrence);
+
+
+--
+-- Name: catch_records catch_records_pkey; Type: CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.catch_records
+    ADD CONSTRAINT catch_records_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: cites_listing_events cites_listing_events_pkey; Type: CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.cites_listing_events
+    ADD CONSTRAINT cites_listing_events_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: cites_listings cites_listings_pkey; Type: CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.cites_listings
+    ADD CONSTRAINT cites_listings_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: cites_trade_records cites_trade_records_pkey; Type: CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.cites_trade_records
+    ADD CONSTRAINT cites_trade_records_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: cms_listings cms_listings_pkey; Type: CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.cms_listings
+    ADD CONSTRAINT cms_listings_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: common_names common_names_pkey; Type: CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.common_names
+    ADD CONSTRAINT common_names_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: common_names common_names_species_name_lang_key; Type: CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.common_names
+    ADD CONSTRAINT common_names_species_name_lang_key UNIQUE (species_id, name, language);
+
+
+--
+-- Name: conservation_profiles conservation_profiles_key; Type: CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.conservation_profiles
+    ADD CONSTRAINT conservation_profiles_key UNIQUE (species_id, profile_key);
+
+
+--
+-- Name: conservation_profiles conservation_profiles_pkey; Type: CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.conservation_profiles
+    ADD CONSTRAINT conservation_profiles_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: countries countries_code_key; Type: CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.countries
+    ADD CONSTRAINT countries_code_key UNIQUE (country_code);
+
+
+--
+-- Name: countries countries_name_key; Type: CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.countries
+    ADD CONSTRAINT countries_name_key UNIQUE (country_name);
+
+
+--
+-- Name: countries countries_pkey; Type: CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.countries
+    ADD CONSTRAINT countries_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: glossary_terms glossary_terms_pkey; Type: CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.glossary_terms
+    ADD CONSTRAINT glossary_terms_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: glossary_terms glossary_terms_term_key; Type: CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.glossary_terms
+    ADD CONSTRAINT glossary_terms_term_key UNIQUE (term);
+
+
+--
+-- Name: illegal_trade_products illegal_trade_products_code_key; Type: CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.illegal_trade_products
+    ADD CONSTRAINT illegal_trade_products_code_key UNIQUE (product_code);
+
+
+--
+-- Name: illegal_trade_products illegal_trade_products_pkey; Type: CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.illegal_trade_products
+    ADD CONSTRAINT illegal_trade_products_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: illegal_trade_seizures illegal_trade_seizures_pkey; Type: CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.illegal_trade_seizures
+    ADD CONSTRAINT illegal_trade_seizures_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: iucn_assessments iucn_assessments_pkey; Type: CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.iucn_assessments
+    ADD CONSTRAINT iucn_assessments_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: management_areas management_areas_key; Type: CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.management_areas
+    ADD CONSTRAINT management_areas_key UNIQUE (area_name, country_id);
+
+
+--
+-- Name: management_areas management_areas_pkey; Type: CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.management_areas
+    ADD CONSTRAINT management_areas_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: narrative_review narrative_review_one_per_reviewer; Type: CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.narrative_review
+    ADD CONSTRAINT narrative_review_one_per_reviewer UNIQUE (narrative_id, reviewer);
+
+
+--
+-- Name: narrative_review narrative_review_pkey; Type: CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.narrative_review
+    ADD CONSTRAINT narrative_review_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: profile_references profile_references_key; Type: CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.profile_references
+    ADD CONSTRAINT profile_references_key UNIQUE (profile_id, reference_id);
+
+
+--
+-- Name: profile_references profile_references_pkey; Type: CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.profile_references
+    ADD CONSTRAINT profile_references_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: profile_review profile_review_one_per_reviewer; Type: CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.profile_review
+    ADD CONSTRAINT profile_review_one_per_reviewer UNIQUE (profile_id, reviewer);
+
+
+--
+-- Name: profile_review profile_review_pkey; Type: CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.profile_review
+    ADD CONSTRAINT profile_review_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: references references_pkey; Type: CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2."references"
+    ADD CONSTRAINT references_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: source_releases source_releases_pkey; Type: CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.source_releases
+    ADD CONSTRAINT source_releases_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: source_releases source_releases_source_name_key; Type: CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.source_releases
+    ADD CONSTRAINT source_releases_source_name_key UNIQUE (source_name);
+
+
+--
+-- Name: source_releases source_releases_source_name_release_label_key; Type: CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.source_releases
+    ADD CONSTRAINT source_releases_source_name_release_label_key UNIQUE (source_name, release_label);
+
+
+--
+-- Name: species_media species_media_pkey; Type: CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.species_media
+    ADD CONSTRAINT species_media_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: species_media species_media_species_id_source_key; Type: CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.species_media
+    ADD CONSTRAINT species_media_species_id_source_key UNIQUE (species_id, source);
+
+
+--
+-- Name: species_narratives species_narratives_key; Type: CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.species_narratives
+    ADD CONSTRAINT species_narratives_key UNIQUE (species_id, section);
+
+
+--
+-- Name: species_narratives species_narratives_pkey; Type: CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.species_narratives
+    ADD CONSTRAINT species_narratives_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: species species_pkey; Type: CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.species
+    ADD CONSTRAINT species_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: species species_scientific_name_key; Type: CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.species
+    ADD CONSTRAINT species_scientific_name_key UNIQUE (scientific_name);
+
+
+--
+-- Name: split_listings split_listings_key; Type: CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.split_listings
+    ADD CONSTRAINT split_listings_key UNIQUE (species_id, population_identifier, appendix, listing_date);
+
+
+--
+-- Name: split_listings split_listings_pkey; Type: CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.split_listings
+    ADD CONSTRAINT split_listings_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: subpopulations subpopulations_key; Type: CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.subpopulations
+    ADD CONSTRAINT subpopulations_key UNIQUE (species_id, subpopulation_name);
+
+
+--
+-- Name: subpopulations subpopulations_pkey; Type: CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.subpopulations
+    ADD CONSTRAINT subpopulations_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: timeline_events timeline_events_pkey; Type: CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.timeline_events
+    ADD CONSTRAINT timeline_events_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: catch_records_species_year_idx; Type: INDEX; Schema: arctic_v2; Owner: -
+--
+
+CREATE INDEX catch_records_species_year_idx ON arctic_v2.catch_records USING btree (species_id, year);
+
+
+--
+-- Name: cites_listing_events_species_idx; Type: INDEX; Schema: arctic_v2; Owner: -
+--
+
+CREATE INDEX cites_listing_events_species_idx ON arctic_v2.cites_listing_events USING btree (species_id, event_date);
+
+
+--
+-- Name: cites_listings_business_key; Type: INDEX; Schema: arctic_v2; Owner: -
+--
+
+CREATE UNIQUE INDEX cites_listings_business_key ON arctic_v2.cites_listings USING btree (species_id, appendix, listing_date, is_current, COALESCE(notes, ''::text));
+
+
+--
+-- Name: cites_trade_records_species_id_idx; Type: INDEX; Schema: arctic_v2; Owner: -
+--
+
+CREATE INDEX cites_trade_records_species_id_idx ON arctic_v2.cites_trade_records USING btree (species_id);
+
+
+--
+-- Name: cites_trade_records_year_idx; Type: INDEX; Schema: arctic_v2; Owner: -
+--
+
+CREATE INDEX cites_trade_records_year_idx ON arctic_v2.cites_trade_records USING btree (year);
+
+
+--
+-- Name: cms_listings_agreement_idx; Type: INDEX; Schema: arctic_v2; Owner: -
+--
+
+CREATE INDEX cms_listings_agreement_idx ON arctic_v2.cms_listings USING btree (agreement);
+
+
+--
+-- Name: cms_listings_key; Type: INDEX; Schema: arctic_v2; Owner: -
+--
+
+CREATE UNIQUE INDEX cms_listings_key ON arctic_v2.cms_listings USING btree (species_id, agreement, COALESCE(appendix, ''::text), listing_date);
+
+
+--
+-- Name: common_names_language_idx; Type: INDEX; Schema: arctic_v2; Owner: -
+--
+
+CREATE INDEX common_names_language_idx ON arctic_v2.common_names USING btree (language);
+
+
+--
+-- Name: common_names_one_main_per_species; Type: INDEX; Schema: arctic_v2; Owner: -
+--
+
+CREATE UNIQUE INDEX common_names_one_main_per_species ON arctic_v2.common_names USING btree (species_id) WHERE is_main;
+
+
+--
+-- Name: illegal_trade_products_search_idx; Type: INDEX; Schema: arctic_v2; Owner: -
+--
+
+CREATE INDEX illegal_trade_products_search_idx ON arctic_v2.illegal_trade_products USING gin (search_terms);
+
+
+--
+-- Name: illegal_trade_seizures_product_type_id_idx; Type: INDEX; Schema: arctic_v2; Owner: -
+--
+
+CREATE INDEX illegal_trade_seizures_product_type_id_idx ON arctic_v2.illegal_trade_seizures USING btree (product_type_id);
+
+
+--
+-- Name: illegal_trade_seizures_species_id_idx; Type: INDEX; Schema: arctic_v2; Owner: -
+--
+
+CREATE INDEX illegal_trade_seizures_species_id_idx ON arctic_v2.illegal_trade_seizures USING btree (species_id);
+
+
+--
+-- Name: iucn_assessments_species_id_idx; Type: INDEX; Schema: arctic_v2; Owner: -
+--
+
+CREATE INDEX iucn_assessments_species_id_idx ON arctic_v2.iucn_assessments USING btree (species_id);
+
+
+--
+-- Name: iucn_assessments_year_published_idx; Type: INDEX; Schema: arctic_v2; Owner: -
+--
+
+CREATE INDEX iucn_assessments_year_published_idx ON arctic_v2.iucn_assessments USING btree (year_published);
+
+
+--
+-- Name: references_doi_key; Type: INDEX; Schema: arctic_v2; Owner: -
+--
+
+CREATE UNIQUE INDEX references_doi_key ON arctic_v2."references" USING btree (lower(doi)) WHERE (doi IS NOT NULL);
+
+
+--
+-- Name: species_family_idx; Type: INDEX; Schema: arctic_v2; Owner: -
+--
+
+CREATE INDEX species_family_idx ON arctic_v2.species USING btree (family);
+
+
+--
+-- Name: species_genus_idx; Type: INDEX; Schema: arctic_v2; Owner: -
+--
+
+CREATE INDEX species_genus_idx ON arctic_v2.species USING btree (genus);
+
+
+--
+-- Name: species_media_species_idx; Type: INDEX; Schema: arctic_v2; Owner: -
+--
+
+CREATE INDEX species_media_species_idx ON arctic_v2.species_media USING btree (species_id);
+
+
+--
+-- Name: subpopulations_sis_id_key; Type: INDEX; Schema: arctic_v2; Owner: -
+--
+
+CREATE UNIQUE INDEX subpopulations_sis_id_key ON arctic_v2.subpopulations USING btree (sis_id) WHERE (sis_id IS NOT NULL);
+
+
+--
+-- Name: timeline_events_business_key; Type: INDEX; Schema: arctic_v2; Owner: -
+--
+
+CREATE UNIQUE INDEX timeline_events_business_key ON arctic_v2.timeline_events USING btree (species_id, event_date, event_type, title, COALESCE(description, ''::text), COALESCE(status, ''::text));
+
+
+--
+-- Name: timeline_events_species_date_idx; Type: INDEX; Schema: arctic_v2; Owner: -
+--
+
+CREATE INDEX timeline_events_species_date_idx ON arctic_v2.timeline_events USING btree (species_id, event_date);
+
+
+--
+-- Name: catch_records catch_records_country_id_fkey; Type: FK CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.catch_records
+    ADD CONSTRAINT catch_records_country_id_fkey FOREIGN KEY (country_id) REFERENCES arctic_v2.countries(id);
+
+
+--
+-- Name: catch_records catch_records_species_id_fkey; Type: FK CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.catch_records
+    ADD CONSTRAINT catch_records_species_id_fkey FOREIGN KEY (species_id) REFERENCES arctic_v2.species(id) ON DELETE CASCADE;
+
+
+--
+-- Name: cites_listing_events cites_listing_events_species_id_fkey; Type: FK CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.cites_listing_events
+    ADD CONSTRAINT cites_listing_events_species_id_fkey FOREIGN KEY (species_id) REFERENCES arctic_v2.species(id) ON DELETE CASCADE;
+
+
+--
+-- Name: cites_listings cites_listings_species_id_fkey; Type: FK CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.cites_listings
+    ADD CONSTRAINT cites_listings_species_id_fkey FOREIGN KEY (species_id) REFERENCES arctic_v2.species(id) ON DELETE CASCADE;
+
+
+--
+-- Name: cites_trade_records cites_trade_records_species_id_fkey; Type: FK CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.cites_trade_records
+    ADD CONSTRAINT cites_trade_records_species_id_fkey FOREIGN KEY (species_id) REFERENCES arctic_v2.species(id) ON DELETE RESTRICT;
+
+
+--
+-- Name: cms_listings cms_listings_species_id_fkey; Type: FK CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.cms_listings
+    ADD CONSTRAINT cms_listings_species_id_fkey FOREIGN KEY (species_id) REFERENCES arctic_v2.species(id) ON DELETE CASCADE;
+
+
+--
+-- Name: common_names common_names_species_id_fkey; Type: FK CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.common_names
+    ADD CONSTRAINT common_names_species_id_fkey FOREIGN KEY (species_id) REFERENCES arctic_v2.species(id) ON DELETE CASCADE;
+
+
+--
+-- Name: conservation_profiles conservation_profiles_species_id_fkey; Type: FK CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.conservation_profiles
+    ADD CONSTRAINT conservation_profiles_species_id_fkey FOREIGN KEY (species_id) REFERENCES arctic_v2.species(id) ON DELETE CASCADE;
+
+
+--
+-- Name: illegal_trade_seizures illegal_trade_seizures_product_type_id_fkey; Type: FK CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.illegal_trade_seizures
+    ADD CONSTRAINT illegal_trade_seizures_product_type_id_fkey FOREIGN KEY (product_type_id) REFERENCES arctic_v2.illegal_trade_products(id) ON DELETE RESTRICT;
+
+
+--
+-- Name: illegal_trade_seizures illegal_trade_seizures_species_id_fkey; Type: FK CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.illegal_trade_seizures
+    ADD CONSTRAINT illegal_trade_seizures_species_id_fkey FOREIGN KEY (species_id) REFERENCES arctic_v2.species(id) ON DELETE RESTRICT;
+
+
+--
+-- Name: iucn_assessments iucn_assessments_species_id_fkey; Type: FK CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.iucn_assessments
+    ADD CONSTRAINT iucn_assessments_species_id_fkey FOREIGN KEY (species_id) REFERENCES arctic_v2.species(id) ON DELETE RESTRICT;
+
+
+--
+-- Name: management_areas management_areas_country_id_fkey; Type: FK CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.management_areas
+    ADD CONSTRAINT management_areas_country_id_fkey FOREIGN KEY (country_id) REFERENCES arctic_v2.countries(id);
+
+
+--
+-- Name: narrative_review narrative_review_narrative_id_fkey; Type: FK CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.narrative_review
+    ADD CONSTRAINT narrative_review_narrative_id_fkey FOREIGN KEY (narrative_id) REFERENCES arctic_v2.species_narratives(id) ON DELETE CASCADE;
+
+
+--
+-- Name: profile_references profile_references_profile_id_fkey; Type: FK CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.profile_references
+    ADD CONSTRAINT profile_references_profile_id_fkey FOREIGN KEY (profile_id) REFERENCES arctic_v2.conservation_profiles(id) ON DELETE CASCADE;
+
+
+--
+-- Name: profile_references profile_references_reference_id_fkey; Type: FK CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.profile_references
+    ADD CONSTRAINT profile_references_reference_id_fkey FOREIGN KEY (reference_id) REFERENCES arctic_v2."references"(id) ON DELETE CASCADE;
+
+
+--
+-- Name: profile_review profile_review_profile_id_fkey; Type: FK CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.profile_review
+    ADD CONSTRAINT profile_review_profile_id_fkey FOREIGN KEY (profile_id) REFERENCES arctic_v2.conservation_profiles(id) ON DELETE CASCADE;
+
+
+--
+-- Name: species_media species_media_species_id_fkey; Type: FK CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.species_media
+    ADD CONSTRAINT species_media_species_id_fkey FOREIGN KEY (species_id) REFERENCES arctic_v2.species(id) ON DELETE CASCADE;
+
+
+--
+-- Name: species_narratives species_narratives_species_id_fkey; Type: FK CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.species_narratives
+    ADD CONSTRAINT species_narratives_species_id_fkey FOREIGN KEY (species_id) REFERENCES arctic_v2.species(id) ON DELETE CASCADE;
+
+
+--
+-- Name: split_listings split_listings_species_id_fkey; Type: FK CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.split_listings
+    ADD CONSTRAINT split_listings_species_id_fkey FOREIGN KEY (species_id) REFERENCES arctic_v2.species(id) ON DELETE CASCADE;
+
+
+--
+-- Name: subpopulations subpopulations_species_id_fkey; Type: FK CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.subpopulations
+    ADD CONSTRAINT subpopulations_species_id_fkey FOREIGN KEY (species_id) REFERENCES arctic_v2.species(id) ON DELETE CASCADE;
+
+
+--
+-- Name: timeline_events timeline_events_species_id_fkey; Type: FK CONSTRAINT; Schema: arctic_v2; Owner: -
+--
+
+ALTER TABLE ONLY arctic_v2.timeline_events
+    ADD CONSTRAINT timeline_events_species_id_fkey FOREIGN KEY (species_id) REFERENCES arctic_v2.species(id) ON DELETE CASCADE;
+
+
+--
+-- PostgreSQL database dump complete
+--
+

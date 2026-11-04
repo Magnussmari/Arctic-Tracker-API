@@ -1,0 +1,21 @@
+__pycache__/
+*.pyc
+.env
+.env.*
+.venv/
+venv/
+deposit/rebuilt/
+deposit/verification/reports/
+# The unpacked Zenodo snapshot: data, never committed here.
+deposit/tables/
+deposit/source_data.zip
+deposit/figures/
+deposit/ADDITIONS.json
+deposit/LICENSE
+deposit/sources/
+deposit/supplementary/
+deposit/zenodo.json
+visualizations/production/
+visualizations/source_data/
+data/processed/
+regenerated/

@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Arctic Tracker: analysis code"
+type: software
+authors:
+  - family-names: Barry
+    given-names: Tom
+    affiliation: University of Akureyri
+  - family-names: Smárason
+    given-names: Magnús Smári
+    affiliation: University of Akureyri
+license: MIT
+repository-code: "https://github.com/Magnussmari/Arctic-Tracker-API"
+url: "https://www.thearctic.is"
+keywords: [CITES, Arctic, wildlife trade, IUCN Red List, conservation]
+doi: "10.5281/zenodo.23578786"
+version: "1.0.0"
+date-released: "2026-11-04"

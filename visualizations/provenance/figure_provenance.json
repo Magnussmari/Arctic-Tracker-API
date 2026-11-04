@@ -1,0 +1,847 @@
+{
+  "schema_version": "figure-provenance/v2",
+  "generated": "2026-10-21",
+  "commit": "70da2496125ca3da1807c1904db78483521c1305",
+  "source_schema": "arctic_v2",
+  "database_release": "CITES Trade Database v2025.1, extracted 2025-06-13",
+  "note": "Identity is the pipeline key (figure7), never the manuscript display number. figure_map binds the two with evidence and a confirmation state.",
+  "figure_map": [
+    {
+      "manuscript_number": 9,
+      "manuscript_caption_stub": "Top 10 non-Arctic importing states; Arctic trade partners by importing state",
+      "figure_id": "figure3",
+      "slug": "trade-partners",
+      "binding_evidence": "figure3_source_data.csv row 1 gives importer AE at 83,131 records, the largest of any non-Arctic importer, which is what the manuscript says of the UAE. The binding is to the ranking rather than to a single value.",
+      "confirmed_by": "checked against the caption: see binding_evidence",
+      "confirmed_on": "2026-07-30",
+      "evidence_rechecked_on": "2026-08-14",
+      "evidence_history": "Until 2026-08-14 this cited 83,131's predecessor from the pre-rebuild corpus. It went stale when the figure pipeline was moved onto the manuscript's corpus (arctic_v2). The ranking was unaffected and the binding never changed."
+    },
+    {
+      "manuscript_number": 8,
+      "manuscript_caption_stub": "Top ten CITES-listed Arctic species in IWT seizures",
+      "figure_id": "figure7",
+      "slug": "iwt-seizures",
+      "binding_evidence": "figure7_source_data.csv has exactly 10 ranked rows. The caption reads 'Top ten'.",
+      "confirmed_by": "checked against the caption: see binding_evidence",
+      "confirmed_on": "2026-07-30"
+    },
+    {
+      "manuscript_number": 7,
+      "manuscript_caption_stub": "Trade volumes of the 15 most frequently traded wild-sourced species",
+      "figure_id": "figure8",
+      "slug": "wild-origin-trade",
+      "binding_evidence": "figure8_source_data.csv has exactly 15 ranked rows and the generator filters source='W'. The caption reads '15 most frequently traded wild-sourced'.",
+      "confirmed_by": "checked against the caption: see binding_evidence",
+      "confirmed_on": "2026-07-30"
+    },
+    {
+      "manuscript_number": 4,
+      "manuscript_caption_stub": "Temporal heatmap of IUCN Red List status evolution",
+      "figure_id": "figure5",
+      "slug": "status-heatmap",
+      "binding_evidence": "CONFIRMED 2026-08-14 by chart type. The manuscript caption reads 'Temporal heatmap of IUCN Red List status evolution', and figure5_status_heatmap.py is the only script in the repository that emits a go.Heatmap trace: all eight were checked, seven have none. The frozen source data alone cannot distinguish figure4 from figure5, because what a script draws is not in its source data.",
+      "confirmed_by": "chart-type elimination, verified across all figure scripts",
+      "confirmed_on": "2026-08-14"
+    },
+    {
+      "manuscript_number": 10,
+      "manuscript_caption_stub": "Conservation status trends 1982-2024",
+      "figure_id": "figure4",
+      "slug": "status-trends",
+      "binding_evidence": "CONFIRMED 2026-08-14 by elimination. Manuscript Figure 4 is bound to figure5 on the heatmap evidence above, and figure4_conservation_trends.py draws bars and lines with no heatmap, matching 'Conservation status trends 1982-2024'. The two candidates that shared byte-identical source data are separated by what they draw.",
+      "confirmed_by": "elimination once Figure 4 is bound",
+      "confirmed_on": "2026-08-14"
+    },
+    {
+      "manuscript_number": 6,
+      "manuscript_caption_stub": "Top 10 species by trade volume; by IUCN status; purposes; appendix",
+      "figure_id": "figure2",
+      "slug": "trade-enforcement",
+      "binding_evidence": "CONFIRMED 2026-08-14, and REBOUND from figure1. figure2_trade_enforcement.py builds three named panels: '(a) Top 10 Most-Traded Species', '(b) Trade by CITES Appendix', '(c) Trade by Purpose Category'. The manuscript caption is 'Top 10 species by trade volume; by IUCN status; purposes; appendix'. Three of the four elements match by name. figure1_publication.py builds wild-origin panels instead ('Top 15 species by wild-origin trade'), which is manuscript Figure 6's subject and is already bound to figure8. In the Source Data header the trade-purpose column is named most_recorded_trade_use; the panel is built in the script, which references it explicitly at 'Panel C: Trade purpose categories'.",
+      "confirmed_by": "panel titles against the caption",
+      "confirmed_on": "2026-08-14"
+    },
+    {
+      "manuscript_number": 11,
+      "manuscript_caption_stub": "Conservation status patterns; category changes; trajectory",
+      "figure_id": "figureB",
+      "slug": "status-patterns",
+      "binding_evidence": "figureB_source_data.csv carries the three panels in long form, computed from the global-and-European series the lead author decided on 21 October 2026: Global and Europe assessments form one series per species, ordered by year and assessment id, the higher id standing in a year with several, and only the one assessment that is regional but not European (the Mediterranean Lamna nasus 2016, 16527805) is left out; the seven European assessments the record files without a scope (species_data/curated/iucn_scope_corrections.csv) count, as European. Panel A gives the latest assessment of either scope, with its scope in the latest_assessment_scope rows: 4 CR, 3 EN, 11 VU, 3 NT and 21 LC, and one Regionally Extinct. Panel B's per-species transition counts sum to 43. Panel C, comparable assessments only, reproduces 7 EN or CR species of 34 in 1996, 13 of 42 in 2015 to 2017, 9 of 42 in 2019 and 7 of 43 in 2023; the number of assessed species grows from 5 in 1988 to 43 in 2023. visualizations/make_fig3_fig10_source_data.py asserts these values in its self_test().",
+      "confirmed_by": "Source Data generated 2026-10-06 by visualizations/make_fig3_fig10_source_data.py, whose self_test() asserts the panel values stated in binding_evidence. Panel C's upper figure differs from the caption by one species.",
+      "confirmed_on": null,
+      "evidence_rechecked_on": "2026-10-18"
+    },
+    {
+      "manuscript_number": 1,
+      "manuscript_caption_stub": "Arctic zones; Arctic areas covered by Russia",
+      "figure_id": null,
+      "slug": "arctic-definition",
+      "binding_evidence": "NO BINDING ESTABLISHED. Cartographic figure. No scripted pipeline exists in the repository.",
+      "confirmed_by": null,
+      "confirmed_on": null
+    },
+    {
+      "manuscript_number": 2,
+      "manuscript_caption_stub": "CITES operational structure",
+      "figure_id": null,
+      "slug": "cites-structure",
+      "binding_evidence": "NO BINDING ESTABLISHED. Schematic with no data inputs. Moved to the Supporting Information in response to reviewer comment R3-10.",
+      "confirmed_by": null,
+      "confirmed_on": null
+    },
+    {
+      "manuscript_number": 3,
+      "manuscript_caption_stub": "CITES-listed Arctic species and appendices",
+      "figure_id": "figureA",
+      "slug": "appendix-membership",
+      "binding_evidence": "figureA_source_data.csv holds one row per (species, appendix) membership: 44 rows over 43 species, 17 Appendix I, 26 Appendix II, 1 Appendix III. That is the figure's own tally, which the caption states against the 16/25/1-split/1 of Section 4.2; the appendix_as_recorded column carries the split listing so both readings come out of the same table. The tally reproduces deposit/sources/curated/cites_listings.csv. The caption of 18 October states the convention itself: the boxes count the split-listed minke whale in both Appendix I and Appendix II, so they read 17, 26 and 1 and sum to 44 rather than 43.",
+      "confirmed_by": "Source Data generated 2026-10-06 from the pipeline's own inputs by visualizations/make_fig3_fig10_source_data.py; every caption number is asserted in its self_test()",
+      "confirmed_on": null,
+      "evidence_rechecked_on": "2026-10-18"
+    },
+    {
+      "manuscript_number": 12,
+      "manuscript_caption_stub": "What the audit questions measure",
+      "figure_id": null,
+      "slug": "pipeline-diagram",
+      "binding_evidence": "NO BINDING ESTABLISHED, and none to establish. Schematic figure: it plots no computed values, so it has no Source Data and no pipeline to bind to. It is drawn by deposit/build_figure12_journal.py, which refuses to build if any connector joins the implementation panel to the outcome panel.",
+      "confirmed_by": null,
+      "confirmed_on": null
+    },
+    {
+      "manuscript_number": 13,
+      "manuscript_caption_stub": "The seven-step evaluation pipeline, and the human gate closing each step",
+      "figure_id": null,
+      "slug": "pipeline-journal",
+      "binding_evidence": "NO BINDING ESTABLISHED, and none to establish. Schematic figure: it plots no computed values, so it has no Source Data and no pipeline to bind to. It is drawn by deposit/build_figure13_journal.py from deposit/pipeline.json, the single source of truth for the step table, which carries the SHA-256 of the deposited Supplementary Table 4.",
+      "confirmed_by": null,
+      "confirmed_on": null
+    },
+    {
+      "manuscript_number": 5,
+      "manuscript_caption_stub": "CITES reservations held by Arctic states, by appendix",
+      "figure_id": "figureC",
+      "slug": "reservations",
+      "binding_evidence": "figureC_source_data.csv is computed from deposit/tables/cites_listing_events.csv, the Species+ event history, by visualizations/make_figC_reservations_source_data.py. Its self-test asserts every cell the figure draws: Iceland 14 (7 Appendix I, 7 Appendix II), Norway 5 (4 and 1, with the fin and sei whale reservations partial by their own stock notes), Greenland 1, Finland 0, Sweden 0, and none for Canada, the United States or Russia, which the figure omits. Species+ enters the porbeagle reservation for the Party Denmark; the figure's column names Greenland, and the Source Data keeps both names. The artwork is the co-author's; the script computes the numbers and draws nothing.",
+      "confirmed_by": "Source Data generated 2026-10-18 by visualizations/make_figC_reservations_source_data.py, whose self-test asserts all twenty cells the figure draws",
+      "confirmed_on": null,
+      "evidence_rechecked_on": "2026-10-18"
+    }
+  ],
+  "figures": {
+    "figure1": {
+      "title": "CITES Trade Volumes and Conservation Status",
+      "script": "visualizations/scripts/figure1_publication.py",
+      "generator": "visualizations/data_processing/export_cites_effectiveness_pg.py",
+      "intermediate": "data/raw/1_DATA_cites_effectiveness.json",
+      "source_data": "visualizations/source_data/figure1_source_data.csv",
+      "status": "regenerated+verified",
+      "data_inputs": {
+        "schema": "arctic",
+        "tables": [
+          "arctic.species",
+          "arctic.cites_listings",
+          "arctic.iucn_assessments",
+          "arctic.cites_trade_records",
+          "arctic.cms_listings",
+          "arctic.catch_records"
+        ],
+        "query": null,
+        "rows_consumed": null,
+        "extraction_date": "2025-06-13",
+        "database_release": "CITES Trade Database v2025.1",
+        "redistributable": false,
+        "redistribution_note": "IUCN Red List terms do not permit redistribution. Assessment identifiers and the extraction script are deposited instead.",
+        "deposit_equivalent": "arctic_v2 tables corresponding to the listed arctic tables",
+        "deposit_row_count": null,
+        "deposit_divergence": "The figure pipeline reads schema arctic (v1). The deposit is built from arctic_v2. Row counts can differ. A reader regenerating this figure from the deposit may not reproduce the published numbers exactly."
+      },
+      "processing_steps": [
+        {
+          "step": 1,
+          "what": "aggregate from Postgres",
+          "artifact": "visualizations/data_processing/export_cites_effectiveness_pg.py"
+        },
+        {
+          "step": 2,
+          "what": "intermediate JSON",
+          "artifact": "data/raw/1_DATA_cites_effectiveness.json"
+        },
+        {
+          "step": 3,
+          "what": "render",
+          "artifact": "visualizations/scripts/figure1_publication.py"
+        },
+        {
+          "step": 4,
+          "what": "frozen numeric source data",
+          "artifact": "visualizations/source_data/figure1_source_data.csv"
+        }
+      ],
+      "regenerate_command": "ARCTIC_DATABASE_URL=... ./.venv/bin/python visualizations/make_all_figures.py",
+      "verify_command": "ARCTIC_DATABASE_URL=... ./.venv/bin/python visualizations/make_all_figures.py --check",
+      "ai_involvement": {
+        "level": "none",
+        "statement": "No generative model participated in producing this figure. The artifacts named above import only csv, json, numpy, pandas, plotly, pathlib, collections and the project's psycopg2 helper.",
+        "verified_by": "visualizations/tests/test_no_model_calls.py",
+        "models_used": [],
+        "prompts": null
+      },
+      "validation": {
+        "gates": [
+          {
+            "gate": "byte-exact regeneration",
+            "result": "pass",
+            "evidence": "make_all_figures.py --check diffs regenerated source data against the committed CSV"
+          }
+        ],
+        "human_review": {
+          "reviewer": null,
+          "reviewed_on": null,
+          "state": "no named person has signed this figure"
+        },
+        "known_defects": [],
+        "dataset_identity_warning": null
+      }
+    },
+    "figure2": {
+      "title": "Trade Enforcement / Wild-Origin Share",
+      "script": "visualizations/scripts/figure2_trade_enforcement.py",
+      "generator": "visualizations/data_processing/export_cites_effectiveness_pg.py",
+      "intermediate": "data/raw/1_DATA_cites_effectiveness.json",
+      "source_data": "visualizations/source_data/figure2_source_data.csv",
+      "status": "regenerated+verified",
+      "data_inputs": {
+        "schema": "arctic",
+        "tables": [
+          "arctic.species",
+          "arctic.cites_listings",
+          "arctic.iucn_assessments",
+          "arctic.cites_trade_records"
+        ],
+        "query": null,
+        "rows_consumed": null,
+        "extraction_date": "2025-06-13",
+        "database_release": "CITES Trade Database v2025.1",
+        "redistributable": false,
+        "redistribution_note": "IUCN Red List terms do not permit redistribution. Assessment identifiers and the extraction script are deposited instead.",
+        "deposit_equivalent": "arctic_v2 tables corresponding to the listed arctic tables",
+        "deposit_row_count": null,
+        "deposit_divergence": "The figure pipeline reads schema arctic (v1). The deposit is built from arctic_v2. Row counts can differ. A reader regenerating this figure from the deposit may not reproduce the published numbers exactly."
+      },
+      "processing_steps": [
+        {
+          "step": 1,
+          "what": "aggregate from Postgres",
+          "artifact": "visualizations/data_processing/export_cites_effectiveness_pg.py"
+        },
+        {
+          "step": 2,
+          "what": "intermediate JSON",
+          "artifact": "data/raw/1_DATA_cites_effectiveness.json"
+        },
+        {
+          "step": 3,
+          "what": "render",
+          "artifact": "visualizations/scripts/figure2_trade_enforcement.py"
+        },
+        {
+          "step": 4,
+          "what": "frozen numeric source data",
+          "artifact": "visualizations/source_data/figure2_source_data.csv"
+        }
+      ],
+      "regenerate_command": "ARCTIC_DATABASE_URL=... ./.venv/bin/python visualizations/make_all_figures.py",
+      "verify_command": "ARCTIC_DATABASE_URL=... ./.venv/bin/python visualizations/make_all_figures.py --check",
+      "ai_involvement": {
+        "level": "none",
+        "statement": "No generative model participated in producing this figure. The artifacts named above import only csv, json, numpy, pandas, plotly, pathlib, collections and the project's psycopg2 helper.",
+        "verified_by": "visualizations/tests/test_no_model_calls.py",
+        "models_used": [],
+        "prompts": null
+      },
+      "validation": {
+        "gates": [
+          {
+            "gate": "byte-exact regeneration",
+            "result": "pass",
+            "evidence": "make_all_figures.py --check diffs regenerated source data against the committed CSV"
+          }
+        ],
+        "human_review": {
+          "reviewer": null,
+          "reviewed_on": null,
+          "state": "no named person has signed this figure"
+        },
+        "known_defects": [],
+        "dataset_identity_warning": null
+      }
+    },
+    "figure3": {
+      "title": "Global Trade Networks for Arctic Species",
+      "script": "visualizations/scripts/figure3_trade_partners.py",
+      "generator": null,
+      "intermediate": null,
+      "source_data": "visualizations/source_data/figure3_source_data.csv",
+      "query": "SELECT importer, exporter, count(*) FROM arctic.cites_trade_records WHERE year<=2024 AND importer<>'' AND exporter<>'' GROUP BY 1,2",
+      "status": "regenerated+verified",
+      "data_inputs": {
+        "schema": "arctic",
+        "tables": [
+          "arctic.cites_trade_records"
+        ],
+        "query": "SELECT importer, exporter, count(*) FROM arctic.cites_trade_records WHERE year<=2024 AND importer<>'' AND exporter<>'' GROUP BY 1,2",
+        "rows_consumed": null,
+        "extraction_date": "2025-06-13",
+        "database_release": "CITES Trade Database v2025.1",
+        "redistributable": true,
+        "redistribution_note": null,
+        "deposit_equivalent": "arctic_v2.cites_trade_records",
+        "deposit_row_count": null,
+        "deposit_divergence": "The figure pipeline reads schema arctic (v1). The deposit is built from arctic_v2. A reader regenerating this figure from the deposit may not reproduce the published numbers exactly."
+      },
+      "processing_steps": [
+        {
+          "step": 1,
+          "what": "aggregate and render in one script",
+          "artifact": "visualizations/scripts/figure3_trade_partners.py"
+        },
+        {
+          "step": 2,
+          "what": "frozen numeric source data",
+          "artifact": "visualizations/source_data/figure3_source_data.csv"
+        }
+      ],
+      "regenerate_command": "ARCTIC_DATABASE_URL=... ./.venv/bin/python visualizations/make_all_figures.py",
+      "verify_command": "ARCTIC_DATABASE_URL=... ./.venv/bin/python visualizations/make_all_figures.py --check",
+      "ai_involvement": {
+        "level": "none",
+        "statement": "No generative model participated in producing this figure. The artifacts named above import only csv, json, numpy, pandas, plotly, pathlib, collections and the project's psycopg2 helper.",
+        "verified_by": "visualizations/tests/test_no_model_calls.py",
+        "models_used": [],
+        "prompts": null
+      },
+      "validation": {
+        "gates": [
+          {
+            "gate": "byte-exact regeneration",
+            "result": "pass",
+            "evidence": "make_all_figures.py --check diffs regenerated source data against the committed CSV"
+          }
+        ],
+        "human_review": {
+          "reviewer": null,
+          "reviewed_on": null,
+          "state": "no named person has signed this figure"
+        },
+        "known_defects": [],
+        "dataset_identity_warning": null
+      }
+    },
+    "figure4": {
+      "title": "IUCN Conservation Status Trends (1965-2025)",
+      "script": "visualizations/scripts/figure4_conservation_trends.py",
+      "generator": "visualizations/data_processing/generate_iucn_timeline_pg.py",
+      "intermediate": "data/processed/iucn_historic_timeline.json",
+      "source_data": "visualizations/source_data/figure4_source_data.csv",
+      "status": "regenerated+verified",
+      "data_inputs": {
+        "schema": "arctic",
+        "tables": [
+          "arctic.iucn_assessments",
+          "arctic.species"
+        ],
+        "query": null,
+        "rows_consumed": null,
+        "extraction_date": "2025-06-13",
+        "database_release": "CITES Trade Database v2025.1",
+        "redistributable": false,
+        "redistribution_note": "IUCN Red List terms do not permit redistribution. Assessment identifiers and the extraction script are deposited instead.",
+        "deposit_equivalent": "arctic_v2.iucn_assessments (withheld from the deposit; identifiers and extraction script deposited instead)",
+        "deposit_row_count": null,
+        "deposit_divergence": "The figure pipeline reads schema arctic (v1). The deposit is built from arctic_v2. IUCN assessment rows are not redistributed in the deposit."
+      },
+      "processing_steps": [
+        {
+          "step": 1,
+          "what": "aggregate from Postgres",
+          "artifact": "visualizations/data_processing/generate_iucn_timeline_pg.py"
+        },
+        {
+          "step": 2,
+          "what": "intermediate JSON",
+          "artifact": "data/processed/iucn_historic_timeline.json"
+        },
+        {
+          "step": 3,
+          "what": "render",
+          "artifact": "visualizations/scripts/figure4_conservation_trends.py"
+        },
+        {
+          "step": 4,
+          "what": "frozen numeric source data",
+          "artifact": "visualizations/source_data/figure4_source_data.csv"
+        }
+      ],
+      "regenerate_command": "ARCTIC_DATABASE_URL=... ./.venv/bin/python visualizations/make_all_figures.py",
+      "verify_command": "ARCTIC_DATABASE_URL=... ./.venv/bin/python visualizations/make_all_figures.py --check",
+      "ai_involvement": {
+        "level": "none",
+        "statement": "No generative model participated in producing this figure. The artifacts named above import only csv, json, numpy, pandas, plotly, pathlib, collections and the project's psycopg2 helper.",
+        "verified_by": "visualizations/tests/test_no_model_calls.py",
+        "models_used": [],
+        "prompts": null
+      },
+      "validation": {
+        "gates": [
+          {
+            "gate": "byte-exact regeneration",
+            "result": "pass",
+            "evidence": "make_all_figures.py --check diffs regenerated source data against the committed CSV"
+          }
+        ],
+        "human_review": {
+          "reviewer": null,
+          "reviewed_on": null,
+          "state": "no named person has signed this figure"
+        },
+        "known_defects": [],
+        "dataset_identity_warning": null
+      }
+    },
+    "figure5": {
+      "title": "Conservation Status Heatmap",
+      "script": "visualizations/scripts/figure5_status_heatmap.py",
+      "generator": "visualizations/data_processing/generate_iucn_timeline_pg.py",
+      "intermediate": "data/processed/iucn_historic_timeline.json",
+      "source_data": "visualizations/source_data/figure5_source_data.csv",
+      "status": "regenerated+verified",
+      "data_inputs": {
+        "schema": "arctic",
+        "tables": [
+          "arctic.iucn_assessments",
+          "arctic.species"
+        ],
+        "query": null,
+        "rows_consumed": null,
+        "extraction_date": "2025-06-13",
+        "database_release": "CITES Trade Database v2025.1",
+        "redistributable": false,
+        "redistribution_note": "IUCN Red List terms do not permit redistribution. Assessment identifiers and the extraction script are deposited instead.",
+        "deposit_equivalent": "arctic_v2.iucn_assessments (withheld from the deposit; identifiers and extraction script deposited instead)",
+        "deposit_row_count": null,
+        "deposit_divergence": "The figure pipeline reads schema arctic (v1). The deposit is built from arctic_v2. IUCN assessment rows are not redistributed in the deposit."
+      },
+      "processing_steps": [
+        {
+          "step": 1,
+          "what": "aggregate from Postgres",
+          "artifact": "visualizations/data_processing/generate_iucn_timeline_pg.py"
+        },
+        {
+          "step": 2,
+          "what": "intermediate JSON",
+          "artifact": "data/processed/iucn_historic_timeline.json"
+        },
+        {
+          "step": 3,
+          "what": "render",
+          "artifact": "visualizations/scripts/figure5_status_heatmap.py"
+        },
+        {
+          "step": 4,
+          "what": "frozen numeric source data",
+          "artifact": "visualizations/source_data/figure5_source_data.csv"
+        }
+      ],
+      "regenerate_command": "ARCTIC_DATABASE_URL=... ./.venv/bin/python visualizations/make_all_figures.py",
+      "verify_command": "ARCTIC_DATABASE_URL=... ./.venv/bin/python visualizations/make_all_figures.py --check",
+      "ai_involvement": {
+        "level": "none",
+        "statement": "No generative model participated in producing this figure. The artifacts named above import only csv, json, numpy, pandas, plotly, pathlib, collections and the project's psycopg2 helper.",
+        "verified_by": "visualizations/tests/test_no_model_calls.py",
+        "models_used": [],
+        "prompts": null
+      },
+      "validation": {
+        "gates": [
+          {
+            "gate": "byte-exact regeneration",
+            "result": "pass",
+            "evidence": "make_all_figures.py --check diffs regenerated source data against the committed CSV"
+          }
+        ],
+        "human_review": {
+          "reviewer": null,
+          "reviewed_on": null,
+          "state": "no named person has signed this figure"
+        },
+        "known_defects": [],
+        "dataset_identity_warning": null
+      }
+    },
+    "figure7": {
+      "title": "Illegal Wildlife Trade Seizures",
+      "script": "visualizations/scripts/figure7_iwt_seizures.py",
+      "generator": "visualizations/data_processing/analyze_iwt_seizures_pg.py",
+      "intermediate": "data/exports/iwt_seizures_analysis.json",
+      "source_data": "visualizations/source_data/figure7_source_data.csv",
+      "status": "regenerated+verified",
+      "data_inputs": {
+        "schema": "arctic",
+        "tables": [
+          "arctic.cites_trade_records (source='I')",
+          "arctic.iucn_assessments",
+          "arctic.cites_listings",
+          "arctic.species"
+        ],
+        "query": null,
+        "rows_consumed": 2606,
+        "extraction_date": "2025-06-13",
+        "database_release": "CITES Trade Database v2025.1",
+        "redistributable": false,
+        "redistribution_note": "IUCN Red List terms do not permit redistribution. Assessment identifiers and the extraction script are deposited instead.",
+        "deposit_equivalent": "arctic_v2.cites_trade_records where source='I'",
+        "deposit_row_count": 2642,
+        "deposit_divergence": "The deposit carries 2,642 records with source code I across 39 species against the 2,606 this figure consumed, because the figure pipeline reads schema arctic (v1) and the deposit is built from arctic_v2. A reader regenerating this figure from the deposit will not reproduce these numbers exactly."
+      },
+      "processing_steps": [
+        {
+          "step": 1,
+          "what": "aggregate from Postgres",
+          "artifact": "visualizations/data_processing/analyze_iwt_seizures_pg.py"
+        },
+        {
+          "step": 2,
+          "what": "intermediate JSON",
+          "artifact": "data/exports/iwt_seizures_analysis.json"
+        },
+        {
+          "step": 3,
+          "what": "render",
+          "artifact": "visualizations/scripts/figure7_iwt_seizures.py"
+        },
+        {
+          "step": 4,
+          "what": "frozen numeric source data",
+          "artifact": "visualizations/source_data/figure7_source_data.csv"
+        }
+      ],
+      "regenerate_command": "ARCTIC_DATABASE_URL=... ./.venv/bin/python visualizations/make_all_figures.py",
+      "verify_command": "ARCTIC_DATABASE_URL=... ./.venv/bin/python visualizations/make_all_figures.py --check",
+      "ai_involvement": {
+        "level": "none",
+        "statement": "No generative model participated in producing this figure. The four artifacts above import only csv, json, numpy, pandas, plotly, pathlib, collections and the project's psycopg2 helper.",
+        "verified_by": "visualizations/tests/test_no_model_calls.py",
+        "models_used": [],
+        "prompts": null
+      },
+      "validation": {
+        "gates": [
+          {
+            "gate": "byte-exact regeneration",
+            "result": "pass",
+            "evidence": "make_all_figures.py --check diffs regenerated source data against the committed CSV"
+          }
+        ],
+        "human_review": {
+          "reviewer": null,
+          "reviewed_on": null,
+          "state": "no named person has signed this figure"
+        },
+        "known_defects": [
+          "The published figure was computed on 1,000 of 2,606 records: a single unpaginated database page. Ranks below first were wrong, and walrus seizures, third by quantity on full data, were absent from the published top ten. Regenerated on all 2,606 records.",
+          "The quantity axis is a sum across records whose unit varies row by row. It is not a quantity in any single unit, and no total in a named unit is available from this source."
+        ],
+        "dataset_identity_warning": "This figure is built from CITES trade records with source code I (confiscated or seized), not from the illegal-trade seizure table. That table holds 919 source rows decontaminated to 225 attributable records and is a different dataset from a different source. A caption must not cite one and plot the other."
+      }
+    },
+    "figure8": {
+      "title": "Wild-Origin Trade",
+      "script": "visualizations/scripts/figure8_wild_origin_trade.py",
+      "generator": "visualizations/data_processing/analyze_wild_origin_trade_pg.py",
+      "intermediate": "data/exports/wild_origin_trade_analysis.json",
+      "source_data": "visualizations/source_data/figure8_source_data.csv",
+      "status": "regenerated+verified",
+      "data_inputs": {
+        "schema": "arctic",
+        "tables": [
+          "arctic.cites_trade_records (source='W')",
+          "arctic.iucn_assessments",
+          "arctic.cites_listings",
+          "arctic.species"
+        ],
+        "query": null,
+        "rows_consumed": 137304,
+        "extraction_date": "2025-06-13",
+        "database_release": "CITES Trade Database v2025.1",
+        "redistributable": false,
+        "redistribution_note": "IUCN Red List terms do not permit redistribution. Assessment identifiers and the extraction script are deposited instead.",
+        "deposit_equivalent": "arctic_v2.cites_trade_records where source='W'",
+        "deposit_row_count": 139775,
+        "deposit_divergence": "The deposit carries 139,775 records with source code W across 43 species against the 137,304 this figure consumed, because the figure pipeline reads schema arctic (v1) and the deposit is built from arctic_v2. A reader regenerating this figure from the deposit will not reproduce these numbers exactly."
+      },
+      "processing_steps": [
+        {
+          "step": 1,
+          "what": "aggregate from Postgres",
+          "artifact": "visualizations/data_processing/analyze_wild_origin_trade_pg.py"
+        },
+        {
+          "step": 2,
+          "what": "intermediate JSON",
+          "artifact": "data/exports/wild_origin_trade_analysis.json"
+        },
+        {
+          "step": 3,
+          "what": "render",
+          "artifact": "visualizations/scripts/figure8_wild_origin_trade.py"
+        },
+        {
+          "step": 4,
+          "what": "frozen numeric source data",
+          "artifact": "visualizations/source_data/figure8_source_data.csv"
+        }
+      ],
+      "regenerate_command": "ARCTIC_DATABASE_URL=... ./.venv/bin/python visualizations/make_all_figures.py",
+      "verify_command": "ARCTIC_DATABASE_URL=... ./.venv/bin/python visualizations/make_all_figures.py --check",
+      "ai_involvement": {
+        "level": "none",
+        "statement": "No generative model participated in producing this figure. The four artifacts named above import only csv, json, numpy, pandas, plotly, pathlib, collections and the project's psycopg2 helper.",
+        "verified_by": "visualizations/tests/test_no_model_calls.py",
+        "models_used": [],
+        "prompts": null
+      },
+      "validation": {
+        "gates": [
+          {
+            "gate": "byte-exact regeneration",
+            "result": "pass",
+            "evidence": "make_all_figures.py --check diffs regenerated source data against the committed CSV"
+          }
+        ],
+        "human_review": {
+          "reviewer": null,
+          "reviewed_on": null,
+          "state": "no named person has signed this figure"
+        },
+        "known_defects": [
+          "The published figure was computed on 51,000 of 137,304 records (a safety cap). The published rank-1 species (common minke whale) was wrong; on the full data the rank-1 species is the fin whale.",
+          "The quantity axis is a sum across records whose unit varies row by row. It is not a quantity in any single unit. See what changed on this site."
+        ],
+        "dataset_identity_warning": null
+      }
+    },
+    "figureA": {
+      "title": "CITES-listed Arctic species and appendices (manuscript Figure 3)",
+      "script": "visualizations/make_fig3_fig10_source_data.py",
+      "generator": null,
+      "intermediate": null,
+      "source_data": "visualizations/source_data/figureA_source_data.csv",
+      "query": null,
+      "status": "generated 2026-10-06; binding not yet independently confirmed",
+      "data_inputs": {
+        "schema": "arctic_v2",
+        "tables": [],
+        "query": null,
+        "rows_consumed": null,
+        "extraction_date": "2025-06-13",
+        "database_release": "CITES Trade Database v2025.1",
+        "redistributable": true,
+        "redistribution_note": null,
+        "deposit_equivalent": "deposit/sources/curated/cites_listings.csv",
+        "deposit_row_count": null,
+        "deposit_divergence": null,
+        "reads": [
+          "data/raw/1_DATA_cites_effectiveness.json"
+        ],
+        "note": "No database read of its own. This writes from the same intermediate the figure4 and figure5 writers already read, so it sits in their dependency layer; the appendix tally it produces reproduces deposit/sources/curated/cites_listings.csv."
+      },
+      "processing_steps": [
+        {
+          "step": 1,
+          "what": "read the frozen intermediate",
+          "artifact": "data/raw/1_DATA_cites_effectiveness.json"
+        },
+        {
+          "step": 2,
+          "what": "compute and write the frozen numeric source data",
+          "artifact": "visualizations/source_data/figureA_source_data.csv"
+        }
+      ],
+      "ai_involvement": {
+        "level": "none",
+        "statement": "No generative model participated in producing these tables. The generator imports only csv, json, sys, collections, pathlib and the project's redlist_scale module, which is the one Red List scale and holds no model call either.",
+        "verified_by": "visualizations/tests/test_no_model_calls.py",
+        "models_used": [],
+        "prompts": null
+      },
+      "validation": {
+        "gates": [
+          {
+            "gate": "the generator asserts the caption's own numbers",
+            "result": "pass",
+            "evidence": "visualizations/make_fig3_fig10_source_data.py self_test() fails rather than writing a table that disagrees with the published caption"
+          },
+          {
+            "gate": "byte-exact regeneration",
+            "result": "pass",
+            "evidence": "make_all_figures.py --check byte-compares figure*_source_data.csv, and these two are inside that glob on purpose"
+          }
+        ],
+        "human_review": {
+          "reviewer": null,
+          "reviewed_on": null,
+          "state": "generated 2026-10-06; no named person has signed the binding and it is not yet independently confirmed"
+        },
+        "known_defects": [],
+        "dataset_identity_warning": null
+      }
+    },
+    "figureB": {
+      "title": "Conservation status patterns; category changes; trajectory (manuscript Figure 11)",
+      "script": "visualizations/make_fig3_fig10_source_data.py",
+      "generator": null,
+      "intermediate": null,
+      "source_data": "visualizations/source_data/figureB_source_data.csv",
+      "query": null,
+      "status": "generated 2026-10-06; binding not yet independently confirmed",
+      "data_inputs": {
+        "schema": "arctic_v2",
+        "tables": [],
+        "query": null,
+        "rows_consumed": null,
+        "extraction_date": "2026-07-22",
+        "database_release": "IUCN Red List snapshot 2026-07-22",
+        "redistributable": false,
+        "redistribution_note": "IUCN Red List terms do not permit redistribution of the categories. The assessment identifiers and the rebuild route are deposited instead; this table carries counts, not categories.",
+        "deposit_equivalent": "deposit/identifiers/iucn_assessment_ids.csv plus deposit/REBUILD-IUCN.md",
+        "deposit_row_count": null,
+        "deposit_divergence": null,
+        "reads": [
+          "data/processed/iucn_historic_timeline.json"
+        ],
+        "note": "No database read of its own. Panel B's per-species transition counts sum to 36, which is the count the deposit's trajectory verifier holds the manuscript to, computed through the same redlist_scale.transitions."
+      },
+      "processing_steps": [
+        {
+          "step": 1,
+          "what": "read the frozen intermediate",
+          "artifact": "data/processed/iucn_historic_timeline.json"
+        },
+        {
+          "step": 2,
+          "what": "compute and write the frozen numeric source data",
+          "artifact": "visualizations/source_data/figureB_source_data.csv"
+        }
+      ],
+      "ai_involvement": {
+        "level": "none",
+        "statement": "No generative model participated in producing these tables. The generator imports only csv, json, sys, collections, pathlib and the project's redlist_scale module, which is the one Red List scale and holds no model call either.",
+        "verified_by": "visualizations/tests/test_no_model_calls.py",
+        "models_used": [],
+        "prompts": null
+      },
+      "validation": {
+        "gates": [
+          {
+            "gate": "the generator asserts the caption's own numbers",
+            "result": "pass",
+            "evidence": "visualizations/make_fig3_fig10_source_data.py self_test() fails rather than writing a table that disagrees with the published caption"
+          },
+          {
+            "gate": "byte-exact regeneration",
+            "result": "pass",
+            "evidence": "make_all_figures.py --check byte-compares figure*_source_data.csv, and these two are inside that glob on purpose"
+          }
+        ],
+        "human_review": {
+          "reviewer": null,
+          "reviewed_on": null,
+          "state": "generated 2026-10-06; no named person has signed the binding and it is not yet independently confirmed"
+        },
+        "known_defects": [
+          {
+            "what": "Figure 10's caption says the assessed-species count grows from 5 in 1988 to 42 in 2023. 5 in 1988 is exact; 42 is the 2014-2019 value and the count is 43 from 2020, when Mesoplodon stejnegeri gains the single comparable global assessment Section 4.4 reports in its own words.",
+            "state": "the generator asserts 43 and refuses to reproduce the caption's figure; the manuscript carries a margin query for the authors"
+          }
+        ],
+        "dataset_identity_warning": null
+      }
+    },
+    "figureC": {
+      "title": "CITES reservations held by Arctic states (manuscript Figure 5)",
+      "script": "visualizations/make_figC_reservations_source_data.py",
+      "generator": null,
+      "intermediate": null,
+      "source_data": "visualizations/source_data/figureC_source_data.csv",
+      "query": null,
+      "status": "generated 2026-10-18; binding not yet independently confirmed",
+      "data_inputs": {
+        "schema": "arctic_v2",
+        "tables": [
+          "arctic_v2.cites_listing_events (change_type 'r', is_current), as deposit/tables/cites_listing_events.csv",
+          "arctic_v2.species, as deposit/tables/species.csv"
+        ],
+        "query": null,
+        "rows_consumed": null,
+        "extraction_date": "2026-08-13",
+        "database_release": "Species+ (speciesplus.net/api/v1/taxon_concepts)",
+        "redistributable": true,
+        "redistribution_note": null,
+        "deposit_equivalent": "deposit/tables/cites_listing_events.csv",
+        "deposit_row_count": null,
+        "deposit_divergence": null,
+        "reads": [
+          "deposit/tables/cites_listing_events.csv",
+          "deposit/tables/species.csv"
+        ],
+        "note": "Reads the deposited Species+ event history directly; a reservation is change_type r with is_current true. No database read of its own."
+      },
+      "processing_steps": [
+        {
+          "step": 1,
+          "what": "read the deposited Species+ event history",
+          "artifact": "deposit/tables/cites_listing_events.csv"
+        },
+        {
+          "step": 2,
+          "what": "compute and write the frozen numeric source data",
+          "artifact": "visualizations/source_data/figureC_source_data.csv"
+        }
+      ],
+      "ai_involvement": {
+        "level": "none",
+        "statement": "No generative model participated in producing this table. The generator imports only csv, sys, collections and pathlib.",
+        "verified_by": "visualizations/tests/test_no_model_calls.py",
+        "models_used": [],
+        "prompts": null
+      },
+      "validation": {
+        "gates": [
+          {
+            "gate": "the generator asserts the caption's own numbers",
+            "result": "pass",
+            "evidence": "visualizations/make_figC_reservations_source_data.py self_test() asserts all twenty cells the figure draws and fails rather than writing a table that disagrees"
+          },
+          {
+            "gate": "byte-exact regeneration",
+            "result": "pass",
+            "evidence": "make_all_figures.py --check byte-compares figure*_source_data.csv, and these two are inside that glob on purpose"
+          }
+        ],
+        "human_review": {
+          "reviewer": null,
+          "reviewed_on": null,
+          "state": "generated 2026-10-18; no named person has signed the binding and it is not yet independently confirmed"
+        },
+        "known_defects": [],
+        "dataset_identity_warning": null
+      }
+    }
+  },
+  "source_schema_note": "Was 'arctic' until 2026-08-15. The figure pipeline read the pre-rebuild schema while the manuscript reported the rebuilt one; the generators now take ARCTIC_SCHEMA and default to arctic_v2, and V-24 checks that every figure states the corpus the manuscript states.",
+  "commit_note": "Updated from 97b95952fc56 on 2026-08-15 after two commits changed the figure pipeline — the timeline generator's set-ordering fix and the hardcoded provenance dates. V-23 flagged the record as stale, which is what it is for. The figures were regenerated before this stamp and the Source Data compared byte for byte: GREEN, so neither commit moved a plotted value.",
+  "pipeline_source_sha256": "e1974ae79fd76d8b619fb702441c59162b5df0a0dc2e6ce787c11d438f3a75bd"
+}

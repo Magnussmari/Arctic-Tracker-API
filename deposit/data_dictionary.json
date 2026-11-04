@@ -1,0 +1,1832 @@
+{
+  "_generated_by": "ingest/build_deposit.py — do not edit; the next make deposit overwrites this file",
+  "built_utc": "2026-09-01T17:13:15Z",
+  "provenance_classes": {
+    "catch_records": {
+      "DERIVED": 958
+    },
+    "cites_listing_events": {
+      "EXTERNAL": 290
+    },
+    "cites_listings": {
+      "CURATED": 62
+    },
+    "cites_trade_records": {
+      "DERIVED": 492095
+    },
+    "cms_listings": {
+      "DERIVED": 92
+    },
+    "common_names": {
+      "CURATED": 327
+    },
+    "conservation_profiles": {
+      "GATED": 4
+    },
+    "countries": {
+      "CURATED": 20
+    },
+    "glossary_terms": {
+      "CURATED": 72
+    },
+    "illegal_trade_products": {
+      "CURATED": 60
+    },
+    "illegal_trade_seizures": {
+      "DERIVED": 225
+    },
+    "iucn_assessments": {
+      "DERIVED": 370
+    },
+    "management_areas": {
+      "CURATED": 32
+    },
+    "references": {
+      "GATED": 4
+    },
+    "species": {
+      "CURATED": 43
+    },
+    "species_media": {
+      "EXTERNAL": 43
+    },
+    "species_narratives": {
+      "GATED": 343
+    },
+    "split_listings": {
+      "CURATED": 2
+    },
+    "subpopulations": {
+      "CURATED": 12
+    },
+    "timeline_events": {
+      "CURATED": 520
+    }
+  },
+  "schema": "arctic_v2",
+  "tables": {
+    "catch_records": {
+      "columns": [
+        {
+          "name": "id",
+          "nullable": false,
+          "type": "uuid"
+        },
+        {
+          "name": "species_id",
+          "nullable": false,
+          "type": "uuid"
+        },
+        {
+          "name": "year",
+          "nullable": false,
+          "type": "integer"
+        },
+        {
+          "name": "area",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "catch_total",
+          "nullable": true,
+          "type": "integer"
+        },
+        {
+          "name": "quota",
+          "nullable": true,
+          "type": "integer"
+        },
+        {
+          "name": "source",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "country_id",
+          "nullable": true,
+          "type": "uuid"
+        },
+        {
+          "name": "data_source",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "source_occurrence",
+          "nullable": false,
+          "type": "integer"
+        },
+        {
+          "name": "source_artifact",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "source_sha256",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "provenance_class",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "loader_version",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "loaded_at",
+          "nullable": false,
+          "type": "timestamp with time zone"
+        }
+      ],
+      "exclusion_reason": "NAMMCO publishes no licence or terms for the Catch Database, so no redistribution is granted. The catch_total column is the source's CATCH TOTAL for one row, in animals; the source lists national totals beside its area rows, so a sum over rows counts those animals twice. Record identifiers are provided under identifiers/. There is no extraction script: these catch figures were taken from the publicly browsable NAMMCO catch database by a scraper that was lost in an October 2025 repository cleanup. The values remain checkable at source using the identifiers and the access date; our route to them is not reproducible, and we state that rather than implying otherwise.",
+      "exported": false,
+      "rows": 958
+    },
+    "cites_listing_events": {
+      "columns": [
+        {
+          "name": "id",
+          "nullable": false,
+          "type": "uuid"
+        },
+        {
+          "name": "species_id",
+          "nullable": false,
+          "type": "uuid"
+        },
+        {
+          "name": "event_date",
+          "nullable": true,
+          "type": "date"
+        },
+        {
+          "name": "appendix",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "change_type",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "is_listing",
+          "nullable": false,
+          "type": "boolean"
+        },
+        {
+          "name": "party",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "is_current",
+          "nullable": true,
+          "type": "boolean"
+        },
+        {
+          "name": "note",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "source_taxon_id",
+          "nullable": true,
+          "type": "integer"
+        },
+        {
+          "name": "source_artifact",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "source_sha256",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "provenance_class",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "loader_version",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "loaded_at",
+          "nullable": false,
+          "type": "timestamp with time zone"
+        }
+      ],
+      "exported": true,
+      "file": "tables/cites_listing_events.csv",
+      "rows": 290
+    },
+    "cites_listings": {
+      "columns": [
+        {
+          "name": "id",
+          "nullable": false,
+          "type": "uuid"
+        },
+        {
+          "name": "species_id",
+          "nullable": false,
+          "type": "uuid"
+        },
+        {
+          "name": "appendix",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "listing_date",
+          "nullable": false,
+          "type": "date"
+        },
+        {
+          "name": "is_current",
+          "nullable": false,
+          "type": "boolean"
+        },
+        {
+          "name": "notes",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "provenance_note",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "source_artifact",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "source_sha256",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "provenance_class",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "loader_version",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "loaded_at",
+          "nullable": false,
+          "type": "timestamp with time zone"
+        }
+      ],
+      "exported": true,
+      "file": "tables/cites_listings.csv",
+      "rows": 62
+    },
+    "cites_trade_records": {
+      "columns": [
+        {
+          "name": "id",
+          "nullable": false,
+          "type": "uuid"
+        },
+        {
+          "name": "species_id",
+          "nullable": false,
+          "type": "uuid"
+        },
+        {
+          "name": "record_id",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "year",
+          "nullable": false,
+          "type": "integer"
+        },
+        {
+          "name": "appendix",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "taxon",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "class",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "order_name",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "family",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "genus",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "term",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "quantity",
+          "nullable": true,
+          "type": "numeric"
+        },
+        {
+          "name": "unit",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "importer",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "exporter",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "origin",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "purpose",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "source",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "reporter_type",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "import_permit",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "export_permit",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "origin_permit",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "source_artifact",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "source_sha256",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "provenance_class",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "loader_version",
+          "nullable": false,
+          "type": "text"
+        }
+      ],
+      "exported": true,
+      "file": "tables/cites_trade_records.csv",
+      "rows": 492095
+    },
+    "cms_listings": {
+      "columns": [
+        {
+          "name": "id",
+          "nullable": false,
+          "type": "uuid"
+        },
+        {
+          "name": "species_id",
+          "nullable": false,
+          "type": "uuid"
+        },
+        {
+          "name": "agreement",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "appendix",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "listing_date",
+          "nullable": false,
+          "type": "date"
+        },
+        {
+          "name": "listed_under",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "notes",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "native_distribution",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "distribution_codes",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "extinct_distribution",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "distribution_uncertain",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "source_row_id",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "source_artifact",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "source_sha256",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "provenance_class",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "loader_version",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "loaded_at",
+          "nullable": false,
+          "type": "timestamp with time zone"
+        }
+      ],
+      "exported": true,
+      "file": "tables/cms_listings.csv",
+      "rows": 92
+    },
+    "common_names": {
+      "columns": [
+        {
+          "name": "id",
+          "nullable": false,
+          "type": "uuid"
+        },
+        {
+          "name": "species_id",
+          "nullable": false,
+          "type": "uuid"
+        },
+        {
+          "name": "name",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "language",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "is_main",
+          "nullable": false,
+          "type": "boolean"
+        },
+        {
+          "name": "provenance_note",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "source_artifact",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "source_sha256",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "provenance_class",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "loader_version",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "loaded_at",
+          "nullable": false,
+          "type": "timestamp with time zone"
+        }
+      ],
+      "exported": true,
+      "file": "tables/common_names.csv",
+      "rows": 327
+    },
+    "conservation_profiles": {
+      "columns": [
+        {
+          "name": "id",
+          "nullable": false,
+          "type": "uuid"
+        },
+        {
+          "name": "species_id",
+          "nullable": false,
+          "type": "uuid"
+        },
+        {
+          "name": "profile_key",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "origin",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "file_source",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "subpopulations",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "distribution_range",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "source_artifact",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "source_sha256",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "provenance_class",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "loader_version",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "loaded_at",
+          "nullable": false,
+          "type": "timestamp with time zone"
+        }
+      ],
+      "exported": true,
+      "file": "tables/conservation_profiles.csv",
+      "rows": 4
+    },
+    "countries": {
+      "columns": [
+        {
+          "name": "id",
+          "nullable": false,
+          "type": "uuid"
+        },
+        {
+          "name": "country_name",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "country_code",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "nammco_member",
+          "nullable": false,
+          "type": "boolean"
+        },
+        {
+          "name": "arctic_council",
+          "nullable": false,
+          "type": "boolean"
+        },
+        {
+          "name": "provenance_note",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "source_artifact",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "source_sha256",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "provenance_class",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "loader_version",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "loaded_at",
+          "nullable": false,
+          "type": "timestamp with time zone"
+        }
+      ],
+      "exported": true,
+      "file": "tables/countries.csv",
+      "rows": 20
+    },
+    "glossary_terms": {
+      "columns": [
+        {
+          "name": "id",
+          "nullable": false,
+          "type": "uuid"
+        },
+        {
+          "name": "term",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "acronym",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "definition",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "category",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "subcategory",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "related_terms",
+          "nullable": true,
+          "type": "ARRAY"
+        },
+        {
+          "name": "priority",
+          "nullable": false,
+          "type": "integer"
+        },
+        {
+          "name": "display_contexts",
+          "nullable": true,
+          "type": "ARRAY"
+        },
+        {
+          "name": "source_artifact",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "source_sha256",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "provenance_class",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "loader_version",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "loaded_at",
+          "nullable": false,
+          "type": "timestamp with time zone"
+        }
+      ],
+      "exported": true,
+      "file": "tables/glossary_terms.csv",
+      "rows": 72
+    },
+    "illegal_trade_products": {
+      "columns": [
+        {
+          "name": "id",
+          "nullable": false,
+          "type": "uuid"
+        },
+        {
+          "name": "product_code",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "product_name",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "product_category",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "main_category",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "is_high_value",
+          "nullable": false,
+          "type": "boolean"
+        },
+        {
+          "name": "search_terms",
+          "nullable": false,
+          "type": "ARRAY"
+        },
+        {
+          "name": "source_artifact",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "source_sha256",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "provenance_class",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "loader_version",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "loaded_at",
+          "nullable": false,
+          "type": "timestamp with time zone"
+        }
+      ],
+      "exported": true,
+      "file": "tables/illegal_trade_products.csv",
+      "rows": 60
+    },
+    "illegal_trade_seizures": {
+      "columns": [
+        {
+          "name": "id",
+          "nullable": false,
+          "type": "uuid"
+        },
+        {
+          "name": "species_id",
+          "nullable": false,
+          "type": "uuid"
+        },
+        {
+          "name": "source_database",
+          "nullable": false,
+          "type": "character varying"
+        },
+        {
+          "name": "original_record_id",
+          "nullable": true,
+          "type": "character varying"
+        },
+        {
+          "name": "seizure_date",
+          "nullable": true,
+          "type": "date"
+        },
+        {
+          "name": "seizure_year",
+          "nullable": true,
+          "type": "integer"
+        },
+        {
+          "name": "seizure_location",
+          "nullable": true,
+          "type": "character varying"
+        },
+        {
+          "name": "product_type_id",
+          "nullable": true,
+          "type": "uuid"
+        },
+        {
+          "name": "product_category",
+          "nullable": true,
+          "type": "character varying"
+        },
+        {
+          "name": "quantity",
+          "nullable": true,
+          "type": "numeric"
+        },
+        {
+          "name": "unit",
+          "nullable": true,
+          "type": "character varying"
+        },
+        {
+          "name": "reported_taxon_name",
+          "nullable": true,
+          "type": "character varying"
+        },
+        {
+          "name": "gbif_id",
+          "nullable": true,
+          "type": "character varying"
+        },
+        {
+          "name": "db_taxa_name_clean",
+          "nullable": true,
+          "type": "character varying"
+        },
+        {
+          "name": "created_at",
+          "nullable": true,
+          "type": "timestamp with time zone"
+        },
+        {
+          "name": "updated_at",
+          "nullable": true,
+          "type": "timestamp with time zone"
+        },
+        {
+          "name": "data_source",
+          "nullable": true,
+          "type": "character varying"
+        },
+        {
+          "name": "source_artifact",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "source_sha256",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "provenance_class",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "loader_version",
+          "nullable": false,
+          "type": "text"
+        }
+      ],
+      "exported": true,
+      "file": "tables/illegal_trade_seizures.csv",
+      "rows": 225
+    },
+    "iucn_assessments": {
+      "columns": [
+        {
+          "name": "id",
+          "nullable": false,
+          "type": "uuid"
+        },
+        {
+          "name": "species_id",
+          "nullable": false,
+          "type": "uuid"
+        },
+        {
+          "name": "year_published",
+          "nullable": false,
+          "type": "integer"
+        },
+        {
+          "name": "is_latest",
+          "nullable": true,
+          "type": "boolean"
+        },
+        {
+          "name": "possibly_extinct",
+          "nullable": true,
+          "type": "boolean"
+        },
+        {
+          "name": "possibly_extinct_in_wild",
+          "nullable": true,
+          "type": "boolean"
+        },
+        {
+          "name": "status",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "url",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "assessment_id",
+          "nullable": true,
+          "type": "integer"
+        },
+        {
+          "name": "scope_code",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "scope_description",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "source_artifact",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "source_sha256",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "provenance_class",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "loader_version",
+          "nullable": false,
+          "type": "text"
+        }
+      ],
+      "exclusion_reason": "IUCN Red List terms do not permit redistribution. The assessment identifier, publication year and scope of every withheld row are provided under identifiers/, so any reader with a free Red List account can retrieve each assessment by its identifier and reconstruct or check the table at source. The extraction is not shipped as a one-command tool inside this deposit; it lives in the code repository, where core/iucn_client.py and core/rebuild_iucn_assessments.py query the Red List API directly. Note that ingest/iucn_load.py is a loader, not an extractor: it replays a snapshot we may not redistribute, and is of no use here.",
+      "exported": false,
+      "rows": 370
+    },
+    "management_areas": {
+      "columns": [
+        {
+          "name": "id",
+          "nullable": false,
+          "type": "uuid"
+        },
+        {
+          "name": "area_name",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "country_id",
+          "nullable": false,
+          "type": "uuid"
+        },
+        {
+          "name": "area_type",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "provenance_note",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "source_artifact",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "source_sha256",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "provenance_class",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "loader_version",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "loaded_at",
+          "nullable": false,
+          "type": "timestamp with time zone"
+        }
+      ],
+      "exported": true,
+      "file": "tables/management_areas.csv",
+      "rows": 32
+    },
+    "narrative_review": {
+      "columns": [
+        {
+          "name": "id",
+          "nullable": false,
+          "type": "uuid"
+        },
+        {
+          "name": "narrative_id",
+          "nullable": false,
+          "type": "uuid"
+        },
+        {
+          "name": "reviewer",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "verdict",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "rationale",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "reviewed_at",
+          "nullable": false,
+          "type": "timestamp with time zone"
+        }
+      ],
+      "exported": true,
+      "file": "tables/narrative_review.csv",
+      "rows": 0
+    },
+    "profile_references": {
+      "columns": [
+        {
+          "name": "id",
+          "nullable": false,
+          "type": "uuid"
+        },
+        {
+          "name": "profile_id",
+          "nullable": false,
+          "type": "uuid"
+        },
+        {
+          "name": "reference_id",
+          "nullable": false,
+          "type": "uuid"
+        },
+        {
+          "name": "binding_status",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "loaded_at",
+          "nullable": false,
+          "type": "timestamp with time zone"
+        }
+      ],
+      "exported": true,
+      "file": "tables/profile_references.csv",
+      "rows": 4
+    },
+    "profile_review": {
+      "columns": [
+        {
+          "name": "id",
+          "nullable": false,
+          "type": "uuid"
+        },
+        {
+          "name": "profile_id",
+          "nullable": false,
+          "type": "uuid"
+        },
+        {
+          "name": "reviewer",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "verdict",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "rationale",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "reviewed_at",
+          "nullable": false,
+          "type": "timestamp with time zone"
+        }
+      ],
+      "exported": true,
+      "file": "tables/profile_review.csv",
+      "rows": 0
+    },
+    "references": {
+      "columns": [
+        {
+          "name": "id",
+          "nullable": false,
+          "type": "uuid"
+        },
+        {
+          "name": "authors",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "year",
+          "nullable": true,
+          "type": "integer"
+        },
+        {
+          "name": "title",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "journal",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "doi",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "full_citation",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "source_artifact",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "source_sha256",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "provenance_class",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "loader_version",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "loaded_at",
+          "nullable": false,
+          "type": "timestamp with time zone"
+        }
+      ],
+      "exported": true,
+      "file": "tables/references.csv",
+      "rows": 4
+    },
+    "source_releases": {
+      "columns": [
+        {
+          "name": "id",
+          "nullable": false,
+          "type": "uuid"
+        },
+        {
+          "name": "source_name",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "release_label",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "obtained_on",
+          "nullable": false,
+          "type": "date"
+        },
+        {
+          "name": "obtained_on_basis",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "artifact_path",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "artifact_count",
+          "nullable": true,
+          "type": "integer"
+        },
+        {
+          "name": "artifact_bytes",
+          "nullable": true,
+          "type": "bigint"
+        },
+        {
+          "name": "notes",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "recorded_at",
+          "nullable": false,
+          "type": "timestamp with time zone"
+        }
+      ],
+      "exported": true,
+      "file": "tables/source_releases.csv",
+      "rows": 6
+    },
+    "species": {
+      "columns": [
+        {
+          "name": "id",
+          "nullable": false,
+          "type": "uuid"
+        },
+        {
+          "name": "scientific_name",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "common_name",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "kingdom",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "phylum",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "class",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "order_name",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "family",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "genus",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "species_name",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "authority",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "sis_id",
+          "nullable": true,
+          "type": "integer"
+        },
+        {
+          "name": "is_arctic",
+          "nullable": false,
+          "type": "boolean"
+        },
+        {
+          "name": "cites_reported_name",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "divergence_from_cites",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "source_artifact",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "source_sha256",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "provenance_class",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "loader_version",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "loaded_at",
+          "nullable": false,
+          "type": "timestamp with time zone"
+        }
+      ],
+      "exported": true,
+      "file": "tables/species.csv",
+      "rows": 43
+    },
+    "species_media": {
+      "columns": [
+        {
+          "name": "id",
+          "nullable": false,
+          "type": "uuid"
+        },
+        {
+          "name": "species_id",
+          "nullable": false,
+          "type": "uuid"
+        },
+        {
+          "name": "source",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "source_taxon_id",
+          "nullable": true,
+          "type": "integer"
+        },
+        {
+          "name": "source_photo_id",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "license_code",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "attribution",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "is_displayable",
+          "nullable": false,
+          "type": "boolean"
+        },
+        {
+          "name": "original_url",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "local_path",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "content_sha256",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "matched_name",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "match_exact",
+          "nullable": false,
+          "type": "boolean"
+        },
+        {
+          "name": "provenance_class",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "loader_version",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "loaded_at",
+          "nullable": false,
+          "type": "timestamp with time zone"
+        },
+        {
+          "name": "source_artifact",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "source_sha256",
+          "nullable": true,
+          "type": "text"
+        }
+      ],
+      "exported": true,
+      "file": "tables/species_media.csv",
+      "rows": 43
+    },
+    "species_narratives": {
+      "columns": [
+        {
+          "name": "id",
+          "nullable": false,
+          "type": "uuid"
+        },
+        {
+          "name": "species_id",
+          "nullable": false,
+          "type": "uuid"
+        },
+        {
+          "name": "section",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "body",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "origin",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "citation_count",
+          "nullable": false,
+          "type": "integer"
+        },
+        {
+          "name": "source_artifact",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "source_sha256",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "provenance_class",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "loader_version",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "loaded_at",
+          "nullable": false,
+          "type": "timestamp with time zone"
+        }
+      ],
+      "exported": true,
+      "file": "tables/species_narratives.csv",
+      "rows": 343
+    },
+    "split_listings": {
+      "columns": [
+        {
+          "name": "id",
+          "nullable": false,
+          "type": "uuid"
+        },
+        {
+          "name": "species_id",
+          "nullable": false,
+          "type": "uuid"
+        },
+        {
+          "name": "population_identifier",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "appendix",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "listing_date",
+          "nullable": false,
+          "type": "date"
+        },
+        {
+          "name": "delisting_date",
+          "nullable": true,
+          "type": "date"
+        },
+        {
+          "name": "is_current",
+          "nullable": false,
+          "type": "boolean"
+        },
+        {
+          "name": "notes",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "annotation",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "source_artifact",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "source_sha256",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "provenance_class",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "loader_version",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "loaded_at",
+          "nullable": false,
+          "type": "timestamp with time zone"
+        }
+      ],
+      "exported": true,
+      "file": "tables/split_listings.csv",
+      "rows": 2
+    },
+    "subpopulations": {
+      "columns": [
+        {
+          "name": "id",
+          "nullable": false,
+          "type": "uuid"
+        },
+        {
+          "name": "species_id",
+          "nullable": false,
+          "type": "uuid"
+        },
+        {
+          "name": "subpopulation_name",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "sis_id",
+          "nullable": true,
+          "type": "integer"
+        },
+        {
+          "name": "authority",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "source_artifact",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "source_sha256",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "provenance_class",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "loader_version",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "loaded_at",
+          "nullable": false,
+          "type": "timestamp with time zone"
+        }
+      ],
+      "exported": true,
+      "file": "tables/subpopulations.csv",
+      "rows": 12
+    },
+    "timeline_events": {
+      "columns": [
+        {
+          "name": "id",
+          "nullable": false,
+          "type": "uuid"
+        },
+        {
+          "name": "species_id",
+          "nullable": false,
+          "type": "uuid"
+        },
+        {
+          "name": "event_date",
+          "nullable": false,
+          "type": "date"
+        },
+        {
+          "name": "year",
+          "nullable": false,
+          "type": "integer"
+        },
+        {
+          "name": "event_type",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "title",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "description",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "status",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "source_type",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "source_id",
+          "nullable": true,
+          "type": "uuid"
+        },
+        {
+          "name": "provenance_note",
+          "nullable": true,
+          "type": "text"
+        },
+        {
+          "name": "source_artifact",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "source_sha256",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "provenance_class",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "loader_version",
+          "nullable": false,
+          "type": "text"
+        },
+        {
+          "name": "loaded_at",
+          "nullable": false,
+          "type": "timestamp with time zone"
+        }
+      ],
+      "exported": true,
+      "file": "tables/timeline_events.csv",
+      "rows": 520
+    }
+  }
+}
